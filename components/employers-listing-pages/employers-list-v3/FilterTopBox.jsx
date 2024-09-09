@@ -1,9 +1,6 @@
-
-
-'use client'
+'use client';
 
 import Link from "next/link";
-import companyData from "../../../data/topCompany";
 import Pagination from "../components/Pagination";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -16,6 +13,11 @@ import {
   addSort,
 } from "../../../features/filter/employerFilterSlice";
 import Image from "next/image";
+import { useQuery } from "react-query";
+import { initializeStorageServices } from "@/appwrite/Services/storageServices";
+import initializeDB from "@/appwrite/Services/dbServices";
+import * as sdk from "node-appwrite";
+import { useState, useEffect } from "react";
 
 const FilterTopBox = () => {
   const {
@@ -29,7 +31,69 @@ const FilterTopBox = () => {
   } = useSelector((state) => state.employerFilter) || {};
   const dispatch = useDispatch();
 
-  // keyword filter
+  const [storageServices, setStorageServices] = useState(null);
+  const [dbServices, setDbServices] = useState(null);
+
+  // Initialize storage and database services
+  useEffect(() => {
+    const initializeServices = async () => {
+      try {
+        const storage = await initializeStorageServices();
+        setStorageServices(storage);
+
+        const db = await initializeDB();
+        setDbServices(db);
+      } catch (error) {
+        console.error("Error initializing services:", error);
+      }
+    };
+
+    initializeServices();
+  }, []);
+
+  // Fetch companies and jobs data using useQuery
+  const { data: companies, isLoading, error } = useQuery(
+    "companies",
+    async () => {
+      if (dbServices?.companies && storageServices?.images) {
+        const response = await dbServices.companies.list();
+
+        // Fetch profile image and job count for each company
+        const companiesData = await Promise.all(
+          response.documents.map(async (company) => {
+            let profileImgUrl = null;
+            if (company.profileImg) {
+              try {
+                const imageFile = await storageServices.images.getFilePreview(company.profileImg);
+                profileImgUrl = imageFile.href;
+              } catch (error) {
+                console.error(`Error fetching profile image for ${company.name}:`, error);
+              }
+            }
+
+            // Fetch the number of open jobs for the company
+            const jobResponse = await dbServices.jobs.list([
+              sdk.Query.equal("userId", company.userId),
+            ]);
+            const jobCount = jobResponse.total;
+
+            return {
+              ...company,
+              img: profileImgUrl,
+              location: `${company.city}, ${company.country}`,
+              jobNumber: jobCount,
+            };
+          })
+        );
+
+        return companiesData;
+      }
+      return [];
+    },
+    { enabled: !!dbServices && !!storageServices }
+  );
+
+  // Apply filters
   const keywordFilter = (item) =>
     keyword !== ""
       ? item?.name?.toLowerCase().includes(keyword?.toLowerCase()) && item
@@ -61,18 +125,23 @@ const FilterTopBox = () => {
   const sortFilter = (a, b) =>
     sort === "des" ? a.id > b.id && -1 : a.id < b.id && -1;
 
-  let content = companyData
-    ?.slice(perPage.start !== 0 && 12, perPage.end !== 0 ? perPage.end : 24)
+  let filteredCompanies = companies
     ?.filter(keywordFilter)
-    ?.filter(locationFilter)
-    ?.filter(destinationFilter)
-    ?.filter(categoryFilter)
-    ?.filter(foundationDataFilter)
-    ?.sort(sortFilter)
+    // ?.filter(locationFilter)
+    // ?.filter(destinationFilter)
+    // ?.filter(categoryFilter)
+    // ?.filter(foundationDataFilter)
+    // ?.sort(sortFilter);
+
+  let content = filteredCompanies
+    ?.slice(
+      perPage.start !== 0 ? perPage.start : 0,
+      perPage.end !== 0 ? perPage.end : filteredCompanies.length
+    )
     ?.map((company) => (
       <div
         className="company-block-four col-xl-3 col-lg-6 col-md-6 col-sm-12"
-        key={company.id}
+        key={company.$id}
       >
         <div className="inner-box">
           <button className="bookmark-btn">
@@ -82,15 +151,24 @@ const FilterTopBox = () => {
           <div className="content-inner">
             <span className="featured">Featured</span>
             <span className="company-logo">
-              <Image
-                width={50}
-                height={50}
-                src={company.img}
-                alt="company brand"
-              />
+              {company.img ? (
+                <Image
+                  width={50}
+                  height={50}
+                  src={company.img}
+                  alt="company brand"
+                />
+              ) : (
+                <Image
+                  width={50}
+                  height={50}
+                  src="/images/default-company.png" // Ensure this path is correct
+                  alt="default company brand"
+                />
+              )}
             </span>
             <h4>
-              <Link href={`/employers-single-v1/${company.id}`}>
+              <Link href={`/employers-single-v1/${company.$id}`}>
                 {company.name}
               </Link>
             </h4>
@@ -101,12 +179,14 @@ const FilterTopBox = () => {
               </li>
               <li className="me-0">
                 <span className="icon flaticon-briefcase"></span>
-                {company.jobType}
+                {company.primaryIndustry}
               </li>
             </ul>
           </div>
 
-          <div className="job-type me-0">Open Jobs – {company.jobNumber}</div>
+          <div className="job-type me-0">
+            Open Jobs – {company.jobNumber} {company.jobNumber !== 1 ? "Positions" : "Position"}
+          </div>
         </div>
       </div>
     ));
@@ -132,26 +212,27 @@ const FilterTopBox = () => {
     dispatch(addSort(""));
     dispatch(addPerPage({ start: 0, end: 0 }));
   };
+
   return (
     <>
       <div className="ls-switcher">
         <div className="showing-result">
           <div className="text">
-            <strong>{content?.length}</strong> jobs
+            <strong>{filteredCompanies?.length}</strong> companies
           </div>
         </div>
         {/* End showing-result */}
         <div className="sort-by">
-          {keyword !== "" ||
-          location !== "" ||
-          destination.min !== 0 ||
-          destination.max !== 100 ||
-          category !== "" ||
-          foundationDate.min !== 1900 ||
-          foundationDate.max !== 2028 ||
-          sort !== "" ||
-          perPage.start !== 0 ||
-          perPage.end !== 0 ? (
+          {(keyword !== "" ||
+            location !== "" ||
+            destination.min !== 0 ||
+            destination.max !== 100 ||
+            category !== "" ||
+            foundationDate.min !== 1900 ||
+            foundationDate.max !== 2028 ||
+            sort !== "" ||
+            perPage.start !== 0 ||
+            perPage.end !== 0) && (
             <button
               onClick={clearAll}
               className="btn btn-danger text-nowrap me-2"
@@ -162,14 +243,14 @@ const FilterTopBox = () => {
             >
               Clear All
             </button>
-          ) : undefined}
+          )}
 
           <select
             value={sort}
             className="chosen-single form-select"
             onChange={sortHandler}
           >
-            <option value="">Sort by (default)</option>
+            <option value="">Sort by default</option>
             <option value="asc">Newest</option>
             <option value="des">Oldest</option>
           </select>

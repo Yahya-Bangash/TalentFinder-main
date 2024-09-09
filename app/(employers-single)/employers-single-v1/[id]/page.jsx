@@ -1,81 +1,144 @@
+'use client';
+
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import employersInfo from "@/data/topCompany";
+import { useQuery } from 'react-query';
+import Image from "next/image";
+import Link from "next/link";
 import LoginPopup from "@/components/common/form/login/LoginPopup";
 import FooterDefault from "@/components/footer/common-footer";
 import DefaulHeader from "@/components/header/DefaulHeader";
 import MobileMenu from "@/components/header/MobileMenu";
-import JobDetailsDescriptions from "@/components/employer-single-pages/shared-components/JobDetailsDescriptions";
 import RelatedJobs from "@/components/employer-single-pages/related-jobs/RelatedJobs";
 import MapJobFinder from "@/components/job-listing-pages/components/MapJobFinder";
 import Social from "@/components/employer-single-pages/social/Social";
 import PrivateMessageBox from "@/components/employer-single-pages/shared-components/PrivateMessageBox";
-import Image from "next/image";
+import { initializeStorageServices } from "@/appwrite/Services/storageServices";
+import initializeDB from "@/appwrite/Services/dbServices";
+import * as sdk from "node-appwrite";
 
-export const metadata = {
-  title:
-    "Employers Single Dyanmic V1 || DIGI-X-TECH - Job Borad React NextJS Template",
-  description: "DIGI-X-TECH - Job Borad React NextJS Template",
-};
+// export const metadata = {
+//   title:
+//     "Employers Single Dyanmic V1 || DIGI-X-TECH - Job Board React NextJS Template",
+//   description: "DIGI-X-TECH - Job Board React NextJS Template",
+// };
 
 const EmployersSingleV1 = ({ params }) => {
-  const id = params.id;
+  const [storageServices, setStorageServices] = useState(null);
+  const [dbServices, setDbServices] = useState(null);
+  const companyId = params.id;
 
-  const employer =
-    employersInfo.find((item) => item.id == id) || employersInfo[0];
+  // Initialize storage and database services
+  useEffect(() => {
+    const initializeServices = async () => {
+      try {
+        const storage = await initializeStorageServices();
+        setStorageServices(storage);
+
+        const db = await initializeDB();
+        setDbServices(db);
+      } catch (error) {
+        console.error("Error initializing services:", error);
+      }
+    };
+
+    initializeServices();
+  }, []);
+
+  // Fetch company data from companies collection
+  const { data: employer, isLoading, error } = useQuery(
+    ['employer', companyId],
+    async () => {
+      if (dbServices?.companies && storageServices?.images) {
+        const companyResponse = await dbServices.companies.get(companyId);
+
+        // Fetch image from storage using profileImg ID
+        let profileImgUrl = null;
+        if (companyResponse.profileImg) {
+          try {
+            const imageFile = await storageServices.images.getFilePreview(companyResponse.profileImg);
+            profileImgUrl = imageFile.href;
+          } catch (error) {
+            console.error("Error fetching profile image:", error);
+          }
+        }
+
+        // Fetch the number of jobs for this company
+        const jobResponse = await dbServices.jobs.list([
+          sdk.Query.equal("userId", companyResponse.userId),
+        ]);
+        const jobCount = jobResponse.total;
+
+        return {
+          ...companyResponse,
+          img: profileImgUrl,
+          jobNumber: jobCount,
+          location: `${companyResponse.city}, ${companyResponse.country}`,
+        };
+      }
+      return null;
+    },
+    { enabled: !!dbServices && !!storageServices && !!companyId }
+  );
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error || !employer) return <div>Error fetching employer data</div>;
 
   return (
     <>
-      {/* <!-- Header Span --> */}
+      {/* Header Span */}
       <span className="header-span"></span>
 
       <LoginPopup />
       {/* End Login Popup Modal */}
 
       <DefaulHeader />
-      {/* <!--End Main Header --> */}
+      {/* End Main Header */}
 
       <MobileMenu />
       {/* End MobileMenu */}
 
-      {/* <!-- Job Detail Section --> */}
+      {/* Job Detail Section */}
       <section className="job-detail-section">
-        {/* <!-- Upper Box --> */}
+        {/* Upper Box */}
         <div className="upper-box">
           <div className="auto-container">
             <div className="job-block-seven">
               <div className="inner-box">
                 <div className="content">
                   <span className="company-logo">
-                    <Image
-                      width={100}
-                      height={100}
-                      src={employer?.img}
-                      alt="logo"
-                    />
+                    {employer.img ? (
+                      <Image
+                        width={100}
+                        height={100}
+                        src={employer.img}
+                        alt="company logo"
+                      />
+                    ) : (
+                      <div>No Image Available</div>
+                    )}
                   </span>
-                  <h4>{employer?.name}</h4>
+                  <h4>{employer.name}</h4>
 
                   <ul className="job-info">
                     <li>
                       <span className="icon flaticon-map-locator"></span>
-                      {employer?.location}
+                      {employer.location}
                     </li>
-                    {/* compnay info */}
                     <li>
                       <span className="icon flaticon-briefcase"></span>
-                      {employer?.jobType}
+                      {employer.primaryIndustry}
                     </li>
-                    {/* location info */}
-                    <li>
-                      <span className="icon flaticon-telephone-1"></span>
-                      {employer?.phone}
-                    </li>
-                    {/* time info */}
                     <li>
                       <span className="icon flaticon-mail"></span>
-                      {employer?.email}
+                      {employer.email}
                     </li>
-                    {/* salary info */}
+                    <li>
+                      <span className="icon flaticon-web-programming"></span>
+                      <a href={employer.website ? `http://${employer.website}` : '#'}>
+                        {employer.website || `www.${employer.name}.com`}
+                      </a>
+                    </li>
                   </ul>
                   {/* End .job-info */}
 
@@ -100,7 +163,7 @@ const EmployersSingleV1 = ({ params }) => {
                 </div>
                 {/* End btn-box */}
 
-                {/* <!-- Modal --> */}
+                {/* Modal */}
                 <div
                   className="modal fade"
                   id="privateMessage"
@@ -125,112 +188,94 @@ const EmployersSingleV1 = ({ params }) => {
                       <PrivateMessageBox />
                       {/* End PrivateMessageBox */}
                     </div>
-                    {/* End .send-private-message-wrapper */}
                   </div>
                 </div>
-                {/* End .modal */}
+                {/* End Modal */}
               </div>
             </div>
-            {/* <!-- Job Block --> */}
           </div>
         </div>
-        {/* <!-- Upper Box --> */}
+        {/* End Upper Box */}
 
-        {/* <!-- job-detail-outer--> */}
+        {/* Job Detail Outer */}
         <div className="job-detail-outer">
           <div className="auto-container">
             <div className="row">
               <div className="content-column col-lg-8 col-md-12 col-sm-12">
-                {/*  job-detail */}
-                <JobDetailsDescriptions />
+                {/* Job Details */}
+                <div className="job-detail">
+                  <h4>About Company</h4>
+                  <p>{employer.description}</p>
+                </div>
                 {/* End job-detail */}
 
-                {/* <!-- Related Jobs --> */}
+                {/* Related Jobs */}
                 <div className="related-jobs">
                   <div className="title-box">
-                    <h3>3 Others jobs available</h3>
-                    <div className="text">
-                      2020 jobs live - 293 added today.
-                    </div>
+                    <h3>{employer.jobNumber} Job(s) available</h3>
                   </div>
-                  {/* End .title-box */}
 
                   <RelatedJobs />
                   {/* End RelatedJobs */}
                 </div>
-                {/* <!-- Related Jobs --> */}
+                {/* End Related Jobs */}
               </div>
-              {/* End .content-column */}
 
+              {/* Sidebar */}
               <div className="sidebar-column col-lg-4 col-md-12 col-sm-12">
                 <aside className="sidebar">
                   <div className="sidebar-widget company-widget">
                     <div className="widget-content">
-                      {/*  compnay-info */}
+                      {/* Company Info */}
                       <ul className="company-info mt-0">
                         <li>
-                          Primary industry: <span>Software</span>
+                          Primary industry: <span>{employer.primaryIndustry}</span>
                         </li>
                         <li>
-                          Company size: <span>501-1,000</span>
+                          Company size: <span>{employer.companySize}</span>
                         </li>
                         <li>
-                          Founded in: <span>2011</span>
+                          Founded in: <span>{employer.estSince}</span>
                         </li>
                         <li>
-                          Phone: <span>{employer?.phone}</span>
+                          Email: <span>{employer.email}</span>
                         </li>
                         <li>
-                          Email: <span>{employer?.email}</span>
-                        </li>
-                        <li>
-                          Location: <span>{employer?.location}</span>
+                          Location: <span>{employer.location}</span>
                         </li>
                         <li>
                           Social media:
                           <Social />
                         </li>
                       </ul>
-                      {/* End compnay-info */}
 
                       <div className="btn-box">
                         <a
-                          href="#"
+                          href={employer.website ? `http://${employer.website}` : '#'}
                           className="theme-btn btn-style-three"
                           style={{ textTransform: "lowercase" }}
                         >
-                          www.{employer?.name}.com
+                          {employer.website || `www.${employer.name}.com`}
                         </a>
                       </div>
-                      {/* btn-box */}
                     </div>
                   </div>
-                  {/* End company-widget */}
 
-                  <div className="sidebar-widget">
-                    {/* <!-- Map Widget --> */}
+                  {/* <div className="sidebar-widget">
                     <h4 className="widget-title">Job Location</h4>
                     <div className="widget-content">
                       <div style={{ height: "300px", width: "100%" }}>
                         <MapJobFinder />
                       </div>
                     </div>
-                    {/* <!--  Map Widget --> */}
-                  </div>
-                  {/* End sidebar-widget */}
+                  </div> */}
                 </aside>
-                {/* End .sidebar */}
               </div>
-              {/* End .sidebar-column */}
             </div>
           </div>
         </div>
-        {/* <!-- job-detail-outer--> */}
       </section>
-      {/* <!-- End Job Detail Section --> */}
-
       <FooterDefault footerStyle="alternate5" />
-      {/* <!-- End Main Footer --> */}
     </>
   );
 };
