@@ -1,29 +1,41 @@
 import Social from "../social/Social";
 
-const CompanyInfo = () => {
+const CompanyInfo = ({
+  primaryIndustry,
+  companySize,
+  estSince,
+  email,
+  location,
+  linkedin,
+  twitter,
+  instagram,
+  facebook,
+}) => {
   return (
     <ul className="company-info">
       <li>
-        Primary industry: <span>Software</span>
+        Primary industry: <span>{primaryIndustry || "N/A"}</span>
       </li>
       <li>
-        Company size: <span>501-1,000</span>
+        Company size: <span>{companySize || "N/A"}</span>
       </li>
       <li>
-        Founded in: <span>2011</span>
+        Founded in: <span>{estSince || "N/A"}</span>
       </li>
       <li>
-        Phone: <span>123 456 7890</span>
+        Email: <span>{email || "N/A"}</span>
       </li>
       <li>
-        Email: <span>info@joio.com</span>
-      </li>
-      <li>
-        Location: <span>London, UK</span>
+        Location: <span>{location || "N/A"}</span>
       </li>
       <li>
         Social media:
-        <Social />
+        <Social
+          linkedin={linkedin}
+          twitter={twitter}
+          instagram={instagram}
+          facebook={facebook}
+        />
       </li>
     </ul>
   );
