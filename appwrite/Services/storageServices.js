@@ -106,21 +106,21 @@ const fetchAllBuckets = async () => {
       storageServices[bucketConfig.name] = {
         bucketId: bucket.$id,
         createFile: async (file, id = ID.unique()) =>
-          await storage.createFile(bucket.$id, id, file),
+          await simpleStorage.createFile(bucket.$id, id, file),
         deleteFile: async (fileId) =>
-          await storage.deleteFile(bucket.$id, fileId),
+          await simpleStorage.deleteFile(bucket.$id, fileId),
         getFile: async (fileId) => await storage.getFile(bucket.$id, fileId),
         getFileDownload: async (fileId) =>
-          await storage.getFileDownload(bucket.$id, fileId),
+          await simpleStorage.getFileDownload(bucket.$id, fileId),
         getFilePreview: async (fileId) =>
-          await storage.getFilePreview(bucket.$id, fileId),
+          await simpleStorage.getFilePreview(bucket.$id, fileId),
         getFileView: async (fileId) =>
           await simpleStorage.getFileView(bucket.$id, fileId),
         // await storage.getFileView(bucket.$id, fileId),
         listFiles: async (queries) =>
-          await storage.listFiles(bucket.$id, queries),
+          await simpleStorage.listFiles(bucket.$id, queries),
         updateFile: async (fileId, file) =>
-          await storage.updateFile(bucket.$id, fileId, file),
+          await simpleStorage.updateFile(bucket.$id, fileId, file),
       };
     }
 
