@@ -16,8 +16,12 @@ import {
   isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
+import useAuth from "@/app/hooks/useAuth";
 
 const HeaderNavContent = () => {
+  const { user, loading } = useAuth();
+  const pathname = usePathname();
+
   return (
     <>
       <nav className="nav main-menu">
@@ -56,28 +60,53 @@ const HeaderNavContent = () => {
             </div>
           </li> */}
 
-<li className={`${usePathname() === "/" ? "current" : ""}`}>
+          <li className={`${pathname === "/" ? "current" : ""}`}>
             <Link href="/">Home</Link>
           </li>
           {/* End homepage menu items */}
 
-
-
-
-          <li className={`${usePathname() === "/about" ? "current" : ""}`}>
+          <li className={`${pathname === "/about" ? "current" : ""}`}>
             <Link href="/about">About Us</Link>
           </li>
           {/* End About Page */}
 
-          <li className={`${usePathname() === "/skills" ? "current" : ""}`}>
+          <li className={`${pathname === "/skills" ? "current" : ""}`}>
             <Link href="/skills">Skills</Link>
           </li>
           {/*End Skills */}
 
-          <li className={`${usePathname() === "/companies" ? "current" : ""}`}>
-            <Link href="/companies">Companies</Link>
-          </li>
-          {/*End Companies */}
+          {/* Only show these items if user is logged in */}
+          {user && (
+            <>
+              {/* Show Companies link only for job seekers */}
+              {user.team === "jobSeekers" && (
+                <li className={`${pathname === "/employers-list-v3" ? "current" : ""}`}>
+                  <Link href="/employers-list-v3">Company Listings</Link>
+                </li>
+              )}
+
+              {/* Show Job Listings for both roles */}
+              <li className={`${pathname === "/job-list-v5" ? "current" : ""}`}>
+                <Link href="/job-list-v5">Job Listings</Link>
+              </li>
+
+              {/* Show Candidate Listings only for employers */}
+              {user.team === "companies" && (
+                <li className={`${pathname === "/candidates-list-v3" ? "current" : ""}`}>
+                  <Link href="/candidates-list-v3">Candidate Listings</Link>
+                </li>
+              )}
+
+              {/* Show appropriate dashboard link based on user role */}
+              <li className={`${pathname.includes("dashboard") ? "current" : ""}`}>
+                {user.team === "companies" ? (
+                  <Link href="/employers-dashboard/dashboard">Company Dashboard</Link>
+                ) : (
+                  <Link href="/candidates-dashboard/my-profile">Candidate Dashboard</Link>
+                )}
+              </li>
+            </>
+          )}
 
           {/* <li
             className={`${
@@ -113,9 +142,6 @@ const HeaderNavContent = () => {
               </div>
             </div>
           </li> */}
-          <li className={`${usePathname() === "/job-list-v5" ? "current" : ""}`}>
-            <Link href="/job-list-v5">Job Listings</Link>
-          </li>
           {/* End findjobs menu items */}
 
           {/* <li
@@ -168,27 +194,19 @@ const HeaderNavContent = () => {
               </li>
             </ul>
           </li> */}
-<li className={`${usePathname() === "/candidates-list-v3" ? "current" : ""}`}>
-            <Link href="/candidates-list-v3">Candidate Listings</Link>
-          </li>
-<li className={`${usePathname() === "/employers-list-v3" ? "current" : ""}`}>
-            <Link href="/employers-list-v3">Company Listings</Link>
-          </li>
           {/* End Employers menu items */}
 
-          <li
+          {/* <li
             className={`${
               isActiveParent(candidateItems, usePathname()) ||
               usePathname()?.split("/")[1] === "candidates-dashboard"
-                ? "current"
-                : ""
                 ? "current"
                 : ""
             } dropdown`}
           >
             <span>Dashboards</span>
             <ul>
-              {/* {candidateItems.map((item) => (
+              {candidateItems.map((item) => (
                 <li className="dropdown" key={item.id}>
                   <span
                     className={
@@ -214,7 +232,7 @@ const HeaderNavContent = () => {
                     ))}
                   </ul>
                 </li>
-              ))} */}
+              ))}
               <li
                 className={
                   usePathname()?.includes("/employers-dashboard")

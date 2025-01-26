@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import About from "../about/About";
 import AppSection from "../app-section/AppSection";
@@ -23,10 +25,11 @@ import JobFeatured1 from "../job-featured/JobFeatured1";
 import Testimonial from "../testimonial/Testimonial";
 import TopCompany from "../top-company/TopCompany";
 import Candidates from "../candidates/Candidates";
-
-
+import useAuth from "@/app/hooks/useAuth";
 
 const index = () => {
+  const { user, loading } = useAuth();
+
   return (
     <>
       <LoginPopup />
@@ -50,7 +53,7 @@ const index = () => {
           </div>
 
           <div
-            className="row "
+            className="row"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
           >
@@ -61,40 +64,42 @@ const index = () => {
       </section>
       {/* End Job Categorie Section */}
 
-      <section className="job-section">
-        <div className="auto-container">
-          <div className="sec-title text-center">
-            <h2>Featured Jobs</h2>
-            <div className="text">
-              Know your worth and find the job that qualify your life
+      {/* Only show job section if user is logged in */}
+      {user && (
+        <section className="job-section">
+          <div className="auto-container">
+            <div className="sec-title text-center">
+              <h2>Featured Jobs</h2>
+              <div className="text">
+                Know your worth and find the job that qualify your life
+              </div>
+            </div>
+
+            <div className="row" data-aos="fade-up">
+              <JobFeatured1 />
+            </div>
+
+            <div className="btn-box">
+              <Link href="/job-list-v5" className="theme-btn btn-style-one bg-blue">
+                <span className="btn-title">Load More Listing</span>
+              </Link>
             </div>
           </div>
-
-          <div className="row " data-aos="fade-up">
-            <JobFeatured1 />
-          </div>
-
-          <div className="btn-box">
-            <Link
-              href="/job-list-v5"
-              className="theme-btn btn-style-one bg-blue"
-            >
-              <span className="btn-title">Load More Listing</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
       {/* End Job Featured Section */}
 
-      <section className="top-companies">
-        <div className="auto-container">
-          <div className="sec-title">
-            <h2>Top Company Registered</h2>
-            <div className="text">
-              Some of the companies we have helped recruit excellent applicants
-              over the years.
+      {/* Only show companies section if user is logged in as job seeker */}
+      {user && user.team === "jobSeekers" && (
+        <section className="top-companies">
+          <div className="auto-container">
+            <div className="sec-title">
+              <h2>Top Company Registered</h2>
+              <div className="text">
+                Some of the companies we have helped recruit excellent applicants
+                over the years.
+              </div>
             </div>
-          </div>
 
           <div className="carousel-outer" data-aos="fade-up">
             <div className="companies-carousel">
@@ -111,16 +116,19 @@ const index = () => {
           </div>
         </div>
       </section>
+      )}
       {/* <!-- End Top Companies --> */}
 
-      <section className="candidates-section">
-        <div className="auto-container">
-          <div className="sec-title">
-            <h2>Featured Candidates</h2>
-            <div className="text">
-              Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
+      {/* Only show candidates section if user is logged in as employer */}
+      {user && user.team === "companies" && (
+        <section className="candidates-section">
+          <div className="auto-container">
+            <div className="sec-title">
+              <h2>Featured Candidates</h2>
+              <div className="text">
+                Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
+              </div>
             </div>
-          </div>
 
           <div className="carousel-outer" data-aos="fade-up">
             <div className="candidates-carousel default-dots">
@@ -137,8 +145,8 @@ const index = () => {
           </div>
         </div>
       </section>
+      )}
       {/* <!-- End Candidates Section --> */}
-
 
       <section className="registeration-banners">
         <div className="auto-container">
@@ -149,16 +157,10 @@ const index = () => {
       </section>
       {/* <!-- End Skills/Companies Banners -->  */}
 
-
-
-      <section className="layout-pt-120 layout-pb-120 ">
+      <section className="layout-pt-120 layout-pb-120">
         <div className="auto-container">
           <div className="sec-title text-center">
             <h2>Our Services</h2>
-            {/* <div className="text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod
-            </div> */}
           </div>
           {/* End sec-title */}
 
@@ -169,7 +171,6 @@ const index = () => {
         </div>
       </section>
       {/* <!-- End Services Section --> */}
-
 
       <section className="about-section-two">
         <div className="auto-container">
@@ -184,10 +185,7 @@ const index = () => {
         <div className="auto-container">
           {/* <!-- Sec Title --> */}
           <div className="sec-title text-center text-5xl font-medium">
-           Holistic solutions are needed.
-            {/* <div className="text">
-              Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
-            </div> */}
+            Holistic solutions are needed.
           </div>
           {/* End sec-title */}
 
@@ -204,7 +202,6 @@ const index = () => {
       <CallToAction11 />
       {/* <!-- End CallToAction Section --> */}
 
-
       <section className="faqs-section">
         <div className="auto-container">
           <div className="sec-title text-center">
@@ -217,10 +214,6 @@ const index = () => {
         </div>
       </section>
       {/* <!-- End Faqs Section --> */}
-
-      
-     
-
 
       <FooterDefault />
       {/* <!-- End Main Footer --> */}

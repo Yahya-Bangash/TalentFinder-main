@@ -16,23 +16,23 @@ const useAuth = () => {
           const currentUser = await getCurrentUser();
           if (!currentUser.team) {
             console.error("User team is null or undefined:", currentUser);
-            router.push("/login"); // Redirect to login if team is not defined
+            setUser(null);
           } else {
             setUser(currentUser);
           }
         } else {
-          router.push("/login"); // Redirect to login if not authenticated
+          setUser(null);
         }
       } catch (error) {
         console.error("Authentication error:", error);
-        router.push("/login"); // Redirect to login if there's an error
+        setUser(null);
       } finally {
         setLoading(false);
       }
     };
 
     authenticateUser();
-  }, [router]);
+  }, []);
 
   return { user, loading };
 };
