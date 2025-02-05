@@ -137,7 +137,7 @@ const PostBoxForm = () => {
         </div>
 
         <div className="form-group col-lg-6 col-md-12">
-          <label>Specialisms</label>
+          <label>Select Job Categories</label>
           <Select
             value={flatOptions.filter(option => jobData.categoryTags.includes(option.value))}
             isMulti

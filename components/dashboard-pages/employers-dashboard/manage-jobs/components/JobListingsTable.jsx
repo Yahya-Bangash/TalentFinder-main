@@ -88,6 +88,7 @@ const JobListingsTable = () => {
                 <tr>
                   <th>Title</th>
                   {/* <th>Applications</th> */}
+                  <th>Rate</th>
                   <th>Created</th>
                   <th>Action</th>
                 </tr>
@@ -109,9 +110,9 @@ const JobListingsTable = () => {
                         </div>
                       </div>
                     </td>
-                    {/* <td className="applied">
-                      <a href="#">3+ Applied</a>
-                    </td> */}
+                    <td>
+                      {item.rate}
+                    </td>
                     <td>
                       {new Date(item.creationTime).toLocaleDateString()}
                     </td>
