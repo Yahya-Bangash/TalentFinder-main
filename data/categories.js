@@ -2,6 +2,7 @@ module.exports = [
   {
     label: "Metal Technology",
     value: "Metal Technology",
+    icon: "flaticon-rocket-ship",
     subOptions: [
       { value: "Plant mechanic", label: "Plant mechanic" },
       { value: "CNC specialist", label: "CNC specialist" },
@@ -40,6 +41,7 @@ module.exports = [
   {
     label: "Welding Technology",
     value: "Welding Technology",
+    icon: "flaticon-web-programming",
     subOptions: [
       { value: "Manual electric welder", label: "Manual electric welder" },
       { value: "Gas welder", label: "Gas welder" },
@@ -54,6 +56,7 @@ module.exports = [
   {
     label: "Electrical Engineering",
     value: "Electrical Engineering",
+    icon: "flaticon-vector",
     subOptions: [
       {
         value: "Bachelor of Engineering Electrical Engineering",
@@ -128,15 +131,22 @@ module.exports = [
   {
     label: "Mechatronics",
     value: "Mechatronics",
+    icon: "flaticon-promotion",
     subOptions: [
       { value: "Engineer - Mechatronics", label: "Engineer - Mechatronics" },
       { value: "Mechatronics engineer", label: "Mechatronics engineer" },
     ],
   },
-  { label: "Chemistry", value: "Chemistry", subOptions: [] },
+  {
+    label: "Chemistry",
+    value: "Chemistry",
+    icon: "flaticon-first-aid-kit-1",
+    subOptions: [],
+  },
   {
     label: "IT/EDP",
     value: "IT/EDP",
+    icon: "flaticon-web-programming",
     subOptions: [
       {
         value: "IT specialist for system integration",
@@ -158,6 +168,7 @@ module.exports = [
   {
     label: "Software Development",
     value: "Software Development",
+    icon: "flaticon-web-programming",
     subOptions: [
       { value: "Backend Developer", label: "Backend Developer" },
       { value: "Database developer", label: "Database developer" },
@@ -172,6 +183,7 @@ module.exports = [
   {
     label: "Warehouse Logistics",
     value: "Warehouse Logistics",
+    icon: "flaticon-money-1",
     subOptions: [],
   },
 ];
