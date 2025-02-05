@@ -15,7 +15,7 @@ const JobModal = ({ isOpen, onClose, job }) => {
           <strong>Category Tags:</strong> {job.categoryTags.join(", ")}
         </p>
         <p className="mb-4">
-          <strong>Salary:</strong> {job.salary}
+          <strong>Salary:</strong> {job.rate}
         </p>
         <button 
           onClick={onClose} 
