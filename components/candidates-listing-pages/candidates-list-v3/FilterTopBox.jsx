@@ -18,7 +18,8 @@ import {
   addCategory,
   addDatePost,
   addDestination,
-  addCandidateGender
+  addCandidateGender,
+  addJobTitle
 } from "../../../features/filter/candidateFilterSlice";
 import {
   clearDatePost,
@@ -28,6 +29,8 @@ import {
 import categories from "../../../data/categories"; // Import categories data
 
 const FilterTopBox = () => {
+  const dispatch = useDispatch();
+  
   const {
     keyword,
     jobTitle, // New jobTitle state from LocationBox
@@ -243,6 +246,7 @@ const FilterTopBox = () => {
     dispatch(clearQualificationF());
     dispatch(addSort(""));
     dispatch(addPerPage({ start: 0, end: 0 }));
+    dispatch(addJobTitle("")); // Also clear the job title
   };
 
   if (isLoading) return <div>Loading candidates...</div>;
