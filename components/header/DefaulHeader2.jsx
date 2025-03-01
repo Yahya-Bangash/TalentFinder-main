@@ -4,9 +4,16 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import HeaderNavContent from "./HeaderNavContent";
 import Image from "next/image";
+import { getCurrentUser } from '@/appwrite/Services/authServices';
+import candidatesMenuData from "../../data/candidatesMenuData";
+import { isActiveLink } from "../../utils/linkActiveChecker";
+import { usePathname } from "next/navigation";
+import employerMenuData from "../../data/employerMenuData";
 
 const DefaulHeader2 = () => {
   const [navbar, setNavbar] = useState(false);
+  const [user, setUser] = useState(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -18,6 +25,11 @@ const DefaulHeader2 = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
+    const fetchUser = async () => {
+      const currentUser = await getCurrentUser();
+      setUser(currentUser);
+    };
+    fetchUser();
   }, []);
 
   return (
@@ -51,21 +63,42 @@ const DefaulHeader2 = () => {
         {/* End .nav-outer */}
 
         <div className="outer-box">
-          {/* <!-- Add Listing --> */}
-          {/* <Link href="/candidates-dashboard/cv-manager" className="upload-cv">
-            Upload your CV
-          </Link> */}
-          {/* <!-- Login/Register --> */}
-          <div className="btn-box">
-            <Link href="/register" className="theme-btn btn-style-three">
-              Login / Register
-            </Link>
-            {/* <Link
-              href="/employers-dashboard/post-jobs"
-              className="theme-btn btn-style-one"
-            >
-              Job Post
-            </Link> */}
+          <div className="dropdown dashboard-option">
+            <a className="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Image
+                alt="avatar"
+                className="thumb"
+                src={user && user.team === 'jobSeekers' ? "/images/jordii-logo.png" : "/images/resource/company-6.png"}
+                width={50}
+                height={50}
+                onLoad={() => setImageLoaded(true)}
+              />
+              <span className="name">
+                {user ? (user.team === 'jobSeekers' ? 'Candidate' : 'Company') : ''}
+              </span>
+            </a>
+            <ul className="dropdown-menu">
+              {user ? (
+                user.team === 'jobSeekers' ? (
+                  candidatesMenuData.map((item) => (
+                    <li className={`${isActiveLink(item.routePath, usePathname()) ? "active" : ""}`} key={item.id}>
+                      <Link href={item.routePath}>
+                        <i className={`la ${item.icon}`}></i> {item.name}
+                      </Link>
+                    </li>
+                  ))
+                ) : (
+                  employerMenuData.map((item) => (
+                    <li className={`${isActiveLink(item.routePath, usePathname()) ? "active" : ""}`} key={item.id}>
+                      <Link href={item.routePath}>
+                        <i className={`la ${item.icon}`}></i> {item.name}
+                      </Link>
+                    </li>
+                  ))
+                )
+              ) : null
+            }
+            </ul>
           </div>
         </div>
       </div>
