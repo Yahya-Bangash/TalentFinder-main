@@ -13,7 +13,7 @@ import employerMenuData from "../../data/employerMenuData";
 const DefaulHeader2 = () => {
   const [navbar, setNavbar] = useState(false);
   const [user, setUser] = useState(null);
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -28,6 +28,7 @@ const DefaulHeader2 = () => {
     const fetchUser = async () => {
       const currentUser = await getCurrentUser();
       setUser(currentUser);
+      setLoading(false);
     };
     fetchUser();
   }, []);
@@ -65,14 +66,19 @@ const DefaulHeader2 = () => {
         <div className="outer-box">
           <div className="dropdown dashboard-option">
             <a className="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <Image
-                alt="avatar"
-                className="thumb"
-                src={user && user.team === 'jobSeekers' ? "/images/jordii-logo.png" : "/images/resource/company-6.png"}
-                width={50}
-                height={50}
-                onLoad={() => setImageLoaded(true)}
-              />
+              {loading ? (
+                <div className="flex items-center justify-center">
+                  <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-blue-500"></div>
+                </div>
+              ) : (
+                <Image
+                  alt="avatar"
+                  className="thumb"
+                  src={user && user.team === 'jobSeekers' ? "/images/jordii-logo.png" : "/images/resource/company-6.png"}
+                  width={50}
+                  height={50}
+                />
+              )}
               <span className="name">
                 {user ? (user.team === 'jobSeekers' ? 'Candidate' : 'Company') : ''}
               </span>
