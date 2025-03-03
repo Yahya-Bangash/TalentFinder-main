@@ -33,8 +33,17 @@ const DefaulHeader2 = () => {
         const isAuthenticated = await checkAuth();
         
         if (isAuthenticated) {
-          const currentUser = await getCurrentUser();
-          setUser(currentUser);
+          try {
+            const currentUser = await getCurrentUser();
+            if (currentUser) {
+              setUser(currentUser);
+            } else {
+              setUser(null);
+            }
+          } catch (error) {
+            console.error("Error getting current user:", error);
+            setUser(null);
+          }
         } else {
           setUser(null);
         }
@@ -47,6 +56,11 @@ const DefaulHeader2 = () => {
     };
     
     fetchUser();
+    
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
+    };
   }, []);
 
   return (

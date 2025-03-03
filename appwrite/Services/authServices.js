@@ -174,35 +174,48 @@ export const getCurrentUser = async () => {
     const profileImg = localStorage.getItem("userProfileImg");
 
     if (!userId || !team) {
-      console.error("User ID or team information is missing in localStorage");
-      throw new Error("User information is missing");
+      // Instead of throwing an error, return null to indicate no user
+      return null;
     }
 
     return { userId, team, name, profileImg };
   } catch (error) {
     console.error("Error fetching current user from localStorage:", error);
-    throw error;
+    return null; // Return null instead of throwing an error
   }
 };
-
-
 
 // Function to check if the user is authenticated
 export const checkAuth = async () => {
   try {
+    // Check if there's a session token in localStorage
     const authToken = localStorage.getItem("authToken");
-    if (!authToken) {
+    const userId = localStorage.getItem("userId");
+    
+    if (!authToken || !userId) {
       return false;
     }
-   
-    return true;
+    
+    // Verify the session with Appwrite
+    try {
+      const session = await account.getSession('current');
+      return session && session.$id === authToken;
+    } catch (error) {
+      // Session might be invalid or expired
+      console.error("Session verification error:", error);
+      // Clear invalid session data
+      localStorage.removeItem("authToken");
+      localStorage.removeItem("userId");
+      localStorage.removeItem("team");
+      localStorage.removeItem("userName");
+      localStorage.removeItem("userProfileImg");
+      return false;
+    }
   } catch (error) {
-    console.error("Error during authentication check:", error);
+    console.error("Authentication check error:", error);
     return false;
   }
 };
-
-
 
 // Function to send a password recovery email
 export const sendPasswordRecoveryEmail = async (email) => {
