@@ -19,7 +19,13 @@ export async function registerUser(
     localStorage.setItem("authToken", user.$id);
 
     // Step 2: Authenticate the user (log in to create a session)
-    await account.createEmailPasswordSession(email, password);
+    try {
+      await account.createEmailPasswordSession(email, password);
+      console.log('Session created successfully for user:', email);
+    } catch (sessionError) {
+      console.error('Error creating session:', sessionError);
+      throw new Error('Session creation failed. Please log in again.');
+    }
 
     // Step 3: Assign the user to a team
     await assignUserToTeam(user.$id, email, isEmployer);
