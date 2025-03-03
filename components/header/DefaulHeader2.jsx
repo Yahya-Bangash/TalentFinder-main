@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import HeaderNavContent from "./HeaderNavContent";
 import Image from "next/image";
-import { getCurrentUser } from '@/appwrite/Services/authServices';
+import { checkAuth, getCurrentUser } from '@/appwrite/Services/authServices';
 import candidatesMenuData from "../../data/candidatesMenuData";
 import { isActiveLink } from "../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
@@ -14,6 +14,7 @@ const DefaulHeader2 = () => {
   const [navbar, setNavbar] = useState(false);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const defaultProfileImage = "/images/icons/user.svg";
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -25,24 +26,36 @@ const DefaulHeader2 = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
+    
     const fetchUser = async () => {
-      const currentUser = await getCurrentUser();
-      setUser(currentUser);
-      setLoading(false);
+      try {
+        // First check if user is authenticated
+        const isAuthenticated = await checkAuth();
+        
+        if (isAuthenticated) {
+          const currentUser = await getCurrentUser();
+          setUser(currentUser);
+        } else {
+          setUser(null);
+        }
+      } catch (error) {
+        console.error("Error fetching user:", error);
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
     };
+    
     fetchUser();
   }, []);
 
   return (
-    // <!-- Main Header-->
     <header
-      className={`main-header  ${
+      className={`main-header ${
         navbar ? "fixed-header animated slideInDown" : ""
       }`}
     >
-      {/* <!-- Main box --> */}
       <div className="main-box">
-        {/* <!--Nav Outer --> */}
         <div className="nav-outer">
           <div className="logo-box">
             <div className="logo">
@@ -56,56 +69,93 @@ const DefaulHeader2 = () => {
               </Link>
             </div>
           </div>
-          {/* End .logo-box */}
 
           <HeaderNavContent />
-          {/* <!-- Main Menu End--> */}
         </div>
-        {/* End .nav-outer */}
 
         <div className="outer-box">
-          <div className="dropdown dashboard-option">
-            <a className="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {loading ? (
-                <div className="flex items-center justify-center">
-                  <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-blue-500"></div>
-                </div>
-              ) : (
+          {loading ? (
+            <div className="flex items-center justify-center">
+              <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
+            </div>
+          ) : user ? (
+            <div className="dropdown dashboard-option">
+              <a
+                className="dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}
+              >
                 <Image
                   alt="avatar"
-                  className="thumb"
-                  src={user && user.team === 'jobSeekers' ? "/images/jordii-logo.png" : "/images/resource/company-6.png"}
-                  width={50}
-                  height={50}
+                  className="thumb rounded-full"
+                  src={user.profileImg || defaultProfileImage}
+                  width={40}
+                  height={40}
+                  style={{
+                    objectFit: 'cover'
+                  }}
                 />
-              )}
-              <span className="name">
-                {user ? (user.team === 'jobSeekers' ? 'Candidate' : 'Company') : ''}
-              </span>
-            </a>
-            <ul className="dropdown-menu">
-              {user ? (
-                user.team === 'jobSeekers' ? (
-                  candidatesMenuData.map((item) => (
-                    <li className={`${isActiveLink(item.routePath, usePathname()) ? "active" : ""}`} key={item.id}>
-                      <Link href={item.routePath}>
-                        <i className={`la ${item.icon}`}></i> {item.name}
-                      </Link>
-                    </li>
-                  ))
-                ) : (
-                  employerMenuData.map((item) => (
-                    <li className={`${isActiveLink(item.routePath, usePathname()) ? "active" : ""}`} key={item.id}>
-                      <Link href={item.routePath}>
-                        <i className={`la ${item.icon}`}></i> {item.name}
-                      </Link>
-                    </li>
-                  ))
-                )
-              ) : null
-            }
-            </ul>
-          </div>
+                <div className="name-wrapper" style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0px'
+                }}>
+                  <span className="name" style={{
+                    fontSize: '15px',
+                    fontWeight: '500',
+                    color: '#202124',
+                    lineHeight: '1.2'
+                  }}>{user.name || 'User'}</span>
+                  <span className="user-type" style={{
+                    fontSize: '12px',
+                    color: '#666',
+                    lineHeight: '1.2'
+                  }}>{user.team === "companies" ? "Company" : "Job Seeker"}</span>
+                </div>
+              </a>
+
+              <ul className="dropdown-menu">
+                {user.team === 'jobSeekers' 
+                  ? candidatesMenuData.map((item) => (
+                      <li
+                        className={`${
+                          isActiveLink(item.routePath, usePathname()) ? "active" : ""
+                        } mb-1`}
+                        key={item.id}
+                      >
+                        <Link href={item.routePath}>
+                          <i className={`la ${item.icon}`}></i> {item.name}
+                        </Link>
+                      </li>
+                    ))
+                  : employerMenuData.map((item) => (
+                      <li
+                        className={`${
+                          isActiveLink(item.routePath, usePathname()) ? "active" : ""
+                        } mb-1`}
+                        key={item.id}
+                      >
+                        <Link href={item.routePath}>
+                          <i className={`la ${item.icon}`}></i> {item.name}
+                        </Link>
+                      </li>
+                    ))
+                }
+              </ul>
+            </div>
+          ) : (
+            <div className="btn-box">
+              <Link href="/register" className="theme-btn btn-style-three">
+                Login / Register
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </header>

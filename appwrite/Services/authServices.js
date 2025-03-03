@@ -52,18 +52,17 @@ export const signIn = async (email, password) => {
     localStorage.setItem("authToken", session.$id); // Store the session ID
     localStorage.setItem("userId", session.userId);
     // Step 2: Extract user ID from session
-    const userId = session.userId; // Ensure this is correct
+    const userId = session.userId;
     console.log("User ID:", userId);
+
+    // Check team membership
     const isUserInTeam = async (teamId) => {
       let isInTeam = false;
-      let page = 0; // Initialize the page number
-      const limit = 25; // Default limit per request
+      let page = 0;
+      const limit = 25;
 
       try {
         while (true) {
-          
-
-          // Fetch the list of memberships with pagination
           const response = await teams.listMemberships(teamId, [
             sdk.Query.limit(limit),
             sdk.Query.offset(page * limit),
@@ -71,18 +70,15 @@ export const signIn = async (email, password) => {
 
           const memberships = response.memberships;
 
-          // Check if the user is in the current batch of memberships
           if (memberships.some((membership) => membership.userId === userId)) {
             isInTeam = true;
-            break; // Stop further requests if user is found
+            break;
           }
 
-          // If there are fewer memberships than the limit, we've reached the end
           if (memberships.length < limit) {
             break;
           }
 
-          // Otherwise, move to the next page
           page += 1;
         }
       } catch (error) {
@@ -102,18 +98,32 @@ export const signIn = async (email, password) => {
       team = "companies";
     }
 
-    localStorage.setItem("team", team); // Store team information
+    localStorage.setItem("team", team);
+
+    // Fetch user profile data based on team
+    const db = await initializeDB();
+    const collection = team === "companies" ? db.companies : db.jobSeekers;
+    const userProfile = await collection.get(userId);
+
+    // Store user profile data
+    if (userProfile) {
+      localStorage.setItem("userName", userProfile.name || "");
+      localStorage.setItem("userProfileImg", userProfile.profileImg || "");
+    }
 
     return {
       session,
       userId,
       team,
+      name: userProfile?.name,
+      profileImg: userProfile?.profileImg
     };
   } catch (error) {
-    console.error("Login error:", error); // Log the error details
+    console.error("Login error:", error);
     throw error;
   }
 };
+
 // Function to assign the authenticated user to a team (can be called separately)
 export async function assignUserToTeam(userId, email, isEmployer) {
   try {
@@ -142,10 +152,12 @@ export async function assignUserToTeam(userId, email, isEmployer) {
 
 export const signOutUser = async () => {
   try {
-    await account.deleteSession('current'); // End the current session in Appwrite
-    localStorage.removeItem("authToken"); // Remove auth token from localStorage
-    localStorage.removeItem("userId");    // Remove user ID from localStorage
-    localStorage.removeItem("team");      // Remove team information from localStorage
+    await account.deleteSession('current');
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("team");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userProfileImg");
     console.log("User signed out successfully");
   } catch (error) {
     console.error("Error during sign out:", error);
@@ -158,13 +170,15 @@ export const getCurrentUser = async () => {
   try {
     const userId = localStorage.getItem("userId");
     const team = localStorage.getItem("team");
+    const name = localStorage.getItem("userName");
+    const profileImg = localStorage.getItem("userProfileImg");
 
     if (!userId || !team) {
       console.error("User ID or team information is missing in localStorage");
       throw new Error("User information is missing");
     }
 
-    return { userId, team };
+    return { userId, team, name, profileImg };
   } catch (error) {
     console.error("Error fetching current user from localStorage:", error);
     throw error;

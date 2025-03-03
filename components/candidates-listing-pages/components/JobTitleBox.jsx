@@ -24,7 +24,7 @@ const JobTitleBox = () => {
             <input
                 type="text"
                 name="listing-search"
-                placeholder="Job title"
+                placeholder="Job title, keywords, or company"
                 value={getJobTitle || ""}
                 onChange={jobTitleHandler}
             />
