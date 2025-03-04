@@ -19,7 +19,13 @@ export async function registerUser(
     localStorage.setItem("authToken", user.$id);
 
     // Step 2: Authenticate the user (log in to create a session)
-    await account.createEmailPasswordSession(email, password);
+    try {
+      await account.createEmailPasswordSession(email, password);
+      console.log('Session created successfully for user:', email);
+    } catch (sessionError) {
+      console.error('Error creating session:', sessionError);
+      throw new Error('Session creation failed. Please log in again.');
+    }
 
     // Step 3: Assign the user to a team
     await assignUserToTeam(user.$id, email, isEmployer);
@@ -46,18 +52,17 @@ export const signIn = async (email, password) => {
     localStorage.setItem("authToken", session.$id); // Store the session ID
     localStorage.setItem("userId", session.userId);
     // Step 2: Extract user ID from session
-    const userId = session.userId; // Ensure this is correct
+    const userId = session.userId;
     console.log("User ID:", userId);
+
+    // Check team membership
     const isUserInTeam = async (teamId) => {
       let isInTeam = false;
-      let page = 0; // Initialize the page number
-      const limit = 25; // Default limit per request
+      let page = 0;
+      const limit = 25;
 
       try {
         while (true) {
-          
-
-          // Fetch the list of memberships with pagination
           const response = await teams.listMemberships(teamId, [
             sdk.Query.limit(limit),
             sdk.Query.offset(page * limit),
@@ -65,18 +70,15 @@ export const signIn = async (email, password) => {
 
           const memberships = response.memberships;
 
-          // Check if the user is in the current batch of memberships
           if (memberships.some((membership) => membership.userId === userId)) {
             isInTeam = true;
-            break; // Stop further requests if user is found
+            break;
           }
 
-          // If there are fewer memberships than the limit, we've reached the end
           if (memberships.length < limit) {
             break;
           }
 
-          // Otherwise, move to the next page
           page += 1;
         }
       } catch (error) {
@@ -96,18 +98,32 @@ export const signIn = async (email, password) => {
       team = "companies";
     }
 
-    localStorage.setItem("team", team); // Store team information
+    localStorage.setItem("team", team);
+
+    // Fetch user profile data based on team
+    const db = await initializeDB();
+    const collection = team === "companies" ? db.companies : db.jobSeekers;
+    const userProfile = await collection.get(userId);
+
+    // Store user profile data
+    if (userProfile) {
+      localStorage.setItem("userName", userProfile.name || "");
+      localStorage.setItem("userProfileImg", userProfile.profileImg || "");
+    }
 
     return {
       session,
       userId,
       team,
+      name: userProfile?.name,
+      profileImg: userProfile?.profileImg
     };
   } catch (error) {
-    console.error("Login error:", error); // Log the error details
+    console.error("Login error:", error);
     throw error;
   }
 };
+
 // Function to assign the authenticated user to a team (can be called separately)
 export async function assignUserToTeam(userId, email, isEmployer) {
   try {
@@ -136,10 +152,12 @@ export async function assignUserToTeam(userId, email, isEmployer) {
 
 export const signOutUser = async () => {
   try {
-    await account.deleteSession('current'); // End the current session in Appwrite
-    localStorage.removeItem("authToken"); // Remove auth token from localStorage
-    localStorage.removeItem("userId");    // Remove user ID from localStorage
-    localStorage.removeItem("team");      // Remove team information from localStorage
+    await account.deleteSession('current');
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("team");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userProfileImg");
     console.log("User signed out successfully");
   } catch (error) {
     console.error("Error during sign out:", error);
@@ -152,37 +170,52 @@ export const getCurrentUser = async () => {
   try {
     const userId = localStorage.getItem("userId");
     const team = localStorage.getItem("team");
+    const name = localStorage.getItem("userName");
+    const profileImg = localStorage.getItem("userProfileImg");
 
     if (!userId || !team) {
-      console.error("User ID or team information is missing in localStorage");
-      throw new Error("User information is missing");
+      // Instead of throwing an error, return null to indicate no user
+      return null;
     }
 
-    return { userId, team };
+    return { userId, team, name, profileImg };
   } catch (error) {
     console.error("Error fetching current user from localStorage:", error);
-    throw error;
+    return null; // Return null instead of throwing an error
   }
 };
-
-
 
 // Function to check if the user is authenticated
 export const checkAuth = async () => {
   try {
+    // Check if there's a session token in localStorage
     const authToken = localStorage.getItem("authToken");
-    if (!authToken) {
+    const userId = localStorage.getItem("userId");
+    
+    if (!authToken || !userId) {
       return false;
     }
-   
-    return true;
+    
+    // Verify the session with Appwrite
+    try {
+      const session = await account.getSession('current');
+      return session && session.$id === authToken;
+    } catch (error) {
+      // Session might be invalid or expired
+      console.error("Session verification error:", error);
+      // Clear invalid session data
+      localStorage.removeItem("authToken");
+      localStorage.removeItem("userId");
+      localStorage.removeItem("team");
+      localStorage.removeItem("userName");
+      localStorage.removeItem("userProfileImg");
+      return false;
+    }
   } catch (error) {
-    console.error("Error during authentication check:", error);
+    console.error("Authentication check error:", error);
     return false;
   }
 };
-
-
 
 // Function to send a password recovery email
 export const sendPasswordRecoveryEmail = async (email) => {

@@ -10,7 +10,7 @@ module.exports = [
         value: "Specialist for metal technology",
         label: "Specialist for metal technology",
       },
-      { value: "Precision mechanic", label: "Precision mechanic" },
+      { value: "Precision mechanic", label: "Precision mechanic " },
       { value: "Foundry mechanic", label: "Foundry mechanic" },
       { value: "Industrial mechanic", label: "Industrial mechanic" },
       {

@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addJobTitle } from "../../../features/filter/candidateFilterSlice";
+import { addJobTitle } from "../../../features/filter/candidateFilterSlice"; // Import the new action for job title filtering
 
 const JobTitleBox = () => {
-    const { jobTitle } = useSelector((state) => state.candidateFilter) || {};
+    const { jobTitle } = useSelector((state) => state.candidateFilter) || {}; // Get jobTitle from Redux state
     const [getJobTitle, setJobTitle] = useState(jobTitle);
     const dispatch = useDispatch();
 
@@ -16,7 +16,7 @@ const JobTitleBox = () => {
 
     // Dispatch job title to Redux store
     useEffect(() => {
-        dispatch(addJobTitle(getJobTitle));
+        dispatch(addJobTitle(getJobTitle)); // Dispatch job title to Redux
     }, [dispatch, getJobTitle]);
 
     return (
@@ -25,7 +25,8 @@ const JobTitleBox = () => {
                 type="text"
                 name="listing-search"
                 placeholder="Job title"
-                value={getJobTitle || ""}
+                value={getJobTitle}
+
                 onChange={jobTitleHandler}
             />
             <span className="icon flaticon-briefcase"></span>
