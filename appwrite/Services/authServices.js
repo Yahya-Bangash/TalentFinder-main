@@ -17,6 +17,8 @@ export async function registerUser(
     // Step 1: Register the user
     const user = await account.create(ID.unique(), email, password);
     localStorage.setItem("authToken", user.$id);
+    localStorage.setItem("userId", user.$id);
+    localStorage.setItem("team", isEmployer ? "companies" : "jobSeekers");
 
     // Step 2: Authenticate the user (log in to create a session)
     await account.createEmailPasswordSession(email, password);
@@ -41,8 +43,11 @@ export async function registerUser(
 // Function to sign in the user by email and password, return user details and team membership
 export const signIn = async (email, password) => {
   try {
+    console.log("Attempting to sign in with email:", email); // Log the email being used
     // Step 1: Authenticate the user (create a session)
     const session = await account.createEmailPasswordSession(email, password);
+    console.log("Session created successfully:", session); // Log the session details
+
     localStorage.setItem("authToken", session.$id); // Store the session ID
     localStorage.setItem("userId", session.userId);
     // Step 2: Extract user ID from session
@@ -55,13 +60,12 @@ export const signIn = async (email, password) => {
 
       try {
         while (true) {
-          
-
           // Fetch the list of memberships with pagination
           const response = await teams.listMemberships(teamId, [
             sdk.Query.limit(limit),
             sdk.Query.offset(page * limit),
           ]);
+          console.log("Memberships response for team ID:", teamId, response); // Log the response
 
           const memberships = response.memberships;
 
@@ -136,36 +140,35 @@ export async function assignUserToTeam(userId, email, isEmployer) {
 
 export const signOutUser = async () => {
   try {
-    await account.deleteSession('current'); // End the current session in Appwrite
+    // await account.deleteSession('current'); // End the current session in Appwrite
     localStorage.removeItem("authToken"); // Remove auth token from localStorage
     localStorage.removeItem("userId");    // Remove user ID from localStorage
     localStorage.removeItem("team");      // Remove team information from localStorage
+    
     console.log("User signed out successfully");
   } catch (error) {
     console.error("Error during sign out:", error);
+    // Still try to clear localStorage even if there was an error
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("team");
     throw error;
   }
 };
 
 // Function to get the currently authenticated user
 export const getCurrentUser = async () => {
-  try {
-    const userId = localStorage.getItem("userId");
-    const team = localStorage.getItem("team");
+  const userId = localStorage.getItem("userId");
+  const team = localStorage.getItem("team");
 
-    if (!userId || !team) {
-      console.error("User ID or team information is missing in localStorage");
-      throw new Error("User information is missing");
-    }
-
-    return { userId, team };
-  } catch (error) {
-    console.error("Error fetching current user from localStorage:", error);
-    throw error;
+  // Check if userId or team is missing
+  if (!userId || !team) {
+    console.error("User ID or team information is missing in localStorage");
+    return null; // Return null instead of throwing an error
   }
+
+  return { userId, team }; // Return user information if available
 };
-
-
 
 // Function to check if the user is authenticated
 export const checkAuth = async () => {
@@ -181,8 +184,6 @@ export const checkAuth = async () => {
     return false;
   }
 };
-
-
 
 // Function to send a password recovery email
 export const sendPasswordRecoveryEmail = async (email) => {

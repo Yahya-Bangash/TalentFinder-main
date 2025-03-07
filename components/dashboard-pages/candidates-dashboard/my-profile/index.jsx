@@ -8,6 +8,8 @@ import ContactInfoBox from "./components/ContactInfoBox";
 import CopyrightFooter from "../../CopyrightFooter";
 import DashboardCandidatesHeader from "../../../header/DashboardCandidatesHeader";
 import MenuToggler from "../../MenuToggler";
+import HeaderNavContent from "@/components/header/HeaderNavContent";
+import DefaulHeader2 from "@/components/header/DefaulHeader2";
 
 const index = () => {
   return (
@@ -18,9 +20,8 @@ const index = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DashboardCandidatesHeader />
-      {/* End Header */}
-
+       <DefaulHeader2/>      {/* End Header */}
+xss
       <MobileMenu />
       {/* End MobileMenu */}
 
