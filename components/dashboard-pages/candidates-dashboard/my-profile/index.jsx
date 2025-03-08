@@ -4,7 +4,6 @@ import DashboardCandidatesSidebar from "../../../header/DashboardCandidatesSideb
 import BreadCrumb from "../../BreadCrumb";
 import MyProfile from "./components/my-profile";
 import SocialNetworkBox from "./components/SocialNetworkBox";
-import ContactInfoBox from "./components/ContactInfoBox";
 import CopyrightFooter from "../../CopyrightFooter";
 import DashboardCandidatesHeader from "../../../header/DashboardCandidatesHeader";
 import MenuToggler from "../../MenuToggler";
@@ -58,19 +57,6 @@ const index = () => {
 
                   <div className="widget-content">
                     <SocialNetworkBox />
-                  </div>
-                </div>
-              </div>
-              {/* <!-- Ls widget --> */}
-
-              <div className="ls-widget">
-                <div className="tabs-box">
-                  <div className="widget-title">
-                    <h4>Contact Information</h4>
-                  </div>
-                  {/* End widget-title */}
-                  <div className="widget-content">
-                    <ContactInfoBox />
                   </div>
                 </div>
               </div>
