@@ -163,7 +163,7 @@ export const getCurrentUser = async () => {
 
   // Check if userId or team is missing
   if (!userId || !team) {
-    console.error("User ID or team information is missing in localStorage");
+    
     return null; // Return null instead of throwing an error
   }
 
