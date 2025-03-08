@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Select from "react-select";
+import { useRouter } from 'next/navigation';
 import { createJobsCollectionIfNotExists } from "@/global-functions/functions";
 import useAuth from "@/app/hooks/useAuth";
 import initializeDB from "@/appwrite/Services/dbServices";
@@ -10,8 +11,11 @@ import categories from "@/data/categories";
 import skills from "@/data/skills";
 
 const PostBoxForm = () => {
+  const router = useRouter();
   const { user } = useAuth();
   const [db, setDb] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const [jobData, setJobData] = useState({
     jobTitle: "",
@@ -64,6 +68,7 @@ const PostBoxForm = () => {
   const handlePostJob = async (e) => {
     e.preventDefault();
     if (user.userId) {
+      setIsSubmitting(true);
       try {
         const jobDocumentPayload = { 
           ...jobData, 
@@ -71,9 +76,17 @@ const PostBoxForm = () => {
           creationTime: new Date().toISOString() 
         };
         await db.jobs.create(jobDocumentPayload, ID.unique());
-        console.log("Job posted successfully.");
+        setSuccessMessage("Job posted successfully!");
+        
+        // Navigate to the manage jobs page after a short delay
+        setTimeout(() => {
+          router.push('/employers-dashboard/manage-jobs');
+        }, 1500);
       } catch (error) {
         console.error("Error posting job:", error);
+        setSuccessMessage("");
+      } finally {
+        setIsSubmitting(false);
       }
     } else {
       console.error("User ID not found.");
@@ -112,6 +125,11 @@ const PostBoxForm = () => {
 
   return (
     <form className="default-form" onSubmit={handlePostJob}>
+      {successMessage && (
+        <div className="alert alert-success mb-4">
+          {successMessage}
+        </div>
+      )}
       <div className="row">
         <div className="form-group col-lg-12 col-md-12">
           <label>Job Title</label>
@@ -189,7 +207,13 @@ const PostBoxForm = () => {
         </div>
 
         <div className="form-group col-lg-12 col-md-12 text-right">
-          <button className="theme-btn btn-style-one" type="submit">Post Job</button>
+          <button 
+            className="theme-btn btn-style-one" 
+            type="submit"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Posting..." : "Post Job"}
+          </button>
         </div>
       </div>
     </form>

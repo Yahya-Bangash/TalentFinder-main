@@ -21,7 +21,7 @@ const index = () => {
       {/* End Login Popup Modal */}
 
        <DefaulHeader2/>      {/* End Header */}
-xss
+
       <MobileMenu />
       {/* End MobileMenu */}
 
