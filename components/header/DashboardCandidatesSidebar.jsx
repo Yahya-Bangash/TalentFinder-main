@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { menuToggle } from "../../features/toggle/toggleSlice";
 import { usePathname, useRouter } from "next/navigation";
 import { signOutUser } from "@/appwrite/Services/authServices";
-import db from "@/appwrite/Services/dbServices";
+import initializeDB from "@/appwrite/Services/dbServices";
 import * as sdk from "node-appwrite";
 
 const DashboardCandidatesSidebar = () => {
@@ -76,14 +76,21 @@ const DashboardCandidatesSidebar = () => {
       if (user && user.userId) {
         try {
           console.log("User ID:", user.userId); // Log the user ID
+          const db = await initializeDB();
+          
+          if (!db) {
+            console.error("Database not initialized");
+            return;
+          }
+
           if (user.team === "companies") {
-            const response = await db.company.list([sdk.Query.equal('userId', user.userId)]);
+            const response = await db.companies.list([sdk.Query.equal('userId', user.userId)]);
             console.log("Company Response:", response); // Log the company response
             if (response.documents.length > 0) {
               setUserName(response.documents[0].name || "My Company");
             }
           } else if (user.team === "jobSeekers") {
-            const response = await db.jobSeeker.list([sdk.Query.equal('userId', user.userId)]);
+            const response = await db.jobSeekers.list([sdk.Query.equal('userId', user.userId)]);
             console.log("Job Seeker Response:", response); // Log the job seeker response
             if (response.documents.length > 0) {
               setUserName(response.documents[0].name || "My Profile");
@@ -135,8 +142,8 @@ const DashboardCandidatesSidebar = () => {
         <div className="skills-percentage">
           <h4>Skills Percentage</h4>
           <p>
-            `Put value for <strong>Cover Image</strong> field to increase your
-            skill up to <strong>85%</strong>`
+            Put value for <strong>Cover Image</strong> field to increase your
+            skill up to <strong>85%</strong>
           </p>
           <div style={{ width: 200, height: 200, margin: "auto" }}>
             <CircularProgressbar
