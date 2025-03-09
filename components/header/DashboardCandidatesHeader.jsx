@@ -79,7 +79,7 @@ const DashboardCandidatesHeader = () => {
                                 <Image
                                     alt="avatar"
                                     className="thumb"
-                                    src="/images/jordii-logo.png"
+                                    src="/images/user-profile-icon.svg"
                                     width={50}
                                     height={50}
                                 />

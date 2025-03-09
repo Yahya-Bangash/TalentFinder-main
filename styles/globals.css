@@ -2,3 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Loading spinner styles */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.theme-btn.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: wait;
+}
+
+.theme-btn.error {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.theme-btn.error:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+

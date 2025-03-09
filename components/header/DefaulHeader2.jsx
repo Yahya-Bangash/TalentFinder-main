@@ -1,28 +1,27 @@
 'use client'
 
 import Link from "next/link";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import HeaderNavContent from "./HeaderNavContent";
 import Image from "next/image";
 import useAuth from "@/app/hooks/useAuth";
+import useUserProfile from "@/app/hooks/useUserProfile";
 import employerMenuData from "../../data/employerMenuData";
 import { isActiveLink } from "../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
-import db from "@/appwrite/Services/dbServices";
-import * as sdk from "node-appwrite";
 import { signOutUser } from "@/appwrite/Services/authServices";
 import candidatesMenuData from "@/data/candidatesMenuData";
 import { useRouter } from "next/navigation";
 
 const DefaulHeader2 = () => {
   const [navbar, setNavbar] = useState(false);
-  const { user, loading, setUser } = useAuth();
-  const [userName, setUserName] = useState("");
+  const { user, setUser } = useAuth();
+  const { profileData, loading: profileLoading, error: profileError } = useUserProfile();
+  console.log('profile url url '+ profileData?.profileImageUrl);
+  
   const pathname = usePathname();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  
   const [componentKey, setComponentKey] = useState(0);
-  
   const router = useRouter();
 
   // Simple function to handle logout
@@ -31,10 +30,13 @@ const DefaulHeader2 = () => {
       e.preventDefault();
       try {
         await signOutUser();
+        // Clear auth data
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("userData");
         setUser(null);
         setIsAuthenticated(false);
-        setComponentKey(prevKey => prevKey + 1);
-        router.push('/');
+        setComponentKey(prev => prev + 1); // Force re-render
+        router.replace('/');
       } catch (error) {
         console.error("Logout error:", error);
       }
@@ -45,7 +47,6 @@ const DefaulHeader2 = () => {
     // Check if user is authenticated
     const checkAuth = () => {
       const authToken = localStorage.getItem("authToken");
-      console.log("Auth Token:", authToken); // Log the auth token
       setIsAuthenticated(!!authToken);
       if (!authToken) {
         router.push('/'); // Redirect to home if not authenticated
@@ -53,7 +54,7 @@ const DefaulHeader2 = () => {
     };
 
     // Initial check
-    checkAuth(); // Call checkAuth directly
+    checkAuth();
 
     // Set up event listener for storage changes
     window.addEventListener('storage', checkAuth);
@@ -73,50 +74,104 @@ const DefaulHeader2 = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
+    return () => window.removeEventListener("scroll", changeBackground);
   }, []);
 
-  useEffect(() => {
-    const fetchUserName = async () => {
-      console.log("Fetching user name..."); // Log when fetching user name
-      if (user && user.userId) {
-        try {
-          console.log("User ID:", user.userId); // Log the user ID
-          if (user.team === "companies") {
-            const response = await db.company.list([sdk.Query.equal('userId', user.userId)]);
-            console.log("Company Response:", response); // Log the company response
-            if (response.documents.length > 0) {
-              setUserName(response.documents[0].name || "My Company");
-            }
-          } else if (user.team === "jobSeekers") {
-            const response = await db.jobSeeker.list([sdk.Query.equal('userId', user.userId)]);
-            console.log("Job Seeker Response:", response); // Log the job seeker response
-            if (response.documents.length > 0) {
-              setUserName(response.documents[0].name || "My Profile");
-            }
-          }
-        } catch (error) {
-          console.error("Error fetching user data:", error);
-          setUserName(user.team === "companies" ? "My Company" : "My Profile");
-        }
-      } else {
-        console.log("User is not authenticated or user ID is missing."); // Log if user is not authenticated
-      }
-    };
+  // Handle profile loading and error states
+  const renderProfileContent = () => {
+    if (profileLoading) {
+      return (
+        <span className="theme-btn btn-style-three loading">
+          <div className="loading-spinner"></div>
+          Loading...
+        </span>
+      );
+    }
 
-    fetchUserName();
-  }, [user]);
+    if (profileError) {
+      console.error('Profile error:', profileError);
+      return (
+        <span className="theme-btn btn-style-three error">
+          Error loading profile
+        </span>
+      );
+    }
+
+    if (!user || !isAuthenticated) {
+      return (
+        <Link href="/login" className="theme-btn btn-style-three">
+          Login / Register
+        </Link>
+      );
+    }
+
+    return (
+      <div className="dropdown dashboard-option">
+        <a
+          className="dropdown-toggle"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ 
+              width: "40px", 
+              height: "40px", 
+              backgroundColor: "#f0f0f0",
+              borderRadius: "50%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              overflow: "hidden"
+            }}>
+              <Image
+                alt="profile"
+                src={profileData?.profileImageUrl || "/images/user-profile-icon.svg"}
+                width={40}
+                height={40}
+                style={{ 
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%"
+                }}
+                priority
+              />
+            </div>
+            <span style={{ 
+              marginLeft: "10px",
+              fontSize: "16px", 
+              fontWeight: "500",
+              color: "#202124"
+            }}>
+              {profileData?.name || (user.team === "companies" ? "My Company" : "My Profile")}
+            </span>
+          </div>
+        </a>
+
+        <ul className="dropdown-menu">
+          {(user.team === "companies" ? employerMenuData : candidatesMenuData).map((item) => (
+            <li
+              className={`${isActiveLink(item.routePath, pathname) ? "active" : ""} mb-1`}
+              key={item.id}
+            >
+              <Link href={item.routePath} onClick={(e) => handleLogout(e, item.name)}>
+                <i className={`la ${item.icon}`}></i>{" "}
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
 
   return (
-    // <!-- Main Header-->
     <header
-      className={`main-header  ${
-        navbar ? "fixed-header animated slideInDown" : ""
-      }`}
+      className={`main-header ${navbar ? "fixed-header animated slideInDown" : ""}`}
       key={componentKey}
     >
-      {/* <!-- Main box --> */}
       <div className="main-box">
-        {/* <!--Nav Outer --> */}
         <div className="nav-outer">
           <div className="logo-box">
             <div className="logo">
@@ -130,81 +185,13 @@ const DefaulHeader2 = () => {
               </Link>
             </div>
           </div>
-          {/* End .logo-box */}
 
           <HeaderNavContent handleLogout={handleLogout} />
-          {/* <!-- Main Menu End--> */}
         </div>
-        {/* End .nav-outer */}
 
         <div className="outer-box">
-          {/* <!-- Login/Register or User Account --> */}
           <div className="btn-box">
-            {loading ? (
-              <span className="theme-btn btn-style-three">Loading...</span>
-            ) : user && isAuthenticated ? (
-              <div className="dropdown dashboard-option">
-                <a
-                  className="dropdown-toggle"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  style={{ display: "flex", alignItems: "center" }}
-                >
-                  <div style={{ display: "flex", alignItems: "center" }}>
-                    <Image
-                      alt="logo"
-                      src="/images/jordii-logo.png"
-                      width={50}
-                      height={50}
-                      style={{ 
-                        objectFit: "contain",
-                        borderRadius: "20%",
-                        overflow: "hidden"
-                      }}
-                    />
-                    <span style={{ 
-                      marginLeft: "10px",
-                      fontSize: "18px", 
-                      fontWeight: "500",
-                      color: "#202124",
-                      display: "flex",
-                      alignItems: "center"
-                    }}>
-                      {userName || (user.team === "companies" ? "My Company" : "My Profile")}
-                    </span>
-                  </div>
-                </a>
-
-                <ul className="dropdown-menu">
-                  {(user.team === "companies" ? employerMenuData : candidatesMenuData).map((item) => (
-                    <li
-                      className={`$ {
-                        isActiveLink(
-                          item.routePath,
-                          pathname
-                        )
-                          ? "active"
-                          : ""
-                      } mb-1`}
-                      key={item.id}
-                    >
-                      <Link href={item.routePath} onClick={(e) => handleLogout(e, item.name)}>
-                        <i
-                          className={`la ${item.icon}`}
-                          
-                        ></i>{" "}
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : (
-              <Link href="/login" className="theme-btn btn-style-three">
-                Login / Register
-              </Link>
-            )}
+            {renderProfileContent()}
           </div>
         </div>
       </div>

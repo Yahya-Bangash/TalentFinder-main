@@ -80,7 +80,7 @@ const DashboardHeader = () => {
                                 <Image
                                     alt="avatar"
                                     className="thumb"
-                                    src="/images/resource/company-6.png"
+                                    src="/images/user-profile-icon.svg"
                                     width={50}
                                     height={50}
                                 />
