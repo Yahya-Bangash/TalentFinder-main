@@ -48,8 +48,8 @@ const DefaulHeader2 = () => {
     const checkAuth = () => {
       const authToken = localStorage.getItem("authToken");
       setIsAuthenticated(!!authToken);
-      if (!authToken) {
-        router.push('/'); // Redirect to home if not authenticated
+      if (!authToken && pathname !== '/about' && pathname !== '/skills') {
+        router.push('/'); // Redirect to home if not authenticated and not on about page
       }
     };
 
