@@ -8,6 +8,7 @@ import * as sdk from "node-appwrite";
 import { ID } from "node-appwrite"; // Importing ID from node-appwrite
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import useUserProfile from '@/app/hooks/useUserProfile';
 
 const LogoUpload = () => {
   const [storageServices, setStorageServices] = useState(null);
@@ -26,6 +27,7 @@ const LogoUpload = () => {
   const [uploading, setUploading] = useState(false);
 
   const { user } = useAuth(); // Get current user
+  const { refreshProfile } = useUserProfile();
 
   // Initialize storage and database services
   useEffect(() => {
@@ -160,11 +162,20 @@ const LogoUpload = () => {
       if (Object.keys(updates).length > 0) {
         await dbServices.jobSeekers.update(documentId, updates);
         console.log("jobSeekers document updated successfully.");
-        toast.update(toastId, { render: "Files uploaded and data updated successfully!", type: toast.TYPE.SUCCESS, autoClose: 5000 });
+        toast.update(toastId, { 
+          render: "Files uploaded and data updated successfully!", 
+          type: toast.TYPE.SUCCESS, 
+          autoClose: 5000 
+        });
+        refreshProfile(); // Refresh profile data after successful upload
       }
     } catch (error) {
       console.error("Error uploading files:", error);
-      toast.update(toastId, { render: `An error occurred during upload: ${error}.`, type: toast.TYPE.ERROR, autoClose: 5000 });
+      toast.update(toastId, { 
+        render: `An error occurred during upload: ${error}.`, 
+        type: toast.TYPE.ERROR, 
+        autoClose: 5000 
+      });
     } finally {
       setUploading(false);
     }

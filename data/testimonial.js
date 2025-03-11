@@ -2,9 +2,7 @@ module.exports = [
   {
     id: 1,
     feedback: "Good theme",
-    feedbackText: `Without JobHunt i’d be homeless, they found me a job and got me
-    sorted out quickly with everything! Can’t quite… The Mitech team
-    works really hard to ensure high level of quality`,
+    feedbackText: `DXT is a company based in Douala, specializing in digital technology, commerce, professional training, and support for international mobility (studies, employment, and work opportunities)`,
     avatar: "/images/resource/testi-thumb-1.png",
     name: "Nicole Wells",
     designation: "Web Developer",
@@ -12,9 +10,7 @@ module.exports = [
   {
     id: 2,
     feedback: "Great quality!",
-    feedbackText: `Without JobHunt i’d be homeless, they found me a job and got me
-    sorted out quickly with everything! Can’t quite… The Mitech team
-    works really hard to ensure high level of quality`,
+    feedbackText: `DXT is a company based in Douala, specializing in digital technology, commerce, professional training, and support for international mobility (studies, employment, and work opportunities)`,
     avatar: "/images/resource/testi-thumb-2.png",
     name: "Gabriel Nolan",
     designation: "Consultant",
@@ -22,9 +18,7 @@ module.exports = [
   {
     id: 3,
     feedback: "Awesome Design",
-    feedbackText: `Without JobHunt i’d be homeless, they found me a job and got me
-    sorted out quickly with everything! Can’t quite… The Mitech team
-    works really hard to ensure high level of quality`,
+    feedbackText: `DXT is a company based in Douala, specializing in digital technology, commerce, professional training, and support for international mobility (studies, employment, and work opportunities)`,
     avatar: "/images/resource/testi-thumb-3.png",
     name: "Ashley Jenkins",
     designation: "Designer",
@@ -32,9 +26,7 @@ module.exports = [
   {
     id: 4,
     feedback: "Great quality!",
-    feedbackText: `Without JobHunt i’d be homeless, they found me a job and got me
-    sorted out quickly with everything! Can’t quite… The Mitech team
-    works really hard to ensure high level of quality`,
+    feedbackText: `DXT is a company based in Douala, specializing in digital technology, commerce, professional training, and support for international mobility (studies, employment, and work opportunities)`,
     avatar: "/images/resource/testi-thumb-1.png",
     name: "Brooklyn Simmons",
     designation: "Web Developer",
@@ -42,9 +34,7 @@ module.exports = [
   {
     id: 5,
     feedback: "Awesome Design!",
-    feedbackText: `Without JobHunt i’d be homeless, they found me a job and got me
-    sorted out quickly with everything! Can’t quite… The Mitech team
-    works really hard to ensure high level of quality`,
+    feedbackText: `DXT is a company based in Douala, specializing in digital technology, commerce, professional training, and support for international mobility (studies, employment, and work opportunities)`,
     avatar: "/images/resource/testi-thumb-2.png",
     name: "Brooklyn Simmons",
     designation: "Web Developer",
@@ -52,9 +42,7 @@ module.exports = [
   {
     id: 6,
     feedback: "Unique Design!",
-    feedbackText: `Without JobHunt i’d be homeless, they found me a job and got me
-    sorted out quickly with everything! Can’t quite… The Mitech team
-    works really hard to ensure high level of quality`,
+    feedbackText: `DXT is a company based in Douala, specializing in digital technology, commerce, professional training, and support for international mobility (studies, employment, and work opportunities)`,
     avatar: "/images/resource/testi-thumb-3.png",
     name: "Brooklyn Simmons",
     designation: "Web Developer",
@@ -80,9 +68,7 @@ module.exports = [
   {
     id: 9,
     feedback: "Great quality!",
-    feedbackText: `Without JobHunt i’d be homeless, they found me a job and got me
-    sorted out quickly with everything! Can’t quite… The Mitech team
-    works really hard to ensure high level of quality`,
+    feedbackText: `DXT is a company based in Douala, specializing in digital technology, commerce, professional training, and support for international mobility (studies, employment, and work opportunities)`,
     avatar: "/images/resource/testimonial-image.jpg",
     name: "Brooklyn Simmons",
     designation: "Web Developer",

@@ -1,18 +1,27 @@
-
 'use client'
+
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addDatePostCheck } from "../../../features/candidate/candidateSlice";
 import { addDatePost } from "../../../features/filter/candidateFilterSlice";
 
 const DatePosted = () => {
   const { datePost } = useSelector((state) => state.candidate) || {};
-  const dispath = useDispatch();
+  const { datePost: selectedDate } = useSelector((state) => state.candidateFilter) || {};
+  const [selectedDatePost, setSelectedDatePost] = useState(selectedDate);
+  const dispatch = useDispatch();
 
   // date post handler
   const datePostHandler = (e, id) => {
-    dispath(addDatePostCheck(id));
-    dispath(addDatePost(e.target.value));
+    const value = e.target.value;
+    setSelectedDatePost(value);
+    dispatch(addDatePostCheck(id));
   };
+
+  // Update Redux store when selected date changes
+  useEffect(() => {
+    dispatch(addDatePost(selectedDatePost));
+  }, [dispatch, selectedDatePost]);
 
   return (
     <ul className="ui-checkbox">
@@ -23,7 +32,7 @@ const DatePosted = () => {
               value={item.value}
               onChange={(e) => datePostHandler(e, item.id)}
               type="radio"
-              checked={item.isChecked}
+              checked={item.value === selectedDatePost}
             />
             <span></span>
             <p>{item.name}</p>

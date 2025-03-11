@@ -8,6 +8,7 @@ import Block8 from "@/components/block/Block8";
 import JobCategorie2 from "@/components/job-categories/JobCategorie2";
 import FaqChild from "@/components/pages-menu/faq/FaqChild";
 import Breadcrumb from "@/components/common/Breadcrumb";
+import DefaulHeader2 from "@/components/header/DefaulHeader2";
 
 const index = () => {
     const missionVisionValues = [
@@ -55,7 +56,7 @@ const index = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DefaulHeader />
+      <DefaulHeader2/>
       {/* <!--End Main Header --> */}
 
       <MobileMenu />

@@ -8,13 +8,14 @@ import SocialNetworkBox from "./components/SocialNetworkBox";
 import ContactInfoBox from "./components/ContactInfoBox";
 import CopyrightFooter from "../../CopyrightFooter";
 import MenuToggler from "../../MenuToggler";
+import DefaulHeader2 from "@/components/header/DefaulHeader2";
 
 const index = () => {
     return (
         <div className="page-wrapper dashboard">
             <span className="header-span"></span>
             <LoginPopup />
-            <DashboardHeader />
+            <DefaulHeader2 />
             <MobileMenu />
             <DashboardEmployerSidebar />
 

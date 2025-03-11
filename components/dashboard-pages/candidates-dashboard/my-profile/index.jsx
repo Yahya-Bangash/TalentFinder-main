@@ -4,10 +4,11 @@ import DashboardCandidatesSidebar from "../../../header/DashboardCandidatesSideb
 import BreadCrumb from "../../BreadCrumb";
 import MyProfile from "./components/my-profile";
 import SocialNetworkBox from "./components/SocialNetworkBox";
-import ContactInfoBox from "./components/ContactInfoBox";
 import CopyrightFooter from "../../CopyrightFooter";
 import DashboardCandidatesHeader from "../../../header/DashboardCandidatesHeader";
 import MenuToggler from "../../MenuToggler";
+import HeaderNavContent from "@/components/header/HeaderNavContent";
+import DefaulHeader2 from "@/components/header/DefaulHeader2";
 
 const index = () => {
   return (
@@ -18,8 +19,7 @@ const index = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DashboardCandidatesHeader />
-      {/* End Header */}
+       <DefaulHeader2/>      {/* End Header */}
 
       <MobileMenu />
       {/* End MobileMenu */}
@@ -57,19 +57,6 @@ const index = () => {
 
                   <div className="widget-content">
                     <SocialNetworkBox />
-                  </div>
-                </div>
-              </div>
-              {/* <!-- Ls widget --> */}
-
-              <div className="ls-widget">
-                <div className="tabs-box">
-                  <div className="widget-title">
-                    <h4>Contact Information</h4>
-                  </div>
-                  {/* End widget-title */}
-                  <div className="widget-content">
-                    <ContactInfoBox />
                   </div>
                 </div>
               </div>

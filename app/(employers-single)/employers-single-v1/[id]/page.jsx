@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LoginPopup from "@/components/common/form/login/LoginPopup";
 import FooterDefault from "@/components/footer/common-footer";
-import DefaulHeader from "@/components/header/DefaulHeader";
+import DefaulHeader2 from "@/components/header/DefaulHeader2";
 import MobileMenu from "@/components/header/MobileMenu";
 import RelatedJobs from "@/components/employer-single-pages/related-jobs/RelatedJobs";
 import MapJobFinder from "@/components/job-listing-pages/components/MapJobFinder";
@@ -92,7 +92,7 @@ const EmployersSingleV1 = ({ params }) => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DefaulHeader />
+      <DefaulHeader2 />
       {/* End Main Header */}
 
       <MobileMenu />

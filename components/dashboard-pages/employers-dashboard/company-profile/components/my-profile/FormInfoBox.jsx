@@ -5,14 +5,16 @@ import useAuth from "@/app/hooks/useAuth"; // Use the Auth hook to get userId
 import initializeDB from "@/appwrite/Services/dbServices";
 import categories from "@/data/categories";
 import "react-datepicker/dist/react-datepicker.css";
-
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import useUserProfile from '@/app/hooks/useUserProfile';
 
 const FormInfoBox = () => {
-
   const [db, setDb] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [subCategories, setSubCategories] = useState([]);
   const [documentId, setDocumentId] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     userId: "",
     profileImg: "",
@@ -34,6 +36,7 @@ const FormInfoBox = () => {
   });
 
   const { user } = useAuth();
+  const { refreshProfile } = useUserProfile();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,23 +50,23 @@ const FormInfoBox = () => {
               const document = response.documents[0];
               setDocumentId(document.$id);
               
-                            // Match the fetched categories with the options in catOptions
-                            const selectedCategories = [];
-                            const selectedSubCategories = [];
+              // Match the fetched categories with the options in catOptions
+              const selectedCategories = [];
+              const selectedSubCategories = [];
 
-                            document.categoryTags?.forEach(tag => {
-                                const mainCategory = categories.find(category => category.subOptions.find(sub => sub.value === tag));
-                                if (mainCategory) {
-                                    selectedCategories.push({ value: mainCategory.value, label: mainCategory.label });
-                                    const subCategory = mainCategory.subOptions.find(sub => sub.value === tag);
-                                    if (subCategory) {
-                                        selectedSubCategories.push({ value: subCategory.value, label: subCategory.label });
-                                    }
-                                }
-                            });
+              document.categoryTags?.forEach(tag => {
+                const mainCategory = categories.find(category => category.subOptions.find(sub => sub.value === tag));
+                if (mainCategory) {
+                  selectedCategories.push({ value: mainCategory.value, label: mainCategory.label });
+                  const subCategory = mainCategory.subOptions.find(sub => sub.value === tag);
+                  if (subCategory) {
+                    selectedSubCategories.push({ value: subCategory.value, label: subCategory.label });
+                  }
+                }
+              });
 
-                            setSelectedCategory(selectedCategories[0]);
-                            setSubCategories(selectedCategories[0]?.subOptions || []);
+              setSelectedCategory(selectedCategories[0]);
+              setSubCategories(selectedCategories[0]?.subOptions || []);
 
               setFormData({
                 userId: document.userId || "",
@@ -117,8 +120,10 @@ const FormInfoBox = () => {
     }));
   };
 
-  const handleSave = (e) => {
+  const handleSave = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    const toastId = toast.info('Saving your information...', { autoClose: false });
 
     const updatedData = {
       userId: formData.userId,
@@ -141,23 +146,42 @@ const FormInfoBox = () => {
     };
 
     if (documentId && db) {
-      db.companies?.update(documentId, updatedData)
-        .then(() => {
-          console.log("Document updated successfully");
-        })
-        .catch((error) => {
-          console.error("Error updating document:", error);
+      try {
+        await db.companies?.update(documentId, updatedData);
+        toast.update(toastId, { 
+          render: "Profile updated successfully!", 
+          type: toast.TYPE.SUCCESS, 
+          autoClose: 3000 
         });
+        refreshProfile(); // Refresh profile data after successful update
+      } catch (error) {
+        console.error("Error updating document:", error);
+        toast.update(toastId, { 
+          render: "Error updating profile. Please try again.", 
+          type: toast.TYPE.ERROR, 
+          autoClose: 5000 
+        });
+      }
     } else if (db) {
-      db.companies?.create(updatedData)
-        .then((newDoc) => {
-          setDocumentId(newDoc.$id);
-          console.log("Document created successfully");
-        })
-        .catch((error) => {
-          console.error("Error creating document:", error);
+      try {
+        const newDoc = await db.companies?.create(updatedData);
+        setDocumentId(newDoc.$id);
+        toast.update(toastId, { 
+          render: "Profile created successfully!", 
+          type: toast.TYPE.SUCCESS, 
+          autoClose: 3000 
         });
+        refreshProfile(); // Refresh profile data after successful creation
+      } catch (error) {
+        console.error("Error creating document:", error);
+        toast.update(toastId, { 
+          render: "Error creating profile. Please try again.", 
+          type: toast.TYPE.ERROR, 
+          autoClose: 5000 
+        });
+      }
     }
+    setIsSubmitting(false);
   };
 
   return (
@@ -259,19 +283,19 @@ const FormInfoBox = () => {
           />
         </div>
 
-       {/* Est. Since Input */}
-<div className="form-group col-lg-6 col-md-12">
-  <label>Est. Since</label>
-  <input
-    type="date" // Change from datetime-local to date for better consistency
-    name="estSince"
-    placeholder="mm/dd/yyyy" // Update placeholder for clarity
-    value={formData.estSince}
-    required
-    onChange={handleInputChange}
-    className="form-control h-14" // Ensure consistent styling
-  />
-</div>
+        {/* Est. Since Input */}
+        <div className="form-group col-lg-6 col-md-12">
+          <label>Est. Since</label>
+          <input
+            type="date"
+            name="estSince"
+            placeholder="mm/dd/yyyy"
+            value={formData.estSince}
+            required
+            onChange={handleInputChange}
+            className="form-control h-14"
+          />
+        </div>
 
         {/* Category Select */}
         <div className="form-group col-lg-6 col-md-12">
@@ -379,11 +403,16 @@ const FormInfoBox = () => {
 
         {/* Save Button */}
         <div className="form-group col-lg-6 col-md-12">
-          <button className="theme-btn btn-style-one" type="submit">
-            Save
+          <button 
+            className="theme-btn btn-style-one" 
+            type="submit"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Saving..." : "Save"}
           </button>
         </div>
       </div>
+      <ToastContainer />
     </form>
   );
 };

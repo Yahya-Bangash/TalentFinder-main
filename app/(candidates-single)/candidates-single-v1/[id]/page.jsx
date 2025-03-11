@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import LoginPopup from "@/components/common/form/login/LoginPopup";
 import FooterDefault from "@/components/footer/common-footer";
-import DefaulHeader from "@/components/header/DefaulHeader";
+import DefaulHeader2 from "@/components/header/DefaulHeader2";
 import MobileMenu from "@/components/header/MobileMenu";
 import Contact from "@/components/candidates-single-pages/shared-components/Contact";
 import GalleryBox from "@/components/candidates-single-pages/shared-components/GalleryBox";
@@ -84,7 +84,7 @@ const CandidateSingleDynamicV1 = () => {
       <span className="header-span"></span>
 
       <LoginPopup />
-      <DefaulHeader />
+      <DefaulHeader2 />
       <MobileMenu />
 
       <section className="candidate-detail-section">

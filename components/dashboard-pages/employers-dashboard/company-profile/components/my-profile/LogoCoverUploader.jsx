@@ -8,6 +8,7 @@ import * as sdk from "node-appwrite";
 import { ID } from "node-appwrite"; // Importing ID from node-appwrite
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import useUserProfile from '@/app/hooks/useUserProfile';
 
 const LogoCoverUploader = () => {
   const [storageServices, setStorageServices] = useState(null);
@@ -18,6 +19,7 @@ const LogoCoverUploader = () => {
   const [uploading, setUploading] = useState(false);
 
   const { user } = useAuth(); // Get current user
+  const { refreshProfile } = useUserProfile();
 
   // Initialize storage and database services
   useEffect(() => {
@@ -123,6 +125,7 @@ const LogoCoverUploader = () => {
         await dbServices.companies.update(documentId, updates);
         console.log("Companies document updated successfully.");
         toast.update(toastId, { render: "Cover image uploaded and data updated successfully!", type: toast.TYPE.SUCCESS, autoClose: 5000 });
+        refreshProfile(); // Refresh profile data after successful update
       }
     } catch (error) {
       console.error("Error uploading files:", error);

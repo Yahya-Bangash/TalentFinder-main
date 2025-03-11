@@ -7,6 +7,7 @@ import CopyrightFooter from "../../CopyrightFooter";
 import WidgetToFilterBox from "./components/WidgetToFilterBox";
 import WidgetContentBox from "./components/WidgetContentBox";
 import MenuToggler from "../../MenuToggler";
+import DefaulHeader2 from "@/components/header/DefaulHeader2";
 
 const index = () => {
   return (
@@ -17,7 +18,7 @@ const index = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DashboardHeader />
+      <DefaulHeader2 />
       {/* End Header */}
 
       <MobileMenu />

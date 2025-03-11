@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 import Image from "next/image";
 import LoginPopup from "@/components/common/form/login/LoginPopup";
 import FooterDefault from "@/components/footer/common-footer";
-import DefaulHeader from "@/components/header/DefaulHeader";
+import DefaulHeader2 from "@/components/header/DefaulHeader2";
 import MobileMenu from "@/components/header/MobileMenu";
 import RelatedJobs from "@/components/job-single-pages/related-jobs/RelatedJobs";
 import JobOverView from "@/components/job-single-pages/job-overview/JobOverView";
@@ -111,7 +111,7 @@ const JobSingleDynamicV1 = ({ params }) => {
 
       <LoginPopup />
 
-      <DefaulHeader />
+      <DefaulHeader2 />
       <MobileMenu />
 
       <section className="job-detail-section">
