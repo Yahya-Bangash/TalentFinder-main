@@ -18,6 +18,7 @@ import { initializeStorageServices } from "@/appwrite/Services/storageServices";
 import initializeDB from "@/appwrite/Services/dbServices";
 import * as sdk from "node-appwrite";
 import { useState, useEffect } from "react";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const FilterTopBox = () => {
   const {
@@ -30,6 +31,7 @@ const FilterTopBox = () => {
     perPage,
   } = useSelector((state) => state.employerFilter) || {};
   const dispatch = useDispatch();
+  const { t } = useTranslation('companyListings');
 
   const [storageServices, setStorageServices] = useState(null);
   const [dbServices, setDbServices] = useState(null);
@@ -149,7 +151,7 @@ const FilterTopBox = () => {
           </button>
 
           <div className="content-inner">
-            <span className="featured">Featured</span>
+            <span className="featured">{t('filterTopBox.featured')}</span>
             <span className="company-logo">
               {company.img ? (
                 <Image
@@ -185,7 +187,7 @@ const FilterTopBox = () => {
           </div>
 
           <div className="job-type me-0">
-            Open Jobs – {company.jobNumber} {company.jobNumber !== 1 ? "Positions" : "Position"}
+            {t('filterTopBox.openJobs.prefix')} {company.jobNumber} {company.jobNumber !== 1 ? t('filterTopBox.openJobs.plural') : t('filterTopBox.openJobs.single')}
           </div>
         </div>
       </div>
@@ -218,7 +220,7 @@ const FilterTopBox = () => {
       <div className="ls-switcher">
         <div className="showing-result">
           <div className="text">
-            <strong>{filteredCompanies?.length}</strong> companies
+            <strong>{filteredCompanies?.length}</strong> {t('filterTopBox.results.companies')}
           </div>
         </div>
         {/* End showing-result */}
@@ -241,7 +243,7 @@ const FilterTopBox = () => {
                 marginBottom: "15px",
               }}
             >
-              Clear All
+              {t('filterTopBox.actions.clearAll')}
             </button>
           )}
 
@@ -250,15 +252,15 @@ const FilterTopBox = () => {
             className="chosen-single form-select"
             onChange={sortHandler}
           >
-            <option value="">Sort by default</option>
-            <option value="asc">Newest</option>
-            <option value="des">Oldest</option>
+            <option value="">{t('filterTopBox.sort.options.default')}</option>
+            <option value="asc">{t('filterTopBox.sort.options.newest')}</option>
+            <option value="des">{t('filterTopBox.sort.options.oldest')}</option>
           </select>
           {/* End select */}
 
           <select
-            onChange={perPageHandler}
             className="chosen-single form-select ms-3 "
+            onChange={perPageHandler}
             value={JSON.stringify(perPage)}
           >
             <option
@@ -267,7 +269,7 @@ const FilterTopBox = () => {
                 end: 0,
               })}
             >
-              All
+              {t('filterTopBox.perPage.options.all')}
             </option>
             <option
               value={JSON.stringify({
@@ -275,7 +277,7 @@ const FilterTopBox = () => {
                 end: 10,
               })}
             >
-              10 per page
+              {t('filterTopBox.perPage.options.10')}
             </option>
             <option
               value={JSON.stringify({
@@ -283,15 +285,15 @@ const FilterTopBox = () => {
                 end: 20,
               })}
             >
-              20 per page
+              {t('filterTopBox.perPage.options.20')}
             </option>
             <option
               value={JSON.stringify({
                 start: 0,
-                end: 24,
+                end: 30,
               })}
             >
-              24 per page
+              {t('filterTopBox.perPage.options.24')}
             </option>
           </select>
           {/* End select */}
@@ -303,7 +305,7 @@ const FilterTopBox = () => {
       {/* End .row */}
 
       <Pagination />
-      {/* <!-- Pagination --> */}
+      {/* <!-- End Pagination --> */}
     </>
   );
 };
