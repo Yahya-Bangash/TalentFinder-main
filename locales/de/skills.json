@@ -1,0 +1,199 @@
+{
+  "Block8": {
+    "blocks": [
+      {
+        "id": 1,
+        "icon": "icon-drawing",
+        "title": "Stellenangebote",
+        "text": "Finden und bewerben Sie sich auf Ihren Traumjob unter den Stellenangeboten bekannter Unternehmen in Deutschland - oder lassen Sie sich von Arbeitgebern über Ihr Profil finden."
+      },
+      {
+        "id": 2,
+        "icon": "icon-process",
+        "title": "Visa-Beratung",
+        "text": "Wir begleiten Sie von der Vorabgenehmigung bis zur Visaerteilung und unterstützen Sie mit unserem Wissen."
+      },
+      {
+        "id": 3,
+        "icon": "icon-task",
+        "title": "Sprachkurse",
+        "text": "Wenn Ihre Sprachkenntnisse noch nicht ausreichen, unterstützen wir Sie mit unseren Deutschkursen."
+      },
+      {
+        "id": 4,
+        "icon": "icon-one-finger-click",
+        "title": "Wohnungssuche",
+        "text": "Wir unterstützen Sie bei der Wohnungssuche, damit Sie in Ruhe in Deutschland ankommen und Ihr neues Leben beginnen können."
+      },
+      {
+        "id": 5,
+        "icon": "icon-task",
+        "title": "Lebenslauf Hochladen",
+        "text": "Die neuesten Design-Trends treffen auf handgefertigte Vorlagen in der Sassio Collection."
+      },
+      {
+        "id": 6,
+        "icon": "icon-one-finger-click",
+        "title": "Spezialberatung",
+        "text": "Sie können sich über den Prozess informieren und Ihren Karriereweg in einer kostenlosen Beratung online oder in unserem Büro in Istanbul planen."
+      }
+    ]
+  },
+  "JobCategorie2": {
+    "categories": [
+      {
+        "id": 1,
+        "icon": "icon-briefcase",
+        "title": "Entwicklung",
+        "content": "120"
+      },
+      {
+        "id": 2,
+        "icon": "icon-user-2",
+        "title": "Marketing",
+        "content": "300"
+      },
+      {
+        "id": 3,
+        "icon": "icon-contact",
+        "title": "Design",
+        "content": "75"
+      },
+      {
+        "id": 4,
+        "icon": "icon-code",
+        "title": "Technologie",
+        "content": "150"
+      },
+      {
+        "id": 5,
+        "icon": "icon-wall-clock",
+        "title": "Kundenservice",
+        "content": "90"
+      },
+      {
+        "id": 6,
+        "icon": "icon-briefcase",
+        "title": "Personalwesen",
+        "content": "200"
+      },
+      {
+        "id": 7,
+        "icon": "icon-medical",
+        "title": "Gesundheitswesen",
+        "content": "250"
+      },
+      {
+        "id": 8,
+        "icon": "icon-money",
+        "title": "Finanzen",
+        "content": "180"
+      }
+    ]
+  },
+  "Breadcrumb": {
+    "home": "Startseite",
+    "title": "Fähigkeiten",
+    "meta": "Fähigkeiten"
+  },
+  "FaqChild": {
+    "items": [
+      {
+        "id": "collapseOne",
+        "question": "Was bietet Ihnen DIGI-X-TECH?",
+        "answer": [
+          "DIGI-X-TECH bietet Ihnen die Möglichkeit, Karrierechancen in Deutschland zu nutzen und unterstützt Sie umfassend von der Erstellung Ihres Profils bis zur Wohnungssuche."
+        ]
+      },
+      {
+        "id": "collapseTwo",
+        "question": "Was ist das DIGI-X-TECH Portal?",
+        "answer": [
+          "Das DIGI-X-TECH Portal ermöglicht Ihnen den Zugriff auf Stellenangebote und Unternehmen und ermöglicht es Ihnen, sich zu bewerben oder von Unternehmen gefunden zu werden. Mit unserem Profilservice optimieren wir Ihr Profil und erstellen ein professionelles Vorstellungsvideo."
+        ]
+      },
+      {
+        "id": "collapseThree",
+        "question": "Welche Bedingungen müssen erfüllt sein, um als qualifizierter Mitarbeiter nach Deutschland zu kommen?",
+        "answer": [
+          "Die Anforderungen variieren je nach gewünschtem Ziel. Im Allgemeinen müssen eine 'Blue Card', ein 'Gleichwertigkeitszertifikat' oder eine 'Gleichwertigkeitspartnerschaft' zusammen mit den erforderlichen Sprachkenntnissen für den Arbeitsbeginn vorhanden sein. Bitte kontaktieren Sie unsere Talent-Scouts für Ihre persönliche Einschätzung."
+        ]
+      },
+      {
+        "id": "collapseFour",
+        "question": "Muss ich Kenntnisse der deutschen Sprache haben?",
+        "answer": [
+          "Die Sprachkenntnisse variieren je nach Art der Beschäftigung und Branche. Unabhängig vom gesetzlich vorgeschriebenen Sprachniveau empfehlen wir mindestens das Niveau B1."
+        ]
+      },
+      {
+        "id": "collapseFive",
+        "question": "Wie lange dauert das Einwanderungsverfahren und wann sollte ich mich bewerben?",
+        "answer": [
+          "Die Dauer des Arbeitsmigrationverfahrens hängt von der Art des beantragten Visums ab. Im Allgemeinen dauert das Verfahren von einigen Wochen bis zu einigen Monaten. Im Rahmen des 'beschleunigten Fachkräfteverfahrens' gibt es Fristen, die auch das Generalkonsulat einhalten muss. Es wird empfohlen, sich so früh wie möglich zu bewerben."
+        ]
+      },
+      {
+        "id": "collapseSix",
+        "question": "Welche Dokumente werden bei der Registrierung auf dem DIGI-X-TECH-Portal benötigt?",
+        "answer": [
+          "Um ein Profil auf dem Portal zu erstellen, werden ein aktueller Lebenslauf, Dokumente zur Berufsausbildung, zusätzliche Qualifikationen und Sprachkenntnisse benötigt."
+        ]
+      },
+      {
+        "id": "collapseSeven",
+        "question": "Welche Dokumente werden für ein Visum benötigt?",
+        "answer": [
+          "Die einzureichenden Dokumente hängen von der Art des Visums ab und variieren für Bildungs- und Beschäftigungsverhältnisse. Grundsätzlich sind jedoch in allen Fällen eine Zustimmung der Bundesagentur für Arbeit, ein Bildungs- oder Arbeitsvertrag, Nachweis von Sprachkenntnissen und ein gültiger Reisepass erforderlich."
+        ]
+      },
+      {
+        "id": "collapseEight",
+        "question": "Wie sind Krankenversicherung und andere Sozialversicherungsbedingungen für Arbeitnehmer in Deutschland geregelt?",
+        "answer": [
+          "Die einzureichenden Dokumente hängen von der Art des Visums ab und variieren für Bildungs- und Beschäftigungsverhältnisse. Grundsätzlich sind jedoch in allen Fällen eine Zustimmung der Bundesagentur für Arbeit, ein Bildungs- oder Arbeitsvertrag, Nachweis von Sprachkenntnissen und ein gültiger Reisepass erforderlich."
+        ]
+      }
+    ]
+  },
+  "AddBlock": {
+    "items": [
+      {
+        "id": 1,
+        "bgImageName": "ads-bg-1",
+        "title": "Unsere Mission",
+        "content": "Neben den digitalen und energetischen Transformationen wird die wichtigste Frage der kommenden Jahre die demografische Entwicklung sein. Deutschland wird bis 2035 einen Mangel von mehr als fünf Millionen Arbeitskräften haben. DIGI-X-TECH wurde gegründet, um deutsche Unternehmen und von uns ausgewählte internationale Talente zusammenzubringen und damit die Wirtschaftskraft Deutschlands zu steigern."
+      },
+      {
+        "id": 2,
+        "bgImageName": "ads-bg-2",
+        "title": "Unsere Vision",
+        "content": "Globalisierung und Netzwerkentwicklung sind in vielen Wirtschaftsbereichen unverzichtbar geworden. Die Beschäftigung von Experten und Führungskräften ist besonders in technischen Berufen hinter den gesetzten Zielen zurückgeblieben. Mit der innovativen DIGI-X-TECH-Plattform, unseren Rekrutierungszentren in der Türkei und im Ausland sowie unseren persönlichen Dienstleistungen unterstützen wir Unternehmen bei der Suche nach den besten Mitarbeitern. Gleichzeitig verstehen wir uns als Wegweiser für Talente und begleiten sie auf ihrem Karriereweg. Als zuverlässiger Partner wollen wir unseren Service weltweit ausbauen."
+      },
+      {
+        "id": 3,
+        "bgImageName": "ads-bg-3",
+        "title": "Unsere Werte",
+        "content": "Vertrauen: Wir verstehen uns als Stakeholder und Unterstützer und arbeiten für eine langfristige Zusammenarbeit mit Unternehmen und Talenten. Vertrauen ist die Basis unserer Arbeit. - Professionalität: Wir erbringen alle unsere Dienstleistungen auf professionellem und hohem Niveau, Ihre Zufriedenheit ist unsere Priorität. - Innovation: Wir erleichtern die Prozesse innerhalb der Talent- und Jobsuche durch ständige Entwicklung innovativer Funktionen. Unser Portal wird zu diesem Zweck ständig weiterentwickelt."
+      }
+    ]
+  },
+  "page": {
+    "metadata": {
+      "title": "Fähigkeiten || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "DIGI-X-TECH - Job Board React NextJS Vorlage"
+    },
+    "title": "Gestalten Sie Ihre Karriere mit uns, indem Sie ein Profil erstellen, das die Aufmerksamkeit von Arbeitgebern auf sich zieht!",
+    "meta": "Fähigkeiten",
+    "services": {
+      "title": "Unsere Dienstleistungen"
+    },
+    "membership": {
+      "title": "DIG-X-TECH Portal Mitgliedschaft",
+      "subtitle": "Mit einer Premium-Mitgliedschaft auf unserer Plattform können Sie von den folgenden Diensten profitieren."
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen"
+    }
+  }
+} 

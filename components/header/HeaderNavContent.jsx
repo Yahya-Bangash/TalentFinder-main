@@ -72,7 +72,7 @@ const HeaderNavContent = () => {
     <>
       <nav className="nav main-menu">
         <ul className="navigation" id="navbar">
-          {/* Basic navigation items - always visible */}
+          {/* Basic navigation itemss - always visible */}
           <li className={`${pathname === "/" ? "current" : ""}`}>
             <Link href="/">Home</Link>
           </li>

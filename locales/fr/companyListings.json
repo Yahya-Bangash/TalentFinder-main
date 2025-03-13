@@ -1,0 +1,139 @@
+{
+  "searchBox": {
+    "placeholder": "Titre du poste, mots-clés ou entreprise",
+    "title": "Rechercher",
+    "filters": {
+      "title": "Tous les Filtres",
+      "location": "Emplacement",
+      "category": "Catégorie",
+      "destination": "Destination",
+      "keyword": "Mot-clé",
+      "founded": "Fondée",
+      "team_size": "Taille de l'Équipe",
+      "apply": "Appliquer le Filtre",
+      "reset": "Réinitialiser"
+    }
+  },
+  "locationBox": {
+    "placeholder": "Ville ou code postal",
+    "title": "Emplacement"
+  },
+  "categories": {
+    "placeholder": "Choisir une catégorie",
+    "title": "Catégorie",
+    "options": {
+      "development": "Développement",
+      "marketing": "Marketing",
+      "design": "Design",
+      "technology": "Technologie",
+      "customer_service": "Service Client",
+      "human_resource": "Ressources Humaines",
+      "healthcare": "Santé",
+      "finance": "Finance"
+    }
+  },
+  "jobSearchForm": {
+    "submit": "Trouver des Emplois",
+    "foundedDate": {
+      "title": "Date de Création",
+      "options": {
+        "all": "Date de Création",
+        "1900_1950": "1900 - 1950",
+        "1950_2000": "1950 - 2000",
+        "2000_2028": "2000 - 2028"
+      }
+    },
+    "form": {
+      "title": "Formulaire de Recherche d'Emploi",
+      "search": {
+        "label": "Quoi",
+        "placeholder": "Titre du poste, mots-clés ou entreprise"
+      },
+      "location": {
+        "label": "Où",
+        "placeholder": "Ville ou code postal"
+      },
+      "category": {
+        "label": "Catégorie",
+        "placeholder": "Choisir une catégorie"
+      }
+    }
+  },
+  "filterTopBox": {
+    "results": {
+      "companies": "entreprises"
+    },
+    "featured": "En Vedette",
+    "openJobs": {
+      "single": "Poste",
+      "plural": "Postes",
+      "prefix": "Postes Ouverts –"
+    },
+    "sort": {
+      "title": "Trier par",
+      "options": {
+        "default": "Tri par défaut",
+        "newest": "Plus récent",
+        "oldest": "Plus ancien"
+      }
+    },
+    "perPage": {
+      "title": "Par page",
+      "options": {
+        "all": "Tout",
+        "10": "10 par page",
+        "20": "20 par page",
+        "24": "24 par page"
+      }
+    },
+    "actions": {
+      "clearAll": "Tout Effacer",
+      "bookmark": "Marquer"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Entreprises || DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi",
+      "description": "Trouvez les meilleures entreprises pour lesquelles travailler avec DIGI-X-TECH"
+    },
+    "title": "Trouvez de Grandes Entreprises",
+    "subtitle": "Découvrez votre prochaine opportunité de carrière",
+    "sections": {
+      "companySearch": "Formulaire de Recherche d'Entreprise",
+      "companyList": "Liste des Entreprises",
+      "filters": "Options de Filtrage"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Entreprises"
+    }
+  },
+  "index": {
+    "title": "Entreprises",
+    "subtitle": "Trouvez les meilleures entreprises pour lesquelles travailler",
+    "search": {
+      "title": "Rechercher des Entreprises",
+      "placeholder": "Nom de l'entreprise ou mot-clé"
+    },
+    "filters": {
+      "location": "Emplacement",
+      "category": "Catégorie",
+      "founded": "Date de Création",
+      "team_size": "Taille de l'Équipe"
+    },
+    "sort": {
+      "title": "Trier par",
+      "options": {
+        "default": "Par défaut",
+        "newest": "Plus récent",
+        "oldest": "Plus ancien"
+      }
+    },
+    "pagination": {
+      "per_page": "Par page",
+      "showing": "Affichage de",
+      "of": "sur",
+      "results": "résultats"
+    }
+  }
+} 

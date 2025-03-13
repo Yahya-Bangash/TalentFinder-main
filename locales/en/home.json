@@ -1,0 +1,568 @@
+{
+  "hero": {
+    "title": "Find Your Dream Job",
+    "subtitle": "Browse thousands of job listings with all the information you need.",
+    "search": {
+      "placeholder": "Job title, keywords, or company",
+      "location_placeholder": "City or postcode",
+      "button": "Search"
+    }
+  },
+  "categories": {
+    "title": "Popular Job Categories",
+    "subtitle": "2020 jobs live - 293 added today",
+    "view_all": "View All Categories"
+  },
+  "featured_jobs": {
+    "title": "Featured Jobs",
+    "subtitle": "Know your worth and find the job that qualify your life",
+    "view_all": "View All Jobs",
+    "job_type": {
+      "full_time": "Full Time",
+      "part_time": "Part Time",
+      "temporary": "Temporary",
+      "freelance": "Freelance",
+      "remote": "Remote"
+    },
+    "salary": "Salary",
+    "experience": "Experience",
+    "posted": "Posted",
+    "apply_now": "Apply Now",
+    "load_more": "Load More Listing"
+  },
+  "top_companies": {
+    "title": "Top Company Registered",
+    "subtitle": "Some of the companies we've helped recruit excellent applicants over the years.",
+    "view_all": "View All Companies",
+    "open_positions": "Open Positions",
+    "load_more": "Load More Companies"
+  },
+  "testimonials": {
+    "title": "Holistic solutions are needed.",
+    "subtitle": "Lorem ipsum dolor sit amet elit, sed do eiusmod tempor",
+    "holistic_solutions_needed": "Holistic solutions are needed."
+  },
+  "cta": {
+    "title": "Make a Difference with Your Online Resume!",
+    "text": "Your resume in minutes with DIGI-X-TECH resume assistant is ready!",
+    "button": "Create an Account"
+  },
+  "blog": {
+    "title": "Recent News Articles",
+    "subtitle": "Fresh job related news content posted each day.",
+    "read_more": "Read More",
+    "view_all": "View All Posts"
+  },
+  "newsletter": {
+    "title": "Subscribe to Our Newsletter",
+    "subtitle": "Stay updated with the latest job opportunities and career insights",
+    "placeholder": "Enter your email",
+    "button": "Subscribe Now",
+    "success": "Thank you for subscribing!"
+  },
+  "hero3": {
+    "title": "Join us & Explore Thousands of Jobs",
+    "subtitle": "Find Jobs, Employment & Career Opportunities",
+    "banner_image": {
+      "alt": "Banner Image"
+    },
+    "search_form": {
+      "what_label": "What",
+      "what_placeholder": "Job title, keywords, or company",
+      "where_label": "Where",
+      "where_placeholder": "City or postcode",
+      "find_jobs_button": "Find Jobs"
+    },
+    "popular_searches": {
+      "title": "Popular Searches",
+      "keywords": [
+        "Designer",
+        "Developer",
+        "Web",
+        "IOS",
+        "PHP",
+        "Senior",
+        "Engineer"
+      ]
+    },
+    "section_class": "banner-section-three",
+    "content_column_class": "content-column col-lg-7 col-md-12 col-sm-12",
+    "image_column_class": "image-column col-lg-5 col-md-12"
+  },
+  "job_categories": {
+    "loading": "Loading categories...",
+    "open_positions": "open positions",
+    "categories": {
+      "development": {
+        "label": "Development",
+        "value": "development",
+        "icon": "icon-web-programming"
+      },
+      "design": {
+        "label": "Design",
+        "value": "design",
+        "icon": "icon-web-design"
+      },
+      "marketing": {
+        "label": "Marketing",
+        "value": "marketing",
+        "icon": "icon-marketing"
+      },
+      "business": {
+        "label": "Business",
+        "value": "business",
+        "icon": "icon-business"
+      },
+      "human_resources": {
+        "label": "Human Resources",
+        "value": "human_resources",
+        "icon": "icon-user-2"
+      },
+      "customer_service": {
+        "label": "Customer Service",
+        "value": "customer_service",
+        "icon": "icon-support-2"
+      }
+    },
+    "title": "Popular Job Categories",
+    "subtitle": "2020 jobs live - 293 added today"
+  },
+  "job_featured": {
+    "loading": "Loading jobs...",
+    "error": "Error fetching jobs",
+    "time": {
+      "minutes_ago": "minutes",
+      "hours_ago": "hours",
+      "days_ago": "days"
+    },
+    "company": {
+      "unknown": "Unknown Company",
+      "default_logo_alt": "Default company logo",
+      "logo_alt": "Logo of {company}"
+    },
+    "location": {
+      "unknown": "Unknown Location"
+    },
+    "bookmark": {
+      "button_aria": "Bookmark job"
+    },
+    "job_info": {
+      "company_icon": "flaticon-briefcase",
+      "location_icon": "flaticon-map-locator",
+      "time_icon": "flaticon-clock-3",
+      "salary_icon": "flaticon-money"
+    }
+  },
+  "top_company": {
+    "loading": "Loading companies...",
+    "error": "Error fetching companies",
+    "toast_error": "Failed to initialize services.",
+    "no_image": "No Image",
+    "company": {
+      "image_alt": "top company",
+      "location_icon": "flaticon-map-locator",
+      "open_position": {
+        "singular": "Open Position",
+        "plural": "Open Positions"
+      }
+    },
+    "slider": {
+      "responsive": [
+        {
+          "breakpoint": 1024,
+          "settings": {
+            "slidesToShow": 4
+          }
+        },
+        {
+          "breakpoint": 768,
+          "settings": {
+            "slidesToShow": 3
+          }
+        },
+        {
+          "breakpoint": 600,
+          "settings": {
+            "slidesToShow": 2
+          }
+        },
+        {
+          "breakpoint": 500,
+          "settings": {
+            "slidesToShow": 1
+          }
+        }
+      ]
+    }
+  },
+  "candidates": {
+    "loading": "Loading candidates...",
+    "error": "Error fetching candidates",
+    "no_image": "No profile image",
+    "candidate": {
+      "image_alt": "candidate",
+      "default_image_alt": "default profile image",
+      "location_icon": "flaticon-map-locator",
+      "designation": "Designation",
+      "unknown_location": "Unknown Location",
+      "view_profile": "View Profile"
+    },
+    "slider": {
+      "dots": true,
+      "infinite": true,
+      "speed": 500,
+      "slidesToShow": 4,
+      "slidesToScroll": 4,
+      "responsive": [
+        {
+          "breakpoint": 1024,
+          "settings": {
+            "slidesToShow": 3
+          }
+        },
+        {
+          "breakpoint": 768,
+          "settings": {
+            "slidesToShow": 2
+          }
+        },
+        {
+          "breakpoint": 600,
+          "settings": {
+            "slidesToShow": 1
+          }
+        }
+      ]
+    },
+    "title": "Featured Candidates",
+    "subtitle": "Discover talented professionals for your company",
+    "load_more": "Load More Candidates"
+  },
+  "reg_banner": {
+    "banners": [
+      {
+        "id": 1,
+        "name": "Skills",
+        "text": "Find suitable jobs and strong employers, apply to them or let companies find you easily and conveniently. With DIGI-X-TECH we offer you a first-class service - personalized and individual.",
+        "avatar": "/images/resource/employ.png",
+        "bannerClass": "banner-style-one",
+        "width": "221",
+        "height": "281"
+      },
+      {
+        "id": 2,
+        "name": "Companies",
+        "text": "Reach a new, international target group of qualified and certified experts. Position yourself with a perfect company profile and job postings. Our employees will be happy to support you.",
+        "avatar": "/images/resource/candidate.png",
+        "bannerClass": "banner-style-two",
+        "width": "207",
+        "height": "283"
+      }
+    ],
+    "register_button": "Register Account"
+  },
+  "block8": {
+    "blocks": [
+      {
+        "id": 1,
+        "icon": "icon-drawing",
+        "title": "Job Postings",
+        "text": "Find and apply for your dream job among job postings from well-known companies across Germany - or let employers find you through your profile."
+      },
+      {
+        "id": 2,
+        "icon": "icon-process",
+        "title": "Visa Consulting",
+        "text": "We accompany you from the preliminary approval to the issuance of the visa and support you with our knowledge."
+      },
+      {
+        "id": 3,
+        "icon": "icon-task",
+        "title": "Language Courses",
+        "text": "If your language skills are not yet sufficient, we support you with our German language courses."
+      },
+      {
+        "id": 4,
+        "icon": "icon-one-finger-click",
+        "title": "Accommodation Support",
+        "text": "We support you in your search for accommodation so that you can arrive in Germany in peace and start your new life."
+      },
+      {
+        "id": 5,
+        "icon": "icon-task",
+        "title": "Upload Your Resume",
+        "text": "The latest design trends meet hand-crafted templates in Sassio Collection."
+      },
+      {
+        "id": 6,
+        "icon": "icon-one-finger-click",
+        "title": "Special Consulting",
+        "text": "You can learn about the process and chart your career path with a free consultation online or at our office in Istanbul."
+      }
+    ]
+  },
+  "about2": {
+    "company_name": "DIGI-X-TECH",
+    "description": "With the DIGI-X-TECH portal, companies reach a new and highly interesting target group, the qualified talents we have vetted find first-class employers and our team accompanies you throughout the entire process. More than just a personalized, individual and simple job search portal.",
+    "subtitle": "A holistic solution. A single portal",
+    "signup_button": "Sign Up Now!",
+    "image": {
+      "alt": "resource",
+      "path": "/images/resource/image-3.png"
+    }
+  },
+  "testimonial3": {
+    "slider": {
+      "arrows": true,
+      "speed": 500,
+      "slidesToShow": 1,
+      "slidesToScroll": 1,
+      "fade": true
+    },
+    "arrow": {
+      "next": "flaticon-next",
+      "prev": "flaticon-back"
+    },
+    "testimonials": [
+      {
+        "id": 1,
+        "feedback": "Great quality!",
+        "text": "DXT is a company based in Douala, specializing in digital technology, commerce, professional training, and support for international mobility (studies, employment, and work opportunities)",
+        "name": "Jordis Kengne",
+        "designation": "Owner and Managing Director of DXT SARL",
+        "avatar": "/images/resource/Jordiee.jpg"
+      },
+      {
+        "id": 2,
+        "feedback": "Superio is a great platform for both job seekers and employers. The interface is intuitive and the features are comprehensive. I found my dream job through this platform!",
+        "text": "Superio is a great platform for both job seekers and employers. The interface is intuitive and the features are comprehensive. I found my dream job through this platform!",
+        "name": "Gabriel Hammond",
+        "designation": "UX Designer",
+        "avatar": "/images/resource/testimonial-image-2.png"
+      },
+      {
+        "id": 3,
+        "feedback": "I've been using Superio for my recruitment needs and it has been a game-changer. The quality of candidates and the user-friendliness set it apart from other platforms.",
+        "text": "I've been using Superio for my recruitment needs and it has been a game-changer. The quality of candidates and the user-friendliness set it apart from other platforms.",
+        "name": "Ashley Jenkins",
+        "designation": "HR Manager",
+        "avatar": "/images/resource/testimonial-image-3.png"
+      }
+    ]
+  },
+  "callToAction11": {
+    "title": "Qualified workforce meets global companies!",
+    "button": "Post a Job",
+    "background_image": "/images/index-17/cta/bg.png"
+  },
+  "faq": {
+    "items": [
+      {
+        "id": "collapseOne",
+        "question": "What does DIGI-X-TECH offer you?",
+        "answer": [
+          "DIGI-X-TECH offers you the opportunity to take advantage of career opportunities in Germany and provides comprehensive support from creating your profile to finding accommodation."
+        ]
+      },
+      {
+        "id": "collapseTwo",
+        "question": "What is the DIGI-X-TECH Portal?",
+        "answer": [
+          "DIGI-X-TECH portal allows you to access job postings and companies, and enables you to apply or be found by companies. With our profile service, we optimize your profile and create a professional introduction video."
+        ]
+      },
+      {
+        "id": "collapseThree",
+        "question": "What conditions must be met in order to come to Germany as a qualified employee?",
+        "answer": [
+          "Requirements vary depending on the desired goal. In general, a 'Blue Card', a 'Certificate of Equivalence' or an 'Equivalence Partnership' must be available along with the necessary language skills to start work. Please contact our Talent-Scouts for your personal assessment."
+        ]
+      },
+      {
+        "id": "collapseFour",
+        "question": "Do I have to have knowledge of the German language?",
+        "answer": [
+          "Language skills vary depending on the type of employment and sector. Whatever the legally required language level, we recommend at least B1 level."
+        ]
+      },
+      {
+        "id": "collapseFive",
+        "question": "How long does the immigration procedure take and when should I apply?",
+        "answer": [
+          "The duration of the labor migration procedure depends on the type of visa applied for. In general, the procedure takes from a few weeks to a few months. Within the scope of the 'accelerated skilled labor procedure', there are deadlines that the Consulate General must also comply with. It is recommended to apply as early as possible."
+        ]
+      },
+      {
+        "id": "collapseSix",
+        "question": "What documents are required when registering on the DIGI-X-TECH portal?",
+        "answer": [
+          "To create a profile on the portal, an up-to-date CV, documents on professional training, additional qualifications and language skills are required."
+        ]
+      },
+      {
+        "id": "collapseSeven",
+        "question": "What documents are required for a visa?",
+        "answer": [
+          "The documents that need to be submitted depend on the type of visa and vary for educational and employment relationships. However, in principle, approval from the Federal Employment Agency, an educational or employment contract, proof of language skills and a valid passport are required in all cases."
+        ]
+      },
+      {
+        "id": "collapseEight",
+        "question": "How are health insurance and other social security conditions regulated for employees in Germany?",
+        "answer": [
+          "The documents that need to be submitted depend on the type of visa and vary for educational and employment relationships. However, in principle, approval from the Federal Employment Agency, an educational or employment contract, proof of language skills and a valid passport are required in all cases."
+        ]
+      }
+    ],
+    "title": "Frequently Asked Questions"
+  },
+  "footer": {
+    "content": [
+      {
+        "id": 1,
+        "title": "For Candidates",
+        "menuList": [
+          { "name": "Browse Jobs", "route": "/job-list-v5" },
+          { "name": "Browse Categories", "route": "/job-list-v5" },
+          { "name": "Candidate Dashboard", "route": "/candidates-dashboard/dashboard" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "For Employers",
+        "menuList": [
+          { "name": "Browse Candidates", "route": "/candidates-list-v3" },
+          { "name": "Employer Dashboard", "route": "/employers-dashboard/dashboard" },
+          { "name": "Add Job", "route": "/employers-dashboard/post-jobs" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "About Us",
+        "menuList": [
+          { "name": "About Us", "route": "/about" },
+          { "name": "Contact", "route": "/contact" }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Helpful Resources",
+        "menuList": [
+          { "name": "Site Map", "route": "/" },
+          { "name": "Terms of Use", "route": "/terms" },
+          { "name": "Privacy Center", "route": "/" },
+          { "name": "Security Center", "route": "/" },
+          { "name": "Accessibility Center", "route": "/" }
+        ]
+      }
+    ]
+  },
+  "social": {
+    "links": [
+      {
+        "id": 1,
+        "icon": "fa-facebook-f",
+        "link": "https://www.facebook.com/",
+        "aria_label": "Follow us on Facebook"
+      },
+      {
+        "id": 2,
+        "icon": "fa-twitter",
+        "link": "https://www.twitter.com/",
+        "aria_label": "Follow us on Twitter"
+      },
+      {
+        "id": 3,
+        "icon": "fa-instagram",
+        "link": "https://www.instagram.com/",
+        "aria_label": "Follow us on Instagram"
+      },
+      {
+        "id": 4,
+        "icon": "fa-linkedin-in",
+        "link": "https://www.linkedin.com/",
+        "aria_label": "Follow us on LinkedIn"
+      }
+    ]
+  },
+  "copyright_footer": {
+    "copyright_text": "© {year} DIGI-X-TECH by",
+    "company_link": {
+      "text": "ib-themes",
+      "url": "https://themeforest.net/user/ib-themes"
+    },
+    "rights_text": "All Rights Reserved."
+  },
+  "index": {
+    "footer": {
+      "contact": {
+        "call_us": "Call us",
+        "phone": "123 456 7890",
+        "address": "329 Queensberry Street, North Melbourne VIC\n3051, Australia.",
+        "email": "support@DIGI-X-TECH.com"
+      }
+    },
+    "job_categories": {
+      "title": "Popular Job Categories",
+      "subtitle": "2020 jobs live - 293 added today."
+    },
+    "featured_jobs": {
+      "title": "Featured Jobs",
+      "subtitle": "Know your worth and find the job that qualify your life",
+      "load_more": "Load More Listing"
+    },
+    "top_companies": {
+      "title": "Top Company Registered",
+      "subtitle": "Some of the companies we have helped recruit excellent applicants over the years.",
+      "load_more": "Load More Companies"
+    },
+    "candidates": {
+      "title": "Featured Candidates",
+      "subtitle": "Lorem ipsum dolor sit amet elit, sed do eiusmod tempor",
+      "load_more": "Load More Candidates"
+    },
+    "services": {
+      "title": "Our Services"
+    },
+    "testimonials": {
+      "title": "Holistic solutions are needed."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Home-1 || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "DIGI-X-TECH - Job Board React NextJS Template"
+    },
+    "job_categories": {
+      "title": "Popular Job Categories",
+      "subtitle": "2020 jobs live - 293 added today."
+    },
+    "featured_jobs": {
+      "title": "Featured Jobs",
+      "subtitle": "Know your worth and find the job that qualify your life",
+      "load_more": "Load More Listing"
+    },
+    "top_companies": {
+      "title": "Top Company Registered",
+      "subtitle": "Some of the companies we have helped recruit excellent applicants over the years.",
+      "load_more": "Load More Companies"
+    },
+    "candidates": {
+      "title": "Featured Candidates",
+      "subtitle": "Lorem ipsum dolor sit amet elit, sed do eiusmod tempor",
+      "load_more": "Load More Candidates"
+    },
+    "services": {
+      "title": "Our Services"
+    },
+    "testimonials": {
+      "title": "Holistic solutions are needed."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  }
+} 

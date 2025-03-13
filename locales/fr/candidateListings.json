@@ -1,0 +1,204 @@
+{
+  "searchBox": {
+    "placeholder": "Nom du candidat ou mot-clé",
+    "title": "Rechercher des Candidats",
+    "filters": {
+      "title": "Tous les Filtres",
+      "location": "Emplacement",
+      "category": "Catégorie",
+      "experience": "Expérience",
+      "education": "Formation",
+      "skills": "Compétences",
+      "apply": "Appliquer le Filtre",
+      "reset": "Réinitialiser"
+    }
+  },
+  "locationBox": {
+    "placeholder": "Ville ou code postal",
+    "title": "Emplacement"
+  },
+  "categories": {
+    "placeholder": "Choisir une catégorie",
+    "title": "Catégorie",
+    "list": [
+      {
+        "label": "Technologie des Métaux",
+        "value": "Metal Technology",
+        "icon": "flaticon-rocket-ship",
+        "subOptions": [
+          { "value": "Plant mechanic", "label": "Mécanicien d'installation" },
+          { "value": "CNC specialist", "label": "Spécialiste CNC" },
+          { "value": "Specialist for metal technology", "label": "Spécialiste en technologie des métaux" },
+          { "value": "Precision mechanic", "label": "Mécanicien de précision" },
+          { "value": "Foundry mechanic", "label": "Mécanicien de fonderie" },
+          { "value": "Industrial mechanic", "label": "Mécanicien industriel" },
+          { "value": "Engineer - Automotive engineering", "label": "Ingénieur - Génie automobile" },
+          { "value": "Engineer - mechanical engineering", "label": "Ingénieur - Génie mécanique" },
+          { "value": "Automotive mechatronics technician", "label": "Technicien en mécatronique automobile" },
+          { "value": "Construction mechanic", "label": "Mécanicien de construction" },
+          { "value": "Machine and plant operator", "label": "Opérateur de machines et d'installations" },
+          { "value": "Machine technology technician", "label": "Technicien en technologie des machines" },
+          { "value": "Tool mechanic", "label": "Mécanicien outilleur" },
+          { "value": "Machining mechanic", "label": "Mécanicien d'usinage" }
+        ]
+      },
+      {
+        "label": "Technologie de Soudage",
+        "value": "Welding Technology",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "Manual electric welder", "label": "Soudeur électrique manuel" },
+          { "value": "Gas welder", "label": "Soudeur au gaz" },
+          { "value": "High-pressure welder", "label": "Soudeur haute pression" },
+          { "value": "MAG welder", "label": "Soudeur MAG" },
+          { "value": "MIG welder", "label": "Soudeur MIG" },
+          { "value": "Welding specialist", "label": "Spécialiste en soudage" },
+          { "value": "Welding foreman", "label": "Chef soudeur" },
+          { "value": "TIG welder", "label": "Soudeur TIG" }
+        ]
+      },
+      {
+        "label": "Génie Électrique",
+        "value": "Electrical Engineering",
+        "icon": "flaticon-vector",
+        "subOptions": [
+          { "value": "Bachelor of Engineering Electrical Engineering", "label": "Licence en Génie Électrique" },
+          { "value": "Bachelor of Science Electrical Engineering", "label": "Licence en Sciences Électriques" },
+          { "value": "Electrical systems fitter", "label": "Monteur de systèmes électriques" },
+          { "value": "Electronics technician - automation and systems engineering", "label": "Technicien en électronique - automatisation et systèmes" },
+          { "value": "Electronics technician - automation technology", "label": "Technicien en électronique - technologie d'automatisation" },
+          { "value": "Electronics technician - industrial engineering", "label": "Technicien en électronique - génie industriel" },
+          { "value": "Electronics technician - energy and building technology", "label": "Technicien en électronique - énergie et bâtiment" },
+          { "value": "Electronics technician - building and infrastructure systems", "label": "Technicien en électronique - systèmes de bâtiment et d'infrastructure" },
+          { "value": "Electronics technician - building systems integration", "label": "Technicien en électronique - intégration des systèmes de bâtiment" },
+          { "value": "Electronics technician - devices and systems", "label": "Technicien en électronique - appareils et systèmes" },
+          { "value": "Electronics technician - information and systems technology", "label": "Technicien en électronique - technologie de l'information et des systèmes" },
+          { "value": "Electronics technician - machines and drive technology (BBiG)", "label": "Technicien en électronique - machines et entraînements (BBiG)" },
+          { "value": "Electronics technician - machines and drive technology (HwO)", "label": "Technicien en électronique - machines et entraînements (HwO)" },
+          { "value": "Industrial electrician - operating technology", "label": "Électricien industriel - technologie d'exploitation" },
+          { "value": "Industrial electrician - devices and systems", "label": "Électricien industriel - appareils et systèmes" },
+          { "value": "Master of Electrical Engineering", "label": "Master en Génie Électrique" },
+          { "value": "Electrical engineering technician", "label": "Technicien en génie électrique" }
+        ]
+      },
+      {
+        "label": "Mécatronique",
+        "value": "Mechatronics",
+        "icon": "flaticon-promotion",
+        "subOptions": [
+          { "value": "Engineer - Mechatronics", "label": "Ingénieur - Mécatronique" },
+          { "value": "Mechatronics engineer", "label": "Ingénieur mécatronicien" }
+        ]
+      },
+      {
+        "label": "Chimie",
+        "value": "Chemistry",
+        "icon": "flaticon-first-aid-kit-1",
+        "subOptions": []
+      },
+      {
+        "label": "Informatique",
+        "value": "IT/EDP",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "IT specialist for system integration", "label": "Spécialiste IT en intégration de systèmes" },
+          { "value": "Computer scientist", "label": "Informaticien" },
+          { "value": "Engineer - Information and communication technology", "label": "Ingénieur - Technologies de l'information et de la communication" },
+          { "value": "IT administrator", "label": "Administrateur IT" },
+          { "value": "Media computer scientist", "label": "Informaticien médias" },
+          { "value": "Computer science technician", "label": "Technicien en informatique" }
+        ]
+      },
+      {
+        "label": "Développement Logiciel",
+        "value": "Software Development",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "Backend Developer", "label": "Développeur Backend" },
+          { "value": "Database developer", "label": "Développeur de bases de données" },
+          { "value": "IT specialist for application development", "label": "Spécialiste IT en développement d'applications" },
+          { "value": "Frontend developer", "label": "Développeur Frontend" },
+          { "value": "Full-Stack Developer", "label": "Développeur Full-Stack" }
+        ]
+      },
+      {
+        "label": "Logistique d'Entrepôt",
+        "value": "Warehouse Logistics",
+        "icon": "flaticon-money-1",
+        "subOptions": []
+      }
+    ]
+  },
+  "filterTopBox": {
+    "results": {
+      "candidates": "candidats"
+    },
+    "featured": "En Vedette",
+    "viewProfile": "Voir le Profil",
+    "sort": {
+      "title": "Trier par",
+      "options": {
+        "default": "Trier par (défaut)",
+        "newest": "Plus récent",
+        "oldest": "Plus ancien"
+      }
+    },
+    "perPage": {
+      "title": "Par page",
+      "options": {
+        "all": "Tout",
+        "15": "15 par page",
+        "20": "20 par page",
+        "25": "25 par page"
+      }
+    },
+    "actions": {
+      "clearAll": "Tout Effacer"
+    },
+    "jobInfo": {
+      "location": "Emplacement",
+      "salary": "Salaire Attendu",
+      "salaryPeriod": "/ an"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Liste des Candidats || DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi",
+      "description": "Trouvez des candidats qualifiés avec DIGI-X-TECH"
+    },
+    "title": "Trouvez des Candidats Talentueux",
+    "subtitle": "Découvrez des professionnels qualifiés pour votre équipe",
+    "sections": {
+      "candidateSearch": "Formulaire de Recherche de Candidats",
+      "candidateList": "Liste des Candidats",
+      "filters": "Options de Filtrage"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Candidats"
+    }
+  },
+  "jobTitleBox": {
+    "placeholder": "Titre du poste",
+    "title": "Titre du Poste"
+  },
+  "index": {
+    "header": {
+      "title": "Rechercher des Candidats",
+      "uploadCV": "Télécharger votre CV"
+    },
+    "pageTitle": {
+      "title": "Trouvez des Candidats Talentueux",
+      "subtitle": "Découvrez des professionnels qualifiés pour votre équipe"
+    },
+    "sections": {
+      "candidateSearch": "Formulaire de Recherche de Candidats",
+      "candidateList": "Liste des Candidats",
+      "filters": "Options de Filtrage"
+    },
+    "metadata": {
+      "title": "Candidats || DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi",
+      "description": "Trouvez des candidats qualifiés avec DIGI-X-TECH"
+    }
+  }
+} 

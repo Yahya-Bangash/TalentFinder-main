@@ -1,0 +1,134 @@
+{
+  "searchBox": {
+    "placeholder": "Job title, keywords, or company",
+    "title": "Search Jobs",
+    "filters": {
+      "title": "All Filters",
+      "location": "Location",
+      "category": "Category",
+      "jobType": "Job Type",
+      "experience": "Experience",
+      "salary": "Salary Range",
+      "datePosted": "Date Posted",
+      "apply": "Apply Filter",
+      "reset": "Reset"
+    }
+  },
+  "locationBox": {
+    "placeholder": "City or postcode",
+    "title": "Location"
+  },
+  "categories": {
+    "placeholder": "Choose a category",
+    "title": "Category",
+    "options": {
+      "development": "Development",
+      "marketing": "Marketing",
+      "design": "Design",
+      "technology": "Technology",
+      "customer_service": "Customer Service",
+      "human_resource": "Human Resource",
+      "healthcare": "Healthcare",
+      "finance": "Finance"
+    }
+  },
+  "jobTypes": {
+    "fullTime": "Full Time",
+    "partTime": "Part Time",
+    "temporary": "Temporary",
+    "contract": "Contract",
+    "internship": "Internship",
+    "remote": "Remote"
+  },
+  "experience": {
+    "fresh": "Fresh",
+    "1year": "1 Year",
+    "2years": "2 Years",
+    "3years": "3 Years",
+    "4years": "4 Years",
+    "5years": "5+ Years"
+  },
+  "datePosted": {
+    "last24hours": "Last 24 hours",
+    "last3days": "Last 3 days",
+    "last7days": "Last 7 days",
+    "last30days": "Last 30 days",
+    "all": "All time"
+  },
+  "sort": {
+    "title": "Sort by",
+    "options": {
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "relevance": "Most Relevant"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Jobs || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Find and apply for jobs with DIGI-X-TECH"
+    },
+    "title": "Find Your Dream Job",
+    "subtitle": "Browse through thousands of job opportunities",
+    "sections": {
+      "jobSearch": "Job Search Form",
+      "jobList": "Job Listings",
+      "filters": "Filter Options"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Jobs"
+    }
+  },
+  "filterJobBox": {
+    "jobInfo": {
+      "company": "Company",
+      "location": "Location",
+      "time": "Time",
+      "salary": "Salary"
+    },
+    "actions": {
+      "clearAll": "Clear All",
+      "bookmark": "Bookmark"
+    },
+    "sort": {
+      "label": "Sort by",
+      "options": {
+        "default": "Sort by (default)",
+        "newest": "Newest",
+        "oldest": "Oldest"
+      }
+    },
+    "perPage": {
+      "label": "Per page",
+      "options": {
+        "all": "All",
+        "10": "10 per page",
+        "20": "20 per page",
+        "30": "30 per page"
+      }
+    },
+    "loading": "Loading jobs...",
+    "error": "Error fetching jobs data",
+    "noResults": "No jobs found"
+  },
+  "index": {
+    "header": {
+      "title": "Find Jobs",
+      "uploadCV": "Upload your CV"
+    },
+    "pageTitle": {
+      "title": "Job Search",
+      "subtitle": "Find your dream job"
+    },
+    "sections": {
+      "jobSearch": "Job Search Form",
+      "jobList": "Job Listings",
+      "filters": "Filter Options"
+    },
+    "metadata": {
+      "title": "Job List || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Find and apply for jobs with DIGI-X-TECH"
+    }
+  }
+} 

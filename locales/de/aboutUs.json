@@ -1,0 +1,111 @@
+{
+  "about": {
+    "title": "Millionen von Jobs. Finden Sie den, der zu Ihnen passt.",
+    "description": "Durchsuchen Sie alle offenen Stellen im Web. Erhalten Sie Ihre persönliche Gehaltsschätzung. Lesen Sie Bewertungen über mehr als 600.000 Unternehmen weltweit.",
+    "features": [
+      "Win-Win-Lösungen auf den Tisch bringen",
+      "Leicht erreichbare Chancen nutzen",
+      "Aber ich muss Ihnen all dies erklären"
+    ],
+    "cta_button": "Loslegen",
+    "image": {
+      "src": "/images/resource/image-2.jpg",
+      "alt": "über uns"
+    }
+  },
+  "imgBox": {
+    "images": [
+      {
+        "id": 1,
+        "block": [{ "img": "about-img-1" }]
+      },
+      {
+        "id": 2,
+        "block": [
+          { "img": "about-img-2" },
+          { "img": "about-img-3" }
+        ]
+      },
+      {
+        "id": 3,
+        "block": [
+          { "img": "about-img-4" },
+          { "img": "about-img-5" }
+        ]
+      },
+      {
+        "id": 4,
+        "block": [{ "img": "about-img-6" }]
+      }
+    ],
+    "alt_text": "Über uns Bild"
+  },
+  "candidates3": {
+    "image": {
+      "alt": "Kandidatenbild"
+    },
+    "candidates": [
+      {
+        "id": 13,
+        "avatar": "/images/resource/candidate-1.jpg",
+        "name": "Floyd Miles",
+        "designation": "UI-Designer"
+      },
+      {
+        "id": 14,
+        "avatar": "/images/resource/candidate-2.jpg",
+        "name": "Eleanor Pena",
+        "designation": "Entwickler"
+      },
+      {
+        "id": 15,
+        "avatar": "/images/resource/candidate-3.jpg",
+        "name": "Devon Lane",
+        "designation": "Designer"
+      },
+      {
+        "id": 16,
+        "avatar": "/images/resource/candidate-4.jpg",
+        "name": "Jane Cooper",
+        "designation": "Marketing-Experte"
+      },
+      {
+        "id": 17,
+        "avatar": "/images/resource/candidate-5.jpg",
+        "name": "Robert Fox",
+        "designation": "Webentwickler"
+      }
+    ]
+  },
+  "index": {
+    "mission_vision_values": [
+      {
+        "id": 1,
+        "bgImageName": "ads-bg-1",
+        "title": "Unsere Mission",
+        "content": "Neben den digitalen und energetischen Transformationen wird die wichtigste Frage der kommenden Jahre die demografische Entwicklung sein. Deutschland wird bis 2035 einen Mangel von mehr als fünf Millionen Arbeitskräften haben. DIGI-X-TECH wurde gegründet, um deutsche Unternehmen und von uns ausgewählte internationale Talente zusammenzubringen und damit die Wirtschaftskraft Deutschlands zu steigern."
+      },
+      {
+        "id": 2,
+        "bgImageName": "ads-bg-2",
+        "title": "Unsere Vision",
+        "content": "Globalisierung und Netzwerkentwicklung sind in vielen Wirtschaftsbereichen unverzichtbar geworden. Die Beschäftigung von Experten und Führungskräften ist besonders in technischen Berufen hinter den gesetzten Zielen zurückgeblieben. Mit der innovativen DIGI-X-TECH-Plattform, unseren Rekrutierungszentren in der Türkei und im Ausland sowie unseren persönlichen Dienstleistungen unterstützen wir Unternehmen bei der Suche nach den besten Mitarbeitern. Gleichzeitig verstehen wir uns als Wegweiser für Talente und begleiten sie auf ihrem Karriereweg. Als verlässlicher Partner wollen wir unseren Service weltweit ausbauen."
+      },
+      {
+        "id": 3,
+        "bgImageName": "ads-bg-3",
+        "title": "Unsere Werte",
+        "content": "Vertrauen: Wir verstehen uns als Stakeholder und Unterstützer und arbeiten für eine langfristige Zusammenarbeit mit Unternehmen und Talenten. Vertrauen ist die Basis unserer Arbeit.\n- Professionalität: Wir erbringen alle unsere Dienstleistungen auf professionellem und hohem Niveau, Ihre Zufriedenheit ist unsere Priorität.\n- Innovation: Wir erleichtern die Prozesse innerhalb der Talent- und Jobsuche durch ständige Entwicklung innovativer Funktionen. Unser Portal wird dafür stetig weiterentwickelt."
+      }
+    ],
+    "team": {
+      "title": "Unser Team"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Über Uns || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "DIGI-X-TECH - Job Board React NextJS Vorlage"
+    }
+  }
+} 

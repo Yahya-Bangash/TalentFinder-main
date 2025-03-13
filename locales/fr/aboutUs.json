@@ -1,0 +1,111 @@
+{
+  "about": {
+    "title": "Des Millions d'Emplois. Trouvez celui qui vous convient.",
+    "description": "Recherchez tous les postes ouverts sur le web. Obtenez votre estimation de salaire personnalisée. Lisez les avis sur plus de 600 000 entreprises dans le monde.",
+    "features": [
+      "Apporter des solutions gagnant-gagnant",
+      "Capitaliser sur les opportunités faciles à identifier",
+      "Mais je dois vous expliquer tout cela"
+    ],
+    "cta_button": "Commencer",
+    "image": {
+      "src": "/images/resource/image-2.jpg",
+      "alt": "à propos"
+    }
+  },
+  "imgBox": {
+    "images": [
+      {
+        "id": 1,
+        "block": [{ "img": "about-img-1" }]
+      },
+      {
+        "id": 2,
+        "block": [
+          { "img": "about-img-2" },
+          { "img": "about-img-3" }
+        ]
+      },
+      {
+        "id": 3,
+        "block": [
+          { "img": "about-img-4" },
+          { "img": "about-img-5" }
+        ]
+      },
+      {
+        "id": 4,
+        "block": [{ "img": "about-img-6" }]
+      }
+    ],
+    "alt_text": "image à propos"
+  },
+  "candidates3": {
+    "image": {
+      "alt": "image du candidat"
+    },
+    "candidates": [
+      {
+        "id": 13,
+        "avatar": "/images/resource/candidate-1.jpg",
+        "name": "Floyd Miles",
+        "designation": "Designer UI"
+      },
+      {
+        "id": 14,
+        "avatar": "/images/resource/candidate-2.jpg",
+        "name": "Eleanor Pena",
+        "designation": "Développeur"
+      },
+      {
+        "id": 15,
+        "avatar": "/images/resource/candidate-3.jpg",
+        "name": "Devon Lane",
+        "designation": "Designer"
+      },
+      {
+        "id": 16,
+        "avatar": "/images/resource/candidate-4.jpg",
+        "name": "Jane Cooper",
+        "designation": "Expert Marketing"
+      },
+      {
+        "id": 17,
+        "avatar": "/images/resource/candidate-5.jpg",
+        "name": "Robert Fox",
+        "designation": "Développeur Web"
+      }
+    ]
+  },
+  "index": {
+    "mission_vision_values": [
+      {
+        "id": 1,
+        "bgImageName": "ads-bg-1",
+        "title": "Notre Mission",
+        "content": "En plus des transformations numériques et énergétiques, l'enjeu le plus important des années à venir sera l'évolution démographique. L'Allemagne fera face à une pénurie de plus de cinq millions de travailleurs d'ici 2035. DIGI-X-TECH a été fondée pour réunir les entreprises allemandes et les talents internationaux que nous avons sélectionnés, augmentant ainsi la force économique de l'Allemagne."
+      },
+      {
+        "id": 2,
+        "bgImageName": "ads-bg-2",
+        "title": "Notre Vision",
+        "content": "La mondialisation et le développement des réseaux sont devenus indispensables dans de nombreux secteurs de l'économie. L'emploi d'experts et de managers n'a pas atteint les objectifs fixés, en particulier dans les professions techniques. Avec la plateforme innovante DIGI-X-TECH, nos centres de recrutement opérant en Turquie et à l'étranger, et nos services personnalisés, nous aidons les entreprises à trouver les meilleurs employés. En même temps, nous nous considérons comme un guide pour les talents et les accompagnons dans leur parcours professionnel. En tant que partenaire fiable, nous voulons étendre notre service dans le monde entier."
+      },
+      {
+        "id": 3,
+        "bgImageName": "ads-bg-3",
+        "title": "Nos Valeurs",
+        "content": "Confiance : Nous nous considérons comme des parties prenantes et des soutiens et travaillons pour une coopération à long terme avec les entreprises et les talents. La confiance est la base de notre travail.\n- Professionnalisme : Nous fournissons tous nos services à un niveau professionnel et élevé, votre satisfaction est notre priorité.\n- Innovation : Nous facilitons les processus de recherche de talents et d'emplois en développant constamment des fonctions innovantes. Notre portail est constamment développé à cet effet."
+      }
+    ],
+    "team": {
+      "title": "Notre Équipe"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "À Propos || DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi",
+      "description": "DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi"
+    }
+  }
+} 

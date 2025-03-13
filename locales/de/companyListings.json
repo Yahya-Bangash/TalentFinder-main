@@ -1,0 +1,139 @@
+{
+  "searchBox": {
+    "placeholder": "Jobtitel, Stichwörter oder Unternehmen",
+    "title": "Suchen",
+    "filters": {
+      "title": "Alle Filter",
+      "location": "Standort",
+      "category": "Kategorie",
+      "destination": "Zielort",
+      "keyword": "Stichwort",
+      "founded": "Gegründet",
+      "team_size": "Teamgröße",
+      "apply": "Filter Anwenden",
+      "reset": "Zurücksetzen"
+    }
+  },
+  "locationBox": {
+    "placeholder": "Stadt oder Postleitzahl",
+    "title": "Standort"
+  },
+  "categories": {
+    "placeholder": "Kategorie auswählen",
+    "title": "Kategorie",
+    "options": {
+      "development": "Entwicklung",
+      "marketing": "Marketing",
+      "design": "Design",
+      "technology": "Technologie",
+      "customer_service": "Kundenservice",
+      "human_resource": "Personalwesen",
+      "healthcare": "Gesundheitswesen",
+      "finance": "Finanzen"
+    }
+  },
+  "jobSearchForm": {
+    "submit": "Jobs Finden",
+    "foundedDate": {
+      "title": "Gründungsdatum",
+      "options": {
+        "all": "Gründungsdatum",
+        "1900_1950": "1900 - 1950",
+        "1950_2000": "1950 - 2000",
+        "2000_2028": "2000 - 2028"
+      }
+    },
+    "form": {
+      "title": "Job-Suchformular",
+      "search": {
+        "label": "Was",
+        "placeholder": "Jobtitel, Stichwörter oder Unternehmen"
+      },
+      "location": {
+        "label": "Wo",
+        "placeholder": "Stadt oder Postleitzahl"
+      },
+      "category": {
+        "label": "Kategorie",
+        "placeholder": "Kategorie auswählen"
+      }
+    }
+  },
+  "filterTopBox": {
+    "results": {
+      "companies": "Unternehmen"
+    },
+    "featured": "Hervorgehoben",
+    "openJobs": {
+      "single": "Position",
+      "plural": "Positionen",
+      "prefix": "Offene Stellen –"
+    },
+    "sort": {
+      "title": "Sortieren nach",
+      "options": {
+        "default": "Standardsortierung",
+        "newest": "Neueste",
+        "oldest": "Älteste"
+      }
+    },
+    "perPage": {
+      "title": "Pro Seite",
+      "options": {
+        "all": "Alle",
+        "10": "10 pro Seite",
+        "20": "20 pro Seite",
+        "24": "24 pro Seite"
+      }
+    },
+    "actions": {
+      "clearAll": "Alles Löschen",
+      "bookmark": "Merken"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Unternehmen || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Finden Sie die besten Arbeitgeber mit DIGI-X-TECH"
+    },
+    "title": "Finden Sie Großartige Unternehmen",
+    "subtitle": "Entdecken Sie Ihre nächste Karrieremöglichkeit",
+    "sections": {
+      "companySearch": "Unternehmenssuche-Formular",
+      "companyList": "Unternehmensliste",
+      "filters": "Filteroptionen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Unternehmen"
+    }
+  },
+  "index": {
+    "title": "Unternehmen",
+    "subtitle": "Finden Sie die besten Arbeitgeber",
+    "search": {
+      "title": "Unternehmen Suchen",
+      "placeholder": "Firmenname oder Stichwort"
+    },
+    "filters": {
+      "location": "Standort",
+      "category": "Kategorie",
+      "founded": "Gründungsdatum",
+      "team_size": "Teamgröße"
+    },
+    "sort": {
+      "title": "Sortieren nach",
+      "options": {
+        "default": "Standard",
+        "newest": "Neueste",
+        "oldest": "Älteste"
+      }
+    },
+    "pagination": {
+      "per_page": "Pro Seite",
+      "showing": "Anzeige von",
+      "of": "von",
+      "results": "Ergebnissen"
+    }
+  }
+} 

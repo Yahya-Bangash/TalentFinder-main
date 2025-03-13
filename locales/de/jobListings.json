@@ -1,0 +1,134 @@
+{
+  "searchBox": {
+    "placeholder": "Jobtitel, Stichwörter oder Unternehmen",
+    "title": "Jobs Suchen",
+    "filters": {
+      "title": "Alle Filter",
+      "location": "Standort",
+      "category": "Kategorie",
+      "jobType": "Beschäftigungsart",
+      "experience": "Erfahrung",
+      "salary": "Gehaltsbereich",
+      "datePosted": "Einstellungsdatum",
+      "apply": "Filter Anwenden",
+      "reset": "Zurücksetzen"
+    }
+  },
+  "locationBox": {
+    "placeholder": "Stadt oder Postleitzahl",
+    "title": "Standort"
+  },
+  "categories": {
+    "placeholder": "Kategorie auswählen",
+    "title": "Kategorie",
+    "options": {
+      "development": "Entwicklung",
+      "marketing": "Marketing",
+      "design": "Design",
+      "technology": "Technologie",
+      "customer_service": "Kundenservice",
+      "human_resource": "Personalwesen",
+      "healthcare": "Gesundheitswesen",
+      "finance": "Finanzen"
+    }
+  },
+  "jobTypes": {
+    "fullTime": "Vollzeit",
+    "partTime": "Teilzeit",
+    "temporary": "Befristet",
+    "contract": "Vertrag",
+    "internship": "Praktikum",
+    "remote": "Remote"
+  },
+  "experience": {
+    "fresh": "Berufseinsteiger",
+    "1year": "1 Jahr",
+    "2years": "2 Jahre",
+    "3years": "3 Jahre",
+    "4years": "4 Jahre",
+    "5years": "5+ Jahre"
+  },
+  "datePosted": {
+    "last24hours": "Letzte 24 Stunden",
+    "last3days": "Letzte 3 Tage",
+    "last7days": "Letzte 7 Tage",
+    "last30days": "Letzte 30 Tage",
+    "all": "Alle Zeit"
+  },
+  "sort": {
+    "title": "Sortieren nach",
+    "options": {
+      "newest": "Neueste",
+      "oldest": "Älteste",
+      "relevance": "Relevanteste"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Jobs || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Finden und bewerben Sie sich auf Jobs mit DIGI-X-TECH"
+    },
+    "title": "Finden Sie Ihren Traumjob",
+    "subtitle": "Durchsuchen Sie Tausende von Stellenangeboten",
+    "sections": {
+      "jobSearch": "Job-Suchformular",
+      "jobList": "Stellenangebote",
+      "filters": "Filteroptionen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Jobs"
+    }
+  },
+  "filterJobBox": {
+    "jobInfo": {
+      "company": "Unternehmen",
+      "location": "Standort",
+      "time": "Zeit",
+      "salary": "Gehalt"
+    },
+    "actions": {
+      "clearAll": "Alles Löschen",
+      "bookmark": "Merken"
+    },
+    "sort": {
+      "label": "Sortieren nach",
+      "options": {
+        "default": "Sortieren nach (Standard)",
+        "newest": "Neueste",
+        "oldest": "Älteste"
+      }
+    },
+    "perPage": {
+      "label": "Pro Seite",
+      "options": {
+        "all": "Alle",
+        "10": "10 pro Seite",
+        "20": "20 pro Seite",
+        "30": "30 pro Seite"
+      }
+    },
+    "loading": "Jobs werden geladen...",
+    "error": "Fehler beim Abrufen der Jobdaten",
+    "noResults": "Keine Jobs gefunden"
+  },
+  "index": {
+    "header": {
+      "title": "Jobs Suchen",
+      "uploadCV": "Lebenslauf hochladen"
+    },
+    "pageTitle": {
+      "title": "Jobsuche",
+      "subtitle": "Finden Sie Ihren Traumjob"
+    },
+    "sections": {
+      "jobSearch": "Job-Suchformular",
+      "jobList": "Stellenangebote",
+      "filters": "Filteroptionen"
+    },
+    "metadata": {
+      "title": "Stellenliste || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Finden und bewerben Sie sich auf Jobs mit DIGI-X-TECH"
+    }
+  }
+} 

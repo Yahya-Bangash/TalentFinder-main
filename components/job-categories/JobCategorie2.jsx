@@ -1,7 +1,10 @@
 import Link from "next/link";
 import membershipServices from "../../data/membershipServices";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const JobCategorie2 = () => {
+  const { t } = useTranslation('skills');
+
   return (
     <>
       {membershipServices.slice(0, 8).map((item) => (

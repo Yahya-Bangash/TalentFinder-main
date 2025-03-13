@@ -1,0 +1,204 @@
+{
+  "searchBox": {
+    "placeholder": "Kandidatenname oder Stichwort",
+    "title": "Kandidaten Suchen",
+    "filters": {
+      "title": "Alle Filter",
+      "location": "Standort",
+      "category": "Kategorie",
+      "experience": "Erfahrung",
+      "education": "Ausbildung",
+      "skills": "Fähigkeiten",
+      "apply": "Filter Anwenden",
+      "reset": "Zurücksetzen"
+    }
+  },
+  "locationBox": {
+    "placeholder": "Stadt oder Postleitzahl",
+    "title": "Standort"
+  },
+  "categories": {
+    "placeholder": "Kategorie auswählen",
+    "title": "Kategorie",
+    "list": [
+      {
+        "label": "Metalltechnik",
+        "value": "Metal Technology",
+        "icon": "flaticon-rocket-ship",
+        "subOptions": [
+          { "value": "Plant mechanic", "label": "Anlagenmechaniker" },
+          { "value": "CNC specialist", "label": "CNC-Fachkraft" },
+          { "value": "Specialist for metal technology", "label": "Fachkraft für Metalltechnik" },
+          { "value": "Precision mechanic", "label": "Feinmechaniker" },
+          { "value": "Foundry mechanic", "label": "Gießereimechaniker" },
+          { "value": "Industrial mechanic", "label": "Industriemechaniker" },
+          { "value": "Engineer - Automotive engineering", "label": "Ingenieur - Fahrzeugtechnik" },
+          { "value": "Engineer - mechanical engineering", "label": "Ingenieur - Maschinenbau" },
+          { "value": "Automotive mechatronics technician", "label": "Kfz-Mechatroniker" },
+          { "value": "Construction mechanic", "label": "Konstruktionsmechaniker" },
+          { "value": "Machine and plant operator", "label": "Maschinen- und Anlagenführer" },
+          { "value": "Machine technology technician", "label": "Maschinentechniker" },
+          { "value": "Tool mechanic", "label": "Werkzeugmechaniker" },
+          { "value": "Machining mechanic", "label": "Zerspanungsmechaniker" }
+        ]
+      },
+      {
+        "label": "Schweißtechnik",
+        "value": "Welding Technology",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "Manual electric welder", "label": "Handschweißer Elektro" },
+          { "value": "Gas welder", "label": "Gasschweißer" },
+          { "value": "High-pressure welder", "label": "Hochdruckschweißer" },
+          { "value": "MAG welder", "label": "MAG-Schweißer" },
+          { "value": "MIG welder", "label": "MIG-Schweißer" },
+          { "value": "Welding specialist", "label": "Schweißfachmann" },
+          { "value": "Welding foreman", "label": "Schweißvorarbeiter" },
+          { "value": "TIG welder", "label": "WIG-Schweißer" }
+        ]
+      },
+      {
+        "label": "Elektrotechnik",
+        "value": "Electrical Engineering",
+        "icon": "flaticon-vector",
+        "subOptions": [
+          { "value": "Bachelor of Engineering Electrical Engineering", "label": "Bachelor of Engineering Elektrotechnik" },
+          { "value": "Bachelor of Science Electrical Engineering", "label": "Bachelor of Science Elektrotechnik" },
+          { "value": "Electrical systems fitter", "label": "Elektroanlagenmonteur" },
+          { "value": "Electronics technician - automation and systems engineering", "label": "Elektroniker - Automatisierungs- und Systemtechnik" },
+          { "value": "Electronics technician - automation technology", "label": "Elektroniker - Automatisierungstechnik" },
+          { "value": "Electronics technician - industrial engineering", "label": "Elektroniker - Betriebstechnik" },
+          { "value": "Electronics technician - energy and building technology", "label": "Elektroniker - Energie- und Gebäudetechnik" },
+          { "value": "Electronics technician - building and infrastructure systems", "label": "Elektroniker - Gebäude- und Infrastruktursysteme" },
+          { "value": "Electronics technician - building systems integration", "label": "Elektroniker - Gebäudesystemintegration" },
+          { "value": "Electronics technician - devices and systems", "label": "Elektroniker - Geräte und Systeme" },
+          { "value": "Electronics technician - information and systems technology", "label": "Elektroniker - Informations- und Systemtechnik" },
+          { "value": "Electronics technician - machines and drive technology (BBiG)", "label": "Elektroniker - Maschinen und Antriebstechnik (BBiG)" },
+          { "value": "Electronics technician - machines and drive technology (HwO)", "label": "Elektroniker - Maschinen und Antriebstechnik (HwO)" },
+          { "value": "Industrial electrician - operating technology", "label": "Industrieelektriker - Betriebstechnik" },
+          { "value": "Industrial electrician - devices and systems", "label": "Industrieelektriker - Geräte und Systeme" },
+          { "value": "Master of Electrical Engineering", "label": "Master of Elektrotechnik" },
+          { "value": "Electrical engineering technician", "label": "Elektrotechniker" }
+        ]
+      },
+      {
+        "label": "Mechatronik",
+        "value": "Mechatronics",
+        "icon": "flaticon-promotion",
+        "subOptions": [
+          { "value": "Engineer - Mechatronics", "label": "Ingenieur - Mechatronik" },
+          { "value": "Mechatronics engineer", "label": "Mechatronikingenieur" }
+        ]
+      },
+      {
+        "label": "Chemie",
+        "value": "Chemistry",
+        "icon": "flaticon-first-aid-kit-1",
+        "subOptions": []
+      },
+      {
+        "label": "IT/EDV",
+        "value": "IT/EDP",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "IT specialist for system integration", "label": "Fachinformatiker für Systemintegration" },
+          { "value": "Computer scientist", "label": "Informatiker" },
+          { "value": "Engineer - Information and communication technology", "label": "Ingenieur - Informations- und Kommunikationstechnik" },
+          { "value": "IT administrator", "label": "IT-Administrator" },
+          { "value": "Media computer scientist", "label": "Medieninformatiker" },
+          { "value": "Computer science technician", "label": "Informatiktechniker" }
+        ]
+      },
+      {
+        "label": "Softwareentwicklung",
+        "value": "Software Development",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "Backend Developer", "label": "Backend-Entwickler" },
+          { "value": "Database developer", "label": "Datenbankentwickler" },
+          { "value": "IT specialist for application development", "label": "Fachinformatiker für Anwendungsentwicklung" },
+          { "value": "Frontend developer", "label": "Frontend-Entwickler" },
+          { "value": "Full-Stack Developer", "label": "Full-Stack-Entwickler" }
+        ]
+      },
+      {
+        "label": "Lagerlogistik",
+        "value": "Warehouse Logistics",
+        "icon": "flaticon-money-1",
+        "subOptions": []
+      }
+    ]
+  },
+  "filterTopBox": {
+    "results": {
+      "candidates": "Kandidaten"
+    },
+    "featured": "Hervorgehoben",
+    "viewProfile": "Profil Ansehen",
+    "sort": {
+      "title": "Sortieren nach",
+      "options": {
+        "default": "Sortieren nach (Standard)",
+        "newest": "Neueste",
+        "oldest": "Älteste"
+      }
+    },
+    "perPage": {
+      "title": "Pro Seite",
+      "options": {
+        "all": "Alle",
+        "15": "15 pro Seite",
+        "20": "20 pro Seite",
+        "25": "25 pro Seite"
+      }
+    },
+    "actions": {
+      "clearAll": "Alles Löschen"
+    },
+    "jobInfo": {
+      "location": "Standort",
+      "salary": "Erwartetes Gehalt",
+      "salaryPeriod": "/ Jahr"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Kandidatenliste || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Finden Sie qualifizierte Kandidaten mit DIGI-X-TECH"
+    },
+    "title": "Finden Sie Talentierte Kandidaten",
+    "subtitle": "Entdecken Sie qualifizierte Fachkräfte für Ihr Team",
+    "sections": {
+      "candidateSearch": "Kandidatensuche-Formular",
+      "candidateList": "Kandidatenliste",
+      "filters": "Filteroptionen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Kandidaten"
+    }
+  },
+  "jobTitleBox": {
+    "placeholder": "Stellenbezeichnung",
+    "title": "Stellenbezeichnung"
+  },
+  "index": {
+    "header": {
+      "title": "Kandidaten Suchen",
+      "uploadCV": "Lebenslauf hochladen"
+    },
+    "pageTitle": {
+      "title": "Finden Sie Talentierte Kandidaten",
+      "subtitle": "Entdecken Sie qualifizierte Fachkräfte für Ihr Team"
+    },
+    "sections": {
+      "candidateSearch": "Kandidatensuche-Formular",
+      "candidateList": "Kandidatenliste",
+      "filters": "Filteroptionen"
+    },
+    "metadata": {
+      "title": "Kandidaten || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Finden Sie qualifizierte Kandidaten mit DIGI-X-TECH"
+    }
+  }
+} 

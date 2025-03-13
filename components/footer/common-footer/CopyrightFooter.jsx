@@ -1,20 +1,24 @@
 import Social from "./Social";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const CopyrightFooter = () => {
+  const { t } = useTranslation('common');
+  const currentYear = new Date().getFullYear();
+  
   return (
     <div className="footer-bottom">
       <div className="auto-container">
         <div className="outer-box">
           <div className="copyright-text">
-            © {new Date().getFullYear()} DIGI-X-TECH by{" "}
+            {t('CopyrightFooter.copyright_text', { year: currentYear })}{" "}
             <a
-              href="https://themeforest.net/user/ib-themes"
+              href={t('CopyrightFooter.company_link.url')}
               target="_blank"
               rel="noopener noreferrer"
             >
-              ib-themes
+              {t('CopyrightFooter.company_link.text')}
             </a>
-            . All Right Reserved.
+            . {t('CopyrightFooter.rights_text')}
           </div>
           <div className="social-links">
             <Social />

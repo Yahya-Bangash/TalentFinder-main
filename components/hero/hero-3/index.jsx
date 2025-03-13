@@ -1,8 +1,11 @@
 import SearchForm2 from "../../common/job-search/SearchForm2";
 import PopularSearch from "../PopularSearch";
 import ImageBox from "./ImageBox";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const index = () => {
+  const { t } = useTranslation('home');
+
   return (
     <section className="banner-section-three">
       <div className="auto-container">
@@ -11,10 +14,10 @@ const index = () => {
             <div className="inner-column">
               <div className="title-box" data-aos="fade-up">
                 <h3>
-                  Join us & Explore Thousands <br /> of Jobs
+                  {t('hero3.title')}
                 </h3>
                 <div className="text">
-                  Find Jobs, Employment & Career Opportunities
+                  {t('hero3.subtitle')}
                 </div>
               </div>
 

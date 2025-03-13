@@ -1,0 +1,289 @@
+{
+  "welcome": "Bienvenue",
+  "language": "Langue",
+  "home": "Accueil",
+  "about": "À propos",
+  "contact": "Contact",
+  "search": "Rechercher",
+  "login": "Connexion",
+  "signup": "S'inscrire",
+  "settings": "Paramètres",
+  "LoginPopup": {
+    "login_title": "Connexion",
+    "register_title": "S'inscrire",
+    "close_button": "Fermer",
+    "login_form": "Formulaire de connexion",
+    "register_form": "Formulaire d'inscription",
+    "modal_login": "Modal de connexion",
+    "modal_register": "Modal d'inscription"
+  },
+  "HeaderNavContent": {
+    "home": "Accueil",
+    "about_us": "À Propos de Nous",
+    "skills": "Compétences",
+    "company_listings": "Liste des Entreprises",
+    "job_listings": "Offres d'Emploi",
+    "candidate_listings": "Liste des Candidats",
+    "company_dashboard": "Tableau de Bord Entreprise",
+    "candidate_dashboard": "Tableau de Bord Candidat",
+    "navigation": {
+      "find_jobs": "Trouver un Emploi",
+      "employers": "Employeurs",
+      "dashboards": "Tableaux de Bord",
+      "blog": "Blog",
+      "pages": "Pages"
+    }
+  },
+  "DefaultHeader2": {
+    "loading": "Chargement...",
+    "error_loading": "Erreur de chargement du profil",
+    "login_register": "Connexion / Inscription",
+    "my_company": "Mon Entreprise",
+    "my_profile": "Mon Profil",
+    "profile": {
+      "alt_text": "profil",
+      "default_image": "/images/user-profile-icon.svg"
+    },
+    "brand": {
+      "alt_text": "marque",
+      "logo_path": "/images/jordii-logo.png"
+    }
+  },
+  "About2": {
+    "company_name": "DIGI-X-TECH",
+    "description": "Avec le portail DIGI-X-TECH, les entreprises atteignent un nouveau groupe cible très intéressant, les talents qualifiés que nous avons sélectionnés trouvent des employeurs de premier ordre et notre équipe vous accompagne tout au long du processus. Plus qu'un simple portail de recherche d'emploi personnalisé, individuel et simple.",
+    "subtitle": "Une solution holistique. Un portail unique",
+    "signup_button": "Inscrivez-vous maintenant !",
+    "image": {
+      "alt_text": "ressource",
+      "path": "/images/resource/image-3.png"
+    }
+  },
+  "Block8": {
+    "blocks": [
+      {
+        "id": 1,
+        "icon": "icon-drawing",
+        "title": "Offres d'Emploi",
+        "text": "Trouvez et postulez à l'emploi de vos rêves parmi les offres d'entreprises renommées en Allemagne - ou laissez les employeurs vous trouver grâce à votre profil."
+      },
+      {
+        "id": 2,
+        "icon": "icon-process",
+        "title": "Conseil en Visa",
+        "text": "Nous vous accompagnons de l'approbation préliminaire à la délivrance du visa et vous soutenons avec nos connaissances."
+      },
+      {
+        "id": 3,
+        "icon": "icon-task",
+        "title": "Cours de Langue",
+        "text": "Si vos compétences linguistiques ne sont pas encore suffisantes, nous vous soutenons avec nos cours d'allemand."
+      },
+      {
+        "id": 4,
+        "icon": "icon-one-finger-click",
+        "title": "Aide au Logement",
+        "text": "Nous vous accompagnons dans votre recherche de logement pour que vous puissiez arriver sereinement en Allemagne et commencer votre nouvelle vie."
+      },
+      {
+        "id": 5,
+        "icon": "icon-task",
+        "title": "Téléchargez Votre CV",
+        "text": "Les dernières tendances en matière de design rencontrent des modèles artisanaux dans la Collection Sassio."
+      },
+      {
+        "id": 6,
+        "icon": "icon-one-finger-click",
+        "title": "Conseil Spécialisé",
+        "text": "Vous pouvez vous renseigner sur le processus et planifier votre carrière lors d'une consultation gratuite en ligne ou dans notre bureau à Istanbul."
+      }
+    ]
+  },
+  "FooterContent": {
+    "sections": [
+      {
+        "id": 1,
+        "title": "Pour les Candidats",
+        "menuList": [
+          { "name": "Parcourir les Offres", "route": "/job-list-v5" },
+          { "name": "Parcourir les Catégories", "route": "/job-list-v5" },
+          { "name": "Tableau de Bord Candidat", "route": "/candidates-dashboard/dashboard" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Pour les Employeurs",
+        "menuList": [
+          { "name": "Parcourir les Candidats", "route": "/candidates-list-v3" },
+          { "name": "Tableau de Bord Employeur", "route": "/employers-dashboard/dashboard" },
+          { "name": "Ajouter une Offre", "route": "/employers-dashboard/post-jobs" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "À Propos",
+        "menuList": [
+          { "name": "À Propos de Nous", "route": "/about" },
+          { "name": "Contact", "route": "/contact" }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Ressources Utiles",
+        "menuList": [
+          { "name": "Plan du Site", "route": "/" },
+          { "name": "Conditions d'Utilisation", "route": "/terms" },
+          { "name": "Centre de Confidentialité", "route": "/" },
+          { "name": "Centre de Sécurité", "route": "/" },
+          { "name": "Centre d'Accessibilité", "route": "/" }
+        ]
+      }
+    ]
+  },
+  "CopyrightFooter": {
+    "copyright_text": "© {year} DIGI-X-TECH par",
+    "company_link": {
+      "text": "ib-themes",
+      "url": "https://themeforest.net/user/ib-themes"
+    },
+    "rights_text": "Tous droits réservés."
+  },
+  "Social": {
+    "links": [
+      {
+        "id": 1,
+        "icon": "fa-facebook-f",
+        "link": "https://www.facebook.com/",
+        "aria_label": "Suivez-nous sur Facebook"
+      },
+      {
+        "id": 2,
+        "icon": "fa-twitter",
+        "link": "https://www.twitter.com/",
+        "aria_label": "Suivez-nous sur Twitter"
+      },
+      {
+        "id": 3,
+        "icon": "fa-instagram",
+        "link": "https://www.instagram.com/",
+        "aria_label": "Suivez-nous sur Instagram"
+      },
+      {
+        "id": 4,
+        "icon": "fa-linkedin-in",
+        "link": "https://www.linkedin.com/",
+        "aria_label": "Suivez-nous sur LinkedIn"
+      }
+    ]
+  },
+  "CopyrightFooter2": {
+    "brand": {
+      "alt_text": "marque",
+      "logo_path": "/images/jordii-logo.png"
+    },
+    "copyright_text": "© {year} DIGI-X-TECH par",
+    "company_link": {
+      "text": "ib-themes",
+      "url": "https://themeforest.net/user/ib-themes"
+    },
+    "rights_text": "Tous droits réservés."
+  },
+  "index": {
+    "footer": {
+      "contact": {
+        "call_us": "Appelez-nous",
+        "phone": "123 456 7890",
+        "address": "329 Queensberry Street, North Melbourne VIC\n3051, Australie.",
+        "email": "support@DIGI-X-TECH.com"
+      }
+    },
+    "job_categories": {
+      "title": "Catégories d'Emplois Populaires",
+      "subtitle": "2020 emplois en ligne - 293 ajoutés aujourd'hui."
+    },
+    "featured_jobs": {
+      "title": "Emplois en Vedette",
+      "subtitle": "Connaissez votre valeur et trouvez l'emploi qui qualifie votre vie",
+      "load_more": "Charger Plus d'Offres"
+    },
+    "top_companies": {
+      "title": "Meilleures Entreprises Inscrites",
+      "subtitle": "Quelques-unes des entreprises que nous avons aidées à recruter d'excellents candidats au fil des années.",
+      "load_more": "Charger Plus d'Entreprises"
+    },
+    "candidates": {
+      "title": "Candidats en Vedette",
+      "subtitle": "Lorem ipsum dolor sit amet elit, sed do eiusmod tempor",
+      "load_more": "Charger Plus de Candidats"
+    },
+    "services": {
+      "title": "Nos Services"
+    },
+    "testimonials": {
+      "title": "Des solutions holistiques sont nécessaires."
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées"
+    }
+  },
+  "FAQ": {
+    "items": [
+      {
+        "id": "collapseOne",
+        "question": "Que vous offre DIGI-X-TECH ?",
+        "answer": [
+          "DIGI-X-TECH vous offre l'opportunité de profiter des opportunités de carrière en Allemagne et fournit un soutien complet, de la création de votre profil à la recherche d'un logement."
+        ]
+      },
+      {
+        "id": "collapseTwo",
+        "question": "Qu'est-ce que le portail DIGI-X-TECH ?",
+        "answer": [
+          "Le portail DIGI-X-TECH vous permet d'accéder aux offres d'emploi et aux entreprises, et vous permet de postuler ou d'être trouvé par les entreprises. Avec notre service de profil, nous optimisons votre profil et créons une vidéo de présentation professionnelle."
+        ]
+      },
+      {
+        "id": "collapseThree",
+        "question": "Quelles conditions doivent être remplies pour venir en Allemagne en tant qu'employé qualifié ?",
+        "answer": [
+          "Les exigences varient en fonction de l'objectif souhaité. En général, une 'Carte Bleue', un 'Certificat d'Équivalence' ou un 'Partenariat d'Équivalence' doit être disponible avec les compétences linguistiques nécessaires pour commencer à travailler. Veuillez contacter nos Talent-Scouts pour votre évaluation personnelle."
+        ]
+      },
+      {
+        "id": "collapseFour",
+        "question": "Dois-je avoir des connaissances en allemand ?",
+        "answer": [
+          "Les compétences linguistiques varient selon le type d'emploi et le secteur. Quel que soit le niveau de langue légalement requis, nous recommandons au moins le niveau B1."
+        ]
+      },
+      {
+        "id": "collapseFive",
+        "question": "Combien de temps dure la procédure d'immigration et quand dois-je postuler ?",
+        "answer": [
+          "La durée de la procédure de migration de travail dépend du type de visa demandé. En général, la procédure prend de quelques semaines à quelques mois. Dans le cadre de la 'procédure accélérée pour travailleurs qualifiés', il existe des délais que le Consulat Général doit également respecter. Il est recommandé de postuler le plus tôt possible."
+        ]
+      },
+      {
+        "id": "collapseSix",
+        "question": "Quels documents sont nécessaires lors de l'inscription sur le portail DIGI-X-TECH ?",
+        "answer": [
+          "Pour créer un profil sur le portail, un CV à jour, des documents sur la formation professionnelle, des qualifications supplémentaires et des compétences linguistiques sont requis."
+        ]
+      },
+      {
+        "id": "collapseSeven",
+        "question": "Quels documents sont nécessaires pour un visa ?",
+        "answer": [
+          "Les documents à soumettre dépendent du type de visa et varient pour les relations éducatives et professionnelles. Cependant, en principe, l'approbation de l'Agence fédérale pour l'emploi, un contrat d'éducation ou d'emploi, une preuve des compétences linguistiques et un passeport valide sont requis dans tous les cas."
+        ]
+      },
+      {
+        "id": "collapseEight",
+        "question": "Comment sont réglementées l'assurance maladie et les autres conditions de sécurité sociale pour les employés en Allemagne ?",
+        "answer": [
+          "Les documents à soumettre dépendent du type de visa et varient pour les relations éducatives et professionnelles. Cependant, en principe, l'approbation de l'Agence fédérale pour l'emploi, un contrat d'éducation ou d'emploi, une preuve des compétences linguistiques et un passeport valide sont requis dans tous les cas."
+        ]
+      }
+    ]
+  }
+} 

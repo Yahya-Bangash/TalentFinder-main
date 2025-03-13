@@ -1,0 +1,289 @@
+{
+  "welcome": "Willkommen",
+  "language": "Sprache",
+  "home": "Startseite",
+  "about": "Über uns",
+  "contact": "Kontakt",
+  "search": "Suchen",
+  "login": "Anmelden",
+  "signup": "Registrieren",
+  "settings": "Einstellungen",
+  "LoginPopup": {
+    "login_title": "Anmelden",
+    "register_title": "Registrieren",
+    "close_button": "Schließen",
+    "login_form": "Anmeldeformular",
+    "register_form": "Registrierungsformular",
+    "modal_login": "Anmelde-Modal",
+    "modal_register": "Registrierungs-Modal"
+  },
+  "HeaderNavContent": {
+    "home": "Startseite",
+    "about_us": "Über Uns",
+    "skills": "Fähigkeiten",
+    "company_listings": "Unternehmensverzeichnis",
+    "job_listings": "Stellenangebote",
+    "candidate_listings": "Kandidatenverzeichnis",
+    "company_dashboard": "Unternehmens-Dashboard",
+    "candidate_dashboard": "Kandidaten-Dashboard",
+    "navigation": {
+      "find_jobs": "Jobs Finden",
+      "employers": "Arbeitgeber",
+      "dashboards": "Dashboards",
+      "blog": "Blog",
+      "pages": "Seiten"
+    }
+  },
+  "DefaultHeader2": {
+    "loading": "Wird geladen...",
+    "error_loading": "Fehler beim Laden des Profils",
+    "login_register": "Anmelden / Registrieren",
+    "my_company": "Mein Unternehmen",
+    "my_profile": "Mein Profil",
+    "profile": {
+      "alt_text": "profil",
+      "default_image": "/images/user-profile-icon.svg"
+    },
+    "brand": {
+      "alt_text": "marke",
+      "logo_path": "/images/jordii-logo.png"
+    }
+  },
+  "About2": {
+    "company_name": "DIGI-X-TECH",
+    "description": "Mit dem DIGI-X-TECH Portal erreichen Unternehmen eine neue und hochinteressante Zielgruppe, die von uns geprüften qualifizierten Talente finden erstklassige Arbeitgeber und unser Team begleitet Sie während des gesamten Prozesses. Mehr als nur ein personalisiertes, individuelles und einfaches Jobsuchportal.",
+    "subtitle": "Eine ganzheitliche Lösung. Ein einziges Portal",
+    "signup_button": "Jetzt Registrieren!",
+    "image": {
+      "alt_text": "ressource",
+      "path": "/images/resource/image-3.png"
+    }
+  },
+  "Block8": {
+    "blocks": [
+      {
+        "id": 1,
+        "icon": "icon-drawing",
+        "title": "Stellenangebote",
+        "text": "Finden und bewerben Sie sich auf Ihren Traumjob unter den Stellenangeboten bekannter Unternehmen in Deutschland - oder lassen Sie sich von Arbeitgebern über Ihr Profil finden."
+      },
+      {
+        "id": 2,
+        "icon": "icon-process",
+        "title": "Visa-Beratung",
+        "text": "Wir begleiten Sie von der Vorabgenehmigung bis zur Visaerteilung und unterstützen Sie mit unserem Wissen."
+      },
+      {
+        "id": 3,
+        "icon": "icon-task",
+        "title": "Sprachkurse",
+        "text": "Wenn Ihre Sprachkenntnisse noch nicht ausreichen, unterstützen wir Sie mit unseren Deutschkursen."
+      },
+      {
+        "id": 4,
+        "icon": "icon-one-finger-click",
+        "title": "Wohnungssuche",
+        "text": "Wir unterstützen Sie bei der Wohnungssuche, damit Sie in Ruhe in Deutschland ankommen und Ihr neues Leben beginnen können."
+      },
+      {
+        "id": 5,
+        "icon": "icon-task",
+        "title": "Lebenslauf Hochladen",
+        "text": "Die neuesten Design-Trends treffen auf handgefertigte Vorlagen in der Sassio Collection."
+      },
+      {
+        "id": 6,
+        "icon": "icon-one-finger-click",
+        "title": "Spezialberatung",
+        "text": "Sie können sich über den Prozess informieren und Ihren Karriereweg in einer kostenlosen Beratung online oder in unserem Büro in Istanbul planen."
+      }
+    ]
+  },
+  "FooterContent": {
+    "sections": [
+      {
+        "id": 1,
+        "title": "Für Kandidaten",
+        "menuList": [
+          { "name": "Jobs Durchsuchen", "route": "/job-list-v5" },
+          { "name": "Kategorien Durchsuchen", "route": "/job-list-v5" },
+          { "name": "Kandidaten-Dashboard", "route": "/candidates-dashboard/dashboard" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Für Arbeitgeber",
+        "menuList": [
+          { "name": "Kandidaten Durchsuchen", "route": "/candidates-list-v3" },
+          { "name": "Arbeitgeber-Dashboard", "route": "/employers-dashboard/dashboard" },
+          { "name": "Job Hinzufügen", "route": "/employers-dashboard/post-jobs" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Über Uns",
+        "menuList": [
+          { "name": "Über Uns", "route": "/about" },
+          { "name": "Kontakt", "route": "/contact" }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Hilfreiche Ressourcen",
+        "menuList": [
+          { "name": "Sitemap", "route": "/" },
+          { "name": "Nutzungsbedingungen", "route": "/terms" },
+          { "name": "Datenschutzcenter", "route": "/" },
+          { "name": "Sicherheitscenter", "route": "/" },
+          { "name": "Barrierefreiheit", "route": "/" }
+        ]
+      }
+    ]
+  },
+  "CopyrightFooter": {
+    "copyright_text": "© {year} DIGI-X-TECH von",
+    "company_link": {
+      "text": "ib-themes",
+      "url": "https://themeforest.net/user/ib-themes"
+    },
+    "rights_text": "Alle Rechte vorbehalten."
+  },
+  "Social": {
+    "links": [
+      {
+        "id": 1,
+        "icon": "fa-facebook-f",
+        "link": "https://www.facebook.com/",
+        "aria_label": "Folgen Sie uns auf Facebook"
+      },
+      {
+        "id": 2,
+        "icon": "fa-twitter",
+        "link": "https://www.twitter.com/",
+        "aria_label": "Folgen Sie uns auf Twitter"
+      },
+      {
+        "id": 3,
+        "icon": "fa-instagram",
+        "link": "https://www.instagram.com/",
+        "aria_label": "Folgen Sie uns auf Instagram"
+      },
+      {
+        "id": 4,
+        "icon": "fa-linkedin-in",
+        "link": "https://www.linkedin.com/",
+        "aria_label": "Folgen Sie uns auf LinkedIn"
+      }
+    ]
+  },
+  "CopyrightFooter2": {
+    "brand": {
+      "alt_text": "marke",
+      "logo_path": "/images/jordii-logo.png"
+    },
+    "copyright_text": "© {year} DIGI-X-TECH von",
+    "company_link": {
+      "text": "ib-themes",
+      "url": "https://themeforest.net/user/ib-themes"
+    },
+    "rights_text": "Alle Rechte vorbehalten."
+  },
+  "index": {
+    "footer": {
+      "contact": {
+        "call_us": "Rufen Sie uns an",
+        "phone": "123 456 7890",
+        "address": "329 Queensberry Street, North Melbourne VIC\n3051, Australien.",
+        "email": "support@DIGI-X-TECH.com"
+      }
+    },
+    "job_categories": {
+      "title": "Beliebte Jobkategorien",
+      "subtitle": "2020 aktive Jobs - 293 heute hinzugefügt."
+    },
+    "featured_jobs": {
+      "title": "Ausgewählte Jobs",
+      "subtitle": "Kennen Sie Ihren Wert und finden Sie den Job, der Ihr Leben bereichert",
+      "load_more": "Mehr Jobs Laden"
+    },
+    "top_companies": {
+      "title": "Top Registrierte Unternehmen",
+      "subtitle": "Einige der Unternehmen, denen wir über die Jahre geholfen haben, ausgezeichnete Bewerber zu rekrutieren.",
+      "load_more": "Mehr Unternehmen Laden"
+    },
+    "candidates": {
+      "title": "Ausgewählte Kandidaten",
+      "subtitle": "Lorem ipsum dolor sit amet elit, sed do eiusmod tempor",
+      "load_more": "Mehr Kandidaten Laden"
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen"
+    },
+    "testimonials": {
+      "title": "Ganzheitliche Lösungen sind gefragt."
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen"
+    }
+  },
+  "FAQ": {
+    "items": [
+      {
+        "id": "collapseOne",
+        "question": "Was bietet Ihnen DIGI-X-TECH?",
+        "answer": [
+          "DIGI-X-TECH bietet Ihnen die Möglichkeit, Karrierechancen in Deutschland zu nutzen und bietet umfassende Unterstützung von der Erstellung Ihres Profils bis zur Wohnungssuche."
+        ]
+      },
+      {
+        "id": "collapseTwo",
+        "question": "Was ist das DIGI-X-TECH Portal?",
+        "answer": [
+          "Das DIGI-X-TECH Portal ermöglicht Ihnen den Zugriff auf Stellenangebote und Unternehmen und ermöglicht es Ihnen, sich zu bewerben oder von Unternehmen gefunden zu werden. Mit unserem Profilservice optimieren wir Ihr Profil und erstellen ein professionelles Vorstellungsvideo."
+        ]
+      },
+      {
+        "id": "collapseThree",
+        "question": "Welche Voraussetzungen müssen erfüllt sein, um als qualifizierter Mitarbeiter nach Deutschland zu kommen?",
+        "answer": [
+          "Die Anforderungen variieren je nach gewünschtem Ziel. Im Allgemeinen müssen eine 'Blue Card', ein 'Gleichwertigkeitszertifikat' oder eine 'Gleichwertigkeitspartnerschaft' zusammen mit den erforderlichen Sprachkenntnissen für den Arbeitsbeginn vorliegen. Bitte kontaktieren Sie unsere Talent-Scouts für Ihre persönliche Einschätzung."
+        ]
+      },
+      {
+        "id": "collapseFour",
+        "question": "Muss ich Deutschkenntnisse haben?",
+        "answer": [
+          "Die Sprachkenntnisse variieren je nach Art der Beschäftigung und Branche. Unabhängig vom gesetzlich vorgeschriebenen Sprachniveau empfehlen wir mindestens das Niveau B1."
+        ]
+      },
+      {
+        "id": "collapseFive",
+        "question": "Wie lange dauert das Einwanderungsverfahren und wann sollte ich mich bewerben?",
+        "answer": [
+          "Die Dauer des Arbeitsmigrationverfahrens hängt von der Art des beantragten Visums ab. Im Allgemeinen dauert das Verfahren von einigen Wochen bis zu einigen Monaten. Im Rahmen des 'beschleunigten Fachkräfteverfahrens' gibt es Fristen, die auch das Generalkonsulat einhalten muss. Es wird empfohlen, sich so früh wie möglich zu bewerben."
+        ]
+      },
+      {
+        "id": "collapseSix",
+        "question": "Welche Unterlagen werden bei der Registrierung auf dem DIGI-X-TECH Portal benötigt?",
+        "answer": [
+          "Zur Erstellung eines Profils auf dem Portal werden ein aktueller Lebenslauf, Unterlagen zur Berufsausbildung, zusätzliche Qualifikationen und Sprachkenntnisse benötigt."
+        ]
+      },
+      {
+        "id": "collapseSeven",
+        "question": "Welche Unterlagen werden für ein Visum benötigt?",
+        "answer": [
+          "Die einzureichenden Unterlagen hängen von der Art des Visums ab und variieren für Bildungs- und Beschäftigungsverhältnisse. Grundsätzlich sind jedoch in allen Fällen die Zustimmung der Bundesagentur für Arbeit, ein Bildungs- oder Arbeitsvertrag, Nachweis der Sprachkenntnisse und ein gültiger Reisepass erforderlich."
+        ]
+      },
+      {
+        "id": "collapseEight",
+        "question": "Wie sind Krankenversicherung und andere Sozialversicherungsbedingungen für Arbeitnehmer in Deutschland geregelt?",
+        "answer": [
+          "Die einzureichenden Unterlagen hängen von der Art des Visums ab und variieren für Bildungs- und Beschäftigungsverhältnisse. Grundsätzlich sind jedoch in allen Fällen die Zustimmung der Bundesagentur für Arbeit, ein Bildungs- oder Arbeitsvertrag, Nachweis der Sprachkenntnisse und ein gültiger Reisepass erforderlich."
+        ]
+      }
+    ]
+  }
+} 

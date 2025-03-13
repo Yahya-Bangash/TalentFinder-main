@@ -1,0 +1,111 @@
+{
+  "about": {
+    "title": "Millions of Jobs. Find the one that suits you.",
+    "description": "Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 600,000 companies worldwide.",
+    "features": [
+      "Bring to the table win-win survival",
+      "Capitalize on low hanging fruit to identify",
+      "But I must explain to you how all this"
+    ],
+    "cta_button": "Get Started",
+    "image": {
+      "src": "/images/resource/image-2.jpg",
+      "alt": "about"
+    }
+  },
+  "imgBox": {
+    "images": [
+      {
+        "id": 1,
+        "block": [{ "img": "about-img-1" }]
+      },
+      {
+        "id": 2,
+        "block": [
+          { "img": "about-img-2" },
+          { "img": "about-img-3" }
+        ]
+      },
+      {
+        "id": 3,
+        "block": [
+          { "img": "about-img-4" },
+          { "img": "about-img-5" }
+        ]
+      },
+      {
+        "id": 4,
+        "block": [{ "img": "about-img-6" }]
+      }
+    ],
+    "alt_text": "about image"
+  },
+  "candidates3": {
+    "image": {
+      "alt": "candidate image"
+    },
+    "candidates": [
+      {
+        "id": 13,
+        "avatar": "/images/resource/candidate-1.jpg",
+        "name": "Floyd Miles",
+        "designation": "UI Designer"
+      },
+      {
+        "id": 14,
+        "avatar": "/images/resource/candidate-2.jpg",
+        "name": "Eleanor Pena",
+        "designation": "Developer"
+      },
+      {
+        "id": 15,
+        "avatar": "/images/resource/candidate-3.jpg",
+        "name": "Devon Lane",
+        "designation": "Designer"
+      },
+      {
+        "id": 16,
+        "avatar": "/images/resource/candidate-4.jpg",
+        "name": "Jane Cooper",
+        "designation": "Marketing Expert"
+      },
+      {
+        "id": 17,
+        "avatar": "/images/resource/candidate-5.jpg",
+        "name": "Robert Fox",
+        "designation": "Web Developer"
+      }
+    ]
+  },
+  "index": {
+    "mission_vision_values": [
+      {
+        "id": 1,
+        "bgImageName": "ads-bg-1",
+        "title": "Our Mission",
+        "content": "In addition to the digital and energy transformations, the most important issue of the coming years will be demographic developments. Germany will face a shortage of more than five million workers by 2035. DIGI-X-TECH was founded to bring together German companies and international talent selected by us, thus increasing Germany's economic strength."
+      },
+      {
+        "id": 2,
+        "bgImageName": "ads-bg-2",
+        "title": "Our Vision",
+        "content": "Globalization and network development have become indispensable in many sectors of the economy. The employment of experts and managers has fallen short of the targets set, especially in technical professions. With the innovative DIGI-X-TECH platform, our recruitment centers operating in Turkey and abroad, and our personal services, we support companies in finding the best employees. At the same time, we see ourselves as a guide for talents and accompany them on their career paths. As a reliable partner, we want to expand our service worldwide."
+      },
+      {
+        "id": 3,
+        "bgImageName": "ads-bg-3",
+        "title": "Our Values",
+        "content": "Trust: We see ourselves as stakeholders and supporters and work for long-term cooperation with companies and talents. Trust is the basis of our work.\n- Professionalism: We provide all our services at a professional and high level, your satisfaction is our priority.\n- Innovation: We facilitate the processes within talent and job search by constantly developing innovative functions. Our portal is constantly being developed for this purpose."
+      }
+    ],
+    "team": {
+      "title": "Our Team"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "About || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "DIGI-X-TECH - Job Board React NextJS Template"
+    }
+  }
+} 
