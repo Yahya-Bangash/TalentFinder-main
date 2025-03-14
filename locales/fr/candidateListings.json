@@ -200,5 +200,194 @@
       "title": "Candidats || DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi",
       "description": "Trouvez des candidats qualifiés avec DIGI-X-TECH"
     }
+  },
+  "appliedJobs": {
+    "title": "Emplois Postulés",
+    "subtitle": "Prêt à reprendre?",
+    "noJobs": "Aucun emploi postulé pour le moment",
+    "table": {
+      "jobTitle": "Titre du Poste",
+      "dateApplied": "Date de Candidature",
+      "company": "Entreprise",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "status": {
+      "pending": "En Attente",
+      "viewed": "Consulté",
+      "rejected": "Refusé",
+      "accepted": "Accepté"
+    },
+    "timePeriod": {
+      "last6Months": "6 Derniers Mois",
+      "last12Months": "12 Derniers Mois",
+      "last16Months": "16 Derniers Mois",
+      "last24Months": "24 Derniers Mois",
+      "last5Years": "5 Dernières Années"
+    }
+  },
+  "myProfile": {
+    "title": "Mon Profil",
+    "form": {
+      "fullName": "Nom Complet",
+      "fullNamePlaceholder": "Jerome",
+      "jobTitle": "Titre du Poste",
+      "jobTitlePlaceholder": "Designer UI",
+      "country": "Pays",
+      "countryPlaceholder": "France",
+      "city": "Ville",
+      "cityPlaceholder": "Paris",
+      "age": "Âge",
+      "agePlaceholder": "0",
+      "expectedSalary": "Fourchette de Salaire Attendue",
+      "expectedSalaryPlaceholder": "90k-100k",
+      "experience": "Expérience (Années)",
+      "experiencePlaceholder": "5",
+      "gender": "Genre",
+      "genderOptions": {
+        "male": "Homme",
+        "female": "Femme",
+        "others": "Autres"
+      },
+      "educationLevel": "Niveau d'Éducation",
+      "educationLevelPlaceholder": "Certificat",
+      "categories": "Catégories",
+      "categoriesPlaceholder": "Sélectionner une Catégorie",
+      "skills": "Compétences",
+      "skillsPlaceholder": "Sélectionner des Compétences",
+      "languages": "Langues",
+      "languagesPlaceholder": "Anglais, Turc",
+      "description": "Description",
+      "descriptionPlaceholder": "Description à propos de vous-même",
+      "saveButton": "Enregistrer",
+      "savingButton": "Enregistrement..."
+    },
+    "upload": {
+      "profileImage": "Télécharger une Photo de Profil",
+      "profileImageInfo": "Taille maximale du fichier: 50MB. Types autorisés: jpg, jpeg, png, gif.",
+      "cv": "Télécharger un CV",
+      "cvInfo": "Taille maximale du fichier: 50MB. Types autorisés: pdf, doc, docx, txt.",
+      "video": "Télécharger une Vidéo",
+      "videoInfo": "Taille maximale du fichier: 50MB. Types autorisés: mp4, mov, avi.",
+      "uploadButton": "Télécharger les Fichiers",
+      "uploadingButton": "Téléchargement...",
+      "successMessage": "Fichiers téléchargés et données mises à jour avec succès!",
+      "errorMessage": "Une erreur s'est produite lors du téléchargement: {{error}}.",
+      "uploadingMessage": "Téléchargement...",
+      "uploadingItemMessage": "Téléchargement de {{type}}...",
+      "itemUploadedMessage": "{{type}} téléchargé avec succès."
+    },
+    "toasts": {
+      "saving": "Enregistrement de vos informations...",
+      "updateSuccess": "Profil mis à jour avec succès!",
+      "createSuccess": "Profil créé avec succès!",
+      "error": "Erreur lors de l'enregistrement du profil. Veuillez réessayer.",
+      "serviceError": "Services non initialisés correctement. Veuillez réessayer."
+    }
+  },
+  "dashboard": {
+    "sidebar": {
+      "menuItems": {
+        "myProfile": "Mon Profil",
+        "appliedJobs": "Emplois Postulés",
+        "jobAlerts": "Alertes d'Emploi",
+        "shortlistedJobs": "Emplois Favoris",
+        "logout": "Déconnexion",
+        "deleteProfile": "Supprimer le Profil"
+      },
+      "skillsPercentage": {
+        "title": "Pourcentage de Compétences",
+        "description": "Ajoutez une valeur pour le champ <strong>Photo de Profil</strong> pour augmenter vos compétences jusqu'à <strong>85%</strong>"
+      }
+    }
+  },
+  "employerProfile": {
+    "title": "Profil d'Entreprise",
+    "form": {
+      "companyName": "Nom de l'entreprise",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "Adresse e-mail",
+      "emailAddressPlaceholder": "ib-themes",
+      "city": "Ville",
+      "cityPlaceholder": "Paris",
+      "country": "Pays",
+      "countryPlaceholder": "France",
+      "primaryIndustry": "Secteur Principal",
+      "primaryIndustryPlaceholder": "Logiciel",
+      "companySize": "Taille de l'Entreprise",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Site Web",
+      "websitePlaceholder": "www.invision.com",
+      "estSince": "Établie Depuis",
+      "estSincePlaceholder": "jj/mm/aaaa",
+      "category": "Catégorie",
+      "categoryPlaceholder": "Sélectionner une Catégorie",
+      "subcategories": "Sous-catégories",
+      "subcategoriesPlaceholder": "Sélectionner une Sous-catégorie",
+      "allowInSearch": "Autoriser dans la Recherche et le Listing",
+      "allowInSearchOptions": {
+        "yes": "Oui",
+        "no": "Non"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/invisionn",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
+      "aboutCompany": "À Propos de l'Entreprise",
+      "aboutCompanyPlaceholder": "Description de l'entreprise",
+      "saveButton": "Enregistrer",
+      "savingButton": "Enregistrement..."
+    },
+    "toasts": {
+      "saving": "Enregistrement de vos informations...",
+      "updateSuccess": "Profil mis à jour avec succès!",
+      "createSuccess": "Profil créé avec succès!",
+      "updateError": "Erreur lors de la mise à jour du profil. Veuillez réessayer.",
+      "createError": "Erreur lors de la création du profil. Veuillez réessayer."
+    }
+  },
+  "contactInfo": {
+    "title": "Informations de Contact",
+    "form": {
+      "country": "Pays",
+      "countryPlaceholder": "France",
+      "city": "Ville",
+      "cityPlaceholder": "Paris",
+      "address": "Adresse Complète",
+      "addressPlaceholder": "123 Avenue des Champs-Élysées, 75008 Paris, France.",
+      "saveButton": "Enregistrer"
+    },
+    "toasts": {
+      "updateSuccess": "Informations de contact mises à jour avec succès",
+      "updateError": "Erreur lors de la mise à jour des informations de contact"
+    }
+  },
+  "socialNetwork": {
+    "title": "Réseaux Sociaux",
+    "form": {
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "URL du Profil LinkedIn",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "URL du Profil Twitter",
+      "github": "GitHub",
+      "githubPlaceholder": "URL du Profil GitHub",
+      "saveButton": "Enregistrer"
+    },
+    "toasts": {
+      "updateSuccess": "Informations des réseaux sociaux mises à jour avec succès",
+      "updateError": "Erreur lors de la mise à jour des informations des réseaux sociaux",
+      "createSuccess": "Informations des réseaux sociaux créées avec succès",
+      "createError": "Erreur lors de la création des informations des réseaux sociaux"
+    }
   }
 } 

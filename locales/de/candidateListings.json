@@ -200,5 +200,194 @@
       "title": "Kandidaten || DIGI-X-TECH - Job Board React NextJS Vorlage",
       "description": "Finden Sie qualifizierte Kandidaten mit DIGI-X-TECH"
     }
+  },
+  "appliedJobs": {
+    "title": "Beworbene Stellen",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "noJobs": "Noch keine Bewerbungen vorhanden",
+    "table": {
+      "jobTitle": "Stellentitel",
+      "dateApplied": "Bewerbungsdatum",
+      "company": "Unternehmen",
+      "status": "Status",
+      "actions": "Aktionen"
+    },
+    "status": {
+      "pending": "Ausstehend",
+      "viewed": "Angesehen",
+      "rejected": "Abgelehnt",
+      "accepted": "Angenommen"
+    },
+    "timePeriod": {
+      "last6Months": "Letzte 6 Monate",
+      "last12Months": "Letzte 12 Monate",
+      "last16Months": "Letzte 16 Monate",
+      "last24Months": "Letzte 24 Monate",
+      "last5Years": "Letzte 5 Jahre"
+    }
+  },
+  "myProfile": {
+    "title": "Mein Profil",
+    "form": {
+      "fullName": "Vollständiger Name",
+      "fullNamePlaceholder": "Jerome",
+      "jobTitle": "Berufsbezeichnung",
+      "jobTitlePlaceholder": "UI Designer",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "city": "Stadt",
+      "cityPlaceholder": "Frankfurt",
+      "age": "Alter",
+      "agePlaceholder": "0",
+      "expectedSalary": "Erwartete Gehaltsspanne",
+      "expectedSalaryPlaceholder": "90k-100k",
+      "experience": "Erfahrung (Jahre)",
+      "experiencePlaceholder": "5",
+      "gender": "Geschlecht",
+      "genderOptions": {
+        "male": "Männlich",
+        "female": "Weiblich",
+        "others": "Andere"
+      },
+      "educationLevel": "Bildungsniveau",
+      "educationLevelPlaceholder": "Zertifikat",
+      "categories": "Kategorien",
+      "categoriesPlaceholder": "Kategorie auswählen",
+      "skills": "Fähigkeiten",
+      "skillsPlaceholder": "Fähigkeiten auswählen",
+      "languages": "Sprachen",
+      "languagesPlaceholder": "Englisch, Türkisch",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreibung über dich selbst",
+      "saveButton": "Speichern",
+      "savingButton": "Speichern..."
+    },
+    "upload": {
+      "profileImage": "Profilbild hochladen",
+      "profileImageInfo": "Maximale Dateigröße: 50MB. Erlaubte Typen: jpg, jpeg, png, gif.",
+      "cv": "Lebenslauf hochladen",
+      "cvInfo": "Maximale Dateigröße: 50MB. Erlaubte Typen: pdf, doc, docx, txt.",
+      "video": "Video hochladen",
+      "videoInfo": "Maximale Dateigröße: 50MB. Erlaubte Typen: mp4, mov, avi.",
+      "uploadButton": "Dateien hochladen",
+      "uploadingButton": "Wird hochgeladen...",
+      "successMessage": "Dateien hochgeladen und Daten erfolgreich aktualisiert!",
+      "errorMessage": "Beim Hochladen ist ein Fehler aufgetreten: {{error}}.",
+      "uploadingMessage": "Wird hochgeladen...",
+      "uploadingItemMessage": "{{type}} wird hochgeladen...",
+      "itemUploadedMessage": "{{type}} erfolgreich hochgeladen."
+    },
+    "toasts": {
+      "saving": "Deine Informationen werden gespeichert...",
+      "updateSuccess": "Profil erfolgreich aktualisiert!",
+      "createSuccess": "Profil erfolgreich erstellt!",
+      "error": "Fehler beim Speichern des Profils. Bitte versuche es erneut.",
+      "serviceError": "Dienste nicht richtig initialisiert. Bitte versuche es erneut."
+    }
+  },
+  "dashboard": {
+    "sidebar": {
+      "menuItems": {
+        "myProfile": "Mein Profil",
+        "appliedJobs": "Beworbene Stellen",
+        "jobAlerts": "Stellenbenachrichtigungen",
+        "shortlistedJobs": "Gespeicherte Stellen",
+        "logout": "Abmelden",
+        "deleteProfile": "Profil löschen"
+      },
+      "skillsPercentage": {
+        "title": "Fähigkeiten Prozentsatz",
+        "description": "Fügen Sie einen Wert für das Feld <strong>Profilbild</strong> hinzu, um Ihre Fähigkeiten auf bis zu <strong>85%</strong> zu erhöhen"
+      }
+    }
+  },
+  "employerProfile": {
+    "title": "Firmenprofil",
+    "form": {
+      "companyName": "Firmenname",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "E-Mail-Adresse",
+      "emailAddressPlaceholder": "ib-themes",
+      "city": "Stadt",
+      "cityPlaceholder": "Berlin",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "primaryIndustry": "Hauptbranche",
+      "primaryIndustryPlaceholder": "Software",
+      "companySize": "Unternehmensgröße",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Webseite",
+      "websitePlaceholder": "www.invision.com",
+      "estSince": "Gegründet seit",
+      "estSincePlaceholder": "TT/MM/JJJJ",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Kategorie auswählen",
+      "subcategories": "Unterkategorien",
+      "subcategoriesPlaceholder": "Unterkategorie auswählen",
+      "allowInSearch": "In Suche & Auflistung erlauben",
+      "allowInSearchOptions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/invisionn",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
+      "aboutCompany": "Über das Unternehmen",
+      "aboutCompanyPlaceholder": "Beschreibung über das Unternehmen",
+      "saveButton": "Speichern",
+      "savingButton": "Speichern..."
+    },
+    "toasts": {
+      "saving": "Ihre Informationen werden gespeichert...",
+      "updateSuccess": "Profil erfolgreich aktualisiert!",
+      "createSuccess": "Profil erfolgreich erstellt!",
+      "updateError": "Fehler beim Aktualisieren des Profils. Bitte versuchen Sie es erneut.",
+      "createError": "Fehler beim Erstellen des Profils. Bitte versuchen Sie es erneut."
+    }
+  },
+  "contactInfo": {
+    "title": "Kontaktinformationen",
+    "form": {
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "city": "Stadt",
+      "cityPlaceholder": "Berlin",
+      "address": "Vollständige Adresse",
+      "addressPlaceholder": "Musterstraße 123, 10115 Berlin, Deutschland.",
+      "saveButton": "Speichern"
+    },
+    "toasts": {
+      "updateSuccess": "Kontaktinformationen erfolgreich aktualisiert",
+      "updateError": "Fehler beim Aktualisieren der Kontaktinformationen"
+    }
+  },
+  "socialNetwork": {
+    "title": "Soziale Netzwerke",
+    "form": {
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "LinkedIn Profil URL",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "Twitter Profil URL",
+      "github": "GitHub",
+      "githubPlaceholder": "GitHub Profil URL",
+      "saveButton": "Speichern"
+    },
+    "toasts": {
+      "updateSuccess": "Informationen zu sozialen Netzwerken erfolgreich aktualisiert",
+      "updateError": "Fehler beim Aktualisieren der Informationen zu sozialen Netzwerken",
+      "createSuccess": "Informationen zu sozialen Netzwerken erfolgreich erstellt",
+      "createError": "Fehler beim Erstellen der Informationen zu sozialen Netzwerken"
+    }
   }
 } 
