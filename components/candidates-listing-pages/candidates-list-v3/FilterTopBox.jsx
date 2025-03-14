@@ -27,9 +27,11 @@ import {
   clearQualification
 } from "../../../features/candidate/candidateSlice";
 import categories from "../../../data/categories"; // Import categories data
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const FilterTopBox = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation('candidateListings');
   
   const {
     keyword,
@@ -171,7 +173,7 @@ const FilterTopBox = () => {
       >
         <div className="inner-box">
           <ul className="job-other-info">
-            <li className="green">Featured</li>
+            <li className="green">{t('filterTopBox.featured')}</li>
           </ul>
 
           <span className="thumb">
@@ -196,7 +198,7 @@ const FilterTopBox = () => {
             </li>
             <li>
               <span className="icon flaticon-money"></span> $
-              {candidate.expectedSalaryRange} / year
+              {candidate.expectedSalaryRange} {t('filterTopBox.jobInfo.salaryPeriod')}
             </li>
           </ul>
           {/* End candidate-info */}
@@ -214,7 +216,7 @@ const FilterTopBox = () => {
             href={`/candidates-single-v1/${candidate.id}`}
             className="theme-btn btn-style-three"
           >
-            View Profile
+            {t('filterTopBox.viewProfile')}
           </Link>
         </div>
       </div>
@@ -276,7 +278,7 @@ const FilterTopBox = () => {
               style={{ minHeight: "45px", marginBottom: "15px" }}
               onClick={clearHandler}
             >
-              Clear All
+              {t('filterTopBox.actions.clearAll')}
             </button>
           ) : undefined}
 
@@ -285,9 +287,9 @@ const FilterTopBox = () => {
             className="chosen-single form-select"
             value={sort}
           >
-            <option value="">Sort by (default)</option>
-            <option value="asc">Newest</option>
-            <option value="des">Oldest</option>
+            <option value="">{t('filterTopBox.sort.options.default')}</option>
+            <option value="asc">{t('filterTopBox.sort.options.newest')}</option>
+            <option value="des">{t('filterTopBox.sort.options.oldest')}</option>
           </select>
 
           <select
@@ -295,15 +297,15 @@ const FilterTopBox = () => {
             onChange={perPageHandler}
             value={JSON.stringify(perPage)}
           >
-            <option value={JSON.stringify({ start: 0, end: 0 })}>All</option>
+            <option value={JSON.stringify({ start: 0, end: 0 })}>{t('filterTopBox.perPage.options.all')}</option>
             <option value={JSON.stringify({ start: 0, end: 15 })}>
-              15 per page
+              {t('filterTopBox.perPage.options.15')}
             </option>
             <option value={JSON.stringify({ start: 0, end: 20 })}>
-              20 per page
+              {t('filterTopBox.perPage.options.20')}
             </option>
             <option value={JSON.stringify({ start: 0, end: 25 })}>
-              25 per page
+              {t('filterTopBox.perPage.options.25')}
             </option>
           </select>
         </div>

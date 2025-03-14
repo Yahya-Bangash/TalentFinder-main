@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addCategory } from "../../../features/filter/candidateFilterSlice";
 import categories from "../../../data/categories"; // Import categories data
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const Categories = () => {
     const { category } = useSelector((state) => state.candidateFilter) || {};
     const [selectedCategory, setSelectedCategory] = useState(category);
     const dispatch = useDispatch();
+    const { t } = useTranslation('candidateListings');
 
     // Category handler
     const categoryHandler = (e) => {
@@ -27,7 +29,7 @@ const Categories = () => {
                 value={selectedCategory || ""} 
                 className="form-select"
             >
-                <option value="">Choose a category</option>
+                <option value="">{t('categories.placeholder')}</option>
                 {categories.map((cat) => (
                     <option key={cat.value} value={cat.value}>
                         {cat.label}

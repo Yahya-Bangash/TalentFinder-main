@@ -8,7 +8,7 @@
       "category": "Kategorie",
       "jobType": "Beschäftigungsart",
       "experience": "Erfahrung",
-      "salary": "Gehaltsbereich",
+      "salary": "Gehaltsschätzung",
       "datePosted": "Einstellungsdatum",
       "apply": "Filter Anwenden",
       "reset": "Zurücksetzen"
@@ -22,6 +22,10 @@
     "placeholder": "Kategorie auswählen",
     "title": "Kategorie",
     "options": {
+      "residential": "Wohngebäude",
+      "commercial": "Gewerbeimmobilien",
+      "industrial": "Industriegebäude",
+      "apartments": "Wohnungen",
       "development": "Entwicklung",
       "marketing": "Marketing",
       "design": "Design",
@@ -33,6 +37,7 @@
     }
   },
   "jobTypes": {
+    "title": "Beschäftigungsart",
     "fullTime": "Vollzeit",
     "partTime": "Teilzeit",
     "temporary": "Befristet",
@@ -41,6 +46,7 @@
     "remote": "Remote"
   },
   "experience": {
+    "title": "Erfahrungsstufe",
     "fresh": "Berufseinsteiger",
     "1year": "1 Jahr",
     "2years": "2 Jahre",
@@ -48,12 +54,21 @@
     "4years": "4 Jahre",
     "5years": "5+ Jahre"
   },
+  "salary": {
+    "title": "Gehaltsschätzung",
+    "range1": "0 - 5000",
+    "range2": "5000 - 10000",
+    "range3": "10000 - 15000",
+    "range4": "15000 - 20000"
+  },
   "datePosted": {
-    "last24hours": "Letzte 24 Stunden",
-    "last3days": "Letzte 3 Tage",
-    "last7days": "Letzte 7 Tage",
-    "last30days": "Letzte 30 Tage",
-    "all": "Alle Zeit"
+    "title": "Einstellungsdatum",
+    "all": "Alle",
+    "lastHour": "Letzte Stunde",
+    "last24Hour": "Letzte 24 Stunden",
+    "last7Days": "Letzte 7 Tage",
+    "last14Days": "Letzte 14 Tage",
+    "last30Days": "Letzte 30 Tage"
   },
   "sort": {
     "title": "Sortieren nach",

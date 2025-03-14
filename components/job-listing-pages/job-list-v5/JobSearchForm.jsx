@@ -1,8 +1,11 @@
 import Categories from "../components/Categories";
 import LocationBox from "../components/LocationBox";
 import SearchBox from "../components/SearchBox";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const JobSearchForm = () => {
+  const { t } = useTranslation('jobListings');
+  
   return (
     <div className="job-search-form">
       <div className="row">
@@ -23,7 +26,7 @@ const JobSearchForm = () => {
 
         <div className="form-group col-lg-2 col-md-12 col-sm-12 text-right">
           <button type="submit" className="theme-btn btn-style-one">
-            Find Jobs
+            {t('searchBox.title')}
           </button>
         </div>
         {/* <!-- Form Group --> */}

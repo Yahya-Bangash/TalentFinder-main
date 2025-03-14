@@ -8,7 +8,7 @@
       "category": "Category",
       "jobType": "Job Type",
       "experience": "Experience",
-      "salary": "Salary Range",
+      "salary": "Salary estimate",
       "datePosted": "Date Posted",
       "apply": "Apply Filter",
       "reset": "Reset"
@@ -22,6 +22,10 @@
     "placeholder": "Choose a category",
     "title": "Category",
     "options": {
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "industrial": "Industrial",
+      "apartments": "Apartments",
       "development": "Development",
       "marketing": "Marketing",
       "design": "Design",
@@ -33,6 +37,7 @@
     }
   },
   "jobTypes": {
+    "title": "Job Type",
     "fullTime": "Full Time",
     "partTime": "Part Time",
     "temporary": "Temporary",
@@ -41,6 +46,7 @@
     "remote": "Remote"
   },
   "experience": {
+    "title": "Experience Level",
     "fresh": "Fresh",
     "1year": "1 Year",
     "2years": "2 Years",
@@ -48,12 +54,21 @@
     "4years": "4 Years",
     "5years": "5+ Years"
   },
+  "salary": {
+    "title": "Salary estimate",
+    "range1": "0 - 5000",
+    "range2": "5000 - 10000",
+    "range3": "10000 - 15000",
+    "range4": "15000 - 20000"
+  },
   "datePosted": {
-    "last24hours": "Last 24 hours",
-    "last3days": "Last 3 days",
-    "last7days": "Last 7 days",
-    "last30days": "Last 30 days",
-    "all": "All time"
+    "title": "Date Posted",
+    "all": "All",
+    "lastHour": "Last Hour",
+    "last24Hour": "Last 24 Hour",
+    "last7Days": "Last 7 Days",
+    "last14Days": "Last 14 Days",
+    "last30Days": "Last 30 Days"
   },
   "sort": {
     "title": "Sort by",

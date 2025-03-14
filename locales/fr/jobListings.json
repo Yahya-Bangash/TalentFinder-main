@@ -8,7 +8,7 @@
       "category": "Catégorie",
       "jobType": "Type d'Emploi",
       "experience": "Expérience",
-      "salary": "Fourchette de Salaire",
+      "salary": "Estimation de Salaire",
       "datePosted": "Date de Publication",
       "apply": "Appliquer le Filtre",
       "reset": "Réinitialiser"
@@ -22,6 +22,10 @@
     "placeholder": "Choisir une catégorie",
     "title": "Catégorie",
     "options": {
+      "residential": "Résidentiel",
+      "commercial": "Commercial",
+      "industrial": "Industriel",
+      "apartments": "Appartements",
       "development": "Développement",
       "marketing": "Marketing",
       "design": "Design",
@@ -33,6 +37,7 @@
     }
   },
   "jobTypes": {
+    "title": "Type d'Emploi",
     "fullTime": "Temps Plein",
     "partTime": "Temps Partiel",
     "temporary": "Temporaire",
@@ -41,6 +46,7 @@
     "remote": "Télétravail"
   },
   "experience": {
+    "title": "Niveau d'Expérience",
     "fresh": "Débutant",
     "1year": "1 An",
     "2years": "2 Ans",
@@ -48,12 +54,21 @@
     "4years": "4 Ans",
     "5years": "5+ Ans"
   },
+  "salary": {
+    "title": "Estimation de Salaire",
+    "range1": "0 - 5000",
+    "range2": "5000 - 10000",
+    "range3": "10000 - 15000",
+    "range4": "15000 - 20000"
+  },
   "datePosted": {
-    "last24hours": "Dernières 24 heures",
-    "last3days": "3 derniers jours",
-    "last7days": "7 derniers jours",
-    "last30days": "30 derniers jours",
-    "all": "Tout temps"
+    "title": "Date de Publication",
+    "all": "Tous",
+    "lastHour": "Dernière Heure",
+    "last24Hour": "Dernières 24 Heures",
+    "last7Days": "7 Derniers Jours",
+    "last14Days": "14 Derniers Jours",
+    "last30Days": "30 Derniers Jours"
   },
   "sort": {
     "title": "Trier par",
