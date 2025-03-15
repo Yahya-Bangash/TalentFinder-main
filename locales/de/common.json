@@ -223,11 +223,25 @@
   "EmployerSidebar": {
     "dashboard": "Dashboard",
     "company_profile": "Unternehmensprofil",
-    "post_new_job": "Neue Stelle ausschreiben",
+    "post_a_new_job": "Neue Stelle ausschreiben",
     "manage_jobs": "Stellen verwalten",
     "all_applicants": "Alle Bewerber",
     "shortlisted_resumes": "Vorgemerkte Lebensläufe",
     "resume_alerts": "Lebenslauf-Benachrichtigungen",
+    "change_password": "Passwort ändern",
+    "logout": "Abmelden",
+    "delete_profile": "Profil löschen"
+  },
+  "CandidateSidebar": {
+    "dashboard": "Dashboard",
+    "my_profile": "Mein Profil",
+    "my_resume": "Mein Lebenslauf",
+    "applied_jobs": "Beworbene Stellen",
+    "job_alerts": "Stellenbenachrichtigungen",
+    "shortlisted_jobs": "Gemerkte Stellen",
+    "cv_manager": "Lebenslauf-Manager",
+    "packages": "Pakete",
+    "messages": "Nachrichten",
     "change_password": "Passwort ändern",
     "logout": "Abmelden",
     "delete_profile": "Profil löschen"

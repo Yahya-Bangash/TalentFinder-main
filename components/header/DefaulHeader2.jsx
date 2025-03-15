@@ -45,7 +45,7 @@ const DefaulHeader2 = () => {
 
   // Simple function to handle logout
   const handleLogout = async (e, itemName) => {
-    if (itemName === "Logout") {
+    if (itemName === "Logout" || itemName === t('EmployerSidebar.logout') || itemName === t('CandidateSidebar.logout')) {
       e.preventDefault();
       try {
         await signOutUser();
@@ -169,17 +169,25 @@ const DefaulHeader2 = () => {
         </a>
 
         <ul className="dropdown-menu">
-          {(user.team === "companies" ? employerMenuData : candidatesMenuData).map((item) => (
-            <li
-              className={`${isActiveLink(item.routePath, pathname) ? "active" : ""} mb-1`}
-              key={item.id}
-            >
-              <Link href={item.routePath} onClick={(e) => handleLogout(e, item.name)}>
-                <i className={`la ${item.icon}`}></i>{" "}
-                {item.name}
-              </Link>
-            </li>
-          ))}
+          {(user.team === "companies" ? employerMenuData : candidatesMenuData).map((item) => {
+            // Convert menu item name to translation key format (lowercase with underscores)
+            const translationKey = item.name.toLowerCase().replace(/ /g, '_');
+            
+            return (
+              <li
+                className={`${isActiveLink(item.routePath, pathname) ? "active" : ""} mb-1`}
+                key={item.id}
+              >
+                <Link href={item.routePath} onClick={(e) => handleLogout(e, item.name)}>
+                  <i className={`la ${item.icon}`}></i>{" "}
+                  {user.team === "companies" 
+                    ? t(`EmployerSidebar.${translationKey}`)
+                    : t(`CandidateSidebar.${translationKey}`)
+                  }
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     );

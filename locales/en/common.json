@@ -227,11 +227,25 @@
   "EmployerSidebar": {
     "dashboard": "Dashboard",
     "company_profile": "Company Profile",
-    "post_new_job": "Post a New Job",
+    "post_a_new_job": "Post a New Job",
     "manage_jobs": "Manage Jobs",
     "all_applicants": "All Applicants",
     "shortlisted_resumes": "Shortlisted Resumes",
     "resume_alerts": "Resume Alerts",
+    "change_password": "Change Password",
+    "logout": "Logout",
+    "delete_profile": "Delete Profile"
+  },
+  "CandidateSidebar": {
+    "dashboard": "Dashboard",
+    "my_profile": "My Profile",
+    "my_resume": "My Resume",
+    "applied_jobs": "Applied Jobs",
+    "job_alerts": "Job Alerts",
+    "shortlisted_jobs": "Shortlisted Jobs",
+    "cv_manager": "CV Manager",
+    "packages": "Packages",
+    "messages": "Messages",
     "change_password": "Change Password",
     "logout": "Logout",
     "delete_profile": "Delete Profile"

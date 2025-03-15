@@ -223,11 +223,25 @@
   "EmployerSidebar": {
     "dashboard": "Tableau de Bord",
     "company_profile": "Profil d'Entreprise",
-    "post_new_job": "Publier une Nouvelle Offre",
+    "post_a_new_job": "Publier une Nouvelle Offre",
     "manage_jobs": "Gérer les Offres",
     "all_applicants": "Tous les Candidats",
     "shortlisted_resumes": "CV Présélectionnés",
     "resume_alerts": "Alertes CV",
+    "change_password": "Changer le Mot de Passe",
+    "logout": "Déconnexion",
+    "delete_profile": "Supprimer le Profil"
+  },
+  "CandidateSidebar": {
+    "dashboard": "Tableau de Bord",
+    "my_profile": "Mon Profil",
+    "my_resume": "Mon CV",
+    "applied_jobs": "Emplois Postulés",
+    "job_alerts": "Alertes Emploi",
+    "shortlisted_jobs": "Emplois Favoris",
+    "cv_manager": "Gestionnaire de CV",
+    "packages": "Forfaits",
+    "messages": "Messages",
     "change_password": "Changer le Mot de Passe",
     "logout": "Déconnexion",
     "delete_profile": "Supprimer le Profil"
