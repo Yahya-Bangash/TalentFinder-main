@@ -11,16 +11,16 @@ const CopyrightFooter = () => {
         <div className="outer-box">
           <div className="copyright-text">
             {t('CopyrightFooter.copyright_text', { year: currentYear })}{" "}
-            <a
+            {/* <a
               href={t('CopyrightFooter.company_link.url')}
               target="_blank"
               rel="noopener noreferrer"
             >
               {t('CopyrightFooter.company_link.text')}
-            </a>
+            </a> */}
             . {t('CopyrightFooter.rights_text')}
           </div>
-          <div className="social-links">
+          <div className="social-links">  
             <Social />
           </div>
         </div>
