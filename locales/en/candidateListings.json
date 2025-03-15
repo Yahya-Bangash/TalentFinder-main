@@ -303,7 +303,32 @@
       },
       "aboutMe": "About Me",
       "aboutMePlaceholder": "Write a short description about yourself",
-      "saveButton": "Save"
+      "saveButton": "Save",
+      "savingButton": "Saving...",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "country": "Country",
+      "countryPlaceholder": "Germany",
+      "city": "City",
+      "cityPlaceholder": "Frankfurt",
+      "expectedSalaryRange": "Expected Salary Range",
+      "expectedSalaryRangePlaceholder": "90k-100k",
+      "experienceYears": "Experience (Years)",
+      "experienceYearsPlaceholder": "5",
+      "gender": "Gender",
+      "genderOptions": {
+        "male": "Male",
+        "female": "Female",
+        "others": "Others"
+      },
+      "educationLevels": "Education Levels",
+      "educationLevelsPlaceholder": "Certificate",
+      "categories": "Categories",
+      "categoriesPlaceholder": "Select Category",
+      "skills": "Skills",
+      "skillsPlaceholder": "Select Skills",
+      "description": "Description",
+      "descriptionPlaceholder": "Description about yourself"
     },
     "upload": {
       "profileImage": "Upload Profile Image",

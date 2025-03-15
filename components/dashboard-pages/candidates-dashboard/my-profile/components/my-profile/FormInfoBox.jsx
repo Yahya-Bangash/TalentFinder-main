@@ -241,11 +241,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>{t('myProfile.form.expectedSalary')}</label>
+                        <label>{t('myProfile.form.expectedSalaryRange')}</label>
                         <input
                             type="text"
                             name="expectedSalaryRange"
-                            placeholder={t('myProfile.form.expectedSalaryPlaceholder')}
+                            placeholder={t('myProfile.form.expectedSalaryRangePlaceholder')}
                             value={formData.expectedSalaryRange}
                             required
                             onChange={handleInputChange}
@@ -253,11 +253,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>{t('myProfile.form.experience')}</label>
+                        <label>{t('myProfile.form.experienceYears')}</label>
                         <input
                             type="number"
                             name="experience"
-                            placeholder={t('myProfile.form.experiencePlaceholder')}
+                            placeholder={t('myProfile.form.experienceYearsPlaceholder')}
                             value={formData.experience}
                             required
                             onChange={handleInputChange}
@@ -280,11 +280,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>{t('myProfile.form.educationLevel')}</label>
+                        <label>{t('myProfile.form.educationLevels')}</label>
                         <input
                             type="text"
                             name="educationalLevel"
-                            placeholder={t('myProfile.form.educationLevelPlaceholder')}
+                            placeholder={t('myProfile.form.educationLevelsPlaceholder')}
                             value={formData.educationalLevel}
                             required
                             onChange={handleInputChange}

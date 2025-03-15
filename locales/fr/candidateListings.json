@@ -303,7 +303,32 @@
       },
       "aboutMe": "À propos de moi",
       "aboutMePlaceholder": "Écrivez une brève description de vous-même",
-      "saveButton": "Enregistrer"
+      "saveButton": "Enregistrer",
+      "savingButton": "Enregistrement...",
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Jean Dupont",
+      "country": "Pays",
+      "countryPlaceholder": "France",
+      "city": "Ville",
+      "cityPlaceholder": "Paris",
+      "expectedSalaryRange": "Fourchette de salaire attendue",
+      "expectedSalaryRangePlaceholder": "90k-100k",
+      "experienceYears": "Expérience (Années)",
+      "experienceYearsPlaceholder": "5",
+      "gender": "Genre",
+      "genderOptions": {
+        "male": "Homme",
+        "female": "Femme",
+        "others": "Autres"
+      },
+      "educationLevels": "Niveaux d'éducation",
+      "educationLevelsPlaceholder": "Certificat",
+      "categories": "Catégories",
+      "categoriesPlaceholder": "Sélectionner une catégorie",
+      "skills": "Compétences",
+      "skillsPlaceholder": "Sélectionner des compétences",
+      "description": "Description",
+      "descriptionPlaceholder": "Description à propos de vous-même"
     },
     "upload": {
       "profileImage": "Télécharger une Photo de Profil",

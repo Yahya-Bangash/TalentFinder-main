@@ -303,7 +303,32 @@
       },
       "aboutMe": "Über mich",
       "aboutMePlaceholder": "Schreiben Sie eine kurze Beschreibung über sich selbst",
-      "saveButton": "Speichern"
+      "saveButton": "Speichern",
+      "savingButton": "Speichern...",
+      "fullName": "Vollständiger Name",
+      "fullNamePlaceholder": "Max Mustermann",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "city": "Stadt",
+      "cityPlaceholder": "Frankfurt",
+      "expectedSalaryRange": "Erwartete Gehaltsspanne",
+      "expectedSalaryRangePlaceholder": "90k-100k",
+      "experienceYears": "Erfahrung (Jahre)",
+      "experienceYearsPlaceholder": "5",
+      "gender": "Geschlecht",
+      "genderOptions": {
+        "male": "Männlich",
+        "female": "Weiblich",
+        "others": "Andere"
+      },
+      "educationLevels": "Bildungsniveau",
+      "educationLevelsPlaceholder": "Zertifikat",
+      "categories": "Kategorien",
+      "categoriesPlaceholder": "Kategorie auswählen",
+      "skills": "Fähigkeiten",
+      "skillsPlaceholder": "Fähigkeiten auswählen",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreibung über sich selbst"
     },
     "upload": {
       "profileImage": "Profilbild hochladen",
