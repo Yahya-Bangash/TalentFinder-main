@@ -1,0 +1,149 @@
+{
+  "searchBox": {
+    "placeholder": "Job title, keywords, or company",
+    "title": "Search Jobs",
+    "filters": {
+      "title": "All Filters",
+      "location": "Location",
+      "category": "Category",
+      "jobType": "Job Type",
+      "experience": "Experience",
+      "salary": "Salary estimate",
+      "datePosted": "Date Posted",
+      "apply": "Apply Filter",
+      "reset": "Reset"
+    }
+  },
+  "locationBox": {
+    "placeholder": "City or postcode",
+    "title": "Location"
+  },
+  "categories": {
+    "placeholder": "Choose a category",
+    "title": "Category",
+    "options": {
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "industrial": "Industrial",
+      "apartments": "Apartments",
+      "development": "Development",
+      "marketing": "Marketing",
+      "design": "Design",
+      "technology": "Technology",
+      "customer_service": "Customer Service",
+      "human_resource": "Human Resource",
+      "healthcare": "Healthcare",
+      "finance": "Finance"
+    }
+  },
+  "jobTypes": {
+    "title": "Job Type",
+    "fullTime": "Full Time",
+    "partTime": "Part Time",
+    "temporary": "Temporary",
+    "contract": "Contract",
+    "internship": "Internship",
+    "remote": "Remote"
+  },
+  "experience": {
+    "title": "Experience Level",
+    "fresh": "Fresh",
+    "1year": "1 Year",
+    "2years": "2 Years",
+    "3years": "3 Years",
+    "4years": "4 Years",
+    "5years": "5+ Years"
+  },
+  "salary": {
+    "title": "Salary estimate",
+    "range1": "0 - 5000",
+    "range2": "5000 - 10000",
+    "range3": "10000 - 15000",
+    "range4": "15000 - 20000"
+  },
+  "datePosted": {
+    "title": "Date Posted",
+    "all": "All",
+    "lastHour": "Last Hour",
+    "last24Hour": "Last 24 Hour",
+    "last7Days": "Last 7 Days",
+    "last14Days": "Last 14 Days",
+    "last30Days": "Last 30 Days"
+  },
+  "sort": {
+    "title": "Sort by",
+    "options": {
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "relevance": "Most Relevant"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Jobs || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Find and apply for jobs with DIGI-X-TECH"
+    },
+    "title": "Find Your Dream Job",
+    "subtitle": "Browse through thousands of job opportunities",
+    "sections": {
+      "jobSearch": "Job Search Form",
+      "jobList": "Job Listings",
+      "filters": "Filter Options"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Jobs"
+    }
+  },
+  "filterJobBox": {
+    "jobInfo": {
+      "company": "Company",
+      "location": "Location",
+      "time": "Time",
+      "salary": "Salary"
+    },
+    "actions": {
+      "clearAll": "Clear All",
+      "bookmark": "Bookmark"
+    },
+    "sort": {
+      "label": "Sort by",
+      "options": {
+        "default": "Sort by (default)",
+        "newest": "Newest",
+        "oldest": "Oldest"
+      }
+    },
+    "perPage": {
+      "label": "Per page",
+      "options": {
+        "all": "All",
+        "10": "10 per page",
+        "20": "20 per page",
+        "30": "30 per page"
+      }
+    },
+    "loading": "Loading jobs...",
+    "error": "Error fetching jobs data",
+    "noResults": "No jobs found"
+  },
+  "index": {
+    "header": {
+      "title": "Find Jobs",
+      "uploadCV": "Upload your CV"
+    },
+    "pageTitle": {
+      "title": "Job Search",
+      "subtitle": "Find your dream job"
+    },
+    "sections": {
+      "jobSearch": "Job Search Form",
+      "jobList": "Job Listings",
+      "filters": "Filter Options"
+    },
+    "metadata": {
+      "title": "Job List || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Find and apply for jobs with DIGI-X-TECH"
+    }
+  }
+} 

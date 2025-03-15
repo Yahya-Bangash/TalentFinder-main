@@ -4,19 +4,22 @@ import candidatesData from "../../../../../data/candidates";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const WidgetContentBox = () => {
+  const { t } = useTranslation('companyListings');
+  
   return (
     <div className="widget-content">
       <div className="tabs-box">
         <Tabs>
           <div className="aplicants-upper-bar">
-            <h6>Senior Product Designer</h6>
+            <h6>{t('allApplicants.content.jobTitle')}</h6>
 
             <TabList className="aplicantion-status tab-buttons clearfix">
-              <Tab className="tab-btn totals"> Total(s): 6</Tab>
-              <Tab className="tab-btn approved"> Approved: 2</Tab>
-              <Tab className="tab-btn rejected"> Rejected(s): 4</Tab>
+              <Tab className="tab-btn totals"> {t('allApplicants.content.tabs.total')}</Tab>
+              <Tab className="tab-btn approved"> {t('allApplicants.content.tabs.approved')}</Tab>
+              <Tab className="tab-btn rejected"> {t('allApplicants.content.tabs.rejected')}</Tab>
             </TabList>
           </div>
 
@@ -54,7 +57,7 @@ const WidgetContentBox = () => {
                           </li>
                           <li>
                             <span className="icon flaticon-money"></span> $
-                            {candidate.hourlyRate} / hour
+                            {candidate.hourlyRate} {t('allApplicants.content.candidate.hourlyRate')}
                           </li>
                         </ul>
                         {/* End candidate-info */}
@@ -72,22 +75,22 @@ const WidgetContentBox = () => {
                       <div className="option-box">
                         <ul className="option-list">
                           <li>
-                            <button data-text="View Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.view')}>
                               <span className="la la-eye"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Approve Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.approve')}>
                               <span className="la la-check"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Reject Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.reject')}>
                               <span className="la la-times-circle"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Delete Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.delete')}>
                               <span className="la la-trash"></span>
                             </button>
                           </li>
@@ -134,7 +137,7 @@ const WidgetContentBox = () => {
                           </li>
                           <li>
                             <span className="icon flaticon-money"></span> $
-                            {candidate.hourlyRate} / hour
+                            {candidate.hourlyRate} {t('allApplicants.content.candidate.hourlyRate')}
                           </li>
                         </ul>
                         {/* End candidate-info */}
@@ -152,22 +155,22 @@ const WidgetContentBox = () => {
                       <div className="option-box">
                         <ul className="option-list">
                           <li>
-                            <button data-text="View Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.view')}>
                               <span className="la la-eye"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Approve Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.approve')}>
                               <span className="la la-check"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Reject Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.reject')}>
                               <span className="la la-times-circle"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Delete Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.delete')}>
                               <span className="la la-trash"></span>
                             </button>
                           </li>
@@ -214,7 +217,7 @@ const WidgetContentBox = () => {
                           </li>
                           <li>
                             <span className="icon flaticon-money"></span> $
-                            {candidate.hourlyRate} / hour
+                            {candidate.hourlyRate} {t('allApplicants.content.candidate.hourlyRate')}
                           </li>
                         </ul>
                         {/* End candidate-info */}
@@ -232,22 +235,22 @@ const WidgetContentBox = () => {
                       <div className="option-box">
                         <ul className="option-list">
                           <li>
-                            <button data-text="View Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.view')}>
                               <span className="la la-eye"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Approve Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.approve')}>
                               <span className="la la-check"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Reject Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.reject')}>
                               <span className="la la-times-circle"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Delete Aplication">
+                            <button data-text={t('allApplicants.content.candidate.actions.delete')}>
                               <span className="la la-trash"></span>
                             </button>
                           </li>

@@ -6,9 +6,11 @@ import useAuth from "@/app/hooks/useAuth";
 import initializeDB from "@/appwrite/Services/dbServices";
 import * as sdk from "node-appwrite";
 import JobModal from "@/components/dashboard-pages/JobModal";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const JobListingsTable = () => {
   const { user } = useAuth();
+  const { t } = useTranslation('companyListings');
   const [db, setDb] = useState(null);
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -75,22 +77,22 @@ const JobListingsTable = () => {
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>My Job Listings</h4>
+        <h4>{t('manageJobs.widgetTitle')}</h4>
       </div>
 
       <div className="widget-content">
         {loading ? (
-          <div className="loading">Loading jobs...</div>
+          <div className="loading">{t('manageJobs.loading')}</div>
         ) : (
           <div className="table-outer">
             <table className="default-table manage-job-table">
               <thead>
                 <tr>
-                  <th>Title</th>
-                  {/* <th>Applications</th> */}
-                  <th>Rate</th>
-                  <th>Created</th>
-                  <th>Action</th>
+                  <th>{t('manageJobs.table.title')}</th>
+                  {/* <th>{t('manageJobs.table.applications')}</th> */}
+                  <th>{t('manageJobs.table.rate')}</th>
+                  <th>{t('manageJobs.table.created')}</th>
+                  <th>{t('manageJobs.table.action')}</th>
                 </tr>
               </thead>
 

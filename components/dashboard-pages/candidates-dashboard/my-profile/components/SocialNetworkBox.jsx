@@ -4,8 +4,12 @@ import { useState, useEffect } from "react";
 import * as sdk from "node-appwrite";
 import useAuth from "@/app/hooks/useAuth";  // Use the Auth hook to get userId
 import initializeDB from "@/appwrite/Services/dbServices";
+import { useTranslation } from "@/app/hooks/useTranslation";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const SocialNetworkBox = () => {
+    const { t } = useTranslation('candidateListings');
     const [db, setDb] = useState(null);
     const [documentId, setDocumentId] = useState(null);  // To track if a document already exists
     const [formData, setFormData] = useState({
@@ -13,6 +17,7 @@ const SocialNetworkBox = () => {
         github: "",
         twitter: "",
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const { user } = useAuth();  // Access the logged-in userId from global auth context
 
@@ -62,6 +67,7 @@ const SocialNetworkBox = () => {
     // Handle form submission (save data to Appwrite)
     const handleSave = async (e) => {
       e.preventDefault();
+      setIsSubmitting(true);
   
       console.log("Save button clicked!");
   
@@ -81,71 +87,84 @@ const SocialNetworkBox = () => {
               // Update existing document
               const response = await db.jobSeekers.update(documentId, updatedData);
               console.log("Document updated successfully:", response);
+              toast.success(t('socialNetwork.toasts.updateSuccess'));
           } else if (db.jobSeekers) {
               // Create a new document
               const newDoc = await db.jobSeekers.create(updatedData);
               setDocumentId(newDoc.$id);
               console.log("Document created successfully:", newDoc);
+              toast.success(t('socialNetwork.toasts.createSuccess'));
           } else {
               console.error("jobSeekers collection not found in db");
+              toast.error(t('socialNetwork.toasts.updateError'));
           }
       } catch (error) {
           console.error("Error during save operation:", error);
+          toast.error(t('socialNetwork.toasts.updateError'));
+      } finally {
+          setIsSubmitting(false);
       }
   };
   
   
 
     return (
-        <form className="default-form" onSubmit={handleSave}>
-            <div className="row">
-                {/* LinkedIn Input */}
-                <div className="form-group col-lg-6 col-md-12">
-                    <label>LinkedIn</label>
-                    <input
-                        type="text"
-                        name="linkedin"
-                        placeholder="LinkedIn Profile URL"
-                        value={formData.linkedin}
-                        required
-                        onChange={handleInputChange}
-                    />
-                </div>
+        <>
+            <form className="default-form" onSubmit={handleSave}>
+                <div className="row">
+                    {/* LinkedIn Input */}
+                    <div className="form-group col-lg-6 col-md-12">
+                        <label>{t('socialNetwork.form.linkedin')}</label>
+                        <input
+                            type="text"
+                            name="linkedin"
+                            placeholder={t('socialNetwork.form.linkedinPlaceholder')}
+                            value={formData.linkedin}
+                            required
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                {/* Twitter Input */}
-                <div className="form-group col-lg-6 col-md-12">
-                    <label>Twitter</label>
-                    <input
-                        type="text"
-                        name="twitter"
-                        placeholder="Twitter Profile URL"
-                        value={formData.twitter}
-                        required
-                        onChange={handleInputChange}
-                    />
-                </div>
+                    {/* Twitter Input */}
+                    <div className="form-group col-lg-6 col-md-12">
+                        <label>{t('socialNetwork.form.twitter')}</label>
+                        <input
+                            type="text"
+                            name="twitter"
+                            placeholder={t('socialNetwork.form.twitterPlaceholder')}
+                            value={formData.twitter}
+                            required
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                {/* GitHub Input */}
-                <div className="form-group col-lg-6 col-md-12">
-                    <label>GitHub</label>
-                    <input
-                        type="text"
-                        name="github"
-                        placeholder="GitHub Profile URL"
-                        value={formData.github}
-                        required
-                        onChange={handleInputChange}
-                    />
-                </div>
+                    {/* GitHub Input */}
+                    <div className="form-group col-lg-6 col-md-12">
+                        <label>{t('socialNetwork.form.github')}</label>
+                        <input
+                            type="text"
+                            name="github"
+                            placeholder={t('socialNetwork.form.githubPlaceholder')}
+                            value={formData.github}
+                            required
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                {/* Save Button */}
-                <div className="form-group col-lg-12 col-md-12">
-                    <button className="theme-btn btn-style-one" type="submit">
-                        Save
-                    </button>
+                    {/* Save Button */}
+                    <div className="form-group col-lg-12 col-md-12">
+                        <button 
+                            className="theme-btn btn-style-one" 
+                            type="submit"
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? t('myProfile.form.savingButton') : t('socialNetwork.form.saveButton')}
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+            <ToastContainer />
+        </>
     );
 };
 

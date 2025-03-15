@@ -1,14 +1,15 @@
-
 'use client'
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addKeyword } from "../../../features/filter/filterSlice";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const SearchBox = () => {
     const { jobList } = useSelector((state) => state.filter);
-    const [getKeyWord, setkeyWord] = useState(jobList.keyword);
+    const [getKeyWord, setKeyWord] = useState(jobList.keyword);
     const dispath = useDispatch();
+    const { t } = useTranslation('jobListings');
 
     // keyword handler
     const keywordHandler = (e) => {
@@ -16,15 +17,15 @@ const SearchBox = () => {
     };
 
     useEffect(() => {
-        setkeyWord(jobList.keyword);
-    }, [setkeyWord, jobList]);
+        setKeyWord(jobList.keyword);
+    }, [setKeyWord, jobList]);
 
     return (
         <>
             <input
                 type="text"
                 name="listing-search"
-                placeholder="Job title, keywords, or company"
+                placeholder={t('searchBox.placeholder')}
                 value={getKeyWord}
                 onChange={keywordHandler}
             />

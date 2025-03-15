@@ -1,0 +1,149 @@
+{
+  "searchBox": {
+    "placeholder": "Titre du poste, mots-clés ou entreprise",
+    "title": "Rechercher des Emplois",
+    "filters": {
+      "title": "Tous les Filtres",
+      "location": "Emplacement",
+      "category": "Catégorie",
+      "jobType": "Type d'Emploi",
+      "experience": "Expérience",
+      "salary": "Estimation de Salaire",
+      "datePosted": "Date de Publication",
+      "apply": "Appliquer le Filtre",
+      "reset": "Réinitialiser"
+    }
+  },
+  "locationBox": {
+    "placeholder": "Ville ou code postal",
+    "title": "Emplacement"
+  },
+  "categories": {
+    "placeholder": "Choisir une catégorie",
+    "title": "Catégorie",
+    "options": {
+      "residential": "Résidentiel",
+      "commercial": "Commercial",
+      "industrial": "Industriel",
+      "apartments": "Appartements",
+      "development": "Développement",
+      "marketing": "Marketing",
+      "design": "Design",
+      "technology": "Technologie",
+      "customer_service": "Service Client",
+      "human_resource": "Ressources Humaines",
+      "healthcare": "Santé",
+      "finance": "Finance"
+    }
+  },
+  "jobTypes": {
+    "title": "Type d'Emploi",
+    "fullTime": "Temps Plein",
+    "partTime": "Temps Partiel",
+    "temporary": "Temporaire",
+    "contract": "Contrat",
+    "internship": "Stage",
+    "remote": "Télétravail"
+  },
+  "experience": {
+    "title": "Niveau d'Expérience",
+    "fresh": "Débutant",
+    "1year": "1 An",
+    "2years": "2 Ans",
+    "3years": "3 Ans",
+    "4years": "4 Ans",
+    "5years": "5+ Ans"
+  },
+  "salary": {
+    "title": "Estimation de Salaire",
+    "range1": "0 - 5000",
+    "range2": "5000 - 10000",
+    "range3": "10000 - 15000",
+    "range4": "15000 - 20000"
+  },
+  "datePosted": {
+    "title": "Date de Publication",
+    "all": "Tous",
+    "lastHour": "Dernière Heure",
+    "last24Hour": "Dernières 24 Heures",
+    "last7Days": "7 Derniers Jours",
+    "last14Days": "14 Derniers Jours",
+    "last30Days": "30 Derniers Jours"
+  },
+  "sort": {
+    "title": "Trier par",
+    "options": {
+      "newest": "Plus récent",
+      "oldest": "Plus ancien",
+      "relevance": "Plus pertinent"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Emplois || DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi",
+      "description": "Trouvez et postulez à des emplois avec DIGI-X-TECH"
+    },
+    "title": "Trouvez l'Emploi de vos Rêves",
+    "subtitle": "Parcourez des milliers d'opportunités d'emploi",
+    "sections": {
+      "jobSearch": "Formulaire de Recherche d'Emploi",
+      "jobList": "Liste des Offres",
+      "filters": "Options de Filtrage"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Emplois"
+    }
+  },
+  "filterJobBox": {
+    "jobInfo": {
+      "company": "Entreprise",
+      "location": "Emplacement",
+      "time": "Temps",
+      "salary": "Salaire"
+    },
+    "actions": {
+      "clearAll": "Tout Effacer",
+      "bookmark": "Marquer"
+    },
+    "sort": {
+      "label": "Trier par",
+      "options": {
+        "default": "Trier par (défaut)",
+        "newest": "Plus récent",
+        "oldest": "Plus ancien"
+      }
+    },
+    "perPage": {
+      "label": "Par page",
+      "options": {
+        "all": "Tout",
+        "10": "10 par page",
+        "20": "20 par page",
+        "30": "30 par page"
+      }
+    },
+    "loading": "Chargement des emplois...",
+    "error": "Erreur lors de la récupération des données",
+    "noResults": "Aucun emploi trouvé"
+  },
+  "index": {
+    "header": {
+      "title": "Rechercher des Emplois",
+      "uploadCV": "Télécharger votre CV"
+    },
+    "pageTitle": {
+      "title": "Recherche d'Emploi",
+      "subtitle": "Trouvez l'emploi de vos rêves"
+    },
+    "sections": {
+      "jobSearch": "Formulaire de Recherche d'Emploi",
+      "jobList": "Liste des Offres",
+      "filters": "Options de Filtrage"
+    },
+    "metadata": {
+      "title": "Liste des Emplois || DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi",
+      "description": "Trouvez et postulez à des emplois avec DIGI-X-TECH"
+    }
+  }
+} 

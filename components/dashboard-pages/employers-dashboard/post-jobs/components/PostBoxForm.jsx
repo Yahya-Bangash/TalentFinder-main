@@ -9,10 +9,12 @@ import initializeDB from "@/appwrite/Services/dbServices";
 import { ID } from "appwrite";
 import categories from "@/data/categories";
 import skills from "@/data/skills";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const PostBoxForm = () => {
   const router = useRouter();
   const { user } = useAuth();
+  const { t } = useTranslation('companyListings');
   const [db, setDb] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
@@ -76,7 +78,7 @@ const PostBoxForm = () => {
           creationTime: new Date().toISOString() 
         };
         await db.jobs.create(jobDocumentPayload, ID.unique());
-        setSuccessMessage("Job posted successfully!");
+        setSuccessMessage(t('postJob.form.successMessage'));
         
         // Navigate to the manage jobs page after a short delay
         setTimeout(() => {
@@ -117,10 +119,10 @@ const PostBoxForm = () => {
   const flatSkills = flattenOptions(skills);
 
   const jobTypeOptions = [
-    { value: "Urgent", label: "Urgent" },
-    { value: "Full Time", label: "Full Time" },
-    { value: "Hybrid", label: "Hybrid" },
-    { value: "Remote", label: "Remote" },
+    { value: "Urgent", label: t('postJob.jobTypes.urgent') },
+    { value: "Full Time", label: t('postJob.jobTypes.fullTime') },
+    { value: "Hybrid", label: t('postJob.jobTypes.hybrid') },
+    { value: "Remote", label: t('postJob.jobTypes.remote') },
   ];
 
   return (
@@ -132,11 +134,11 @@ const PostBoxForm = () => {
       )}
       <div className="row">
         <div className="form-group col-lg-12 col-md-12">
-          <label>Job Title</label>
+          <label>{t('postJob.form.jobTitle')}</label>
           <input 
             type="text" 
             name="jobTitle" 
-            placeholder="Title" 
+            placeholder={t('postJob.form.jobTitlePlaceholder')} 
             value={jobData.jobTitle}
             onChange={handleInputChange}
             required
@@ -144,10 +146,10 @@ const PostBoxForm = () => {
         </div>
 
         <div className="form-group col-lg-12 col-md-12">
-          <label>Job Description</label>
+          <label>{t('postJob.form.jobDescription')}</label>
           <textarea 
             name="jobDescription"
-            placeholder="Job Description"
+            placeholder={t('postJob.form.jobDescriptionPlaceholder')}
             value={jobData.jobDescription}
             onChange={handleInputChange}
             required
@@ -155,7 +157,7 @@ const PostBoxForm = () => {
         </div>
 
         <div className="form-group col-lg-6 col-md-12">
-          <label>Select Job Categories</label>
+          <label>{t('postJob.form.selectCategories')}</label>
           <Select
             value={flatOptions.filter(option => jobData.categoryTags.includes(option.value))}
             isMulti
@@ -171,7 +173,7 @@ const PostBoxForm = () => {
         </div>
 
         <div className="form-group col-lg-6 col-md-12">
-          <label>Job Type</label>
+          <label>{t('postJob.form.jobType')}</label>
           <Select
             value={jobData.jobType.map(type => jobTypeOptions.find(option => option.value === type))}
             isMulti
@@ -183,11 +185,11 @@ const PostBoxForm = () => {
         </div>
 
         <div className="form-group col-lg-6 col-md-12">
-          <label>Offered Rate</label>
+          <label>{t('postJob.form.offeredRate')}</label>
           <input 
             type="text" 
             name="rate" 
-            placeholder="$1000" 
+            placeholder={t('postJob.form.offeredRatePlaceholder')} 
             value={jobData.rate}
             onChange={handleInputChange}
             required
@@ -195,7 +197,7 @@ const PostBoxForm = () => {
         </div>
 
         <div className="form-group col-lg-6 col-md-12">
-          <label>Skills</label>
+          <label>{t('postJob.form.skills')}</label>
           <Select
             value={flatSkills.filter(option => jobData.skills.includes(option.value))}
             isMulti
@@ -212,7 +214,7 @@ const PostBoxForm = () => {
             type="submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Posting..." : "Post Job"}
+            {isSubmitting ? t('postJob.form.postingButton') : t('postJob.form.postButton')}
           </button>
         </div>
       </div>

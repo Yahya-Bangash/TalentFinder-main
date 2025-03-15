@@ -1,0 +1,346 @@
+{
+  "welcome": "Welcome",
+  "language": "Language",
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "search": "Search",
+  "login": "Login",
+  "signup": "Sign Up",
+  "settings": "Settings",
+  "LoginPopup": {
+    "login_title": "Login",
+    "register_title": "Register",
+    "close_button": "Close",
+    "login_form": "Login Form",
+    "register_form": "Register Form",
+    "modal_login": "Login Modal",
+    "modal_register": "Register Modal"
+  },
+  "HeaderNavContent": {
+    "home": "Home",
+    "about_us": "About Us",
+    "skills": "Skills",
+    "company_listings": "Company Listings",
+    "job_listings": "Job Listings",
+    "candidate_listings": "Candidate Listings",
+    "company_dashboard": "Company Dashboard",
+    "candidate_dashboard": "Candidate Dashboard",
+    "navigation": {
+      "find_jobs": "Find Jobs",
+      "candidate": "Candidate",
+      "employers": "Employer",
+      "dashboards": "Dashboards",
+      "blog": "Blog",
+      "pages": "Pages"
+    }
+  },
+  "DefaultHeader2": {
+    "loading": "Loading...",
+    "error_loading": "Error loading profile",
+    "login_register": "Login / Register",
+    "my_company": "My Company",
+    "my_profile": "My Profile",
+    "profile": {
+      "alt_text": "profile",
+      "default_image": "/images/user-profile-icon.svg"
+    },
+    "brand": {
+      "alt_text": "brand",
+      "logo_path": "/images/jordii-logo.png"
+    }
+  },
+  "LoginForm": {
+    "title": "Login to DIGI-X-TECH",
+    "email": "Email",
+    "email_placeholder": "Email",
+    "username": "Username",
+    "username_placeholder": "Username",
+    "password": "Password",
+    "password_placeholder": "Password",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot password?",
+    "login_button": "Log In",
+    "logging_in": "Logging in...",
+    "no_account": "Don't have an account?",
+    "signup_link": "Signup",
+    "or": "or",
+    "error_message": "Login failed. Please check your credentials and try again."
+  },
+  "RegisterForm": {
+    "title": "Create a free DIGI-X-TECH Account",
+    "email": "Email Address",
+    "email_placeholder": "Email Address",
+    "username": "Username",
+    "username_placeholder": "Username",
+    "password": "Password",
+    "password_placeholder": "Password",
+    "register_button": "Register",
+    "registering": "Registering...",
+    "have_account": "Already have an account?",
+    "login_link": "Login",
+    "or": "or",
+    "error_message": "Registration failed. Please try again."
+  },
+  "LoginWithSocial": {
+    "facebook": "Log In via Facebook",
+    "google": "Log In via Gmail"
+  },
+  "About2": {
+    "company_name": "DIGI-X-TECH",
+    "description": "With the DIGI-X-TECH portal, companies reach a new and highly interesting target group, the qualified talents we have vetted find first-class employers and our team accompanies you throughout the entire process. More than just a personalized, individual and simple job search portal.",
+    "subtitle": "A holistic solution. A single portal",
+    "signup_button": "Sign Up Now!",
+    "image": {
+      "alt_text": "resource",
+      "path": "/images/resource/image-3.png"
+    }
+  },
+  "Block8": {
+    "blocks": [
+      {
+        "id": 1,
+        "icon": "icon-drawing",
+        "title": "Job Postings",
+        "text": "Find and apply for your dream job among job postings from well-known companies across Germany - or let employers find you through your profile."
+      },
+      {
+        "id": 2,
+        "icon": "icon-process",
+        "title": "Visa Consulting",
+        "text": "We accompany you from the preliminary approval to the issuance of the visa and support you with our knowledge."
+      },
+      {
+        "id": 3,
+        "icon": "icon-task",
+        "title": "Language Courses",
+        "text": "If your language skills are not yet sufficient, we support you with our German language courses."
+      },
+      {
+        "id": 4,
+        "icon": "icon-one-finger-click",
+        "title": "Accommodation Support",
+        "text": "We support you in your search for accommodation so that you can arrive in Germany in peace and start your new life."
+      },
+      {
+        "id": 5,
+        "icon": "icon-task",
+        "title": "Upload Your Resume",
+        "text": "The latest design trends meet hand-crafted templates in Sassio Collection."
+      },
+      {
+        "id": 6,
+        "icon": "icon-one-finger-click",
+        "title": "Special Consulting",
+        "text": "You can learn about the process and chart your career path with a free consultation online or at our office in Istanbul."
+      }
+    ]
+  },
+  "FooterContent": {
+    "sections": [
+      {
+        "id": 1,
+        "title": "For Candidates",
+        "menuList": [
+          { "name": "Browse Jobs", "route": "/job-list-v5" },
+          { "name": "Browse Categories", "route": "/job-list-v5" },
+          { "name": "Candidate Dashboard", "route": "/candidates-dashboard/dashboard" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "For Employers",
+        "menuList": [
+          { "name": "Browse Candidates", "route": "/candidates-list-v3" },
+          { "name": "Employer Dashboard", "route": "/employers-dashboard/dashboard" },
+          { "name": "Add Job", "route": "/employers-dashboard/post-jobs" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "About Us",
+        "menuList": [
+          { "name": "About Us", "route": "/about" },
+          { "name": "Contact", "route": "/contact" }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Helpful Resources",
+        "menuList": [
+          { "name": "Site Map", "route": "/" },
+          { "name": "Terms of Use", "route": "/terms" },
+          { "name": "Privacy Center", "route": "/" },
+          { "name": "Security Center", "route": "/" },
+          { "name": "Accessibility Center", "route": "/" }
+        ]
+      }
+    ]
+  },
+  "CopyrightFooter": {
+    "copyright_text": 2025,
+    
+    "rights_text": "All Right Reserved."
+  },
+  "Social": {
+    "links": [
+      {
+        "id": 1,
+        "icon": "fa-facebook-f",
+        "link": "https://www.facebook.com/",
+        "aria_label": "Follow us on Facebook"
+      },
+      {
+        "id": 2,
+        "icon": "fa-twitter",
+        "link": "https://www.twitter.com/",
+        "aria_label": "Follow us on Twitter"
+      },
+      {
+        "id": 3,
+        "icon": "fa-instagram",
+        "link": "https://www.instagram.com/",
+        "aria_label": "Follow us on Instagram"
+      },
+      {
+        "id": 4,
+        "icon": "fa-linkedin-in",
+        "link": "https://www.linkedin.com/",
+        "aria_label": "Follow us on LinkedIn"
+      }
+    ]
+  },
+  "CopyrightFooter2": {
+    "brand": {
+      "alt_text": "brand",
+      "logo_path": "/images/jordii-logo.png"
+    },
+    "copyright_text": 2025,
+    
+    "rights_text": "All Right Reserved."
+  },
+  "EmployerSidebar": {
+    "dashboard": "Dashboard",
+    "company_profile": "Company Profile",
+    "post_a_new_job": "Post a New Job",
+    "manage_jobs": "Manage Jobs",
+    "all_applicants": "All Applicants",
+    "shortlisted_resumes": "Shortlisted Resumes",
+    "resume_alerts": "Resume Alerts",
+    "change_password": "Change Password",
+    "logout": "Logout",
+    "delete_profile": "Delete Profile"
+  },
+  "CandidateSidebar": {
+    "dashboard": "Dashboard",
+    "my_profile": "My Profile",
+    "my_resume": "My Resume",
+    "applied_jobs": "Applied Jobs",
+    "job_alerts": "Job Alerts",
+    "shortlisted_jobs": "Shortlisted Jobs",
+    "cv_manager": "CV Manager",
+    "packages": "Packages",
+    "messages": "Messages",
+    "change_password": "Change Password",
+    "logout": "Logout",
+    "delete_profile": "Delete Profile"
+  },
+  "index": {
+    "footer": {
+      "contact": {
+        "call_us": "Call us",
+        "phone": "+4917665048247/+237689276584",
+        "address": "Deido\nDouala Cameroon",
+        "email": "contact@ifp-idxt.com"
+      }
+    },
+    "job_categories": {
+      "title": "Popular Job Categories",
+      "subtitle": "2020 jobs live - 293 added today."
+    },
+    "featured_jobs": {
+      "title": "Featured Jobs",
+      "subtitle": "Know your worth and find the job that qualify your life",
+      "load_more": "Load More Listing"
+    },
+    "top_companies": {
+      "title": "Top Company Registered",
+      "subtitle": "Some of the companies we have helped recruit excellent applicants over the years.",
+      "load_more": "Load More Companies"
+    },
+    "candidates": {
+      "title": "Featured Candidates",
+      "subtitle": "Lorem ipsum dolor sit amet elit, sed do eiusmod tempor",
+      "load_more": "Load More Candidates"
+    },
+    "services": {
+      "title": "Our Services"
+    },
+    "testimonials": {
+      "title": "Holistic solutions are needed."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  },
+  "FAQ": {
+    "items": [
+      {
+        "id": "collapseOne",
+        "question": "What does DIGI-X-TECH offer you?",
+        "answer": [
+          "DIGI-X-TECH offers you the opportunity to take advantage of career opportunities in Germany and provides comprehensive support from creating your profile to finding accommodation."
+        ]
+      },
+      {
+        "id": "collapseTwo",
+        "question": "What is the DIGI-X-TECH Portal?",
+        "answer": [
+          "DIGI-X-TECH portal allows you to access job postings and companies, and enables you to apply or be found by companies. With our profile service, we optimize your profile and create a professional introduction video."
+        ]
+      },
+      {
+        "id": "collapseThree",
+        "question": "What conditions must be met in order to come to Germany as a qualified employee?",
+        "answer": [
+          "Requirements vary depending on the desired goal. In general, a 'Blue Card', a 'Certificate of Equivalence' or an 'Equivalence Partnership' must be available along with the necessary language skills to start work. Please contact our Talent-Scouts for your personal assessment."
+        ]
+      },
+      {
+        "id": "collapseFour",
+        "question": "Do I have to have knowledge of the German language?",
+        "answer": [
+          "Language skills vary depending on the type of employment and sector. Whatever the legally required language level, we recommend at least B1 level."
+        ]
+      },
+      {
+        "id": "collapseFive",
+        "question": "How long does the immigration procedure take and when should I apply?",
+        "answer": [
+          "The duration of the labor migration procedure depends on the type of visa applied for. In general, the procedure takes from a few weeks to a few months. Within the scope of the 'accelerated skilled labor procedure', there are deadlines that the Consulate General must also comply with. It is recommended to apply as early as possible."
+        ]
+      },
+      {
+        "id": "collapseSix",
+        "question": "What documents are required when registering on the DIGI-X-TECH portal?",
+        "answer": [
+          "To create a profile on the portal, an up-to-date CV, documents on professional training, additional qualifications and language skills are required."
+        ]
+      },
+      {
+        "id": "collapseSeven",
+        "question": "What documents are required for a visa?",
+        "answer": [
+          "The documents that need to be submitted depend on the type of visa and vary for educational and employment relationships. However, in principle, approval from the Federal Employment Agency, an educational or employment contract, proof of language skills and a valid passport are required in all cases."
+        ]
+      },
+      {
+        "id": "collapseEight",
+        "question": "How are health insurance and other social security conditions regulated for employees in Germany?",
+        "answer": [
+          "The documents that need to be submitted depend on the type of visa and vary for educational and employment relationships. However, in principle, approval from the Federal Employment Agency, an educational or employment contract, proof of language skills and a valid passport are required in all cases."
+        ]
+      }
+    ]
+  }
+} 

@@ -1,4 +1,3 @@
-
 'use client'
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -7,12 +6,14 @@ import {
     addJobTypeSelect,
     addSalary,
 } from "../../../features/filter/filterSlice";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 export default function JobSelect() {
     const { jobList } = useSelector((state) => state.filter);
     const { jobTypeList, datePost, experienceLavel } = useSelector(
         (state) => state.job
     );
+    const { t } = useTranslation('jobListings');
 
     const dispatch = useDispatch();
 
@@ -47,7 +48,7 @@ export default function JobSelect() {
                             className="chosen-single form-select"
                             value={jobList?.jobTypeSelect}
                         >
-                            <option value="">Job Type</option>
+                            <option value="">{t('jobTypes.title')}</option>
                             {jobTypeList?.map((item) => (
                                 <option value={item.value} key={item.id}>
                                     {item.name}
@@ -65,7 +66,12 @@ export default function JobSelect() {
                         >
                             {datePost?.map((item) => (
                                 <option value={item.value} key={item.id}>
-                                    {item.name}
+                                    {item.value === "all" ? t('datePosted.all') :
+                                     item.value === "last-hour" ? t('datePosted.lastHour') :
+                                     item.value === "last-24-hour" ? t('datePosted.last24Hour') :
+                                     item.value === "last-7-days" ? t('datePosted.last7Days') :
+                                     item.value === "last-14-days" ? t('datePosted.last14Days') :
+                                     item.value === "last-30-days" ? t('datePosted.last30Days') : item.name}
                                 </option>
                             ))}
                         </select>
@@ -78,10 +84,14 @@ export default function JobSelect() {
                             className="chosen-single form-select"
                             value={jobList?.experienceSelect}
                         >
-                            <option>Experience Level</option>
+                            <option value="">{t('experience.title')}</option>
                             {experienceLavel?.map((item) => (
                                 <option value={item.value} key={item.id}>
-                                    {item.name}
+                                    {item.value === "fresh" ? t('experience.fresh') :
+                                     item.value === "1-year" ? t('experience.1year') :
+                                     item.value === "2-year" ? t('experience.2years') :
+                                     item.value === "3-year" ? t('experience.3years') :
+                                     item.value === "4-year" ? t('experience.4years') : item.name}
                                 </option>
                             ))}
                         </select>
@@ -100,7 +110,7 @@ export default function JobSelect() {
                                     max: 20000,
                                 })}
                             >
-                                Salary estimate
+                                {t('salary.title')}
                             </option>
                             <option
                                 value={JSON.stringify({
@@ -108,7 +118,7 @@ export default function JobSelect() {
                                     max: 5000,
                                 })}
                             >
-                                0 - 5000
+                                {t('salary.range1')}
                             </option>
                             <option
                                 value={JSON.stringify({
@@ -116,7 +126,7 @@ export default function JobSelect() {
                                     max: 10000,
                                 })}
                             >
-                                5000 - 10000
+                                {t('salary.range2')}
                             </option>
                             <option
                                 value={JSON.stringify({
@@ -124,7 +134,7 @@ export default function JobSelect() {
                                     max: 15000,
                                 })}
                             >
-                                10000 - 15000
+                                {t('salary.range3')}
                             </option>
                             <option
                                 value={JSON.stringify({
@@ -132,7 +142,7 @@ export default function JobSelect() {
                                     max: 20000,
                                 })}
                             >
-                                15000 - 20000
+                                {t('salary.range4')}
                             </option>
                         </select>
                     </div>

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import * as sdk from "node-appwrite";
 import useAuth from "@/app/hooks/useAuth";  // Use the Auth hook to get userId
 import initializeDB from "@/appwrite/Services/dbServices";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const ContactInfoBox = () => {
     const { user } = useAuth();  // Access the logged-in userId from global auth context
@@ -14,6 +15,7 @@ const ContactInfoBox = () => {
         city: '',
         address: ''
     });
+    const { t } = useTranslation('companyListings');
 
     // Fetch the document from Appwrite based on userId and populate the form
     useEffect(() => {
@@ -78,11 +80,11 @@ const ContactInfoBox = () => {
         <form className="default-form" onSubmit={handleSave}>
             <div className="row">
                 <div className="form-group col-lg-6 col-md-12">
-                    <label>Country</label>
+                    <label>{t('companyProfile.contactInfo.country')}</label>
                     <input
                         type="text"
                         name="country"
-                        placeholder="United States"
+                        placeholder={t('companyProfile.contactInfo.countryPlaceholder')}
                         value={contactInfo.country}
                         required
                         onChange={handleInputChange}
@@ -90,11 +92,11 @@ const ContactInfoBox = () => {
                 </div>
 
                 <div className="form-group col-lg-6 col-md-12">
-                    <label>City</label>
+                    <label>{t('companyProfile.contactInfo.city')}</label>
                     <input
                         type="text"
                         name="city"
-                        placeholder="California"
+                        placeholder={t('companyProfile.contactInfo.cityPlaceholder')}
                         value={contactInfo.city}
                         required
                         onChange={handleInputChange}
@@ -102,11 +104,11 @@ const ContactInfoBox = () => {
                 </div>
 
                 <div className="form-group col-lg-12 col-md-12">
-                    <label>Complete Address</label>
+                    <label>{t('companyProfile.contactInfo.address')}</label>
                     <input
                         type="text"
                         name="address"
-                        placeholder="329 Queensberry Street, North Melbourne VIC 3051, Australia."
+                        placeholder={t('companyProfile.contactInfo.addressPlaceholder')}
                         value={contactInfo.address}
                         required
                         onChange={handleInputChange}
@@ -115,7 +117,7 @@ const ContactInfoBox = () => {
 
                 <div className="form-group col-lg-12 col-md-12">
                     <button type="submit" className="theme-btn btn-style-one">
-                        Save
+                        {t('companyProfile.contactInfo.saveButton')}
                     </button>
                 </div>
             </div>

@@ -1,8 +1,11 @@
 import Link from "next/link";
 import ApplicantsList from "./ApplicantsList";
 import Image from "next/image";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const About2 = () => {
+  const { t } = useTranslation('common');
+
   return (
     <>
       {/* <!-- Content Column --> */}
@@ -10,14 +13,13 @@ const About2 = () => {
         <div className="inner-column" data-aos="fade-left">
           <div className="sec-title">
             <h2>
-              DIGI-X-TECH
+              {t('About2.company_name')}
             </h2>
             <div className="text">
-            With the DIGI-X-TECH portal, companies reach a new and highly interesting target group, the qualified talents we have vetted find first-class employers and our team accompanies you throughout the entire process. More than just a personalized, individual and simple job search portal.
-
+              {t('About2.description')}
             </div>
             <div className="font-semibold mt-6">
-            A holistic solution. A single portal
+              {t('About2.subtitle')}
             </div>
           </div>
           {/* <ul className="list-style-one">
@@ -29,7 +31,7 @@ const About2 = () => {
             href="/register"
             className="theme-btn btn-style-one"
           >
-            Sign Up Now!
+            {t('About2.signup_button')}
           </Link>
         </div>
       </div>

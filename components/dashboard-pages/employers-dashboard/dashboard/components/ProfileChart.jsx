@@ -1,4 +1,3 @@
-
 'use client'
 import {
   Chart as ChartJS,
@@ -12,6 +11,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 ChartJS.register(
   CategoryScale,
@@ -50,35 +50,44 @@ export const options = {
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June"];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset",
-      data: labels.map(() => faker.datatype.number({ min: 100, max: 400 })),
-      borderColor: "#1967d2",
-      backgroundColor: "#1967d2",
-      data: [196, 132, 215, 362, 210, 252],
-      fill: false,
-    },
-  ],
-};
-
 const ProfileChart = () => {
+  const { t } = useTranslation('companyListings');
+  
+  const labels = [
+    t('dashboard.profileChart.months.january', 'January'), 
+    t('dashboard.profileChart.months.february', 'February'), 
+    t('dashboard.profileChart.months.march', 'March'), 
+    t('dashboard.profileChart.months.april', 'April'), 
+    t('dashboard.profileChart.months.may', 'May'), 
+    t('dashboard.profileChart.months.june', 'June')
+  ];
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: t('dashboard.profileChart.dataset', 'Dataset'),
+        data: labels.map(() => faker.datatype.number({ min: 100, max: 400 })),
+        borderColor: "#1967d2",
+        backgroundColor: "#1967d2",
+        data: [196, 132, 215, 362, 210, 252],
+        fill: false,
+      },
+    ],
+  };
+
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>Your Profile Views</h4>
+        <h4>{t('dashboard.profileChart.title', 'Your Profile Views')}</h4>
         <div className="chosen-outer">
           {/* <!--Tabs Box--> */}
           <select className="chosen-single form-select">
-            <option>Last 6 Months</option>
-            <option>Last 12 Months</option>
-            <option>Last 16 Months</option>
-            <option>Last 24 Months</option>
-            <option>Last 5 year</option>
+            <option>{t('dashboard.profileChart.timeOptions.last6Months', 'Last 6 Months')}</option>
+            <option>{t('dashboard.profileChart.timeOptions.last12Months', 'Last 12 Months')}</option>
+            <option>{t('dashboard.profileChart.timeOptions.last16Months', 'Last 16 Months')}</option>
+            <option>{t('dashboard.profileChart.timeOptions.last24Months', 'Last 24 Months')}</option>
+            <option>{t('dashboard.profileChart.timeOptions.last5Years', 'Last 5 year')}</option>
           </select>
         </div>
       </div>

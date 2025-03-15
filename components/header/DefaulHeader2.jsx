@@ -8,10 +8,11 @@ import useAuth from "@/app/hooks/useAuth";
 import useUserProfile from "@/app/hooks/useUserProfile";
 import employerMenuData from "../../data/employerMenuData";
 import { isActiveLink } from "../../utils/linkActiveChecker";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { signOutUser } from "@/appwrite/Services/authServices";
 import candidatesMenuData from "@/data/candidatesMenuData";
-import { useRouter } from "next/navigation";
+import { useLanguage } from "@/app/contexts/LanguageContext";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const DefaulHeader2 = () => {
   const [navbar, setNavbar] = useState(false);
@@ -23,10 +24,28 @@ const DefaulHeader2 = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [componentKey, setComponentKey] = useState(0);
   const router = useRouter();
+  
+  // Get language context
+  const { language, changeLanguage } = useLanguage();
+  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+  const { t } = useTranslation('common');
+
+  // Language options with flags
+  const languages = [
+    { code: 'en', name: 'English', flag: '/images/flags/gb.svg' },
+    { code: 'de', name: 'Deutsch', flag: '/images/flags/de.svg' },
+    { code: 'fr', name: 'Français', flag: '/images/flags/fr.svg' },
+  ];
+
+  // Function to handle language change
+  const handleLanguageChange = (langCode) => {
+    changeLanguage(langCode);
+    setShowLanguageDropdown(false);
+  };
 
   // Simple function to handle logout
   const handleLogout = async (e, itemName) => {
-    if (itemName === "Logout") {
+    if (itemName === "Logout" || itemName === t('EmployerSidebar.logout') || itemName === t('CandidateSidebar.logout')) {
       e.preventDefault();
       try {
         await signOutUser();
@@ -83,7 +102,7 @@ const DefaulHeader2 = () => {
       return (
         <span className="theme-btn btn-style-three loading">
           <div className="loading-spinner"></div>
-          Loading...
+          {t('DefaultHeader2.loading')}
         </span>
       );
     }
@@ -92,7 +111,7 @@ const DefaulHeader2 = () => {
       console.error('Profile error:', profileError);
       return (
         <span className="theme-btn btn-style-three error">
-          Error loading profile
+          {t('DefaultHeader2.error_loading')}
         </span>
       );
     }
@@ -100,7 +119,7 @@ const DefaulHeader2 = () => {
     if (!user || !isAuthenticated) {
       return (
         <Link href="/login" className="theme-btn btn-style-three">
-          Login / Register
+          {t('DefaultHeader2.login_register')}
         </Link>
       );
     }
@@ -150,18 +169,118 @@ const DefaulHeader2 = () => {
         </a>
 
         <ul className="dropdown-menu">
-          {(user.team === "companies" ? employerMenuData : candidatesMenuData).map((item) => (
-            <li
-              className={`${isActiveLink(item.routePath, pathname) ? "active" : ""} mb-1`}
-              key={item.id}
-            >
-              <Link href={item.routePath} onClick={(e) => handleLogout(e, item.name)}>
-                <i className={`la ${item.icon}`}></i>{" "}
-                {item.name}
-              </Link>
-            </li>
-          ))}
+          {(user.team === "companies" ? employerMenuData : candidatesMenuData).map((item) => {
+            // Convert menu item name to translation key format (lowercase with underscores)
+            const translationKey = item.name.toLowerCase().replace(/ /g, '_');
+            
+            return (
+              <li
+                className={`${isActiveLink(item.routePath, pathname) ? "active" : ""} mb-1`}
+                key={item.id}
+              >
+                <Link href={item.routePath} onClick={(e) => handleLogout(e, item.name)}>
+                  <i className={`la ${item.icon}`}></i>{" "}
+                  {user.team === "companies" 
+                    ? t(`EmployerSidebar.${translationKey}`)
+                    : t(`CandidateSidebar.${translationKey}`)
+                  }
+                </Link>
+              </li>
+            );
+          })}
         </ul>
+      </div>
+    );
+  };
+
+  // Language switcher component
+  const renderLanguageSwitcher = () => {
+    const currentLang = languages.find(lang => lang.code === language);
+    
+    return (
+      <div className="language-switcher" style={{ position: 'relative', marginRight: '15px' }}>
+        <button 
+          onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            background: 'transparent',
+            border: 'none',
+            cursor: 'pointer',
+            padding: '5px',
+            borderRadius: '4px'
+          }}
+        >
+          <div style={{ 
+            width: '24px', 
+            height: '24px', 
+            borderRadius: '50%', 
+            overflow: 'hidden',
+            marginRight: '5px'
+          }}>
+            <Image 
+              src={currentLang.flag} 
+              alt={currentLang.name} 
+              width={24} 
+              height={24}
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+          <span style={{ fontSize: '14px', color: '#202124' }}>{currentLang.code.toUpperCase()}</span>
+          <i className="la la-angle-down" style={{ marginLeft: '5px' }}></i>
+        </button>
+        
+        {showLanguageDropdown && (
+          <div style={{
+            position: 'absolute',
+            top: '100%',
+            right: '0',
+            backgroundColor: '#fff',
+            boxShadow: '0 5px 20px rgba(0,0,0,0.1)',
+            borderRadius: '8px',
+            padding: '5px 0',
+            zIndex: 100,
+            minWidth: '150px',
+            marginTop: '5px'
+          }}>
+            {languages.map(lang => (
+              <button
+                key={lang.code}
+                onClick={() => handleLanguageChange(lang.code)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '8px 15px',
+                  width: '100%',
+                  textAlign: 'left',
+                  border: 'none',
+                  background: lang.code === language ? '#f5f5f5' : 'transparent',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.2s',
+                }}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = lang.code === language ? '#f5f5f5' : 'transparent'}
+              >
+                <div style={{ 
+                  width: '20px', 
+                  height: '20px', 
+                  borderRadius: '50%', 
+                  overflow: 'hidden',
+                  marginRight: '10px'
+                }}>
+                  <Image 
+                    src={lang.flag} 
+                    alt={lang.name} 
+                    width={20} 
+                    height={20}
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <span style={{ fontSize: '14px' }}>{lang.name}</span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     );
   };
@@ -190,7 +309,8 @@ const DefaulHeader2 = () => {
         </div>
 
         <div className="outer-box">
-          <div className="btn-box">
+          <div className="btn-box" style={{ display: 'flex', alignItems: 'center' }}>
+            {renderLanguageSwitcher()}
             {renderProfileContent()}
           </div>
         </div>

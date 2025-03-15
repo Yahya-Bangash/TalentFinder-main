@@ -1,0 +1,477 @@
+{
+  "searchBox": {
+    "placeholder": "Kandidatenname oder Stichwort",
+    "title": "Kandidaten Suchen",
+    "filters": {
+      "title": "Alle Filter",
+      "location": "Standort",
+      "category": "Kategorie",
+      "experience": "Erfahrung",
+      "education": "Ausbildung",
+      "skills": "Fähigkeiten",
+      "apply": "Filter Anwenden",
+      "reset": "Zurücksetzen"
+    }
+  },
+  "locationBox": {
+    "placeholder": "Stadt oder Postleitzahl",
+    "title": "Standort"
+  },
+  "categories": {
+    "placeholder": "Kategorie auswählen",
+    "title": "Kategorie",
+    "list": [
+      {
+        "label": "Metalltechnik",
+        "value": "Metal Technology",
+        "icon": "flaticon-rocket-ship",
+        "subOptions": [
+          { "value": "Plant mechanic", "label": "Anlagenmechaniker" },
+          { "value": "CNC specialist", "label": "CNC-Fachkraft" },
+          { "value": "Specialist for metal technology", "label": "Fachkraft für Metalltechnik" },
+          { "value": "Precision mechanic", "label": "Feinmechaniker" },
+          { "value": "Foundry mechanic", "label": "Gießereimechaniker" },
+          { "value": "Industrial mechanic", "label": "Industriemechaniker" },
+          { "value": "Engineer - Automotive engineering", "label": "Ingenieur - Fahrzeugtechnik" },
+          { "value": "Engineer - mechanical engineering", "label": "Ingenieur - Maschinenbau" },
+          { "value": "Automotive mechatronics technician", "label": "Kfz-Mechatroniker" },
+          { "value": "Construction mechanic", "label": "Konstruktionsmechaniker" },
+          { "value": "Machine and plant operator", "label": "Maschinen- und Anlagenführer" },
+          { "value": "Machine technology technician", "label": "Maschinentechniker" },
+          { "value": "Tool mechanic", "label": "Werkzeugmechaniker" },
+          { "value": "Machining mechanic", "label": "Zerspanungsmechaniker" }
+        ]
+      },
+      {
+        "label": "Schweißtechnik",
+        "value": "Welding Technology",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "Manual electric welder", "label": "Handschweißer Elektro" },
+          { "value": "Gas welder", "label": "Gasschweißer" },
+          { "value": "High-pressure welder", "label": "Hochdruckschweißer" },
+          { "value": "MAG welder", "label": "MAG-Schweißer" },
+          { "value": "MIG welder", "label": "MIG-Schweißer" },
+          { "value": "Welding specialist", "label": "Schweißfachmann" },
+          { "value": "Welding foreman", "label": "Schweißvorarbeiter" },
+          { "value": "TIG welder", "label": "WIG-Schweißer" }
+        ]
+      },
+      {
+        "label": "Elektrotechnik",
+        "value": "Electrical Engineering",
+        "icon": "flaticon-vector",
+        "subOptions": [
+          { "value": "Bachelor of Engineering Electrical Engineering", "label": "Bachelor of Engineering Elektrotechnik" },
+          { "value": "Bachelor of Science Electrical Engineering", "label": "Bachelor of Science Elektrotechnik" },
+          { "value": "Electrical systems fitter", "label": "Elektroanlagenmonteur" },
+          { "value": "Electronics technician - automation and systems engineering", "label": "Elektroniker - Automatisierungs- und Systemtechnik" },
+          { "value": "Electronics technician - automation technology", "label": "Elektroniker - Automatisierungstechnik" },
+          { "value": "Electronics technician - industrial engineering", "label": "Elektroniker - Betriebstechnik" },
+          { "value": "Electronics technician - energy and building technology", "label": "Elektroniker - Energie- und Gebäudetechnik" },
+          { "value": "Electronics technician - building and infrastructure systems", "label": "Elektroniker - Gebäude- und Infrastruktursysteme" },
+          { "value": "Electronics technician - building systems integration", "label": "Elektroniker - Gebäudesystemintegration" },
+          { "value": "Electronics technician - devices and systems", "label": "Elektroniker - Geräte und Systeme" },
+          { "value": "Electronics technician - information and systems technology", "label": "Elektroniker - Informations- und Systemtechnik" },
+          { "value": "Electronics technician - machines and drive technology (BBiG)", "label": "Elektroniker - Maschinen und Antriebstechnik (BBiG)" },
+          { "value": "Electronics technician - machines and drive technology (HwO)", "label": "Elektroniker - Maschinen und Antriebstechnik (HwO)" },
+          { "value": "Industrial electrician - operating technology", "label": "Industrieelektriker - Betriebstechnik" },
+          { "value": "Industrial electrician - devices and systems", "label": "Industrieelektriker - Geräte und Systeme" },
+          { "value": "Master of Electrical Engineering", "label": "Master of Elektrotechnik" },
+          { "value": "Electrical engineering technician", "label": "Elektrotechniker" }
+        ]
+      },
+      {
+        "label": "Mechatronik",
+        "value": "Mechatronics",
+        "icon": "flaticon-promotion",
+        "subOptions": [
+          { "value": "Engineer - Mechatronics", "label": "Ingenieur - Mechatronik" },
+          { "value": "Mechatronics engineer", "label": "Mechatronikingenieur" }
+        ]
+      },
+      {
+        "label": "Chemie",
+        "value": "Chemistry",
+        "icon": "flaticon-first-aid-kit-1",
+        "subOptions": []
+      },
+      {
+        "label": "IT/EDV",
+        "value": "IT/EDP",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "IT specialist for system integration", "label": "Fachinformatiker für Systemintegration" },
+          { "value": "Computer scientist", "label": "Informatiker" },
+          { "value": "Engineer - Information and communication technology", "label": "Ingenieur - Informations- und Kommunikationstechnik" },
+          { "value": "IT administrator", "label": "IT-Administrator" },
+          { "value": "Media computer scientist", "label": "Medieninformatiker" },
+          { "value": "Computer science technician", "label": "Informatiktechniker" }
+        ]
+      },
+      {
+        "label": "Softwareentwicklung",
+        "value": "Software Development",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "Backend Developer", "label": "Backend-Entwickler" },
+          { "value": "Database developer", "label": "Datenbankentwickler" },
+          { "value": "IT specialist for application development", "label": "Fachinformatiker für Anwendungsentwicklung" },
+          { "value": "Frontend developer", "label": "Frontend-Entwickler" },
+          { "value": "Full-Stack Developer", "label": "Full-Stack-Entwickler" }
+        ]
+      },
+      {
+        "label": "Lagerlogistik",
+        "value": "Warehouse Logistics",
+        "icon": "flaticon-money-1",
+        "subOptions": []
+      }
+    ]
+  },
+  "filterTopBox": {
+    "results": {
+      "candidates": "Kandidaten"
+    },
+    "featured": "Hervorgehoben",
+    "viewProfile": "Profil Ansehen",
+    "sort": {
+      "title": "Sortieren nach",
+      "options": {
+        "default": "Sortieren nach (Standard)",
+        "newest": "Neueste",
+        "oldest": "Älteste"
+      }
+    },
+    "perPage": {
+      "title": "Pro Seite",
+      "options": {
+        "all": "Alle",
+        "15": "15 pro Seite",
+        "20": "20 pro Seite",
+        "25": "25 pro Seite"
+      }
+    },
+    "actions": {
+      "clearAll": "Alles Löschen"
+    },
+    "jobInfo": {
+      "location": "Standort",
+      "salary": "Erwartetes Gehalt",
+      "salaryPeriod": "/ Jahr"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Kandidatenliste || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Finden Sie qualifizierte Kandidaten mit DIGI-X-TECH"
+    },
+    "title": "Finden Sie Talentierte Kandidaten",
+    "subtitle": "Entdecken Sie qualifizierte Fachkräfte für Ihr Team",
+    "sections": {
+      "candidateSearch": "Kandidatensuche-Formular",
+      "candidateList": "Kandidatenliste",
+      "filters": "Filteroptionen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Kandidaten"
+    }
+  },
+  "jobTitleBox": {
+    "placeholder": "Stellenbezeichnung",
+    "title": "Stellenbezeichnung"
+  },
+  "index": {
+    "header": {
+      "title": "Kandidaten Suchen",
+      "uploadCV": "Lebenslauf hochladen"
+    },
+    "pageTitle": {
+      "title": "Finden Sie Talentierte Kandidaten",
+      "subtitle": "Entdecken Sie qualifizierte Fachkräfte für Ihr Team"
+    },
+    "sections": {
+      "candidateSearch": "Kandidatensuche-Formular",
+      "candidateList": "Kandidatenliste",
+      "filters": "Filteroptionen"
+    },
+    "metadata": {
+      "title": "Kandidaten || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Finden Sie qualifizierte Kandidaten mit DIGI-X-TECH"
+    }
+  },
+  "appliedJobs": {
+    "title": "Beworbene Stellen",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "noJobs": "Noch keine Bewerbungen vorhanden",
+    "table": {
+      "jobTitle": "Stellentitel",
+      "dateApplied": "Bewerbungsdatum",
+      "company": "Unternehmen",
+      "status": "Status",
+      "actions": "Aktionen"
+    },
+    "status": {
+      "pending": "Ausstehend",
+      "viewed": "Angesehen",
+      "rejected": "Abgelehnt",
+      "accepted": "Angenommen"
+    },
+    "timePeriod": {
+      "last6Months": "Letzte 6 Monate",
+      "last12Months": "Letzte 12 Monate",
+      "last16Months": "Letzte 16 Monate",
+      "last24Months": "Letzte 24 Monate",
+      "last5Years": "Letzte 5 Jahre"
+    }
+  },
+  "jobAlerts": {
+    "title": "Jobalerts",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "myAppliedJobs": "Meine beworbenen Stellen",
+    "noAlerts": "Noch keine Jobalerts eingerichtet",
+    "table": {
+      "alertName": "Alertname",
+      "keywords": "Schlüsselwörter",
+      "location": "Standort",
+      "category": "Kategorie",
+      "actions": "Aktionen"
+    }
+  },
+  "shortlistedJobs": {
+    "title": "Gespeicherte Stellen",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "myFavoriteJobs": "Meine Lieblingsjobs",
+    "noJobs": "Noch keine gespeicherten Stellen",
+    "table": {
+      "jobTitle": "Stellentitel",
+      "dateAdded": "Hinzugefügt am",
+      "company": "Unternehmen",
+      "status": "Status",
+      "actions": "Aktionen"
+    }
+  },
+  "changePassword": {
+    "title": "Passwort Ändern",
+    "subtitle": "Aktualisieren Sie Ihre Kontosicherheit",
+    "form": {
+      "currentPassword": "Aktuelles Passwort",
+      "currentPasswordPlaceholder": "Geben Sie Ihr aktuelles Passwort ein",
+      "newPassword": "Neues Passwort",
+      "newPasswordPlaceholder": "Geben Sie Ihr neues Passwort ein",
+      "confirmPassword": "Passwort Bestätigen",
+      "confirmPasswordPlaceholder": "Bestätigen Sie Ihr neues Passwort",
+      "updateButton": "Passwort Aktualisieren",
+      "updatingButton": "Wird aktualisiert..."
+    },
+    "toasts": {
+      "updateSuccess": "Passwort erfolgreich aktualisiert!",
+      "updateError": "Fehler beim Aktualisieren des Passworts. Bitte versuchen Sie es erneut.",
+      "passwordMismatch": "Neue Passwörter stimmen nicht überein."
+    }
+  },
+  "myProfile": {
+    "title": "Mein Profil!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Mein Profil",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Max Mustermann",
+      "jobTitle": "Berufsbezeichnung",
+      "jobTitlePlaceholder": "Softwareentwickler",
+      "phone": "Telefon",
+      "phonePlaceholder": "+49 123 456 789",
+      "email": "E-Mail",
+      "emailPlaceholder": "beispiel@domain.de",
+      "website": "Webseite",
+      "websitePlaceholder": "www.beispiel.de",
+      "currentSalary": "Aktuelles Gehalt",
+      "currentSalaryPlaceholder": "50.000€",
+      "age": "Alter",
+      "agePlaceholder": "30",
+      "education": "Bildung",
+      "educationPlaceholder": "Bachelor-Abschluss",
+      "languages": "Sprachen",
+      "languagesPlaceholder": "Deutsch, Englisch",
+      "experience": "Erfahrung",
+      "experiencePlaceholder": "5 Jahre",
+      "allowInSearch": "In Suche & Auflistung erlauben",
+      "allowInSearchOptions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "aboutMe": "Über mich",
+      "aboutMePlaceholder": "Schreiben Sie eine kurze Beschreibung über sich selbst",
+      "saveButton": "Speichern",
+      "savingButton": "Speichern...",
+      "fullName": "Vollständiger Name",
+      "fullNamePlaceholder": "Max Mustermann",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "city": "Stadt",
+      "cityPlaceholder": "Frankfurt",
+      "expectedSalaryRange": "Erwartete Gehaltsspanne",
+      "expectedSalaryRangePlaceholder": "90k-100k",
+      "experienceYears": "Erfahrung (Jahre)",
+      "experienceYearsPlaceholder": "5",
+      "gender": "Geschlecht",
+      "genderOptions": {
+        "male": "Männlich",
+        "female": "Weiblich",
+        "others": "Andere"
+      },
+      "educationLevels": "Bildungsniveau",
+      "educationLevelsPlaceholder": "Zertifikat",
+      "categories": "Kategorien",
+      "categoriesPlaceholder": "Kategorie auswählen",
+      "skills": "Fähigkeiten",
+      "skillsPlaceholder": "Fähigkeiten auswählen",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreibung über sich selbst"
+    },
+    "upload": {
+      "profileImage": "Profilbild hochladen",
+      "profileImageInfo": "Maximale Dateigröße: 50MB. Erlaubte Typen: jpg, jpeg, png, gif.",
+      "cv": "Lebenslauf hochladen",
+      "cvInfo": "Maximale Dateigröße: 50MB. Erlaubte Typen: pdf, doc, docx, txt.",
+      "video": "Video hochladen",
+      "videoInfo": "Maximale Dateigröße: 50MB. Erlaubte Typen: mp4, mov, avi.",
+      "uploadButton": "Dateien hochladen",
+      "uploadingButton": "Wird hochgeladen...",
+      "successMessage": "Dateien hochgeladen und Daten erfolgreich aktualisiert!",
+      "errorMessage": "Beim Hochladen ist ein Fehler aufgetreten: {{error}}.",
+      "uploadingMessage": "Wird hochgeladen...",
+      "uploadingItemMessage": "{{type}} wird hochgeladen...",
+      "itemUploadedMessage": "{{type}} erfolgreich hochgeladen."
+    },
+    "toasts": {
+      "saving": "Deine Informationen werden gespeichert...",
+      "updateSuccess": "Profil erfolgreich aktualisiert!",
+      "createSuccess": "Profil erfolgreich erstellt!",
+      "error": "Fehler beim Speichern des Profils. Bitte versuche es erneut.",
+      "serviceError": "Dienste nicht richtig initialisiert. Bitte versuche es erneut."
+    }
+  },
+  "dashboard": {
+    "sidebar": {
+      "menuItems": {
+        "myProfile": "Mein Profil",
+        "appliedJobs": "Beworbene Stellen",
+        "jobAlerts": "Stellenbenachrichtigungen",
+        "shortlistedJobs": "Gespeicherte Stellen",
+        "logout": "Abmelden",
+        "deleteProfile": "Profil löschen"
+      },
+      "skillsPercentage": {
+        "title": "Fähigkeiten Prozentsatz",
+        "description": "Fügen Sie einen Wert für das Feld <strong>Profilbild</strong> hinzu, um Ihre Fähigkeiten auf bis zu <strong>85%</strong> zu erhöhen"
+      }
+    }
+  },
+  "employerProfile": {
+    "title": "Firmenprofil",
+    "form": {
+      "companyName": "Firmenname",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "E-Mail-Adresse",
+      "emailAddressPlaceholder": "ib-themes",
+      "city": "Stadt",
+      "cityPlaceholder": "Berlin",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "primaryIndustry": "Hauptbranche",
+      "primaryIndustryPlaceholder": "Software",
+      "companySize": "Unternehmensgröße",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Webseite",
+      "websitePlaceholder": "www.invision.com",
+      "estSince": "Gegründet seit",
+      "estSincePlaceholder": "TT/MM/JJJJ",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Kategorie auswählen",
+      "subcategories": "Unterkategorien",
+      "subcategoriesPlaceholder": "Unterkategorie auswählen",
+      "allowInSearch": "In Suche & Auflistung erlauben",
+      "allowInSearchOptions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/invisionn",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
+      "aboutCompany": "Über das Unternehmen",
+      "aboutCompanyPlaceholder": "Beschreibung über das Unternehmen",
+      "saveButton": "Speichern",
+      "savingButton": "Speichern..."
+    },
+    "toasts": {
+      "saving": "Ihre Informationen werden gespeichert...",
+      "updateSuccess": "Profil erfolgreich aktualisiert!",
+      "createSuccess": "Profil erfolgreich erstellt!",
+      "updateError": "Fehler beim Aktualisieren des Profils. Bitte versuchen Sie es erneut.",
+      "createError": "Fehler beim Erstellen des Profils. Bitte versuchen Sie es erneut."
+    }
+  },
+  "contactInfo": {
+    "title": "Kontaktinformationen",
+    "form": {
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "city": "Stadt",
+      "cityPlaceholder": "Berlin",
+      "address": "Vollständige Adresse",
+      "addressPlaceholder": "Musterstraße 123, 10115 Berlin, Deutschland.",
+      "saveButton": "Speichern"
+    },
+    "toasts": {
+      "updateSuccess": "Kontaktinformationen erfolgreich aktualisiert",
+      "updateError": "Fehler beim Aktualisieren der Kontaktinformationen"
+    }
+  },
+  "socialNetwork": {
+    "title": "Soziale Netzwerke",
+    "form": {
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "LinkedIn Profil URL",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "Twitter Profil URL",
+      "github": "GitHub",
+      "githubPlaceholder": "GitHub Profil URL",
+      "saveButton": "Speichern"
+    },
+    "toasts": {
+      "updateSuccess": "Informationen zu sozialen Netzwerken erfolgreich aktualisiert",
+      "updateError": "Fehler beim Aktualisieren der Informationen zu sozialen Netzwerken",
+      "createSuccess": "Informationen zu sozialen Netzwerken erfolgreich erstellt",
+      "createError": "Fehler beim Erstellen der Informationen zu sozialen Netzwerken"
+    }
+  },
+  "candidateMenu": {
+    "dashboard": "Dashboard",
+    "my_profile": "Mein Profil",
+    "my_resume": "Mein Lebenslauf",
+    "applied_jobs": "Beworbene Stellen",
+    "job_alerts": "Job-Benachrichtigungen",
+    "shortlisted_jobs": "Gespeicherte Stellen",
+    "cv_manager": "Lebenslauf-Manager",
+    "packages": "Pakete",
+    "messages": "Nachrichten",
+    "change_password": "Passwort ändern",
+    "logout": "Abmelden",
+    "delete_profile": "Profil löschen",
+    "skills_percentage": "Fähigkeiten-Prozentsatz",
+    "skills_percentage_text": "Fügen Sie einen Wert für das Titelbild-Feld hinzu, um Ihre Fähigkeiten auf bis zu 85% zu erhöhen"
+  }
+} 

@@ -1,0 +1,223 @@
+{
+  "Block8": {
+    "blocks": [
+      {
+        "id": 1,
+        "icon": "icon-drawing",
+        "title": "Offres d'Emploi",
+        "text": "Trouvez et postulez à l'emploi de vos rêves parmi les offres d'entreprises renommées en Allemagne - ou laissez les employeurs vous trouver grâce à votre profil."
+      },
+      {
+        "id": 2,
+        "icon": "icon-process",
+        "title": "Conseil en Visa",
+        "text": "Nous vous accompagnons de l'approbation préliminaire à la délivrance du visa et vous soutenons avec nos connaissances."
+      },
+      {
+        "id": 3,
+        "icon": "icon-task",
+        "title": "Cours de Langue",
+        "text": "Si vos compétences linguistiques ne sont pas encore suffisantes, nous vous soutenons avec nos cours d'allemand."
+      },
+      {
+        "id": 4,
+        "icon": "icon-one-finger-click",
+        "title": "Aide au Logement",
+        "text": "Nous vous accompagnons dans votre recherche de logement pour que vous puissiez arriver sereinement en Allemagne et commencer votre nouvelle vie."
+      },
+      {
+        "id": 5,
+        "icon": "icon-task",
+        "title": "Téléchargez Votre CV",
+        "text": "Les dernières tendances en matière de design rencontrent des modèles artisanaux dans la Collection Sassio."
+      },
+      {
+        "id": 6,
+        "icon": "icon-one-finger-click",
+        "title": "Conseil Spécialisé",
+        "text": "Vous pouvez vous renseigner sur le processus et planifier votre carrière lors d'une consultation gratuite en ligne ou dans notre bureau à Istanbul."
+      }
+    ]
+  },
+  "JobCategorie2": {
+    "categories": [
+      {
+        "id": 1,
+        "icon": "icon-briefcase",
+        "title": "Développement",
+        "content": "120"
+      },
+      {
+        "id": 2,
+        "icon": "icon-user-2",
+        "title": "Marketing",
+        "content": "300"
+      },
+      {
+        "id": 3,
+        "icon": "icon-contact",
+        "title": "Design",
+        "content": "75"
+      },
+      {
+        "id": 4,
+        "icon": "icon-code",
+        "title": "Technologie",
+        "content": "150"
+      },
+      {
+        "id": 5,
+        "icon": "icon-wall-clock",
+        "title": "Service Client",
+        "content": "90"
+      },
+      {
+        "id": 6,
+        "icon": "icon-briefcase",
+        "title": "Ressources Humaines",
+        "content": "200"
+      },
+      {
+        "id": 7,
+        "icon": "icon-medical",
+        "title": "Santé",
+        "content": "250"
+      },
+      {
+        "id": 8,
+        "icon": "icon-money",
+        "title": "Finance",
+        "content": "180"
+      }
+    ]
+  },
+  "Breadcrumb": {
+    "home": "Accueil",
+    "title": "Compétences",
+    "meta": "Compétences"
+  },
+  "FaqChild": {
+    "items": [
+      {
+        "id": "collapseOne",
+        "question": "Que vous offre DIGI-X-TECH ?",
+        "answer": [
+          "DIGI-X-TECH vous offre la possibilité de profiter des opportunités de carrière en Allemagne et vous fournit un soutien complet, de la création de votre profil à la recherche d'un logement."
+        ]
+      },
+      {
+        "id": "collapseTwo",
+        "question": "Qu'est-ce que le Portail DIGI-X-TECH ?",
+        "answer": [
+          "Le portail DIGI-X-TECH vous permet d'accéder aux offres d'emploi et aux entreprises, et vous permet de postuler ou d'être trouvé par des entreprises. Avec notre service de profil, nous optimisons votre profil et créons une vidéo de présentation professionnelle."
+        ]
+      },
+      {
+        "id": "collapseThree",
+        "question": "Quelles conditions doivent être remplies pour venir en Allemagne en tant qu'employé qualifié ?",
+        "answer": [
+          "Les exigences varient en fonction de l'objectif souhaité. En général, une 'Carte Bleue', un 'Certificat d'Équivalence' ou un 'Partenariat d'Équivalence' doit être disponible avec les compétences linguistiques nécessaires pour commencer à travailler. Veuillez contacter nos Talent-Scouts pour votre évaluation personnelle."
+        ]
+      },
+      {
+        "id": "collapseFour",
+        "question": "Dois-je avoir des connaissances de la langue allemande ?",
+        "answer": [
+          "Les compétences linguistiques varient selon le type d'emploi et le secteur. Quel que soit le niveau de langue légalement requis, nous recommandons au moins le niveau B1."
+        ]
+      },
+      {
+        "id": "collapseFive",
+        "question": "Combien de temps dure la procédure d'immigration et quand dois-je postuler ?",
+        "answer": [
+          "La durée de la procédure de migration de travail dépend du type de visa demandé. En général, la procédure prend de quelques semaines à quelques mois. Dans le cadre de la 'procédure accélérée pour les travailleurs qualifiés', il existe des délais que le Consulat Général doit également respecter. Il est recommandé de postuler le plus tôt possible."
+        ]
+      },
+      {
+        "id": "collapseSix",
+        "question": "Quels documents sont nécessaires lors de l'inscription sur le portail DIGI-X-TECH ?",
+        "answer": [
+          "Pour créer un profil sur le portail, un CV à jour, des documents sur la formation professionnelle, des qualifications supplémentaires et des compétences linguistiques sont nécessaires."
+        ]
+      },
+      {
+        "id": "collapseSeven",
+        "question": "Quels documents sont nécessaires pour un visa ?",
+        "answer": [
+          "Les documents à soumettre dépendent du type de visa et varient pour les relations éducatives et d'emploi. Cependant, en principe, l'approbation de l'Agence fédérale pour l'emploi, un contrat d'éducation ou d'emploi, une preuve de compétences linguistiques et un passeport valide sont requis dans tous les cas."
+        ]
+      },
+      {
+        "id": "collapseEight",
+        "question": "Comment sont réglementées l'assurance maladie et les autres conditions de sécurité sociale pour les employés en Allemagne ?",
+        "answer": [
+          "Les documents à soumettre dépendent du type de visa et varient pour les relations éducatives et d'emploi. Cependant, en principe, l'approbation de l'Agence fédérale pour l'emploi, un contrat d'éducation ou d'emploi, une preuve de compétences linguistiques et un passeport valide sont requis dans tous les cas."
+        ]
+      }
+    ]
+  },
+  "membershipServices": {
+    "services": [
+      {
+        "id": 1,
+        "title": "Accès au Portail DIGI-X-TECH",
+        "content": "Accès illimité aux offres d'emploi et aux entreprises pendant 12 mois."
+      },
+      {
+        "id": 2,
+        "title": "Tournage Vidéo",
+        "content": "Production d'une vidéo promotionnelle professionnelle en allemand ou en anglais."
+      },
+      {
+        "id": 3,
+        "title": "Conseil de Carrière Privé",
+        "content": "Offre de conseils de carrière privés."
+      },
+      {
+        "id": 4,
+        "title": "Offres d'emploi",
+        "content": "Envoi de suggestions d'emploi adaptées pour candidature."
+      }
+    ]
+  },
+  "AddBlock": {
+    "items": [
+      {
+        "id": 1,
+        "bgImageName": "ads-bg-1",
+        "title": "Notre Mission",
+        "content": "En plus des transformations numériques et énergétiques, l'enjeu le plus important des années à venir sera l'évolution démographique. L'Allemagne fera face à une pénurie de plus de cinq millions de travailleurs d'ici 2035. DIGI-X-TECH a été fondée pour réunir les entreprises allemandes et les talents internationaux que nous avons sélectionnés, augmentant ainsi la force économique de l'Allemagne."
+      },
+      {
+        "id": 2,
+        "bgImageName": "ads-bg-2",
+        "title": "Notre Vision",
+        "content": "La mondialisation et le développement des réseaux sont devenus indispensables dans de nombreux secteurs de l'économie. L'emploi d'experts et de managers n'a pas atteint les objectifs fixés, en particulier dans les professions techniques. Avec la plateforme innovante DIGI-X-TECH, nos centres de recrutement opérant en Turquie et à l'étranger, et nos services personnalisés, nous aidons les entreprises à trouver les meilleurs employés."
+      },
+      {
+        "id": 3,
+        "bgImageName": "ads-bg-3",
+        "title": "Nos Valeurs",
+        "content": "Confiance : Nous nous considérons comme des parties prenantes et des soutiens et travaillons pour une coopération à long terme avec les entreprises et les talents. La confiance est la base de notre travail. Professionnalisme : Nous fournissons tous nos services à un niveau professionnel et élevé, votre satisfaction est notre priorité. Innovation : Nous facilitons les processus de recherche de talents et d'emplois en développant constamment des fonctions innovantes."
+      }
+    ]
+  },
+  "page": {
+    "metadata": {
+      "title": "Compétences || DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi",
+      "description": "DIGI-X-TECH - Modèle React NextJS de Portail d'Emploi"
+    },
+    "title": "Façonnez votre carrière avec nous en créant un profil qui attirera l'attention des employeurs !",
+    "meta": "Compétences",
+    "services": {
+      "title": "Nos Services"
+    },
+    "membership": {
+      "title": "Adhésion au Portail DIG-X-TECH",
+      "subtitle": "Vous pouvez bénéficier des services suivants avec une adhésion premium sur notre plateforme."
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées"
+    }
+  }
+} 

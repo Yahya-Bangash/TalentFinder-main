@@ -1,3 +1,4 @@
+'use client'
 import MobileMenu from "../../../header/MobileMenu";
 import DashboardHeader from "../../../header/DashboardHeader";
 import LoginPopup from "../../../common/form/login/LoginPopup";
@@ -10,8 +11,11 @@ import Applicants from "./components/Applicants";
 import CopyrightFooter from "../../CopyrightFooter";
 import MenuToggler from "../../MenuToggler";
 import DefaulHeader2 from "@/components/header/DefaulHeader2";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const Index = () => {
+  const { t } = useTranslation('companyListings');
+  
   return (
     <div className="page-wrapper dashboard">
       <span className="header-span"></span>
@@ -32,7 +36,7 @@ const Index = () => {
       {/* <!-- Dashboard --> */}
       <section className="user-dashboard">
         <div className="dashboard-outer">
-          <BreadCrumb title="Dashboard Home!" />
+          <BreadCrumb title={t('dashboard.title', 'Dashboard Home!')} />
           {/* breadCrumb */}
 
           <MenuToggler />
@@ -57,7 +61,7 @@ const Index = () => {
               {/* <!-- Notification Widget --> */}
               <div className="notification-widget ls-widget">
                 <div className="widget-title">
-                  <h4>Notifications</h4>
+                  <h4>{t('dashboard.notifications', 'Notifications')}</h4>
                 </div>
                 <div className="widget-content">
                   <Notification />
@@ -70,7 +74,7 @@ const Index = () => {
               {/* <!-- applicants Widget --> */}
               <div className="applicants-widget ls-widget">
                 <div className="widget-title">
-                  <h4>Recent Applicants</h4>
+                  <h4>{t('dashboard.recentApplicants', 'Recent Applicants')}</h4>
                 </div>
                 <div className="widget-content">
                   <div className="row">

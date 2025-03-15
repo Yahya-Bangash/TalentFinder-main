@@ -6,8 +6,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import LoginWithSocial from "./LoginWithSocial";
 import { signIn } from "@/appwrite/Services/authServices"; // Adjust the path as necessary
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const FormContent2 = () => {
+  const { t } = useTranslation('common');
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -33,7 +35,7 @@ const FormContent2 = () => {
         router.push("/dashboard"); // Fallback if team is not identified
       }
     } catch (error) {
-      setErrorMessage("Login failed. Please check your credentials and try again.");
+      setErrorMessage(t('LoginForm.error_message'));
       console.error("Error during sign-in:", error);
     } finally {
       setLoading(false);
@@ -42,26 +44,26 @@ const FormContent2 = () => {
 
   return (
     <div className="form-inner">
-      <h3>Login to DIGI-X-TECH</h3>
+      <h3>{t('LoginForm.title')}</h3>
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <form method="post" onSubmit={handleLogin}>
         <div className="form-group">
-          <label>Email</label>
+          <label>{t('LoginForm.email')}</label>
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder={t('LoginForm.email_placeholder')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label>Password</label>
+          <label>{t('LoginForm.password')}</label>
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder={t('LoginForm.password_placeholder')}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -72,11 +74,11 @@ const FormContent2 = () => {
             <div className="input-group checkboxes square">
               <input type="checkbox" name="remember-me" id="remember" />
               <label htmlFor="remember" className="remember">
-                <span className="custom-checkbox"></span> Remember me
+                <span className="custom-checkbox"></span> {t('LoginForm.remember_me')}
               </label>
             </div>
             <a href="#" className="pwd">
-              Forgot password?
+              {t('LoginForm.forgot_password')}
             </a>
           </div>
         </div>
@@ -87,16 +89,16 @@ const FormContent2 = () => {
             name="log-in"
             disabled={loading}
           >
-            {loading ? "Logging in..." : "Log In"}
+            {loading ? t('LoginForm.logging_in') : t('LoginForm.login_button')}
           </button>
         </div>
       </form>
       <div className="bottom-box">
         <div className="text">
-          Don&apos;t have an account? <Link href="/register">Signup</Link>
+          {t('LoginForm.no_account')} <Link href="/register">{t('LoginForm.signup_link')}</Link>
         </div>
         <div className="divider">
-          <span>or</span>
+          <span>{t('LoginForm.or')}</span>
         </div>
         <LoginWithSocial />
       </div>

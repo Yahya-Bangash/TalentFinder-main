@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const CallToAction11 = () => {
+  const { t } = useTranslation('home');
+  
   return (
     <>
       <section className="subscribe-section-two -type-5">
@@ -14,7 +17,7 @@ const CallToAction11 = () => {
           <div className="row align-items-center justify-content-between">
             <div className="col-lg-6 offset-lg-1">
               <div className="sec-title pb-16">
-                <h2 className="">Qualified workforce meets global companies!</h2>
+                <h2 className="">{t('callToAction11.title')}</h2>
                 {/* <div className="text">
                   Advertise your jobs to millions of monthly
                   <br /> users and search 15.8 million CVs in our
@@ -26,7 +29,7 @@ const CallToAction11 = () => {
                     href="/register"
                     className="theme-btn"
                   >
-                    Post a Job
+                    {t('callToAction11.button')}
                   </Link>
                 </div>
               </div>

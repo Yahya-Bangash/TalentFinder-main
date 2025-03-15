@@ -6,7 +6,6 @@ import AppSection from "../app-section/AppSection";
 import Blog from "../blog/Blog";
 import CallToAction from "../call-to-action/CallToAction";
 import LoginPopup from "../common/form/login/LoginPopup";
-import Partner from "../common/partner/Partner";
 import FooterDefault from "../footer/common-footer";
 import Funfact from "../fun-fact-counter/Funfact";
 import DefaulHeader2 from "../header/DefaulHeader2";
@@ -21,14 +20,14 @@ import FaqChild from "../pages-menu/faq/FaqChild";
 
 
 import JobCategorie1 from "../job-categories/JobCategorie1";
-import JobFeatured1 from "../job-featured/JobFeatured1";
 import Testimonial from "../testimonial/Testimonial";
-import TopCompany from "../top-company/TopCompany";
-import Candidates from "../candidates/Candidates";
 import useAuth from "@/app/hooks/useAuth";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const index = () => {
   const { user, loading } = useAuth();
+  const { t: tCommon } = useTranslation('common');
+  const { t: tHome } = useTranslation('home');
 
   return (
     <>
@@ -48,8 +47,8 @@ const index = () => {
       <section className="job-categories ui-job-categories">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2>Popular Job Categories</h2>
-            <div className="text">2020 jobs live - 293 added today.</div>
+            <h2>{tHome('categories.title')}</h2>
+            <div className="text">{tHome('categories.subtitle')}</div>
           </div>
 
           <div
@@ -64,90 +63,6 @@ const index = () => {
       </section>
       {/* End Job Categorie Section */}
 
-      {/* Only show job section if user is logged in */}
-      {user && (
-        <section className="job-section">
-          <div className="auto-container">
-            <div className="sec-title text-center">
-              <h2>Featured Jobs</h2>
-              <div className="text">
-                Know your worth and find the job that qualify your life
-              </div>
-            </div>
-
-            <div className="row" data-aos="fade-up">
-              <JobFeatured1 />
-            </div>
-
-            <div className="btn-box">
-              <Link href="/job-list-v5" className="theme-btn btn-style-one bg-blue">
-                <span className="btn-title">Load More Listing</span>
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-      {/* End Job Featured Section */}
-
-      {/* Only show companies section if user is logged in as job seeker */}
-      {user && user.team === "jobSeekers" && (
-        <section className="top-companies">
-          <div className="auto-container">
-            <div className="sec-title">
-              <h2>Top Company Registered</h2>
-              <div className="text">
-                Some of the companies we have helped recruit excellent applicants
-                over the years.
-              </div>
-            </div>
-
-          <div className="carousel-outer" data-aos="fade-up">
-            <div className="companies-carousel">
-              <TopCompany />
-            </div>
-          </div>
-          <div className="btn-box text-center">
-            <Link
-              href="/employers-list-v3"
-              className="theme-btn btn-style-one bg-blue"
-            >
-              <span className="btn-title">Load More Companies</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-      )}
-      {/* <!-- End Top Companies --> */}
-
-      {/* Only show candidates section if user is logged in as employer */}
-      {user && user.team === "companies" && (
-        <section className="candidates-section">
-          <div className="auto-container">
-            <div className="sec-title">
-              <h2>Featured Candidates</h2>
-              <div className="text">
-                Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
-              </div>
-            </div>
-
-          <div className="carousel-outer" data-aos="fade-up">
-            <div className="candidates-carousel default-dots">
-              <Candidates />
-            </div>
-          </div>
-          <div className="btn-box text-center">
-            <Link
-              href="/candidates-list-v3"
-              className="theme-btn btn-style-one bg-blue"
-            >
-              <span className="btn-title">Load More Candidates</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-      )}
-      {/* <!-- End Candidates Section --> */}
-
       <section className="registeration-banners">
         <div className="auto-container">
           <div className="row" data-aos="fade-up">
@@ -160,7 +75,7 @@ const index = () => {
       <section className="layout-pt-120 layout-pb-120">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2>Our Services</h2>
+            <h2>{tCommon('index.services.title')}</h2>
           </div>
           {/* End sec-title */}
 
@@ -185,7 +100,7 @@ const index = () => {
         <div className="auto-container">
           {/* <!-- Sec Title --> */}
           <div className="sec-title text-center text-5xl font-medium">
-            Holistic solutions are needed.
+            {tHome('testimonials.title')}
           </div>
           {/* End sec-title */}
 
@@ -205,11 +120,11 @@ const index = () => {
       <section className="faqs-section">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2>Frequently Asked Questions</h2>
+            <h2>{tCommon('index.faq.title')}</h2>
           </div>
           {/* <!--Accordian Box--> */}
           <ul className="accordion-box">
-            <FaqChild />
+            <FaqChild namespace="common" translationKey="FAQ.items" />
           </ul>
         </div>
       </section>

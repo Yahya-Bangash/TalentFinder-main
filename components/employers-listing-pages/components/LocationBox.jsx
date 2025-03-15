@@ -1,14 +1,15 @@
-
 'use client'
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addLocation } from "../../../features/filter/employerFilterSlice";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const LocationBox = () => {
     const { location } = useSelector((state) => state.employerFilter);
     const [getLocation, setLocation] = useState(location);
     const dispath = useDispatch();
+    const { t } = useTranslation('companyListings');
 
     // location handler
     const locationHandler = (e) => {
@@ -24,7 +25,7 @@ const LocationBox = () => {
             <input
                 type="text"
                 name="listing-search"
-                placeholder="City or postcode"
+                placeholder={t('locationBox.placeholder')}
                 value={getLocation}
                 onChange={locationHandler}
             />

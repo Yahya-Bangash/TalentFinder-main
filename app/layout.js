@@ -11,6 +11,7 @@ import { store } from "../store/store";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { QueryClient, QueryClientProvider } from "react-query"; // Import react-query
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
@@ -51,25 +52,27 @@ export default function RootLayout({ children }) {
       <body>
         <Provider store={store}>
           <QueryClientProvider client={queryClient}>
-            <div className="page-wrapper">
-              {children}
+            <LanguageProvider>
+              <div className="page-wrapper">
+                {children}
 
-              {/* Toastify */}
-              <ToastContainer
-                position="bottom-right"
-                autoClose={500}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-              />
-              {/* <!-- Scroll To Top --> */}
-              <ScrollToTop />
-            </div>
+                {/* Toastify */}
+                <ToastContainer
+                  position="bottom-right"
+                  autoClose={500}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="colored"
+                />
+                {/* <!-- Scroll To Top --> */}
+                <ScrollToTop />
+              </div>
+            </LanguageProvider>
           </QueryClientProvider>
         </Provider>
       </body>

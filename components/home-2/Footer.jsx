@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import CopyrightFooter from "../footer/common-footer/CopyrightFooter";
 import FooterContent2 from "../footer/FooterContent2";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const Footer = () => {
+  const { t } = useTranslation('common');
+  
   return (
     <footer className="main-footer style-two">
       <div className="auto-container">
@@ -22,14 +27,19 @@ const Footer = () => {
                   </a>
                 </div>
                 <p className="phone-num">
-                  <span>Call us </span>
-                  <a href="thebeehost@support.com">123 456 7890</a>
+                  <span>{t('index.footer.contact.call_us')} </span>
+                  <a href={`tel:${t('index.footer.contact.phone')}`}>{t('index.footer.contact.phone')}</a>
                 </p>
                 <p className="address">
-                  329 Queensberry Street, North Melbourne VIC
-                  <br /> 3051, Australia. <br />
-                  <a href="mailto:support@DIGI-X-TECH.com" className="email">
-                    support@DIGI-X-TECH.com
+                  {t('index.footer.contact.address').split('\n').map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      {i < t('index.footer.contact.address').split('\n').length - 1 && <br />}
+                    </span>
+                  ))}
+                  <br />
+                  <a href={`mailto:${t('index.footer.contact.email')}`} className="email">
+                    {t('index.footer.contact.email')}
                   </a>
                 </p>
               </div>

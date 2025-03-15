@@ -5,27 +5,28 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import LoginWithSocial from "./LoginWithSocial";
 import FormContent from "./FormContent";
 import Link from "next/link";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const Register2 = () => {
-
+  const { t } = useTranslation('common');
   const [isEmployer, setIsEmployer] = useState(false); // State to track whether it's an employer or not
 
   return (
     <div className="form-inner">
-      <h3>Create a free DIGI-X-TECH Account</h3>
+      <h3>{t('RegisterForm.title')}</h3>
 
       <Tabs onSelect={(index) => setIsEmployer(index === 1)}> {/* Update isEmployer based on the selected tab */}
         <div className="form-group register-dual">
           <TabList className="btn-box row">
             <Tab className="col-lg-6 col-md-12">
               <button className="theme-btn btn-style-four">
-                <i className="la la-user"></i> Candidate
+                <i className="la la-user"></i> {t('HeaderNavContent.navigation.candidate')}
               </button>
             </Tab>
 
             <Tab className="col-lg-6 col-md-12">
               <button className="theme-btn btn-style-four">
-                <i className="la la-briefcase"></i> Employer
+                <i className="la la-briefcase"></i> {t('HeaderNavContent.navigation.employers')}
               </button>
             </Tab>
           </TabList>
@@ -46,13 +47,13 @@ const Register2 = () => {
 
       <div className="bottom-box">
         <div className="text">
-          Already have an account?{" "}
+          {t('RegisterForm.have_account')}{" "}
           <Link href="/login" className="call-modal login">
-            LogIn
+            {t('RegisterForm.login_link')}
           </Link>
         </div>
         <div className="divider">
-          <span>or</span>
+          <span>{t('RegisterForm.or')}</span>
         </div>
         <LoginWithSocial />
       </div>

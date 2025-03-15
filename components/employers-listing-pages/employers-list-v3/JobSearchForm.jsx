@@ -1,14 +1,15 @@
-
 'use client'
 import { useDispatch, useSelector } from "react-redux";
 import { addFoundationDate } from "../../../features/filter/employerFilterSlice";
 import Categories from "../components/Categories";
 import LocationBox from "../components/LocationBox";
 import SearchBox from "../components/SearchBox";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const JobSearchForm = () => {
     const { foundationDate } = useSelector((state) => state.employerFilter);
     const dispatch = useDispatch();
+    const { t } = useTranslation('companyListings');
 
     // founded handler
     const foundedHandler = (e) => {
@@ -40,7 +41,7 @@ const JobSearchForm = () => {
                             type="submit"
                             className="theme-btn btn-style-one"
                         >
-                            Find Jobs
+                            {t('jobSearchForm.submit')}
                         </button>
                     </div>
                     {/* <!-- Form Group --> */}
@@ -60,7 +61,7 @@ const JobSearchForm = () => {
                                 max: 2028,
                             })}
                         >
-                            Founded Date
+                            {t('jobSearchForm.foundedDate.options.all')}
                         </option>
                         <option
                             value={JSON.stringify({
@@ -68,7 +69,7 @@ const JobSearchForm = () => {
                                 max: 1950,
                             })}
                         >
-                            1900 - 1950
+                            {t('jobSearchForm.foundedDate.options.1900_1950')}
                         </option>
                         <option
                             value={JSON.stringify({
@@ -76,7 +77,7 @@ const JobSearchForm = () => {
                                 max: 2000,
                             })}
                         >
-                            1950 - 2000
+                            {t('jobSearchForm.foundedDate.options.1950_2000')}
                         </option>
                         <option
                             value={JSON.stringify({
@@ -84,7 +85,7 @@ const JobSearchForm = () => {
                                 max: 2028,
                             })}
                         >
-                            2000 - 2028
+                            {t('jobSearchForm.foundedDate.options.2000_2028')}
                         </option>
                     </select>
                 </div>

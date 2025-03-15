@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import * as sdk from "node-appwrite";
 import useAuth from "@/app/hooks/useAuth";  // Use the Auth hook to get userId
 import initializeDB from "@/appwrite/Services/dbServices";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const SocialNetworkBox = () => {
     const { user } = useAuth();  // Access the logged-in userId from global auth context
@@ -15,6 +16,7 @@ const SocialNetworkBox = () => {
         linkedin: '',
         googlePlus: ''
     });
+    const { t } = useTranslation('companyListings');
 
     // Fetch the document from Appwrite based on userId and populate the form
     useEffect(() => {
@@ -93,11 +95,11 @@ const SocialNetworkBox = () => {
         <form className="default-form" onSubmit={handleSave}>
             <div className="row">
                 <div className="form-group col-lg-6 col-md-12">
-                    <label>Facebook</label>
+                    <label>{t('companyProfile.socialNetwork.facebook')}</label>
                     <input
                         type="text"
                         name="facebook"
-                        placeholder="www.facebook.com/Invision"
+                        placeholder={t('companyProfile.socialNetwork.facebookPlaceholder')}
                         value={socialInfo.facebook}
                         required
                         onChange={handleInputChange}
@@ -105,11 +107,11 @@ const SocialNetworkBox = () => {
                 </div>
 
                 <div className="form-group col-lg-6 col-md-12">
-                    <label>Twitter</label>
+                    <label>{t('companyProfile.socialNetwork.twitter')}</label>
                     <input
                         type="text"
                         name="twitter"
-                        placeholder=""
+                        placeholder={t('companyProfile.socialNetwork.twitterPlaceholder')}
                         value={socialInfo.twitter}
                         required
                         onChange={handleInputChange}
@@ -117,11 +119,11 @@ const SocialNetworkBox = () => {
                 </div>
 
                 <div className="form-group col-lg-6 col-md-12">
-                    <label>Linkedin</label>
+                    <label>{t('companyProfile.socialNetwork.linkedin')}</label>
                     <input
                         type="text"
                         name="linkedin"
-                        placeholder=""
+                        placeholder={t('companyProfile.socialNetwork.linkedinPlaceholder')}
                         value={socialInfo.linkedin}
                         required
                         onChange={handleInputChange}
@@ -129,11 +131,11 @@ const SocialNetworkBox = () => {
                 </div>
 
                 <div className="form-group col-lg-6 col-md-12">
-                    <label>Google Plus</label>
+                    <label>{t('companyProfile.socialNetwork.googlePlus')}</label>
                     <input
                         type="text"
                         name="googlePlus"
-                        placeholder=""
+                        placeholder={t('companyProfile.socialNetwork.googlePlusPlaceholder')}
                         value={socialInfo.googlePlus}
                         required
                         onChange={handleInputChange}
@@ -142,7 +144,7 @@ const SocialNetworkBox = () => {
 
                 <div className="form-group col-lg-6 col-md-12">
                     <button type="submit" className="theme-btn btn-style-one">
-                        Save
+                        {t('companyProfile.socialNetwork.saveButton')}
                     </button>
                 </div>
             </div>

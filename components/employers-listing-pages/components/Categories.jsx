@@ -1,7 +1,7 @@
-
 'use client'
 import { useDispatch, useSelector } from "react-redux";
 import { addCategory } from "../../../features/filter/employerFilterSlice";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const Categories = () => {
     const { category } = useSelector((state) => state.employer) || {};
@@ -9,6 +9,7 @@ const Categories = () => {
         (state) => state.employerFilter
     );
     const dispatch = useDispatch();
+    const { t } = useTranslation('companyListings');
 
     const categoryHandler = (e) => {
         dispatch(addCategory(e.target.value));
@@ -20,7 +21,7 @@ const Categories = () => {
                 onChange={categoryHandler}
                 value={getCategory}
             >
-                <option value="">Choose a category</option>
+                <option value="">{t('categories.placeholder')}</option>
                 {category?.map((item) => (
                     <option value={item.value} key={item.id}>
                         {item.name}

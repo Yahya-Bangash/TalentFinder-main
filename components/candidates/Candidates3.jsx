@@ -1,8 +1,23 @@
 import Link from "next/link";
 import candidates from "../../data/candidates";
 import Image from "next/image";
+import { useTranslation } from "@/app/hooks/useTranslation";
+import { useEffect, useState } from "react";
 
 const Candidates3 = () => {
+  const { t } = useTranslation('aboutUs');
+  const [teamMembers, setTeamMembers] = useState([]);
+  
+  useEffect(() => {
+    const candidatesData = t('candidates3.candidates');
+    if (Array.isArray(candidatesData) && candidatesData.length > 0) {
+      setTeamMembers(candidatesData);
+    } else {
+      // Fallback to static data if translations not available
+      setTeamMembers(candidates.slice(12, 17));
+    }
+  }, [t]);
+  
   return (
     <>
       {candidates.slice(12, 17).map((candidate) => (

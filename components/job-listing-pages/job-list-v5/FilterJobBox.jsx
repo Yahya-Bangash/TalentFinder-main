@@ -22,8 +22,10 @@ import { initializeStorageServices } from "@/appwrite/Services/storageServices";
 import initializeDB from "@/appwrite/Services/dbServices";
 import * as sdk from "node-appwrite";
 import moment from "moment"; // For date handling
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const FilterJobBox = () => {
+  const { t } = useTranslation('jobListings');
   const { jobList, jobSort } = useSelector((state) => state.filter);
   const {
     keyword,
@@ -120,8 +122,8 @@ const FilterJobBox = () => {
     { enabled: !!dbServices && !!storageServices }
   );
 
-  if (isLoading) return <div>Loading jobs...</div>;
-  if (error) return <div>Error fetching jobs data</div>;
+  if (isLoading) return <div>{t('filterJobBox.loading')}</div>;
+  if (error) return <div>{t('filterJobBox.error')}</div>;
 
   // Apply filters dynamically
   const keywordFilter = (item) =>
@@ -256,7 +258,7 @@ const FilterJobBox = () => {
               className="btn btn-danger text-nowrap me-2"
               style={{ minHeight: "45px", marginBottom: "15px" }}
             >
-              Clear All
+              {t('filterJobBox.actions.clearAll')}
             </button>
           )}
 
@@ -265,9 +267,9 @@ const FilterJobBox = () => {
             className="chosen-single form-select"
             onChange={sortHandler}
           >
-            <option value="">Sort by (default)</option>
-            <option value="asc">Newest</option>
-            <option value="des">Oldest</option>
+            <option value="">{t('filterJobBox.sort.options.default')}</option>
+            <option value="asc">{t('filterJobBox.sort.options.newest')}</option>
+            <option value="des">{t('filterJobBox.sort.options.oldest')}</option>
           </select>
 
           <select
@@ -275,10 +277,10 @@ const FilterJobBox = () => {
             className="chosen-single form-select ms-3 "
             value={JSON.stringify(perPage)}
           >
-            <option value={JSON.stringify({ start: 0, end: 0 })}>All</option>
-            <option value={JSON.stringify({ start: 0, end: 10 })}>10 per page</option>
-            <option value={JSON.stringify({ start: 0, end: 20 })}>20 per page</option>
-            <option value={JSON.stringify({ start: 0, end: 30 })}>30 per page</option>
+            <option value={JSON.stringify({ start: 0, end: 0 })}>{t('filterJobBox.perPage.options.all')}</option>
+            <option value={JSON.stringify({ start: 0, end: 10 })}>{t('filterJobBox.perPage.options.10')}</option>
+            <option value={JSON.stringify({ start: 0, end: 20 })}>{t('filterJobBox.perPage.options.20')}</option>
+            <option value={JSON.stringify({ start: 0, end: 30 })}>{t('filterJobBox.perPage.options.30')}</option>
           </select>
         </div>
       </div>

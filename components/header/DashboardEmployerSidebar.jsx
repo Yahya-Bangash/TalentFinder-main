@@ -13,6 +13,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { signOutUser } from "@/appwrite/Services/authServices";
 import initializeDB from "@/appwrite/Services/dbServices";
 import * as sdk from "node-appwrite";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const DashboardEmployerSidebar = () => {
     const { menu } = useSelector((state) => state.toggle);
@@ -22,6 +23,7 @@ const DashboardEmployerSidebar = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [componentKey, setComponentKey] = useState(0);
     const router = useRouter();
+    const { t } = useTranslation('companyListings');
 
     const dispatch = useDispatch();
     // menu togggle handler
@@ -105,6 +107,23 @@ const DashboardEmployerSidebar = () => {
         fetchUserName();
     }, [user]);
 
+    // Function to get the translation key based on the menu item name
+    const getTranslationKey = (name) => {
+        switch (name) {
+            case "Dashboard": return "employerMenu.dashboard";
+            case "Company Profile": return "employerMenu.company_profile";
+            case "Post a New Job": return "employerMenu.post_new_job";
+            case "Manage Jobs": return "employerMenu.manage_jobs";
+            case "All Applicants": return "employerMenu.all_applicants";
+            case "Shortlisted Resumes": return "employerMenu.shortlisted_resumes";
+            case "Resume Alerts": return "employerMenu.resume_alerts";
+            case "Change Password": return "employerMenu.change_password";
+            case "Logout": return "employerMenu.logout";
+            case "Delete Profile": return "employerMenu.delete_profile";
+            default: return "";
+        }
+    };
+
     return (
         <div className={`user-sidebar ${menu ? "sidebar_open" : ""}`} key={componentKey}>
             {/* Start sidebar close icon */}
@@ -131,7 +150,7 @@ const DashboardEmployerSidebar = () => {
                         >
                             <Link href={item.routePath}>
                                 <i className={`la ${item.icon}`}></i>{" "}
-                                {item.name}
+                                {t(getTranslationKey(item.name), { fallback: item.name })}
                             </Link>
                         </li>
                     ))}

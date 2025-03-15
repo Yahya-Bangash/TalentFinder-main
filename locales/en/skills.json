@@ -1,0 +1,227 @@
+{
+  "Block8": {
+    "blocks": [
+      {
+        "id": 1,
+        "icon": "icon-drawing",
+        "title": "Job Postings",
+        "text": "Find and apply for your dream job among job postings from well-known companies across Germany - or let employers find you through your profile."
+      },
+      {
+        "id": 2,
+        "icon": "icon-process",
+        "title": "Visa Consulting",
+        "text": "We accompany you from the preliminary approval to the issuance of the visa and support you with our knowledge."
+      },
+      {
+        "id": 3,
+        "icon": "icon-task",
+        "title": "Language Courses",
+        "text": "If your language skills are not yet sufficient, we support you with our German language courses."
+      },
+      {
+        "id": 4,
+        "icon": "icon-one-finger-click",
+        "title": "Accommodation Support",
+        "text": "We support you in your search for accommodation so that you can arrive in Germany in peace and start your new life."
+      },
+      {
+        "id": 5,
+        "icon": "icon-task",
+        "title": "Upload Your Resume",
+        "text": "The latest design trends meet hand-crafted templates in Sassio Collection."
+      },
+      {
+        "id": 6,
+        "icon": "icon-one-finger-click",
+        "title": "Special Consulting",
+        "text": "You can learn about the process and chart your career path with a free consultation online or at our office in Istanbul."
+      }
+    ]
+  },
+  "JobCategorie2": {
+    "categories": [
+      {
+        "id": 1,
+        "icon": "icon-briefcase",
+        "title": "Development",
+        "content": "120"
+      },
+      {
+        "id": 2,
+        "icon": "icon-user-2",
+        "title": "Marketing",
+        "content": "300"
+      },
+      {
+        "id": 3,
+        "icon": "icon-contact",
+        "title": "Design",
+        "content": "75"
+      },
+      {
+        "id": 4,
+        "icon": "icon-code",
+        "title": "Technology",
+        "content": "150"
+      },
+      {
+        "id": 5,
+        "icon": "icon-wall-clock",
+        "title": "Customer Service",
+        "content": "90"
+      },
+      {
+        "id": 6,
+        "icon": "icon-briefcase",
+        "title": "Human Resource",
+        "content": "200"
+      },
+      {
+        "id": 7,
+        "icon": "icon-medical",
+        "title": "Healthcare",
+        "content": "250"
+      },
+      {
+        "id": 8,
+        "icon": "icon-money",
+        "title": "Finance",
+        "content": "180"
+      }
+    ]
+  },
+  "membershipServices": {
+    "services": [
+      {
+        "id": 1,
+        "icon": "flaticon-money-1",
+        "title": "Access to DIGI-X-TECH Portal",
+        "content": "Unlimited access to jobs and companies on the portal for 12 months."
+      },
+      {
+        "id": 2,
+        "icon": "flaticon-promotion",
+        "title": "Video Shooting",
+        "content": "Shooting of a professional promotional video of yourself - in German or English. We record several videos and edit the appropriate parts into one video."
+      },
+      {
+        "id": 3,
+        "icon": "flaticon-vector",
+        "title": "Private Career Consulting",
+        "content": "Private career counseling"
+      },
+      {
+        "id": 4,
+        "icon": "flaticon-web-programming",
+        "title": "Job offers",
+        "content": "We will send you suitable job suggestions and you will be able to apply for the ones that interest you."
+      }
+    ]
+  },
+  "FaqChild": {
+    "items": [
+      {
+        "id": "collapseOne",
+        "question": "What does DIGI-X-TECH offer you?",
+        "answer": [
+          "DIGI-X-TECH offers you the opportunity to take advantage of career opportunities in Germany and provides comprehensive support from creating your profile to finding accommodation."
+        ]
+      },
+      {
+        "id": "collapseTwo",
+        "question": "What is the DIGI-X-TECH Portal?",
+        "answer": [
+          "DIGI-X-TECH portal allows you to access job postings and companies, and enables you to apply or be found by companies. With our profile service, we optimize your profile and create a professional introduction video."
+        ]
+      },
+      {
+        "id": "collapseThree",
+        "question": "What conditions must be met in order to come to Germany as a qualified employee?",
+        "answer": [
+          "Requirements vary depending on the desired goal. In general, a 'Blue Card', a 'Certificate of Equivalence' or an 'Equivalence Partnership' must be available along with the necessary language skills to start work. Please contact our Talent-Scouts for your personal assessment."
+        ]
+      },
+      {
+        "id": "collapseFour",
+        "question": "Do I have to have knowledge of the German language?",
+        "answer": [
+          "Language skills vary depending on the type of employment and sector. Whatever the legally required language level, we recommend at least B1 level."
+        ]
+      },
+      {
+        "id": "collapseFive",
+        "question": "How long does the immigration procedure take and when should I apply?",
+        "answer": [
+          "The duration of the labor migration procedure depends on the type of visa applied for. In general, the procedure takes from a few weeks to a few months. Within the scope of the 'accelerated skilled labor procedure', there are deadlines that the Consulate General must also comply with. It is recommended to apply as early as possible."
+        ]
+      },
+      {
+        "id": "collapseSix",
+        "question": "What documents are required when registering on the DIGI-X-TECH portal?",
+        "answer": [
+          "To create a profile on the portal, an up-to-date CV, documents on professional training, additional qualifications and language skills are required."
+        ]
+      },
+      {
+        "id": "collapseSeven",
+        "question": "What documents are required for a visa?",
+        "answer": [
+          "The documents that need to be submitted depend on the type of visa and vary for educational and employment relationships. However, in principle, approval from the Federal Employment Agency, an educational or employment contract, proof of language skills and a valid passport are required in all cases."
+        ]
+      },
+      {
+        "id": "collapseEight",
+        "question": "How are health insurance and other social security conditions regulated for employees in Germany?",
+        "answer": [
+          "The documents that need to be submitted depend on the type of visa and vary for educational and employment relationships. However, in principle, approval from the Federal Employment Agency, an educational or employment contract, proof of language skills and a valid passport are required in all cases."
+        ]
+      }
+    ]
+  },
+  "Breadcrumb": {
+    "home": "Home",
+    "title": "Skills",
+    "meta": "Skills"
+  },
+  "AddBlock": {
+    "items": [
+      {
+        "id": 1,
+        "bgImageName": "ads-bg-1",
+        "title": "Our Mission",
+        "content": "In addition to the digital and energy transformations, the most important issue of the coming years will be demographic developments. Germany will face a shortage of more than five million workers by 2035. DIGI-X-TECH was founded to bring together German companies and international talent selected by us, thus increasing Germany's economic strength."
+      },
+      {
+        "id": 2,
+        "bgImageName": "ads-bg-2",
+        "title": "Our Vision",
+        "content": "Globalization and network development have become indispensable in many sectors of the economy. The employment of experts and managers has fallen short of the targets set, especially in technical professions. With the innovative DIGI-X-TECH platform, our recruitment centers operating in Turkey and abroad, and our personal services, we support companies in finding the best employees. At the same time, we see ourselves as a guide for talents and accompany them on their career paths. As a reliable partner, we want to expand our service worldwide."
+      },
+      {
+        "id": 3,
+        "bgImageName": "ads-bg-3",
+        "title": "Our Values",
+        "content": "Trust: We see ourselves as stakeholders and supporters and work for long-term cooperation with companies and talents. Trust is the basis of our work. - Professionalism: We provide all our services at a professional and high level, your satisfaction is our priority. - Innovation: We facilitate the processes within talent and job search by constantly developing innovative functions. Our portal is constantly being developed for this purpose."
+      }
+    ]
+  },
+  "page": {
+    "metadata": {
+      "title": "Skills || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "DIGI-X-TECH - Job Board React NextJS Template"
+    },
+    "title": "Shape your career with us by creating a profile that will attract the attention of employers!",
+    "meta": "Skills",
+    "services": {
+      "title": "Our Services"
+    },
+    "membership": {
+      "title": "DIG-X-TECH Portal Membership",
+      "subtitle": "You can benefit from the following services with a premium membership on our platform."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  }
+} 

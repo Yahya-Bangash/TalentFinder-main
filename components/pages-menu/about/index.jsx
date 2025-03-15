@@ -1,3 +1,5 @@
+"use client";
+
 import LoginPopup from "../../common/form/login/LoginPopup";
 import About from "@/components/about/About";
 import AddBlock from "@/components/block/AddBlock";
@@ -16,45 +18,33 @@ import Block1 from "../../block/Block1";
 import Breadcrumb from "../../common/Breadcrumb";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const index = () => {
-  const missionVisionValues = [
+  const { t } = useTranslation('aboutUs');
+  
+  // Get mission, vision, values from translations
+  const missionVisionValues = t('index.mission_vision_values') || [
     {
       id: 1,
       bgImageName: "ads-bg-1",
-      title: (
-        <>
-          {" "}
-          <span>Our Mission</span>
-        </>
-      ),
+      title: "Our Mission",
       content: "In addition to the digital and energy transformations, the most important issue of the coming years will be demographic developments. Germany will face a shortage of more than five million workers by 2035. DIGI-X-TECH was founded to bring together German companies and international talent selected by us, thus increasing Germany's economic strength."
     },
     {
       id: 2,
       bgImageName: "ads-bg-2",
-      title: (
-        <>
-          {" "}
-          <span>Our Vision</span>
-        </>
-      ),
-      content:"Globalization and network development have become indispensable in many sectors of the economy. The employment of experts and managers has fallen short of the targets set, especially in technical professions. With the innovative DIGI-X-TECH platform, our recruitment centers operating in Turkey and abroad, and our personal services, we support companies in finding the best employees. At the same time, we see ourselves as a guide for talents and accompany them on their career paths. As a reliable partner, we want to expand our service worldwide."
+      title: "Our Vision",
+      content: "Globalization and network development have become indispensable in many sectors of the economy. The employment of experts and managers has fallen short of the targets set, especially in technical professions. With the innovative DIGI-X-TECH platform, our recruitment centers operating in Turkey and abroad, and our personal services, we support companies in finding the best employees. At the same time, we see ourselves as a guide for talents and accompany them on their career paths. As a reliable partner, we want to expand our service worldwide."
     },
     {
       id: 3,
       bgImageName: "ads-bg-3",
-      title: (
-        <>
-          {" "}
-          <span>Our Values</span>
-        </>
-      ),
-      content: `Trust: We see ourselves as stakeholders and supporters and work for long-term cooperation with companies and talents. Trust is the basis of our work.
-- Professionalism: We provide all our services at a professional and high level, your satisfaction is our priority.
-- Innovation: We facilitate the processes within talent and job search by constantly developing innovative functions. Our portal is constantly being developed for this purpose.`
+      title: "Our Values",
+      content: "Trust: We see ourselves as stakeholders and supporters and work for long-term cooperation with companies and talents. Trust is the basis of our work.\n- Professionalism: We provide all our services at a professional and high level, your satisfaction is our priority.\n- Innovation: We facilitate the processes within talent and job search by constantly developing innovative functions. Our portal is constantly being developed for this purpose."
     },
   ];
+  
   return (
     <>
       {/* <!-- Header Span --> */}
@@ -69,7 +59,7 @@ const index = () => {
       <MobileMenu />
       {/* End MobileMenu */}
 
-      <Breadcrumb title="About Us" meta="About Us" />
+      <Breadcrumb title={t('page.metadata.title') || "About Us"} meta={t('page.metadata.description') || "About Us"} />
       {/* <!--End Page Title--> */}
 
       <section className="about-section">
@@ -94,7 +84,7 @@ const index = () => {
       <section className="layout-pt-60 layout-pb-120">
         <div className="auto-container">
             {/* <div className="col-lg-6"> */}
-              <h2 className="text-4xl font-semibold">Our Team</h2>
+              <h2 className="text-4xl font-semibold">{t('index.team.title') || "Our Team"}</h2>
             {/* </div> */}
           <div className="row grid-base pt-50" data-aos="fade-up">
             <Candidates3 />

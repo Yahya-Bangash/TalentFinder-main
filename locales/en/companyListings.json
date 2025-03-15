@@ -1,0 +1,454 @@
+{
+  "searchBox": {
+    "placeholder": "Job title, keywords, or company",
+    "title": "Search",
+    "filters": {
+      "title": "All Filters",
+      "location": "Location",
+      "category": "Category",
+      "destination": "Destination",
+      "keyword": "Keyword",
+      "founded": "Founded",
+      "team_size": "Team Size",
+      "apply": "Apply Filter",
+      "reset": "Reset"
+    }
+  },
+  "locationBox": {
+    "placeholder": "City or postcode",
+    "title": "Location"
+  },
+  "categories": {
+    "placeholder": "Choose a category",
+    "title": "Category",
+    "options": {
+      "development": "Development",
+      "marketing": "Marketing",
+      "design": "Design",
+      "technology": "Technology",
+      "customer_service": "Customer Service",
+      "human_resource": "Human Resource",
+      "healthcare": "Healthcare",
+      "finance": "Finance"
+    }
+  },
+  "jobSearchForm": {
+    "submit": "Find Jobs",
+    "foundedDate": {
+      "title": "Founded Date",
+      "options": {
+        "all": "Founded Date",
+        "1900_1950": "1900 - 1950",
+        "1950_2000": "1950 - 2000",
+        "2000_2028": "2000 - 2028"
+      }
+    },
+    "form": {
+      "title": "Job Search Form",
+      "search": {
+        "label": "What",
+        "placeholder": "Job title, keywords, or company"
+      },
+      "location": {
+        "label": "Where",
+        "placeholder": "City or postcode"
+      },
+      "category": {
+        "label": "Category",
+        "placeholder": "Choose a category"
+      }
+    }
+  },
+  "filterTopBox": {
+    "results": {
+      "companies": "companies"
+    },
+    "featured": "Featured",
+    "openJobs": {
+      "single": "Position",
+      "plural": "Positions",
+      "prefix": "Open Jobs –"
+    },
+    "sort": {
+      "title": "Sort by",
+      "options": {
+        "default": "Sort by default",
+        "newest": "Newest",
+        "oldest": "Oldest"
+      }
+    },
+    "perPage": {
+      "title": "Per page",
+      "options": {
+        "all": "All",
+        "10": "10 per page",
+        "20": "20 per page",
+        "24": "24 per page"
+      }
+    },
+    "actions": {
+      "clearAll": "Clear All",
+      "bookmark": "Bookmark"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Companies || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Find the best companies to work for with DIGI-X-TECH"
+    },
+    "title": "Find Great Companies",
+    "subtitle": "Discover your next career opportunity",
+    "sections": {
+      "companySearch": "Company Search Form",
+      "companyList": "Company Listings",
+      "filters": "Filter Options"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Companies"
+    }
+  },
+  "index": {
+    "title": "Companies",
+    "subtitle": "Find the best companies to work for",
+    "search": {
+      "title": "Search Companies",
+      "placeholder": "Company name or keyword"
+    },
+    "filters": {
+      "location": "Location",
+      "category": "Category",
+      "founded": "Founded Date",
+      "team_size": "Team Size"
+    },
+    "sort": {
+      "title": "Sort by",
+      "options": {
+        "default": "Default",
+        "newest": "Newest",
+        "oldest": "Oldest"
+      }
+    },
+    "pagination": {
+      "per_page": "Per page",
+      "showing": "Showing",
+      "of": "of",
+      "results": "results"
+    }
+  },
+  "postJob": {
+    "title": "Post a New Job!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "Post Job",
+    "steps": {
+      "title": "Post Job Steps"
+    },
+    "form": {
+      "title": "Post Job Form",
+      "jobTitle": "Job Title",
+      "jobTitlePlaceholder": "Title",
+      "jobDescription": "Job Description",
+      "jobDescriptionPlaceholder": "Job Description",
+      "selectCategories": "Select Job Categories",
+      "jobType": "Job Type",
+      "offeredRate": "Offered Rate",
+      "offeredRatePlaceholder": "$1000",
+      "skills": "Skills",
+      "postButton": "Post Job",
+      "postingButton": "Posting...",
+      "successMessage": "Job posted successfully!"
+    },
+    "jobTypes": {
+      "urgent": "Urgent",
+      "fullTime": "Full Time",
+      "hybrid": "Hybrid",
+      "remote": "Remote"
+    }
+  },
+  "manageJobs": {
+    "title": "Manage Jobs",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "My Job Listings",
+    "metadata": {
+      "title": "Manage Jobs || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Manage your job listings with DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Title",
+      "applications": "Applications",
+      "rate": "Rate",
+      "created": "Created",
+      "action": "Action"
+    },
+    "loading": "Loading jobs..."
+  },
+  "shortlistedResumes": {
+    "title": "Shortlisted Resumes!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "Shortlist Resumes",
+    "metadata": {
+      "title": "Shortlisted Resumes || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "View your shortlisted candidate resumes with DIGI-X-TECH"
+    },
+    "filterBox": {
+      "searchPlaceholder": "Search",
+      "timeFilter": {
+        "newest": "Newest",
+        "last12Months": "Last 12 Months",
+        "last16Months": "Last 16 Months",
+        "last24Months": "Last 24 Months",
+        "last5Years": "Last 5 year"
+      }
+    }
+  },
+  "resumeAlerts": {
+    "title": "Resume Alerts!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "My Packages",
+    "metadata": {
+      "title": "Resume Alerts || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Manage your resume alerts with DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Title",
+      "alertQuery": "Alert Query",
+      "numberJobs": "Number Jobs",
+      "times": "Times",
+      "actions": "Actions",
+      "category": "Category",
+      "postedDate": "Posted Date",
+      "salary": "Salary",
+      "jobsFound": "Jobs found",
+      "weekly": "Weekly",
+      "education": "Education",
+      "accountingFinance": "Accounting and Finance",
+      "educationTraining": "Education Training",
+      "all": "All"
+    }
+  },
+  "allApplicants": {
+    "title": "All Applicants!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "Applicant",
+    "metadata": {
+      "title": "All Applicants || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "View all job applicants with DIGI-X-TECH"
+    },
+    "content": {
+      "jobTitle": "Senior Product Designer",
+      "tabs": {
+        "total": "Total(s): 6",
+        "approved": "Approved: 2",
+        "rejected": "Rejected(s): 4"
+      },
+      "candidate": {
+        "hourlyRate": "/ hour",
+        "actions": {
+          "view": "View Application",
+          "approve": "Approve Application",
+          "reject": "Reject Application",
+          "delete": "Delete Application"
+        }
+      }
+    },
+    "filterBox": {
+      "selectJobs": {
+        "title": "Select Jobs",
+        "options": {
+          "last12Months": "Last 12 Months",
+          "last16Months": "Last 16 Months",
+          "last24Months": "Last 24 Months",
+          "last5Years": "Last 5 year"
+        }
+      },
+      "status": {
+        "title": "All Status",
+        "options": {
+          "last12Months": "Last 12 Months",
+          "last16Months": "Last 16 Months",
+          "last24Months": "Last 24 Months",
+          "last5Years": "Last 5 year"
+        }
+      }
+    }
+  },
+  "changePassword": {
+    "title": "Change Password!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "Change Password",
+    "metadata": {
+      "title": "Change Password || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Change your account password with DIGI-X-TECH"
+    },
+    "form": {
+      "oldPassword": "Old Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "updateButton": "Update"
+    }
+  },
+  "companyProfile": {
+    "title": "Company Profile",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": {
+      "myProfile": "My Profile",
+      "socialNetwork": "Social Network",
+      "contactInformation": "Contact Information"
+    },
+    "metadata": {
+      "title": "Company Profile || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Manage your company profile with DIGI-X-TECH"
+    },
+    "contactInfo": {
+      "country": "Country",
+      "countryPlaceholder": "United States",
+      "city": "City",
+      "cityPlaceholder": "California",
+      "address": "Complete Address",
+      "addressPlaceholder": "329 Queensberry Street, North Melbourne VIC 3051, Australia.",
+      "saveButton": "Save"
+    },
+    "socialNetwork": {
+      "facebook": "Facebook",
+      "facebookPlaceholder": "www.facebook.com/Invision",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "www.twitter.com/Invision",
+      "linkedin": "Linkedin",
+      "linkedinPlaceholder": "www.linkedin.com/Invision",
+      "googlePlus": "Google Plus",
+      "googlePlusPlaceholder": "www.googleplus.com/Invision",
+      "saveButton": "Save"
+    },
+    "form": {
+      "company_name": "Company Name",
+      "company_tagline": "Company Tagline",
+      "company_description": "Company Description",
+      "company_website": "Company Website",
+      "company_established": "Company Established",
+      "company_team_size": "Company Team Size",
+      "company_category": "Company Category",
+      "company_revenue": "Company Revenue",
+      "company_allow_search": "Allow In Search & Listing",
+      "company_address": "Company Address",
+      "company_city": "City",
+      "company_state": "State",
+      "company_zip": "Zip",
+      "company_country": "Country",
+      "company_phone": "Phone",
+      "company_email": "Email",
+      "company_facebook": "Facebook",
+      "company_twitter": "Twitter",
+      "company_linkedin": "LinkedIn",
+      "company_instagram": "Instagram",
+      "save_button": "Save Changes",
+      "companyName": "Company Name",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "Email Address",
+      "emailAddressPlaceholder": "example@domain.com",
+      "city": "City",
+      "cityPlaceholder": "New York",
+      "country": "Country",
+      "countryPlaceholder": "USA",
+      "primaryIndustry": "Primary Industry",
+      "primaryIndustryPlaceholder": "Software",
+      "companySize": "Company Size",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Website",
+      "websitePlaceholder": "www.example.com",
+      "estSince": "Est. Since",
+      "estSincePlaceholder": "mm/dd/yyyy",
+      "category": "Category",
+      "categoryPlaceholder": "Select Category",
+      "subcategories": "Subcategories",
+      "subcategoriesPlaceholder": "Select Subcategory",
+      "allowInSearch": "Allow In Search & Listing",
+      "allowInSearchOptions": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/example/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/example",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/example/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/example/",
+      "aboutCompany": "About Company",
+      "aboutCompanyPlaceholder": "Description about the company",
+      "saveButton": "Save",
+      "savingButton": "Saving..."
+    },
+    "toasts": {
+      "saving": "Saving your information...",
+      "updateSuccess": "Profile updated successfully!",
+      "createSuccess": "Profile created successfully!",
+      "updateError": "Error updating profile. Please try again.",
+      "createError": "Error creating profile. Please try again."
+    },
+    "logoCoverUploader": {
+      "uploadButton": "Upload Cover Image",
+      "uploadingButton": "Uploading...",
+      "uploadCoverImage": "Upload Cover Image",
+      "fileRestrictions": "Max file size: 50MB. Allowed types: jpg, jpeg, png, gif.",
+      "coverImage": "Cover Image",
+      "uploading": "Uploading...",
+      "updateSuccess": "Cover image uploaded and data updated successfully!",
+      "errors": {
+        "initServices": "Failed to initialize services.",
+        "servicesNotInitialized": "Services not initialized properly. Please try again.",
+        "uploadError": "An error occurred during upload: {error}."
+      },
+      "uploadingType": "Uploading {type}...",
+      "uploadSuccess": "{type} uploaded successfully."
+    }
+  },
+  "employerMenu": {
+    "dashboard": "Dashboard",
+    "company_profile": "Company Profile",
+    "post_new_job": "Post a New Job",
+    "manage_jobs": "Manage Jobs",
+    "all_applicants": "All Applicants",
+    "shortlisted_resumes": "Shortlisted Resumes",
+    "resume_alerts": "Resume Alerts",
+    "change_password": "Change Password",
+    "logout": "Logout",
+    "delete_profile": "Delete Profile"
+  },
+  "dashboard": {
+    "title": "Dashboard Home!",
+    "notifications": "Notifications",
+    "recentApplicants": "Recent Applicants",
+    "topCards": {
+      "jobsPosted": "Jobs Posted",
+      "applications": "Applications",
+      "messages": "Messages",
+      "shortlisted": "Shortlisted"
+    },
+    "profileChart": {
+      "title": "Your Profile Views",
+      "dataset": "Dataset",
+      "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June"
+      },
+      "timeOptions": {
+        "last6Months": "Last 6 Months",
+        "last12Months": "Last 12 Months",
+        "last16Months": "Last 16 Months",
+        "last24Months": "Last 24 Months",
+        "last5Years": "Last 5 year"
+      }
+    }
+  }
+} 

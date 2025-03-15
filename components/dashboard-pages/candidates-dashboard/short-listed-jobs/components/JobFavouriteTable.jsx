@@ -1,21 +1,24 @@
 import Link from "next/link.js";
 import jobs from "../../../../../data/job-featured.js";
 import Image from "next/image.js";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const JobFavouriteTable = () => {
+  const { t } = useTranslation('candidateListings');
+  
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>My Favorite Jobs</h4>
+        <h4>{t('shortlistedJobs.myFavoriteJobs')}</h4>
 
         <div className="chosen-outer">
           {/* <!--Tabs Box--> */}
           <select className="chosen-single form-select">
-            <option>Last 6 Months</option>
-            <option>Last 12 Months</option>
-            <option>Last 16 Months</option>
-            <option>Last 24 Months</option>
-            <option>Last 5 year</option>
+            <option>{t('appliedJobs.timePeriod.last6Months')}</option>
+            <option>{t('appliedJobs.timePeriod.last12Months')}</option>
+            <option>{t('appliedJobs.timePeriod.last16Months')}</option>
+            <option>{t('appliedJobs.timePeriod.last24Months')}</option>
+            <option>{t('appliedJobs.timePeriod.last5Years')}</option>
           </select>
         </div>
       </div>
@@ -28,10 +31,10 @@ const JobFavouriteTable = () => {
             <table className="default-table manage-job-table">
               <thead>
                 <tr>
-                  <th>Job Title</th>
-                  <th>Date Applied</th>
-                  <th>Status</th>
-                  <th>Action</th>
+                  <th>{t('shortlistedJobs.table.jobTitle')}</th>
+                  <th>{t('shortlistedJobs.table.dateAdded')}</th>
+                  <th>{t('shortlistedJobs.table.status')}</th>
+                  <th>{t('shortlistedJobs.table.actions')}</th>
                 </tr>
               </thead>
 

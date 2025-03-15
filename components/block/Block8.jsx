@@ -1,5 +1,13 @@
+import { useTranslation } from "@/app/hooks/useTranslation";
+import { useState, useEffect } from "react";
+
 const Block8 = () => {
-  const blockContent = [
+  const { t, loading } = useTranslation('skills');
+  const [isLoading, setIsLoading] = useState(true);
+  const [displayContent, setDisplayContent] = useState([]);
+  
+  // Fallback content in case translation fails
+  const fallbackContent = [
     {
       id: 1,
       icon: "icon-drawing",
@@ -37,9 +45,37 @@ const Block8 = () => {
       text: `You can learn about the process and chart your career path with a free consultation online or at our office in Istanbul.`,
     },
   ];
+  
+  useEffect(() => {
+    if (!loading) {
+      const blockContent = t('Block8.blocks');
+      setDisplayContent(Array.isArray(blockContent) ? blockContent : fallbackContent);
+      setIsLoading(false);
+    }
+  }, [loading, t]);
+  
+  // Show placeholder blocks during loading
+  if (isLoading) {
+    return (
+      <>
+        {[1, 2, 3, 4, 5, 6].map((id) => (
+          <div className="col-lg-4 col-md-6 col-sm-12" key={id}>
+            <div className="work-block -type-4">
+              <div className="icon-wrap">
+                <span className="icon opacity-0"></span>
+              </div>
+              <h5 className="title opacity-0">Loading...</h5>
+              <p className="text opacity-0">Loading content...</p>
+            </div>
+          </div>
+        ))}
+      </>
+    );
+  }
+  
   return (
     <>
-      {blockContent.map((item) => (
+      {displayContent.map((item) => (
         <div className="col-lg-4 col-md-6 col-sm-12" key={item.id}>
           <div className="work-block -type-4">
             <div className="icon-wrap">

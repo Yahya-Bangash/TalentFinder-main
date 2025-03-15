@@ -1,5 +1,3 @@
-
-
 'use client'
 
 import Image from "next/image";
@@ -54,15 +52,8 @@ const Partner = () => {
     ],
   };
 
-  const sliderGallery = [
-    { id: 1, link: "#", imgNumber: "1-1" },
-    { id: 2, link: "#", imgNumber: "1-2" },
-    { id: 3, link: "#", imgNumber: "1-1" },
-    { id: 4, link: "#", imgNumber: "1-4" },
-    { id: 5, link: "#", imgNumber: "1-5" },
-    { id: 6, link: "#", imgNumber: "1-6" },
-    { id: 7, link: "#", imgNumber: "1-7" },
-  ];
+  // Empty array - no logos will be displayed
+  const sliderGallery = [];
 
   return (
     <>

@@ -1,0 +1,454 @@
+{
+  "searchBox": {
+    "placeholder": "Jobtitel, Stichwörter oder Unternehmen",
+    "title": "Suchen",
+    "filters": {
+      "title": "Alle Filter",
+      "location": "Standort",
+      "category": "Kategorie",
+      "destination": "Zielort",
+      "keyword": "Stichwort",
+      "founded": "Gegründet",
+      "team_size": "Teamgröße",
+      "apply": "Filter Anwenden",
+      "reset": "Zurücksetzen"
+    }
+  },
+  "locationBox": {
+    "placeholder": "Stadt oder Postleitzahl",
+    "title": "Standort"
+  },
+  "categories": {
+    "placeholder": "Kategorie auswählen",
+    "title": "Kategorie",
+    "options": {
+      "development": "Entwicklung",
+      "marketing": "Marketing",
+      "design": "Design",
+      "technology": "Technologie",
+      "customer_service": "Kundenservice",
+      "human_resource": "Personalwesen",
+      "healthcare": "Gesundheitswesen",
+      "finance": "Finanzen"
+    }
+  },
+  "jobSearchForm": {
+    "submit": "Jobs Finden",
+    "foundedDate": {
+      "title": "Gründungsdatum",
+      "options": {
+        "all": "Gründungsdatum",
+        "1900_1950": "1900 - 1950",
+        "1950_2000": "1950 - 2000",
+        "2000_2028": "2000 - 2028"
+      }
+    },
+    "form": {
+      "title": "Job-Suchformular",
+      "search": {
+        "label": "Was",
+        "placeholder": "Jobtitel, Stichwörter oder Unternehmen"
+      },
+      "location": {
+        "label": "Wo",
+        "placeholder": "Stadt oder Postleitzahl"
+      },
+      "category": {
+        "label": "Kategorie",
+        "placeholder": "Kategorie auswählen"
+      }
+    }
+  },
+  "filterTopBox": {
+    "results": {
+      "companies": "Unternehmen"
+    },
+    "featured": "Hervorgehoben",
+    "openJobs": {
+      "single": "Position",
+      "plural": "Positionen",
+      "prefix": "Offene Stellen –"
+    },
+    "sort": {
+      "title": "Sortieren nach",
+      "options": {
+        "default": "Standardsortierung",
+        "newest": "Neueste",
+        "oldest": "Älteste"
+      }
+    },
+    "perPage": {
+      "title": "Pro Seite",
+      "options": {
+        "all": "Alle",
+        "10": "10 pro Seite",
+        "20": "20 pro Seite",
+        "24": "24 pro Seite"
+      }
+    },
+    "actions": {
+      "clearAll": "Alles Löschen",
+      "bookmark": "Merken"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Unternehmen || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Finden Sie die besten Arbeitgeber mit DIGI-X-TECH"
+    },
+    "title": "Finden Sie Großartige Unternehmen",
+    "subtitle": "Entdecken Sie Ihre nächste Karrieremöglichkeit",
+    "sections": {
+      "companySearch": "Unternehmenssuche-Formular",
+      "companyList": "Unternehmensliste",
+      "filters": "Filteroptionen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Unternehmen"
+    }
+  },
+  "index": {
+    "title": "Unternehmen",
+    "subtitle": "Finden Sie die besten Unternehmen, für die Sie arbeiten können",
+    "search": {
+      "title": "Unternehmen Suchen",
+      "placeholder": "Firmenname oder Stichwort"
+    },
+    "filters": {
+      "location": "Standort",
+      "category": "Kategorie",
+      "founded": "Gründungsdatum",
+      "team_size": "Teamgröße"
+    },
+    "sort": {
+      "title": "Sortieren nach",
+      "options": {
+        "default": "Standard",
+        "newest": "Neueste",
+        "oldest": "Älteste"
+      }
+    },
+    "pagination": {
+      "per_page": "Pro Seite",
+      "showing": "Zeige",
+      "of": "von",
+      "results": "Ergebnissen"
+    }
+  },
+  "postJob": {
+    "title": "Neuen Job veröffentlichen!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Job veröffentlichen",
+    "steps": {
+      "title": "Schritte zur Jobveröffentlichung"
+    },
+    "form": {
+      "title": "Jobformular veröffentlichen",
+      "jobTitle": "Jobtitel",
+      "jobTitlePlaceholder": "Titel",
+      "jobDescription": "Stellenbeschreibung",
+      "jobDescriptionPlaceholder": "Stellenbeschreibung",
+      "selectCategories": "Jobkategorien auswählen",
+      "jobType": "Jobtyp",
+      "offeredRate": "Angebotene Vergütung",
+      "offeredRatePlaceholder": "1000€",
+      "skills": "Fähigkeiten",
+      "postButton": "Job veröffentlichen",
+      "postingButton": "Wird veröffentlicht...",
+      "successMessage": "Job erfolgreich veröffentlicht!"
+    },
+    "jobTypes": {
+      "urgent": "Dringend",
+      "fullTime": "Vollzeit",
+      "hybrid": "Hybrid",
+      "remote": "Remote"
+    }
+  },
+  "manageJobs": {
+    "title": "Jobs verwalten",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Meine Stellenangebote",
+    "metadata": {
+      "title": "Jobs verwalten || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Verwalten Sie Ihre Stellenangebote mit DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Titel",
+      "applications": "Bewerbungen",
+      "rate": "Vergütung",
+      "created": "Erstellt",
+      "action": "Aktion"
+    },
+    "loading": "Jobs werden geladen..."
+  },
+  "shortlistedResumes": {
+    "title": "Gespeicherte Lebensläufe!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Gespeicherte Lebensläufe",
+    "metadata": {
+      "title": "Gespeicherte Lebensläufe || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Sehen Sie sich Ihre gespeicherten Kandidaten-Lebensläufe mit DIGI-X-TECH an"
+    },
+    "filterBox": {
+      "searchPlaceholder": "Suchen",
+      "timeFilter": {
+        "newest": "Neueste",
+        "last12Months": "Letzte 12 Monate",
+        "last16Months": "Letzte 16 Monate",
+        "last24Months": "Letzte 24 Monate",
+        "last5Years": "Letzte 5 Jahre"
+      }
+    }
+  },
+  "resumeAlerts": {
+    "title": "Lebenslauf-Benachrichtigungen!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Meine Pakete",
+    "metadata": {
+      "title": "Lebenslauf-Benachrichtigungen || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Verwalten Sie Ihre Lebenslauf-Benachrichtigungen mit DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Titel",
+      "alertQuery": "Benachrichtigungsabfrage",
+      "numberJobs": "Anzahl der Jobs",
+      "times": "Zeiten",
+      "actions": "Aktionen",
+      "category": "Kategorie",
+      "postedDate": "Veröffentlichungsdatum",
+      "salary": "Gehalt",
+      "jobsFound": "Jobs gefunden",
+      "weekly": "Wöchentlich",
+      "education": "Bildung",
+      "accountingFinance": "Buchhaltung und Finanzen",
+      "educationTraining": "Bildung und Training",
+      "all": "Alle"
+    }
+  },
+  "allApplicants": {
+    "title": "Alle Bewerber!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Bewerber",
+    "metadata": {
+      "title": "Alle Bewerber || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Sehen Sie sich alle Stellenbewerber mit DIGI-X-TECH an"
+    },
+    "content": {
+      "jobTitle": "Senior Produktdesigner",
+      "tabs": {
+        "total": "Gesamt: 6",
+        "approved": "Genehmigt: 2",
+        "rejected": "Abgelehnt: 4"
+      },
+      "candidate": {
+        "hourlyRate": "/ Stunde",
+        "actions": {
+          "view": "Bewerbung ansehen",
+          "approve": "Bewerbung genehmigen",
+          "reject": "Bewerbung ablehnen",
+          "delete": "Bewerbung löschen"
+        }
+      }
+    },
+    "filterBox": {
+      "selectJobs": {
+        "title": "Jobs auswählen",
+        "options": {
+          "last12Months": "Letzte 12 Monate",
+          "last16Months": "Letzte 16 Monate",
+          "last24Months": "Letzte 24 Monate",
+          "last5Years": "Letzte 5 Jahre"
+        }
+      },
+      "status": {
+        "title": "Alle Status",
+        "options": {
+          "last12Months": "Letzte 12 Monate",
+          "last16Months": "Letzte 16 Monate",
+          "last24Months": "Letzte 24 Monate",
+          "last5Years": "Letzte 5 Jahre"
+        }
+      }
+    }
+  },
+  "changePassword": {
+    "title": "Passwort ändern!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Passwort ändern",
+    "metadata": {
+      "title": "Passwort ändern || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Ändern Sie Ihr Kontokennwort mit DIGI-X-TECH"
+    },
+    "form": {
+      "oldPassword": "Altes Passwort",
+      "newPassword": "Neues Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "updateButton": "Aktualisieren"
+    }
+  },
+  "companyProfile": {
+    "title": "Unternehmensprofil",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": {
+      "myProfile": "Mein Profil",
+      "socialNetwork": "Soziales Netzwerk",
+      "contactInformation": "Kontaktinformationen"
+    },
+    "metadata": {
+      "title": "Firmenprofil || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Verwalten Sie Ihr Firmenprofil mit DIGI-X-TECH"
+    },
+    "contactInfo": {
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "city": "Stadt",
+      "cityPlaceholder": "Berlin",
+      "address": "Vollständige Adresse",
+      "addressPlaceholder": "Musterstraße 123, 10115 Berlin, Deutschland",
+      "saveButton": "Speichern"
+    },
+    "socialNetwork": {
+      "facebook": "Facebook",
+      "facebookPlaceholder": "www.facebook.com/Invision",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "www.twitter.com/Invision",
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "www.linkedin.com/Invision",
+      "googlePlus": "Google Plus",
+      "googlePlusPlaceholder": "www.googleplus.com/Invision",
+      "saveButton": "Speichern"
+    },
+    "form": {
+      "company_name": "Firmenname",
+      "company_tagline": "Firmenslogan",
+      "company_description": "Firmenbeschreibung",
+      "company_website": "Firmenwebsite",
+      "company_established": "Unternehmen gegründet",
+      "company_team_size": "Teamgröße des Unternehmens",
+      "company_category": "Unternehmenskategorie",
+      "company_revenue": "Unternehmensumsatz",
+      "company_allow_search": "In Suche & Auflistung erlauben",
+      "company_address": "Firmenadresse",
+      "company_city": "Stadt",
+      "company_state": "Bundesland",
+      "company_zip": "PLZ",
+      "company_country": "Land",
+      "company_phone": "Telefon",
+      "company_email": "E-Mail",
+      "company_facebook": "Facebook",
+      "company_twitter": "Twitter",
+      "company_linkedin": "LinkedIn",
+      "company_instagram": "Instagram",
+      "save_button": "Änderungen speichern",
+      "companyName": "Firmenname",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "E-Mail-Adresse",
+      "emailAddressPlaceholder": "beispiel@domain.de",
+      "city": "Stadt",
+      "cityPlaceholder": "Berlin",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "primaryIndustry": "Hauptbranche",
+      "primaryIndustryPlaceholder": "Software",
+      "companySize": "Unternehmensgröße",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Webseite",
+      "websitePlaceholder": "www.beispiel.de",
+      "estSince": "Gegründet seit",
+      "estSincePlaceholder": "TT/MM/JJJJ",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Kategorie auswählen",
+      "subcategories": "Unterkategorien",
+      "subcategoriesPlaceholder": "Unterkategorie auswählen",
+      "allowInSearch": "In Suche & Auflistung erlauben",
+      "allowInSearchOptions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/beispiel/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/beispiel",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/beispiel/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/beispiel/",
+      "aboutCompany": "Über das Unternehmen",
+      "aboutCompanyPlaceholder": "Beschreibung über das Unternehmen",
+      "saveButton": "Speichern",
+      "savingButton": "Speichern..."
+    },
+    "toasts": {
+      "saving": "Ihre Informationen werden gespeichert...",
+      "updateSuccess": "Profil erfolgreich aktualisiert!",
+      "createSuccess": "Profil erfolgreich erstellt!",
+      "updateError": "Fehler beim Aktualisieren des Profils. Bitte versuchen Sie es erneut.",
+      "createError": "Fehler beim Erstellen des Profils. Bitte versuchen Sie es erneut."
+    },
+    "logoCoverUploader": {
+      "uploadButton": "Titelbild hochladen",
+      "uploadingButton": "Wird hochgeladen...",
+      "uploadCoverImage": "Titelbild hochladen",
+      "fileRestrictions": "Maximale Dateigröße: 50MB. Erlaubte Typen: jpg, jpeg, png, gif.",
+      "coverImage": "Titelbild",
+      "uploading": "Wird hochgeladen...",
+      "updateSuccess": "Titelbild erfolgreich hochgeladen und Daten aktualisiert!",
+      "errors": {
+        "initServices": "Fehler beim Initialisieren der Dienste.",
+        "servicesNotInitialized": "Dienste nicht richtig initialisiert. Bitte versuchen Sie es erneut.",
+        "uploadError": "Beim Hochladen ist ein Fehler aufgetreten: {error}."
+      },
+      "uploadingType": "{type} wird hochgeladen...",
+      "uploadSuccess": "{type} erfolgreich hochgeladen."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard Startseite!",
+    "notifications": "Benachrichtigungen",
+    "recentApplicants": "Neueste Bewerber",
+    "topCards": {
+      "jobsPosted": "Veröffentlichte Jobs",
+      "applications": "Bewerbungen",
+      "messages": "Nachrichten",
+      "shortlisted": "Vorgemerkt"
+    },
+    "profileChart": {
+      "title": "Ihre Profilaufrufe",
+      "dataset": "Datensatz",
+      "months": {
+        "january": "Januar",
+        "february": "Februar",
+        "march": "März",
+        "april": "April",
+        "may": "Mai",
+        "june": "Juni"
+      },
+      "timeOptions": {
+        "last6Months": "Letzte 6 Monate",
+        "last12Months": "Letzte 12 Monate",
+        "last16Months": "Letzte 16 Monate",
+        "last24Months": "Letzte 24 Monate",
+        "last5Years": "Letzte 5 Jahre"
+      }
+    }
+  },
+  "employerMenu": {
+    "dashboard": "Dashboard",
+    "company_profile": "Unternehmensprofil",
+    "post_new_job": "Neue Stelle ausschreiben",
+    "manage_jobs": "Stellen verwalten",
+    "all_applicants": "Alle Bewerber",
+    "shortlisted_resumes": "Vorgemerkte Lebensläufe",
+    "resume_alerts": "Lebenslauf-Benachrichtigungen",
+    "change_password": "Passwort ändern",
+    "logout": "Abmelden",
+    "delete_profile": "Profil löschen"
+  }
+} 

@@ -1,0 +1,565 @@
+{
+  "hero": {
+    "title": "Finden Sie Ihren Traumjob",
+    "subtitle": "Durchsuchen Sie tausende von Stellenangeboten mit allen Informationen, die Sie benötigen.",
+    "search": {
+      "placeholder": "Jobtitel, Stichwörter oder Unternehmen",
+      "location_placeholder": "Stadt oder Postleitzahl",
+      "button": "Suchen"
+    }
+  },
+  "categories": {
+    "title": "Beliebte Jobkategorien",
+    "subtitle": "2020 aktive Jobs - 293 heute hinzugefügt",
+    "view_all": "Alle Kategorien Anzeigen"
+  },
+  "featured_jobs": {
+    "title": "Ausgewählte Jobs",
+    "subtitle": "Kennen Sie Ihren Wert und finden Sie den Job, der Ihr Leben bereichert",
+    "view_all": "Alle Jobs Anzeigen",
+    "job_type": {
+      "full_time": "Vollzeit",
+      "part_time": "Teilzeit",
+      "temporary": "Befristet",
+      "freelance": "Freiberuflich",
+      "remote": "Remote"
+    },
+    "salary": "Gehalt",
+    "experience": "Erfahrung",
+    "posted": "Veröffentlicht",
+    "apply_now": "Jetzt Bewerben",
+    "load_more": "Mehr Jobs Laden"
+  },
+  "top_companies": {
+    "title": "Top Registrierte Unternehmen",
+    "subtitle": "Einige der Unternehmen, denen wir über die Jahre geholfen haben, ausgezeichnete Bewerber zu rekrutieren.",
+    "view_all": "Alle Unternehmen Anzeigen",
+    "open_positions": "Offene Stellen",
+    "load_more": "Mehr Unternehmen Laden"
+  },
+  "testimonials": {
+    "title": "Was Unsere Nutzer Sagen",
+    "subtitle": "Ganzheitliche Lösungen sind gefragt"
+  },
+  "cta": {
+    "title": "Machen Sie den Unterschied mit Ihrem Online-Lebenslauf!",
+    "text": "Ihr Lebenslauf in Minuten mit dem DIGI-X-TECH Lebenslauf-Assistenten ist fertig!",
+    "button": "Konto Erstellen"
+  },
+  "blog": {
+    "title": "Aktuelle Nachrichtenartikel",
+    "subtitle": "Täglich neue Inhalte rund um das Thema Job.",
+    "read_more": "Weiterlesen",
+    "view_all": "Alle Beiträge Anzeigen"
+  },
+  "newsletter": {
+    "title": "Abonnieren Sie Unseren Newsletter",
+    "subtitle": "Bleiben Sie über die neuesten Jobmöglichkeiten und Karriereeinblicke informiert",
+    "placeholder": "E-Mail eingeben",
+    "button": "Jetzt Abonnieren",
+    "success": "Vielen Dank für Ihr Abonnement!",
+    "error": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+  },
+  "hero3": {
+    "title": "Werden Sie Teil und Entdecken Sie Tausende von Jobs",
+    "subtitle": "Finden Sie Jobs, Beschäftigung und Karrieremöglichkeiten",
+    "banner_image": {
+      "alt": "Banner-Bild"
+    },
+    "search_form": {
+      "what_label": "Was",
+      "what_placeholder": "Jobtitel, Stichwörter oder Unternehmen",
+      "where_label": "Wo",
+      "where_placeholder": "Stadt oder Postleitzahl",
+      "find_jobs_button": "Jobs Finden"
+    },
+    "popular_searches": {
+      "title": "Beliebte Suchen",
+      "keywords": [
+        "Designer",
+        "Entwickler",
+        "Web",
+        "IOS",
+        "PHP",
+        "Senior",
+        "Ingenieur"
+      ]
+    },
+    "section_class": "banner-bereich-drei",
+    "content_column_class": "inhalt-spalte col-lg-7 col-md-12 col-sm-12",
+    "image_column_class": "bild-spalte col-lg-5 col-md-12"
+  },
+  "job_categories": {
+    "loading": "Kategorien werden geladen...",
+    "open_positions": "offene Stellen",
+    "categories": {
+      "development": {
+        "label": "Entwicklung",
+        "value": "development",
+        "icon": "icon-web-programming"
+      },
+      "design": {
+        "label": "Design",
+        "value": "design",
+        "icon": "icon-web-design"
+      },
+      "marketing": {
+        "label": "Marketing",
+        "value": "marketing",
+        "icon": "icon-marketing"
+      },
+      "business": {
+        "label": "Business",
+        "value": "business",
+        "icon": "icon-business"
+      },
+      "human_resources": {
+        "label": "Personalwesen",
+        "value": "human_resources",
+        "icon": "icon-user-2"
+      },
+      "customer_service": {
+        "label": "Kundenservice",
+        "value": "customer_service",
+        "icon": "icon-support-2"
+      }
+    },
+    "title": "Beliebte Jobkategorien",
+    "subtitle": "2020 aktive Jobs - 293 heute hinzugefügt"
+  },
+  "job_featured": {
+    "loading": "Jobs werden geladen...",
+    "error": "Fehler beim Abrufen der Jobs",
+    "time": {
+      "minutes_ago": "Minuten",
+      "hours_ago": "Stunden",
+      "days_ago": "Tage"
+    },
+    "company": {
+      "unknown": "Unbekanntes Unternehmen",
+      "default_logo_alt": "Standard-Firmenlogo",
+      "logo_alt": "Logo von {company}"
+    },
+    "location": {
+      "unknown": "Unbekannter Standort"
+    },
+    "bookmark": {
+      "button_aria": "Job merken"
+    },
+    "job_info": {
+      "company_icon": "flaticon-briefcase",
+      "location_icon": "flaticon-map-locator",
+      "time_icon": "flaticon-clock-3",
+      "salary_icon": "flaticon-money"
+    }
+  },
+  "top_company": {
+    "loading": "Unternehmen werden geladen...",
+    "error": "Fehler beim Abrufen der Unternehmen",
+    "toast_error": "Fehler bei der Initialisierung der Dienste",
+    "no_image": "Kein Bild",
+    "company": {
+      "image_alt": "Top-Unternehmen",
+      "location_icon": "flaticon-map-locator",
+      "open_position": {
+        "singular": "Offene Stelle",
+        "plural": "Offene Stellen"
+      }
+    },
+    "slider": {
+      "responsive": [
+        {
+          "breakpoint": 1024,
+          "settings": {
+            "slidesToShow": 4
+          }
+        },
+        {
+          "breakpoint": 768,
+          "settings": {
+            "slidesToShow": 3
+          }
+        },
+        {
+          "breakpoint": 600,
+          "settings": {
+            "slidesToShow": 2
+          }
+        },
+        {
+          "breakpoint": 500,
+          "settings": {
+            "slidesToShow": 1
+          }
+        }
+      ]
+    }
+  },
+  "candidates": {
+    "loading": "Kandidaten werden geladen...",
+    "error": "Fehler beim Abrufen der Kandidaten",
+    "no_image": "Kein Profilbild",
+    "candidate": {
+      "image_alt": "Kandidat",
+      "default_image_alt": "Standard-Profilbild",
+      "location_icon": "flaticon-map-locator",
+      "designation": "Position",
+      "unknown_location": "Unbekannter Standort",
+      "view_profile": "Profil Anzeigen"
+    },
+    "slider": {
+      "dots": true,
+      "infinite": true,
+      "speed": 500,
+      "slidesToShow": 4,
+      "slidesToScroll": 4,
+      "responsive": [
+        {
+          "breakpoint": 1024,
+          "settings": {
+            "slidesToShow": 3
+          }
+        },
+        {
+          "breakpoint": 768,
+          "settings": {
+            "slidesToShow": 2
+          }
+        },
+        {
+          "breakpoint": 600,
+          "settings": {
+            "slidesToShow": 1
+          }
+        }
+      ]
+    },
+    "title": "Ausgewählte Kandidaten",
+    "subtitle": "Entdecken Sie talentierte Fachkräfte für Ihr Unternehmen",
+    "load_more": "Mehr Kandidaten Laden"
+  },
+  "reg_banner": {
+    "banners": [
+      {
+        "id": 1,
+        "name": "Fähigkeiten",
+        "text": "Finden Sie passende Jobs und starke Arbeitgeber, bewerben Sie sich oder lassen Sie sich von Unternehmen einfach und bequem finden. Mit DIGI-X-TECH bieten wir Ihnen einen erstklassigen Service - persönlich und individuell.",
+        "avatar": "/images/resource/employ.png",
+        "bannerClass": "banner-style-one",
+        "width": "221",
+        "height": "281"
+      },
+      {
+        "id": 2,
+        "name": "Unternehmen",
+        "text": "Erreichen Sie eine neue, internationale Zielgruppe qualifizierter und zertifizierter Experten. Positionieren Sie sich mit einem perfekten Unternehmensprofil und Stellenangeboten. Unsere Mitarbeiter unterstützen Sie gerne.",
+        "avatar": "/images/resource/candidate.png",
+        "bannerClass": "banner-style-two",
+        "width": "207",
+        "height": "283"
+      }
+    ],
+    "register_button": "Konto Registrieren"
+  },
+  "block8": {
+    "blocks": [
+      {
+        "id": 1,
+        "icon": "icon-drawing",
+        "title": "Stellenangebote",
+        "text": "Finden und bewerben Sie sich auf Ihren Traumjob unter den Stellenangeboten bekannter Unternehmen in Deutschland - oder lassen Sie sich von Arbeitgebern über Ihr Profil finden."
+      },
+      {
+        "id": 2,
+        "icon": "icon-process",
+        "title": "Visa-Beratung",
+        "text": "Wir begleiten Sie von der Vorabgenehmigung bis zur Visaerteilung und unterstützen Sie mit unserem Wissen."
+      },
+      {
+        "id": 3,
+        "icon": "icon-task",
+        "title": "Sprachkurse",
+        "text": "Wenn Ihre Sprachkenntnisse noch nicht ausreichen, unterstützen wir Sie mit unseren Deutschkursen."
+      },
+      {
+        "id": 4,
+        "icon": "icon-one-finger-click",
+        "title": "Wohnungssuche",
+        "text": "Wir unterstützen Sie bei der Wohnungssuche, damit Sie in Ruhe in Deutschland ankommen und Ihr neues Leben beginnen können."
+      },
+      {
+        "id": 5,
+        "icon": "icon-task",
+        "title": "Lebenslauf Hochladen",
+        "text": "Die neuesten Design-Trends treffen auf handgefertigte Vorlagen in der Sassio Collection."
+      },
+      {
+        "id": 6,
+        "icon": "icon-one-finger-click",
+        "title": "Spezialberatung",
+        "text": "Sie können sich über den Prozess informieren und Ihren Karriereweg in einer kostenlosen Beratung online oder in unserem Büro in Istanbul planen."
+      }
+    ]
+  },
+  "about2": {
+    "company_name": "DIGI-X-TECH",
+    "description": "Mit dem DIGI-X-TECH Portal erreichen Unternehmen eine neue und hochinteressante Zielgruppe, die von uns geprüften qualifizierten Talente finden erstklassige Arbeitgeber und unser Team begleitet Sie während des gesamten Prozesses. Mehr als nur ein personalisiertes, individuelles und einfaches Jobsuchportal.",
+    "subtitle": "Eine ganzheitliche Lösung. Ein einziges Portal",
+    "signup_button": "Jetzt Registrieren!",
+    "image": {
+      "alt": "ressource",
+      "path": "/images/resource/image-3.png"
+    }
+  },
+  "testimonial3": {
+    "slider": {
+      "arrows": true,
+      "speed": 500,
+      "slidesToShow": 1,
+      "slidesToScroll": 1,
+      "fade": true
+    },
+    "arrow": {
+      "next": "flaticon-next",
+      "prev": "flaticon-back"
+    },
+    "testimonials": [
+      {
+        "id": 1,
+        "feedback": "Hervorragende Qualität!",
+        "text": "DXT ist ein Unternehmen mit Sitz in Douala, das sich auf digitale Technologie, Handel, berufliche Ausbildung und Unterstützung für internationale Mobilität (Studium, Beschäftigung und Arbeitsmöglichkeiten) spezialisiert hat.",
+        "name": "Jordis Kengne",
+        "designation": "Inhaber und Geschäftsführer von DXT SARL",
+        "avatar": "/images/resource/Jordiee.jpg"
+      },
+      {
+        "id": 2,
+        "feedback": "Superio ist eine großartige Plattform sowohl für Arbeitssuchende als auch für Arbeitgeber. Die Benutzeroberfläche ist intuitiv und die Funktionen sind umfassend. Ich habe meinen Traumjob über diese Plattform gefunden!",
+        "text": "Superio ist eine großartige Plattform sowohl für Arbeitssuchende als auch für Arbeitgeber. Die Benutzeroberfläche ist intuitiv und die Funktionen sind umfassend. Ich habe meinen Traumjob über diese Plattform gefunden!",
+        "name": "Gabriel Hammond",
+        "designation": "UX-Designer",
+        "avatar": "/images/resource/testimonial-image-2.png"
+      },
+      {
+        "id": 3,
+        "feedback": "Ich nutze Superio für meine Rekrutierungsbedürfnisse und es hat die Spielregeln verändert. Die Qualität der Kandidaten und die Benutzerfreundlichkeit heben es von anderen Plattformen ab.",
+        "text": "Ich nutze Superio für meine Rekrutierungsbedürfnisse und es hat die Spielregeln verändert. Die Qualität der Kandidaten und die Benutzerfreundlichkeit heben es von anderen Plattformen ab.",
+        "name": "Ashley Jenkins",
+        "designation": "HR-Managerin",
+        "avatar": "/images/resource/testimonial-image-3.png"
+      }
+    ]
+  },
+  "callToAction11": {
+    "title": "Qualifizierte Arbeitskräfte treffen auf globale Unternehmen!",
+    "button": "Job Veröffentlichen",
+    "background_image": "/images/index-17/cta/bg.png"
+  },
+  "faq": {
+    "items": [
+      {
+        "id": "collapseOne",
+        "question": "Was bietet Ihnen DIGI-X-TECH?",
+        "answer": [
+          "DIGI-X-TECH bietet Ihnen die Möglichkeit, Karrierechancen in Deutschland zu nutzen und bietet umfassende Unterstützung von der Erstellung Ihres Profils bis zur Wohnungssuche."
+        ]
+      },
+      {
+        "id": "collapseTwo",
+        "question": "Was ist das DIGI-X-TECH Portal?",
+        "answer": [
+          "Das DIGI-X-TECH Portal ermöglicht Ihnen den Zugriff auf Stellenangebote und Unternehmen und ermöglicht es Ihnen, sich zu bewerben oder von Unternehmen gefunden zu werden. Mit unserem Profilservice optimieren wir Ihr Profil und erstellen ein professionelles Vorstellungsvideo."
+        ]
+      },
+      {
+        "id": "collapseThree",
+        "question": "Welche Voraussetzungen müssen erfüllt sein, um als qualifizierte Fachkraft nach Deutschland zu kommen?",
+        "answer": [
+          "Die Anforderungen variieren je nach gewünschtem Ziel. Grundsätzlich muss eine 'Blaue Karte', ein 'Anerkennungszertifikat' oder eine 'Anerkennungspartnerschaft' zusammen mit den erforderlichen Sprachkenntnissen für den Arbeitsbeginn vorliegen. Bitte kontaktieren Sie unsere Talent-Scouts für Ihre persönliche Einschätzung."
+        ]
+      },
+      {
+        "id": "collapseFour",
+        "question": "Muss ich Deutschkenntnisse haben?",
+        "answer": [
+          "Die Sprachkenntnisse variieren je nach Art der Beschäftigung und Branche. Unabhängig vom gesetzlich vorgeschriebenen Sprachniveau empfehlen wir mindestens das Niveau B1."
+        ]
+      },
+      {
+        "id": "collapseFive",
+        "question": "Wie lange dauert das Einwanderungsverfahren und wann sollte ich mich bewerben?",
+        "answer": [
+          "Die Dauer des Arbeitsmigrationverfahrens hängt von der Art des beantragten Visums ab. Im Allgemeinen dauert das Verfahren von einigen Wochen bis zu einigen Monaten. Im Rahmen des 'beschleunigten Fachkräfteverfahrens' gibt es Fristen, die auch das Generalkonsulat einhalten muss. Es wird empfohlen, sich so früh wie möglich zu bewerben."
+        ]
+      },
+      {
+        "id": "collapseSix",
+        "question": "Welche Dokumente sind für die Registrierung auf dem DIGI-X-TECH Portal erforderlich?",
+        "answer": [
+          "Für die Erstellung eines Profils auf dem Portal sind ein aktueller Lebenslauf, Dokumente zur Berufsausbildung, zusätzliche Qualifikationen und Sprachkenntnisse erforderlich."
+        ]
+      },
+      {
+        "id": "collapseSeven",
+        "question": "Welche Dokumente sind für ein Visum erforderlich?",
+        "answer": [
+          "Die einzureichenden Dokumente hängen von der Art des Visums ab und variieren für Bildungs- und Beschäftigungsverhältnisse. Grundsätzlich sind jedoch in allen Fällen die Zustimmung der Bundesagentur für Arbeit, ein Bildungs- oder Arbeitsvertrag, Nachweis der Sprachkenntnisse und ein gültiger Reisepass erforderlich."
+        ]
+      },
+      {
+        "id": "collapseEight",
+        "question": "Wie sind Krankenversicherung und andere Sozialversicherungsbedingungen für Arbeitnehmer in Deutschland geregelt?",
+        "answer": [
+          "Die einzureichenden Dokumente hängen von der Art des Visums ab und variieren für Bildungs- und Beschäftigungsverhältnisse. Grundsätzlich sind jedoch in allen Fällen die Zustimmung der Bundesagentur für Arbeit, ein Bildungs- oder Arbeitsvertrag, Nachweis der Sprachkenntnisse und ein gültiger Reisepass erforderlich."
+        ]
+      }
+    ],
+    "title": "Häufig Gestellte Fragen"
+  },
+  "footer": {
+    "content": [
+      {
+        "id": 1,
+        "title": "Für Kandidaten",
+        "menuList": [
+          { "name": "Jobs Durchsuchen", "route": "/job-list-v5" },
+          { "name": "Kategorien Durchsuchen", "route": "/job-list-v5" },
+          { "name": "Kandidaten-Dashboard", "route": "/candidates-dashboard/dashboard" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Für Arbeitgeber",
+        "menuList": [
+          { "name": "Kandidaten Durchsuchen", "route": "/candidates-list-v3" },
+          { "name": "Arbeitgeber-Dashboard", "route": "/employers-dashboard/dashboard" },
+          { "name": "Job Hinzufügen", "route": "/employers-dashboard/post-jobs" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Über Uns",
+        "menuList": [
+          { "name": "Über Uns", "route": "/about" },
+          { "name": "Kontakt", "route": "/contact" }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Hilfreiche Ressourcen",
+        "menuList": [
+          { "name": "Sitemap", "route": "/" },
+          { "name": "Nutzungsbedingungen", "route": "/terms" },
+          { "name": "Datenschutzcenter", "route": "/" },
+          { "name": "Sicherheitscenter", "route": "/" },
+          { "name": "Barrierefreiheit", "route": "/" }
+        ]
+      }
+    ]
+  },
+  "social": {
+    "links": [
+      {
+        "id": 1,
+        "icon": "fa-facebook-f",
+        "link": "https://www.facebook.com/",
+        "aria_label": "Folgen Sie uns auf Facebook"
+      },
+      {
+        "id": 2,
+        "icon": "fa-twitter",
+        "link": "https://www.twitter.com/",
+        "aria_label": "Folgen Sie uns auf Twitter"
+      },
+      {
+        "id": 3,
+        "icon": "fa-instagram",
+        "link": "https://www.instagram.com/",
+        "aria_label": "Folgen Sie uns auf Instagram"
+      },
+      {
+        "id": 4,
+        "icon": "fa-linkedin-in",
+        "link": "https://www.linkedin.com/",
+        "aria_label": "Folgen Sie uns auf LinkedIn"
+      }
+    ]
+  },
+  "copyright_footer": {
+    "copyright_text": 2025,
+    
+    "rights_text": "Alle Rechte vorbehalten."
+  },
+  "index": {
+    "footer": {
+      "contact": {
+        "call_us": "Rufen Sie uns an",
+        "phone": "123 456 7890",
+        "address": "329 Queensberry Street, North Melbourne VIC\n3051, Australien.",
+        "email": "support@DIGI-X-TECH.com"
+      }
+    },
+    "job_categories": {
+      "title": "Beliebte Jobkategorien",
+      "subtitle": "2020 aktive Jobs - 293 heute hinzugefügt."
+    },
+    "featured_jobs": {
+      "title": "Ausgewählte Jobs",
+      "subtitle": "Kennen Sie Ihren Wert und finden Sie den Job, der Ihr Leben bereichert",
+      "load_more": "Mehr Jobs Laden"
+    },
+    "top_companies": {
+      "title": "Top Registrierte Unternehmen",
+      "subtitle": "Einige der Unternehmen, denen wir über die Jahre geholfen haben, ausgezeichnete Bewerber zu rekrutieren.",
+      "load_more": "Mehr Unternehmen Laden"
+    },
+    "candidates": {
+      "title": "Ausgewählte Kandidaten",
+      "subtitle": "Entdecken Sie talentierte Fachkräfte für Ihr Unternehmen",
+      "load_more": "Mehr Kandidaten Laden"
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen"
+    },
+    "testimonials": {
+      "title": "Ganzheitliche Lösungen sind gefragt."
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Startseite-1 || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "DIGI-X-TECH - Job Board React NextJS Template"
+    },
+    "job_categories": {
+      "title": "Beliebte Jobkategorien",
+      "subtitle": "2020 aktive Jobs - 293 heute hinzugefügt."
+    },
+    "featured_jobs": {
+      "title": "Ausgewählte Jobs",
+      "subtitle": "Kennen Sie Ihren Wert und finden Sie den Job, der Ihr Leben bereichert",
+      "load_more": "Mehr Jobs Laden"
+    },
+    "top_companies": {
+      "title": "Top Registrierte Unternehmen",
+      "subtitle": "Einige der Unternehmen, denen wir über die Jahre geholfen haben, ausgezeichnete Bewerber zu rekrutieren.",
+      "load_more": "Mehr Unternehmen Laden"
+    },
+    "candidates": {
+      "title": "Ausgewählte Kandidaten",
+      "subtitle": "Entdecken Sie talentierte Fachkräfte für Ihr Unternehmen",
+      "load_more": "Mehr Kandidaten Laden"
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen"
+    },
+    "testimonials": {
+      "title": "Ganzheitliche Lösungen sind gefragt."
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen"
+    }
+  }
+} 

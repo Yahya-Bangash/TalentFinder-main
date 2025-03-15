@@ -1,0 +1,477 @@
+{
+  "searchBox": {
+    "placeholder": "Candidate name or keyword",
+    "title": "Search Candidates",
+    "filters": {
+      "title": "All Filters",
+      "location": "Location",
+      "category": "Category",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "apply": "Apply Filter",
+      "reset": "Reset"
+    }
+  },
+  "locationBox": {
+    "placeholder": "City or postcode",
+    "title": "Location"
+  },
+  "categories": {
+    "placeholder": "Choose a category",
+    "title": "Category",
+    "list": [
+      {
+        "label": "Metal Technology",
+        "value": "Metal Technology",
+        "icon": "flaticon-rocket-ship",
+        "subOptions": [
+          { "value": "Plant mechanic", "label": "Plant mechanic" },
+          { "value": "CNC specialist", "label": "CNC specialist" },
+          { "value": "Specialist for metal technology", "label": "Specialist for metal technology" },
+          { "value": "Precision mechanic", "label": "Precision mechanic" },
+          { "value": "Foundry mechanic", "label": "Foundry mechanic" },
+          { "value": "Industrial mechanic", "label": "Industrial mechanic" },
+          { "value": "Engineer - Automotive engineering", "label": "Engineer - Automotive engineering" },
+          { "value": "Engineer - mechanical engineering", "label": "Engineer - mechanical engineering" },
+          { "value": "Automotive mechatronics technician", "label": "Automotive mechatronics technician" },
+          { "value": "Construction mechanic", "label": "Construction mechanic" },
+          { "value": "Machine and plant operator", "label": "Machine and plant operator" },
+          { "value": "Machine technology technician", "label": "Machine technology technician" },
+          { "value": "Tool mechanic", "label": "Tool mechanic" },
+          { "value": "Machining mechanic", "label": "Machining mechanic" }
+        ]
+      },
+      {
+        "label": "Welding Technology",
+        "value": "Welding Technology",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "Manual electric welder", "label": "Manual electric welder" },
+          { "value": "Gas welder", "label": "Gas welder" },
+          { "value": "High-pressure welder", "label": "High-pressure welder" },
+          { "value": "MAG welder", "label": "MAG welder" },
+          { "value": "MIG welder", "label": "MIG welder" },
+          { "value": "Welding specialist", "label": "Welding specialist" },
+          { "value": "Welding foreman", "label": "Welding foreman" },
+          { "value": "TIG welder", "label": "TIG welder" }
+        ]
+      },
+      {
+        "label": "Electrical Engineering",
+        "value": "Electrical Engineering",
+        "icon": "flaticon-vector",
+        "subOptions": [
+          { "value": "Bachelor of Engineering Electrical Engineering", "label": "Bachelor of Engineering Electrical Engineering" },
+          { "value": "Bachelor of Science Electrical Engineering", "label": "Bachelor of Science Electrical Engineering" },
+          { "value": "Electrical systems fitter", "label": "Electrical systems fitter" },
+          { "value": "Electronics technician - automation and systems engineering", "label": "Electronics technician - automation and systems engineering" },
+          { "value": "Electronics technician - automation technology", "label": "Electronics technician - automation technology" },
+          { "value": "Electronics technician - industrial engineering", "label": "Electronics technician - industrial engineering" },
+          { "value": "Electronics technician - energy and building technology", "label": "Electronics technician - energy and building technology" },
+          { "value": "Electronics technician - building and infrastructure systems", "label": "Electronics technician - building and infrastructure systems" },
+          { "value": "Electronics technician - building systems integration", "label": "Electronics technician - building systems integration" },
+          { "value": "Electronics technician - devices and systems", "label": "Electronics technician - devices and systems" },
+          { "value": "Electronics technician - information and systems technology", "label": "Electronics technician - information and systems technology" },
+          { "value": "Electronics technician - machines and drive technology (BBiG)", "label": "Electronics technician - machines and drive technology (BBiG)" },
+          { "value": "Electronics technician - machines and drive technology (HwO)", "label": "Electronics technician - machines and drive technology (HwO)" },
+          { "value": "Industrial electrician - operating technology", "label": "Industrial electrician - operating technology" },
+          { "value": "Industrial electrician - devices and systems", "label": "Industrial electrician - devices and systems" },
+          { "value": "Master of Electrical Engineering", "label": "Master of Electrical Engineering" },
+          { "value": "Electrical engineering technician", "label": "Electrical engineering technician" }
+        ]
+      },
+      {
+        "label": "Mechatronics",
+        "value": "Mechatronics",
+        "icon": "flaticon-promotion",
+        "subOptions": [
+          { "value": "Engineer - Mechatronics", "label": "Engineer - Mechatronics" },
+          { "value": "Mechatronics engineer", "label": "Mechatronics engineer" }
+        ]
+      },
+      {
+        "label": "Chemistry",
+        "value": "Chemistry",
+        "icon": "flaticon-first-aid-kit-1",
+        "subOptions": []
+      },
+      {
+        "label": "IT/EDP",
+        "value": "IT/EDP",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "IT specialist for system integration", "label": "IT specialist for system integration" },
+          { "value": "Computer scientist", "label": "Computer scientist" },
+          { "value": "Engineer - Information and communication technology", "label": "Engineer - Information and communication technology" },
+          { "value": "IT administrator", "label": "IT administrator" },
+          { "value": "Media computer scientist", "label": "Media computer scientist" },
+          { "value": "Computer science technician", "label": "Computer science technician" }
+        ]
+      },
+      {
+        "label": "Software Development",
+        "value": "Software Development",
+        "icon": "flaticon-web-programming",
+        "subOptions": [
+          { "value": "Backend Developer", "label": "Backend Developer" },
+          { "value": "Database developer", "label": "Database developer" },
+          { "value": "IT specialist for application development", "label": "IT specialist for application development" },
+          { "value": "Frontend developer", "label": "Frontend developer" },
+          { "value": "Full-Stack Developer", "label": "Full-Stack Developer" }
+        ]
+      },
+      {
+        "label": "Warehouse Logistics",
+        "value": "Warehouse Logistics",
+        "icon": "flaticon-money-1",
+        "subOptions": []
+      }
+    ]
+  },
+  "filterTopBox": {
+    "results": {
+      "candidates": "candidates"
+    },
+    "featured": "Featured",
+    "viewProfile": "View Profile",
+    "sort": {
+      "title": "Sort by",
+      "options": {
+        "default": "Sort by (default)",
+        "newest": "Newest",
+        "oldest": "Oldest"
+      }
+    },
+    "perPage": {
+      "title": "Per page",
+      "options": {
+        "all": "All",
+        "15": "15 per page",
+        "20": "20 per page",
+        "25": "25 per page"
+      }
+    },
+    "actions": {
+      "clearAll": "Clear All"
+    },
+    "jobInfo": {
+      "location": "Location",
+      "salary": "Expected Salary",
+      "salaryPeriod": "/ year"
+    }
+  },
+  "page": {
+    "metadata": {
+      "title": "Candidates List || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Find skilled candidates with DIGI-X-TECH"
+    },
+    "title": "Find Talented Candidates",
+    "subtitle": "Discover skilled professionals for your team",
+    "sections": {
+      "candidateSearch": "Candidate Search Form",
+      "candidateList": "Candidate Listings",
+      "filters": "Filter Options"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Candidates"
+    }
+  },
+  "jobTitleBox": {
+    "placeholder": "Job title",
+    "title": "Job Title"
+  },
+  "index": {
+    "header": {
+      "title": "Find Candidates",
+      "uploadCV": "Upload your CV"
+    },
+    "pageTitle": {
+      "title": "Find Talented Candidates",
+      "subtitle": "Discover skilled professionals for your team"
+    },
+    "sections": {
+      "candidateSearch": "Candidate Search Form",
+      "candidateList": "Candidate Listings",
+      "filters": "Filter Options"
+    },
+    "metadata": {
+      "title": "Candidates || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Find skilled candidates with DIGI-X-TECH"
+    }
+  },
+  "appliedJobs": {
+    "title": "Applied Jobs",
+    "subtitle": "Ready to jump back in?",
+    "noJobs": "No jobs applied yet",
+    "table": {
+      "jobTitle": "Job Title",
+      "dateApplied": "Date Applied",
+      "company": "Company",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "status": {
+      "pending": "Pending",
+      "viewed": "Viewed",
+      "rejected": "Rejected",
+      "accepted": "Accepted"
+    },
+    "timePeriod": {
+      "last6Months": "Last 6 Months",
+      "last12Months": "Last 12 Months",
+      "last16Months": "Last 16 Months",
+      "last24Months": "Last 24 Months",
+      "last5Years": "Last 5 Years"
+    }
+  },
+  "jobAlerts": {
+    "title": "Job Alerts",
+    "subtitle": "Ready to jump back in?",
+    "myAppliedJobs": "My Applied Jobs",
+    "noAlerts": "No job alerts set up yet",
+    "table": {
+      "alertName": "Alert Name",
+      "keywords": "Keywords",
+      "location": "Location",
+      "category": "Category",
+      "actions": "Actions"
+    }
+  },
+  "shortlistedJobs": {
+    "title": "Shortlisted Jobs",
+    "subtitle": "Ready to jump back in?",
+    "myFavoriteJobs": "My Favorite Jobs",
+    "noJobs": "No shortlisted jobs yet",
+    "table": {
+      "jobTitle": "Job Title",
+      "dateAdded": "Date Added",
+      "company": "Company",
+      "status": "Status",
+      "actions": "Actions"
+    }
+  },
+  "changePassword": {
+    "title": "Change Password",
+    "subtitle": "Update your account security",
+    "form": {
+      "currentPassword": "Current Password",
+      "currentPasswordPlaceholder": "Enter your current password",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Enter your new password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your new password",
+      "updateButton": "Update Password",
+      "updatingButton": "Updating..."
+    },
+    "toasts": {
+      "updateSuccess": "Password updated successfully!",
+      "updateError": "Error updating password. Please try again.",
+      "passwordMismatch": "New passwords do not match."
+    }
+  },
+  "myProfile": {
+    "title": "My Profile!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "My Profile",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "jobTitle": "Job Title",
+      "jobTitlePlaceholder": "Software Developer",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 234 567 890",
+      "email": "Email",
+      "emailPlaceholder": "example@domain.com",
+      "website": "Website",
+      "websitePlaceholder": "www.example.com",
+      "currentSalary": "Current Salary",
+      "currentSalaryPlaceholder": "$50,000",
+      "age": "Age",
+      "agePlaceholder": "30",
+      "education": "Education",
+      "educationPlaceholder": "Bachelor's Degree",
+      "languages": "Languages",
+      "languagesPlaceholder": "English, Spanish",
+      "experience": "Experience",
+      "experiencePlaceholder": "5 years",
+      "allowInSearch": "Allow In Search & Listing",
+      "allowInSearchOptions": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "aboutMe": "About Me",
+      "aboutMePlaceholder": "Write a short description about yourself",
+      "saveButton": "Save",
+      "savingButton": "Saving...",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "country": "Country",
+      "countryPlaceholder": "Germany",
+      "city": "City",
+      "cityPlaceholder": "Frankfurt",
+      "expectedSalaryRange": "Expected Salary Range",
+      "expectedSalaryRangePlaceholder": "90k-100k",
+      "experienceYears": "Experience (Years)",
+      "experienceYearsPlaceholder": "5",
+      "gender": "Gender",
+      "genderOptions": {
+        "male": "Male",
+        "female": "Female",
+        "others": "Others"
+      },
+      "educationLevels": "Education Levels",
+      "educationLevelsPlaceholder": "Certificate",
+      "categories": "Categories",
+      "categoriesPlaceholder": "Select Category",
+      "skills": "Skills",
+      "skillsPlaceholder": "Select Skills",
+      "description": "Description",
+      "descriptionPlaceholder": "Description about yourself"
+    },
+    "upload": {
+      "profileImage": "Upload Profile Image",
+      "profileImageInfo": "Max file size: 50MB. Allowed types: jpg, jpeg, png, gif.",
+      "cv": "Upload CV",
+      "cvInfo": "Max file size: 50MB. Allowed types: pdf, doc, docx, txt.",
+      "video": "Upload Video",
+      "videoInfo": "Max file size: 50MB. Allowed types: mp4, mov, avi.",
+      "uploadButton": "Upload Files",
+      "uploadingButton": "Uploading...",
+      "successMessage": "Files uploaded and data updated successfully!",
+      "errorMessage": "An error occurred during upload: {{error}}.",
+      "uploadingMessage": "Uploading...",
+      "uploadingItemMessage": "Uploading {{type}}...",
+      "itemUploadedMessage": "{{type}} uploaded successfully."
+    },
+    "toasts": {
+      "saving": "Saving your information...",
+      "updateSuccess": "Profile updated successfully!",
+      "createSuccess": "Profile created successfully!",
+      "error": "Error saving profile. Please try again.",
+      "serviceError": "Services not initialized properly. Please try again."
+    }
+  },
+  "candidateMenu": {
+    "dashboard": "Dashboard",
+    "my_profile": "My Profile",
+    "my_resume": "My Resume",
+    "applied_jobs": "Applied Jobs",
+    "job_alerts": "Job Alerts",
+    "shortlisted_jobs": "Shortlisted Jobs",
+    "cv_manager": "CV Manager",
+    "packages": "Packages",
+    "messages": "Messages",
+    "change_password": "Change Password",
+    "logout": "Logout",
+    "delete_profile": "Delete Profile",
+    "skills_percentage": "Skills Percentage",
+    "skills_percentage_text": "Put value for Cover Image field to increase your skill up to 85%"
+  },
+  "dashboard": {
+    "sidebar": {
+      "menuItems": {
+        "myProfile": "My Profile",
+        "appliedJobs": "Applied Jobs",
+        "jobAlerts": "Job Alerts",
+        "shortlistedJobs": "Shortlisted Jobs",
+        "logout": "Logout",
+        "deleteProfile": "Delete Profile"
+      },
+      "skillsPercentage": {
+        "title": "Skills Percentage",
+        "description": "Put value for <strong>Cover Image</strong> field to increase your skill up to <strong>85%</strong>"
+      }
+    }
+  },
+  "employerProfile": {
+    "title": "Company Profile",
+    "form": {
+      "companyName": "Company name",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "Email address",
+      "emailAddressPlaceholder": "ib-themes",
+      "city": "City",
+      "cityPlaceholder": "New York",
+      "country": "Country",
+      "countryPlaceholder": "USA",
+      "primaryIndustry": "Primary Industry",
+      "primaryIndustryPlaceholder": "Software",
+      "companySize": "Company Size",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Website",
+      "websitePlaceholder": "www.invision.com",
+      "estSince": "Est. Since",
+      "estSincePlaceholder": "mm/dd/yyyy",
+      "category": "Category",
+      "categoryPlaceholder": "Select Category",
+      "subcategories": "Subcategories",
+      "subcategoriesPlaceholder": "Select Subcategory",
+      "allowInSearch": "Allow In Search & Listing",
+      "allowInSearchOptions": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/invisionn",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
+      "aboutCompany": "About Company",
+      "aboutCompanyPlaceholder": "Description about the company",
+      "saveButton": "Save",
+      "savingButton": "Saving..."
+    },
+    "toasts": {
+      "saving": "Saving your information...",
+      "updateSuccess": "Profile updated successfully!",
+      "createSuccess": "Profile created successfully!",
+      "updateError": "Error updating profile. Please try again.",
+      "createError": "Error creating profile. Please try again."
+    }
+  },
+  "contactInfo": {
+    "title": "Contact Information",
+    "form": {
+      "country": "Country",
+      "countryPlaceholder": "United States",
+      "city": "City",
+      "cityPlaceholder": "California",
+      "address": "Complete Address",
+      "addressPlaceholder": "329 Queensberry Street, North Melbourne VIC 3051, Australia.",
+      "saveButton": "Save"
+    },
+    "toasts": {
+      "updateSuccess": "Contact information updated successfully",
+      "updateError": "Error updating contact information"
+    }
+  },
+  "socialNetwork": {
+    "title": "Social Network",
+    "form": {
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "LinkedIn Profile URL",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "Twitter Profile URL",
+      "github": "GitHub",
+      "githubPlaceholder": "GitHub Profile URL",
+      "saveButton": "Save"
+    },
+    "toasts": {
+      "updateSuccess": "Social network information updated successfully",
+      "updateError": "Error updating social network information",
+      "createSuccess": "Social network information created successfully",
+      "createError": "Error creating social network information"
+    }
+  }
+} 
