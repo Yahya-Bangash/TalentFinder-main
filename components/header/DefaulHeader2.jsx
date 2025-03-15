@@ -12,6 +12,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { signOutUser } from "@/appwrite/Services/authServices";
 import candidatesMenuData from "@/data/candidatesMenuData";
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const DefaulHeader2 = () => {
   const [navbar, setNavbar] = useState(false);
@@ -27,6 +28,7 @@ const DefaulHeader2 = () => {
   // Get language context
   const { language, changeLanguage } = useLanguage();
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+  const { t } = useTranslation('common');
 
   // Language options with flags
   const languages = [
@@ -100,7 +102,7 @@ const DefaulHeader2 = () => {
       return (
         <span className="theme-btn btn-style-three loading">
           <div className="loading-spinner"></div>
-          Loading...
+          {t('DefaultHeader2.loading')}
         </span>
       );
     }
@@ -109,7 +111,7 @@ const DefaulHeader2 = () => {
       console.error('Profile error:', profileError);
       return (
         <span className="theme-btn btn-style-three error">
-          Error loading profile
+          {t('DefaultHeader2.error_loading')}
         </span>
       );
     }
@@ -117,7 +119,7 @@ const DefaulHeader2 = () => {
     if (!user || !isAuthenticated) {
       return (
         <Link href="/login" className="theme-btn btn-style-three">
-          Login / Register
+          {t('DefaultHeader2.login_register')}
         </Link>
       );
     }
