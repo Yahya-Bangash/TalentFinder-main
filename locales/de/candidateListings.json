@@ -226,6 +226,51 @@
       "last5Years": "Letzte 5 Jahre"
     }
   },
+  "jobAlerts": {
+    "title": "Jobalerts",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "myAppliedJobs": "Meine beworbenen Stellen",
+    "noAlerts": "Noch keine Jobalerts eingerichtet",
+    "table": {
+      "alertName": "Alertname",
+      "keywords": "Schlüsselwörter",
+      "location": "Standort",
+      "category": "Kategorie",
+      "actions": "Aktionen"
+    }
+  },
+  "shortlistedJobs": {
+    "title": "Gespeicherte Stellen",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "myFavoriteJobs": "Meine Lieblingsjobs",
+    "noJobs": "Noch keine gespeicherten Stellen",
+    "table": {
+      "jobTitle": "Stellentitel",
+      "dateAdded": "Hinzugefügt am",
+      "company": "Unternehmen",
+      "status": "Status",
+      "actions": "Aktionen"
+    }
+  },
+  "changePassword": {
+    "title": "Passwort Ändern",
+    "subtitle": "Aktualisieren Sie Ihre Kontosicherheit",
+    "form": {
+      "currentPassword": "Aktuelles Passwort",
+      "currentPasswordPlaceholder": "Geben Sie Ihr aktuelles Passwort ein",
+      "newPassword": "Neues Passwort",
+      "newPasswordPlaceholder": "Geben Sie Ihr neues Passwort ein",
+      "confirmPassword": "Passwort Bestätigen",
+      "confirmPasswordPlaceholder": "Bestätigen Sie Ihr neues Passwort",
+      "updateButton": "Passwort Aktualisieren",
+      "updatingButton": "Wird aktualisiert..."
+    },
+    "toasts": {
+      "updateSuccess": "Passwort erfolgreich aktualisiert!",
+      "updateError": "Fehler beim Aktualisieren des Passworts. Bitte versuchen Sie es erneut.",
+      "passwordMismatch": "Neue Passwörter stimmen nicht überein."
+    }
+  },
   "myProfile": {
     "title": "Mein Profil",
     "form": {

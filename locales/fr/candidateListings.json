@@ -226,6 +226,51 @@
       "last5Years": "5 Dernières Années"
     }
   },
+  "jobAlerts": {
+    "title": "Alertes d'Emploi",
+    "subtitle": "Prêt à reprendre?",
+    "myAppliedJobs": "Mes Emplois Postulés",
+    "noAlerts": "Aucune alerte d'emploi configurée pour le moment",
+    "table": {
+      "alertName": "Nom de l'Alerte",
+      "keywords": "Mots-clés",
+      "location": "Emplacement",
+      "category": "Catégorie",
+      "actions": "Actions"
+    }
+  },
+  "shortlistedJobs": {
+    "title": "Emplois Favoris",
+    "subtitle": "Prêt à reprendre?",
+    "myFavoriteJobs": "Mes Emplois Favoris",
+    "noJobs": "Aucun emploi favori pour le moment",
+    "table": {
+      "jobTitle": "Titre du Poste",
+      "dateAdded": "Date d'Ajout",
+      "company": "Entreprise",
+      "status": "Statut",
+      "actions": "Actions"
+    }
+  },
+  "changePassword": {
+    "title": "Changer le Mot de Passe",
+    "subtitle": "Mettez à jour la sécurité de votre compte",
+    "form": {
+      "currentPassword": "Mot de Passe Actuel",
+      "currentPasswordPlaceholder": "Entrez votre mot de passe actuel",
+      "newPassword": "Nouveau Mot de Passe",
+      "newPasswordPlaceholder": "Entrez votre nouveau mot de passe",
+      "confirmPassword": "Confirmer le Mot de Passe",
+      "confirmPasswordPlaceholder": "Confirmez votre nouveau mot de passe",
+      "updateButton": "Mettre à Jour le Mot de Passe",
+      "updatingButton": "Mise à jour..."
+    },
+    "toasts": {
+      "updateSuccess": "Mot de passe mis à jour avec succès!",
+      "updateError": "Erreur lors de la mise à jour du mot de passe. Veuillez réessayer.",
+      "passwordMismatch": "Les nouveaux mots de passe ne correspondent pas."
+    }
+  },
   "myProfile": {
     "title": "Mon Profil",
     "form": {
