@@ -21,11 +21,13 @@ import { useState, useEffect } from "react";
 import employerMenuData from "../../data/employerMenuData";
 import candidatesMenuData from "../../data/candidatesMenuData";
 import { signOutUser } from "@/appwrite/Services/authServices";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const HeaderNavContent = () => {
   const { user, setUser, checkAuth } = useAuth();
   const pathname = usePathname();
   const router = useRouter();
+  const { t } = useTranslation('common');
 
   // Simple check for authentication
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -74,17 +76,17 @@ const HeaderNavContent = () => {
         <ul className="navigation" id="navbar">
           {/* Basic navigation itemss - always visible */}
           <li className={`${pathname === "/" ? "current" : ""}`}>
-            <Link href="/">Home</Link>
+            <Link href="/">{t('HeaderNavContent.home')}</Link>
           </li>
           {/* End homepage menu item */}
 
           <li className={`${pathname === "/about" ? "current" : ""}`}>
-            <Link href="/about">About Us</Link>
+            <Link href="/about">{t('HeaderNavContent.about_us')}</Link>
           </li>
           {/* End About Page */}
 
           <li className={`${pathname === "/skills" ? "current" : ""}`}>
-            <Link href="/skills">Skills</Link>
+            <Link href="/skills">{t('HeaderNavContent.skills')}</Link>
           </li>
           {/* End Skills */}
 
@@ -94,19 +96,19 @@ const HeaderNavContent = () => {
               {/* Show Companies link only for job seekers */}
               {user.team === "jobSeekers" && (
                 <li className={`${pathname === "/employers-list-v3" ? "current" : ""}`}>
-                  <Link href="/employers-list-v3">Company Listings</Link>
+                  <Link href="/employers-list-v3">{t('HeaderNavContent.company_listings')}</Link>
                 </li>
               )}
 
               {/* Show Job Listings for both roles */}
               <li className={`${pathname === "/job-list-v5" ? "current" : ""}`}>
-                <Link href="/job-list-v5">Job Listings</Link>
+                <Link href="/job-list-v5">{t('HeaderNavContent.job_listings')}</Link>
               </li>
 
               {/* Show Candidate Listings only for employers */}
               {user.team === "companies" && (
                 <li className={`${pathname === "/candidates-list-v3" ? "current" : ""}`}>
-                  <Link href="/candidates-list-v3">Candidate Listings</Link>
+                  <Link href="/candidates-list-v3">{t('HeaderNavContent.candidate_listings')}</Link>
                 </li>
               )}
 
@@ -115,10 +117,10 @@ const HeaderNavContent = () => {
                 {user && user.team ? (
                   <>
                     {user.team === "companies" && (
-                      <Link href="/employers-dashboard/dashboard">Company Dashboard</Link>
+                      <Link href="/employers-dashboard/dashboard">{t('HeaderNavContent.company_dashboard')}</Link>
                     )}
                     {user.team === "jobSeekers" && (
-                      <Link href="/candidates-dashboard/my-profile">Candidate Dashboard</Link>
+                      <Link href="/candidates-dashboard/my-profile">{t('HeaderNavContent.candidate_dashboard')}</Link>
                     )}
                   </>
                 ) : (
