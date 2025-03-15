@@ -28,6 +28,7 @@
     "candidate_dashboard": "Kandidaten-Dashboard",
     "navigation": {
       "find_jobs": "Jobs Finden",
+      "candidate": "Kandidat",
       "employers": "Arbeitgeber",
       "dashboards": "Dashboards",
       "blog": "Blog",
@@ -67,7 +68,7 @@
     "error_message": "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Anmeldedaten und versuchen Sie es erneut."
   },
   "RegisterForm": {
-    "title": "Registrieren bei DIGI-X-TECH",
+    "title": "Kostenloses DIGI-X-TECH Konto erstellen",
     "email": "E-Mail-Adresse",
     "email_placeholder": "E-Mail-Adresse",
     "username": "Benutzername",

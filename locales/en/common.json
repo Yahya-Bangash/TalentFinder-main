@@ -28,7 +28,8 @@
     "candidate_dashboard": "Candidate Dashboard",
     "navigation": {
       "find_jobs": "Find Jobs",
-      "employers": "Employers",
+      "candidate": "Candidate",
+      "employers": "Employer",
       "dashboards": "Dashboards",
       "blog": "Blog",
       "pages": "Pages"
@@ -67,7 +68,7 @@
     "error_message": "Login failed. Please check your credentials and try again."
   },
   "RegisterForm": {
-    "title": "Register with DIGI-X-TECH",
+    "title": "Create a free DIGI-X-TECH Account",
     "email": "Email Address",
     "email_placeholder": "Email Address",
     "username": "Username",

@@ -28,7 +28,8 @@
     "candidate_dashboard": "Tableau de Bord Candidat",
     "navigation": {
       "find_jobs": "Trouver un Emploi",
-      "employers": "Employeurs",
+      "candidate": "Candidat",
+      "employers": "Employeur",
       "dashboards": "Tableaux de Bord",
       "blog": "Blog",
       "pages": "Pages"
@@ -67,7 +68,7 @@
     "error_message": "Échec de la connexion. Veuillez vérifier vos identifiants et réessayer."
   },
   "RegisterForm": {
-    "title": "S'inscrire sur DIGI-X-TECH",
+    "title": "Créer un compte DIGI-X-TECH gratuit",
     "email": "Adresse email",
     "email_placeholder": "Adresse email",
     "username": "Nom d'utilisateur",

@@ -18,7 +18,7 @@ const Register = () => {
           <TabList className="btn-box row">
             <Tab className="col-lg-6 col-md-12">
               <button className="theme-btn btn-style-four">
-                <i className="la la-user"></i> {t('HeaderNavContent.navigation.find_jobs')}
+                <i className="la la-user"></i> {t('HeaderNavContent.navigation.candidate')}
               </button>
             </Tab>
 
