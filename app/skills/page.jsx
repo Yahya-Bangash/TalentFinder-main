@@ -87,7 +87,7 @@ const index = () => {
       <section className="layout-pt-120 layout-pb-120 ">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2>Our Services</h2>
+            <h2>{t('page.services.title')}</h2>
             {/* <div className="text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod
@@ -106,8 +106,8 @@ const index = () => {
       <section className="job-categories">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2>DIG-X-TECH Portal Membership</h2>
-            <div className="text">You can benefit from the following services with a premium membership on our platform.</div>
+            <h2>{t('page.membership.title')}</h2>
+            <div className="text">{t('page.membership.subtitle')}</div>
           </div>
 
           <div className="row" data-aos="fade-up">
@@ -120,7 +120,7 @@ const index = () => {
       <section className="faqs-section">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2>Frequently Asked Questions</h2>
+            <h2>{t('page.faq.title')}</h2>
           </div>
           {/* <!--Accordian Box--> */}
           <ul className="accordion-box">

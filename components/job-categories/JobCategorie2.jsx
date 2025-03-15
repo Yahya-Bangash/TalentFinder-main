@@ -16,9 +16,9 @@ const JobCategorie2 = () => {
             <div className="content flex-grow-1">
               <span className={`icon ${item.icon}`}></span>
               <h4>
-                <Link href="/job-list-v2">{item.title}</Link>
+                <Link href="/job-list-v2">{t(`membershipServices.services.${item.id - 1}.title`)}</Link>
               </h4>
-              <p>{item.content} open positions</p>
+              <p>{t(`membershipServices.services.${item.id - 1}.content`)}</p>
             </div>
           </div>
         </div>

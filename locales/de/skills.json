@@ -91,6 +91,34 @@
       }
     ]
   },
+  "membershipServices": {
+    "services": [
+      {
+        "id": 1,
+        "icon": "flaticon-money-1",
+        "title": "Zugang zum DIGI-X-TECH Portal",
+        "content": "Unbegrenzter Zugang zu Jobs und Unternehmen auf dem Portal für 12 Monate."
+      },
+      {
+        "id": 2,
+        "icon": "flaticon-promotion",
+        "title": "Video-Aufnahme",
+        "content": "Aufnahme eines professionellen Werbevideo von Ihnen - auf Deutsch oder Englisch. Wir nehmen mehrere Videos auf und schneiden die passenden Teile zu einem Video zusammen."
+      },
+      {
+        "id": 3,
+        "icon": "flaticon-vector",
+        "title": "Private Karriereberatung",
+        "content": "Individuelle Karriereberatung"
+      },
+      {
+        "id": 4,
+        "icon": "flaticon-web-programming",
+        "title": "Stellenangebote",
+        "content": "Wir senden Ihnen passende Stellenvorschläge und Sie können sich auf die bewerben, die Sie interessieren."
+      }
+    ]
+  },
   "Breadcrumb": {
     "home": "Startseite",
     "title": "Fähigkeiten",
