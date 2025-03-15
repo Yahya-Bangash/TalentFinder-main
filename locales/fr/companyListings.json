@@ -200,5 +200,30 @@
         "last5Years": "5 dernières années"
       }
     }
+  },
+  "resumeAlerts": {
+    "title": "Alertes CV !",
+    "subtitle": "Prêt à vous y remettre ?",
+    "widgetTitle": "Mes Forfaits",
+    "metadata": {
+      "title": "Alertes CV || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Gérez vos alertes CV avec DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Titre",
+      "alertQuery": "Requête d'Alerte",
+      "numberJobs": "Nombre d'Emplois",
+      "times": "Fréquence",
+      "actions": "Actions",
+      "category": "Catégorie",
+      "postedDate": "Date de Publication",
+      "salary": "Salaire",
+      "jobsFound": "Emplois trouvés",
+      "weekly": "Hebdomadaire",
+      "education": "Éducation",
+      "accountingFinance": "Comptabilité et Finance",
+      "educationTraining": "Formation en Éducation",
+      "all": "Tous"
+    }
   }
 } 

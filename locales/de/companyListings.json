@@ -200,5 +200,30 @@
         "last5Years": "Letzte 5 Jahre"
       }
     }
+  },
+  "resumeAlerts": {
+    "title": "Lebenslauf-Benachrichtigungen!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Meine Pakete",
+    "metadata": {
+      "title": "Lebenslauf-Benachrichtigungen || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Verwalten Sie Ihre Lebenslauf-Benachrichtigungen mit DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Titel",
+      "alertQuery": "Benachrichtigungsabfrage",
+      "numberJobs": "Anzahl der Jobs",
+      "times": "Zeiten",
+      "actions": "Aktionen",
+      "category": "Kategorie",
+      "postedDate": "Veröffentlichungsdatum",
+      "salary": "Gehalt",
+      "jobsFound": "Jobs gefunden",
+      "weekly": "Wöchentlich",
+      "education": "Bildung",
+      "accountingFinance": "Buchhaltung und Finanzen",
+      "educationTraining": "Bildung und Training",
+      "all": "Alle"
+    }
   }
 } 

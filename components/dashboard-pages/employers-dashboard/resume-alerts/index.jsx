@@ -1,3 +1,4 @@
+'use client'
 import MobileMenu from "../../../header/MobileMenu";
 import DashboardHeader from "../../../header/DashboardHeader";
 import LoginPopup from "../../../common/form/login/LoginPopup";
@@ -7,8 +8,11 @@ import CopyrightFooter from "../../CopyrightFooter";
 import AlertDataTable from "./components/AlertDataTable";
 import MenuToggler from "../../MenuToggler";
 import DefaulHeader2 from "@/components/header/DefaulHeader2";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const index = () => {
+  const { t } = useTranslation('companyListings');
+  
   return (
     <div className="page-wrapper dashboard">
       <span className="header-span"></span>
@@ -29,7 +33,7 @@ const index = () => {
       {/* <!-- Dashboard --> */}
       <section className="user-dashboard">
         <div className="dashboard-outer">
-          <BreadCrumb title="Resume Alerts!" />
+          <BreadCrumb title={t('resumeAlerts.title')} subtitle={t('resumeAlerts.subtitle')} />
           {/* breadCrumb */}
 
           <MenuToggler />
@@ -40,7 +44,7 @@ const index = () => {
               <div className="ls-widget">
                 <div className="tabs-box">
                   <div className="widget-title">
-                    <h4>My Packages</h4>
+                    <h4>{t('resumeAlerts.widgetTitle')}</h4>
                   </div>
                   {/* End widget-title */}
 

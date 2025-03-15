@@ -200,5 +200,30 @@
         "last5Years": "Last 5 year"
       }
     }
+  },
+  "resumeAlerts": {
+    "title": "Resume Alerts!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "My Packages",
+    "metadata": {
+      "title": "Resume Alerts || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Manage your resume alerts with DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Title",
+      "alertQuery": "Alert Query",
+      "numberJobs": "Number Jobs",
+      "times": "Times",
+      "actions": "Actions",
+      "category": "Category",
+      "postedDate": "Posted Date",
+      "salary": "Salary",
+      "jobsFound": "Jobs found",
+      "weekly": "Weekly",
+      "education": "Education",
+      "accountingFinance": "Accounting and Finance",
+      "educationTraining": "Education Training",
+      "all": "All"
+    }
   }
 } 
