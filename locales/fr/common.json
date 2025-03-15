@@ -49,6 +49,38 @@
       "logo_path": "/images/jordii-logo.png"
     }
   },
+  "LoginForm": {
+    "title": "Connexion à DIGI-X-TECH",
+    "email": "Email",
+    "email_placeholder": "Email",
+    "username": "Nom d'utilisateur",
+    "username_placeholder": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "password_placeholder": "Mot de passe",
+    "remember_me": "Se souvenir de moi",
+    "forgot_password": "Mot de passe oublié?",
+    "login_button": "Se connecter",
+    "logging_in": "Connexion en cours...",
+    "no_account": "Vous n'avez pas de compte?",
+    "signup_link": "S'inscrire",
+    "or": "ou",
+    "error_message": "Échec de la connexion. Veuillez vérifier vos identifiants et réessayer."
+  },
+  "RegisterForm": {
+    "title": "S'inscrire sur DIGI-X-TECH",
+    "email": "Adresse email",
+    "email_placeholder": "Adresse email",
+    "username": "Nom d'utilisateur",
+    "username_placeholder": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "password_placeholder": "Mot de passe",
+    "register_button": "S'inscrire",
+    "registering": "Inscription en cours...",
+    "have_account": "Vous avez déjà un compte?",
+    "login_link": "Se connecter",
+    "or": "ou",
+    "error_message": "Échec de l'inscription. Veuillez réessayer."
+  },
   "About2": {
     "company_name": "DIGI-X-TECH",
     "description": "Avec le portail DIGI-X-TECH, les entreprises atteignent un nouveau groupe cible très intéressant, les talents qualifiés que nous avons sélectionnés trouvent des employeurs de premier ordre et notre équipe vous accompagne tout au long du processus. Plus qu'un simple portail de recherche d'emploi personnalisé, individuel et simple.",
@@ -297,5 +329,9 @@
         ]
       }
     ]
+  },
+  "LoginWithSocial": {
+    "facebook": "Se connecter via Facebook",
+    "google": "Se connecter via Gmail"
   }
 } 

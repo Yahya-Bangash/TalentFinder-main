@@ -1,16 +1,18 @@
+"use client";  // Make sure this is at the very top
+
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // For Next.js routing
 import { ToastContainer, toast } from 'react-toastify'; // Toaster notifications
 import 'react-toastify/dist/ReactToastify.css';
 import { registerUser } from '../../../../appwrite/Services/authServices';
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const FormContent = ({ isEmployer }) => {
+  const { t } = useTranslation('common');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();  // Prevent default form submission
@@ -34,7 +36,7 @@ const FormContent = ({ isEmployer }) => {
       console.error("Error during registration:", error);
 
       // Show error notification
-      toast.error(`Registration failed: ${error}` , {
+      toast.error(t('RegisterForm.error_message'), {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 3000,
       });
@@ -47,32 +49,32 @@ const FormContent = ({ isEmployer }) => {
     <>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Email Address</label>
+          <label>{t('RegisterForm.email')}</label>
           <input
             type="email"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
+            placeholder={t('RegisterForm.email_placeholder')}
             required
           />
         </div>
 
         <div className="form-group">
-          <label>Password</label>
+          <label>{t('RegisterForm.password')}</label>
           <input
             type="password"
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
+            placeholder={t('RegisterForm.password_placeholder')}
             required
           />
         </div>
 
         <div className="form-group">
           <button className="theme-btn btn-style-one" type="submit" disabled={loading}>
-            {loading ? "Registering..." : "Register"}
+            {loading ? t('RegisterForm.registering') : t('RegisterForm.register_button')}
           </button>
         </div>
       </form>

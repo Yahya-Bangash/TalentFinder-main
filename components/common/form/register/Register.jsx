@@ -1,28 +1,30 @@
-
 'use client'
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import LoginWithSocial from "./LoginWithSocial";
 import Form from "./FormContent";
 import Link from "next/link";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const Register = () => {
+  const { t } = useTranslation('common');
+  
   return (
     <div className="form-inner">
-      <h3>Create a Free DIGI-X-TECH Account</h3>
+      <h3>{t('RegisterForm.title')}</h3>
 
       <Tabs>
         <div className="form-group register-dual">
           <TabList className="btn-box row">
             <Tab className="col-lg-6 col-md-12">
               <button className="theme-btn btn-style-four">
-                <i className="la la-user"></i> Candidate
+                <i className="la la-user"></i> {t('HeaderNavContent.navigation.find_jobs')}
               </button>
             </Tab>
 
             <Tab className="col-lg-6 col-md-12">
               <button className="theme-btn btn-style-four">
-                <i className="la la-briefcase"></i> Employer
+                <i className="la la-briefcase"></i> {t('HeaderNavContent.navigation.employers')}
               </button>
             </Tab>
           </TabList>
@@ -43,7 +45,7 @@ const Register = () => {
 
       <div className="bottom-box">
         <div className="text">
-          Already have an account?{" "}
+          {t('RegisterForm.have_account')}{" "}
           <Link
             href="#"
             className="call-modal login"
@@ -51,11 +53,11 @@ const Register = () => {
             data-bs-dismiss="modal"
             data-bs-target="#loginPopupModal"
           >
-            LogIn
+            {t('RegisterForm.login_link')}
           </Link>
         </div>
         <div className="divider">
-          <span>or</span>
+          <span>{t('RegisterForm.or')}</span>
         </div>
         <LoginWithSocial />
       </div>

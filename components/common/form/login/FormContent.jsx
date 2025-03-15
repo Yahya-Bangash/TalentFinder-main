@@ -1,25 +1,35 @@
+"use client";  // Make sure this is at the very top
+
 import Link from "next/link";
 import LoginWithSocial from "./LoginWithSocial";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const FormContent = () => {
+  const { t } = useTranslation('common');
+  
   return (
     <div className="form-inner">
-      <h3>Login to DIGI-X-TECH</h3>
+      <h3>{t('LoginForm.title')}</h3>
 
       {/* <!--Login Form--> */}
       <form method="post">
         <div className="form-group">
-          <label>Username</label>
-          <input type="text" name="username" placeholder="Username" required />
+          <label>{t('LoginForm.username')}</label>
+          <input 
+            type="text" 
+            name="username" 
+            placeholder={t('LoginForm.username_placeholder')} 
+            required 
+          />
         </div>
         {/* name */}
 
         <div className="form-group">
-          <label>Password</label>
+          <label>{t('LoginForm.password')}</label>
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder={t('LoginForm.password_placeholder')}
             required
           />
         </div>
@@ -30,11 +40,11 @@ const FormContent = () => {
             <div className="input-group checkboxes square">
               <input type="checkbox" name="remember-me" id="remember" />
               <label htmlFor="remember" className="remember">
-                <span className="custom-checkbox"></span> Remember me
+                <span className="custom-checkbox"></span> {t('LoginForm.remember_me')}
               </label>
             </div>
             <a href="#" className="pwd">
-              Forgot password?
+              {t('LoginForm.forgot_password')}
             </a>
           </div>
         </div>
@@ -46,7 +56,7 @@ const FormContent = () => {
             type="submit"
             name="log-in"
           >
-            Log In
+            {t('LoginForm.login_button')}
           </button>
         </div>
         {/* login */}
@@ -55,19 +65,19 @@ const FormContent = () => {
 
       <div className="bottom-box">
         <div className="text">
-          Don&apos;t have an account?{" "}
+          {t('LoginForm.no_account')}{" "}
           <Link
             href="#"
             className="call-modal signup"
             data-bs-toggle="modal"
             data-bs-target="#registerModal"
           >
-            Signup
+            {t('LoginForm.signup_link')}
           </Link>
         </div>
 
         <div className="divider">
-          <span>or</span>
+          <span>{t('LoginForm.or')}</span>
         </div>
 
         <LoginWithSocial />

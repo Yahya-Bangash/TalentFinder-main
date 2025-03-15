@@ -49,6 +49,42 @@
       "logo_path": "/images/jordii-logo.png"
     }
   },
+  "LoginForm": {
+    "title": "Login to DIGI-X-TECH",
+    "email": "Email",
+    "email_placeholder": "Email",
+    "username": "Username",
+    "username_placeholder": "Username",
+    "password": "Password",
+    "password_placeholder": "Password",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot password?",
+    "login_button": "Log In",
+    "logging_in": "Logging in...",
+    "no_account": "Don't have an account?",
+    "signup_link": "Signup",
+    "or": "or",
+    "error_message": "Login failed. Please check your credentials and try again."
+  },
+  "RegisterForm": {
+    "title": "Register with DIGI-X-TECH",
+    "email": "Email Address",
+    "email_placeholder": "Email Address",
+    "username": "Username",
+    "username_placeholder": "Username",
+    "password": "Password",
+    "password_placeholder": "Password",
+    "register_button": "Register",
+    "registering": "Registering...",
+    "have_account": "Already have an account?",
+    "login_link": "Login",
+    "or": "or",
+    "error_message": "Registration failed. Please try again."
+  },
+  "LoginWithSocial": {
+    "facebook": "Log In via Facebook",
+    "google": "Log In via Gmail"
+  },
   "About2": {
     "company_name": "DIGI-X-TECH",
     "description": "With the DIGI-X-TECH portal, companies reach a new and highly interesting target group, the qualified talents we have vetted find first-class employers and our team accompanies you throughout the entire process. More than just a personalized, individual and simple job search portal.",

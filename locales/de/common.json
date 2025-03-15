@@ -49,6 +49,38 @@
       "logo_path": "/images/jordii-logo.png"
     }
   },
+  "LoginForm": {
+    "title": "Anmelden bei DIGI-X-TECH",
+    "email": "E-Mail",
+    "email_placeholder": "E-Mail",
+    "username": "Benutzername",
+    "username_placeholder": "Benutzername",
+    "password": "Passwort",
+    "password_placeholder": "Passwort",
+    "remember_me": "Angemeldet bleiben",
+    "forgot_password": "Passwort vergessen?",
+    "login_button": "Anmelden",
+    "logging_in": "Anmeldung läuft...",
+    "no_account": "Noch kein Konto?",
+    "signup_link": "Registrieren",
+    "or": "oder",
+    "error_message": "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Anmeldedaten und versuchen Sie es erneut."
+  },
+  "RegisterForm": {
+    "title": "Registrieren bei DIGI-X-TECH",
+    "email": "E-Mail-Adresse",
+    "email_placeholder": "E-Mail-Adresse",
+    "username": "Benutzername",
+    "username_placeholder": "Benutzername",
+    "password": "Passwort",
+    "password_placeholder": "Passwort",
+    "register_button": "Registrieren",
+    "registering": "Registrierung läuft...",
+    "have_account": "Haben Sie bereits ein Konto?",
+    "login_link": "Anmelden",
+    "or": "oder",
+    "error_message": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut."
+  },
   "About2": {
     "company_name": "DIGI-X-TECH",
     "description": "Mit dem DIGI-X-TECH Portal erreichen Unternehmen eine neue und hochinteressante Zielgruppe, die von uns geprüften qualifizierten Talente finden erstklassige Arbeitgeber und unser Team begleitet Sie während des gesamten Prozesses. Mehr als nur ein personalisiertes, individuelles und einfaches Jobsuchportal.",
@@ -297,5 +329,9 @@
         ]
       }
     ]
+  },
+  "LoginWithSocial": {
+    "facebook": "Anmelden über Facebook",
+    "google": "Anmelden über Gmail"
   }
 } 
