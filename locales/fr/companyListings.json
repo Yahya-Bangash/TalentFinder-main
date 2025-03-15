@@ -288,8 +288,8 @@
     }
   },
   "companyProfile": {
-    "title": "Profil d'Entreprise !",
-    "subtitle": "Prêt à vous y remettre ?",
+    "title": "Profil d'Entreprise",
+    "subtitle": "Prêt à reprendre ?",
     "widgetTitle": {
       "myProfile": "Mon Profil",
       "socialNetwork": "Réseau Social",
@@ -320,49 +320,27 @@
       "saveButton": "Enregistrer"
     },
     "form": {
-      "companyName": "Nom de l'entreprise",
-      "companyNamePlaceholder": "Invisionn",
-      "emailAddress": "Adresse e-mail",
-      "emailAddressPlaceholder": "ib-themes",
-      "city": "Ville",
-      "cityPlaceholder": "Paris",
-      "country": "Pays",
-      "countryPlaceholder": "France",
-      "primaryIndustry": "Secteur Principal",
-      "primaryIndustryPlaceholder": "Logiciel",
-      "companySize": "Taille de l'Entreprise",
-      "companySizeOptions": {
-        "50_100": "50 - 100",
-        "100_150": "100 - 150",
-        "200_250": "200 - 250",
-        "300_350": "300 - 350",
-        "500_1000": "500 - 1000"
-      },
-      "website": "Site Web",
-      "websitePlaceholder": "www.invision.com",
-      "estSince": "Établie Depuis",
-      "estSincePlaceholder": "jj/mm/aaaa",
-      "category": "Catégorie",
-      "categoryPlaceholder": "Sélectionner une Catégorie",
-      "subcategories": "Sous-catégories",
-      "subcategoriesPlaceholder": "Sélectionner une Sous-catégorie",
-      "allowInSearch": "Autoriser dans la Recherche et le Listing",
-      "allowInSearchOptions": {
-        "yes": "Oui",
-        "no": "Non"
-      },
-      "linkedin": "LinkedIn",
-      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
-      "twitter": "Twitter",
-      "twitterPlaceholder": "https://twitter.com/invisionn",
-      "instagram": "Instagram",
-      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
-      "facebook": "Facebook",
-      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
-      "aboutCompany": "À Propos de l'Entreprise",
-      "aboutCompanyPlaceholder": "Description de l'entreprise",
-      "saveButton": "Enregistrer",
-      "savingButton": "Enregistrement..."
+      "company_name": "Nom de l'Entreprise",
+      "company_tagline": "Slogan de l'Entreprise",
+      "company_description": "Description de l'Entreprise",
+      "company_website": "Site Web de l'Entreprise",
+      "company_established": "Entreprise Établie",
+      "company_team_size": "Taille de l'Équipe",
+      "company_category": "Catégorie de l'Entreprise",
+      "company_revenue": "Revenus de l'Entreprise",
+      "company_allow_search": "Autoriser dans la Recherche et les Listes",
+      "company_address": "Adresse de l'Entreprise",
+      "company_city": "Ville",
+      "company_state": "État/Région",
+      "company_zip": "Code Postal",
+      "company_country": "Pays",
+      "company_phone": "Téléphone",
+      "company_email": "Email",
+      "company_facebook": "Facebook",
+      "company_twitter": "Twitter",
+      "company_linkedin": "LinkedIn",
+      "company_instagram": "Instagram",
+      "save_button": "Enregistrer les Modifications"
     },
     "logoCoverUploader": {
       "uploadButton": "Télécharger l'image de couverture",
@@ -380,6 +358,18 @@
       "uploadingType": "Téléchargement de {type}...",
       "uploadSuccess": "{type} téléchargé avec succès."
     }
+  },
+  "employerMenu": {
+    "dashboard": "Tableau de Bord",
+    "company_profile": "Profil d'Entreprise",
+    "post_new_job": "Publier une Nouvelle Offre",
+    "manage_jobs": "Gérer les Offres",
+    "all_applicants": "Tous les Candidats",
+    "shortlisted_resumes": "CV Présélectionnés",
+    "resume_alerts": "Alertes CV",
+    "change_password": "Changer le Mot de Passe",
+    "logout": "Déconnexion",
+    "delete_profile": "Supprimer le Profil"
   },
   "dashboard": {
     "title": "Tableau de Bord!",

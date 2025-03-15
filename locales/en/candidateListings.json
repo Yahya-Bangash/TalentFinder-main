@@ -272,40 +272,38 @@
     }
   },
   "myProfile": {
-    "title": "My Profile",
+    "title": "My Profile!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "My Profile",
     "form": {
-      "fullName": "Full Name",
-      "fullNamePlaceholder": "Jerome",
+      "name": "Name",
+      "namePlaceholder": "John Doe",
       "jobTitle": "Job Title",
-      "jobTitlePlaceholder": "UI Designer",
-      "country": "Country",
-      "countryPlaceholder": "Germany",
-      "city": "City",
-      "cityPlaceholder": "Frankfurt",
+      "jobTitlePlaceholder": "Software Developer",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 234 567 890",
+      "email": "Email",
+      "emailPlaceholder": "example@domain.com",
+      "website": "Website",
+      "websitePlaceholder": "www.example.com",
+      "currentSalary": "Current Salary",
+      "currentSalaryPlaceholder": "$50,000",
       "age": "Age",
-      "agePlaceholder": "0",
-      "expectedSalary": "Expected Salary Range",
-      "expectedSalaryPlaceholder": "90k-100k",
-      "experience": "Experience (Years)",
-      "experiencePlaceholder": "5",
-      "gender": "Gender",
-      "genderOptions": {
-        "male": "Male",
-        "female": "Female",
-        "others": "Others"
-      },
-      "educationLevel": "Education Levels",
-      "educationLevelPlaceholder": "Certificate",
-      "categories": "Categories",
-      "categoriesPlaceholder": "Select Category",
-      "skills": "Skills",
-      "skillsPlaceholder": "Select Skills",
+      "agePlaceholder": "30",
+      "education": "Education",
+      "educationPlaceholder": "Bachelor's Degree",
       "languages": "Languages",
-      "languagesPlaceholder": "English, Turkish",
-      "description": "Description",
-      "descriptionPlaceholder": "Description about yourself",
-      "saveButton": "Save",
-      "savingButton": "Saving..."
+      "languagesPlaceholder": "English, Spanish",
+      "experience": "Experience",
+      "experiencePlaceholder": "5 years",
+      "allowInSearch": "Allow In Search & Listing",
+      "allowInSearchOptions": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "aboutMe": "About Me",
+      "aboutMePlaceholder": "Write a short description about yourself",
+      "saveButton": "Save"
     },
     "upload": {
       "profileImage": "Upload Profile Image",
@@ -329,6 +327,22 @@
       "error": "Error saving profile. Please try again.",
       "serviceError": "Services not initialized properly. Please try again."
     }
+  },
+  "candidateMenu": {
+    "dashboard": "Dashboard",
+    "my_profile": "My Profile",
+    "my_resume": "My Resume",
+    "applied_jobs": "Applied Jobs",
+    "job_alerts": "Job Alerts",
+    "shortlisted_jobs": "Shortlisted Jobs",
+    "cv_manager": "CV Manager",
+    "packages": "Packages",
+    "messages": "Messages",
+    "change_password": "Change Password",
+    "logout": "Logout",
+    "delete_profile": "Delete Profile",
+    "skills_percentage": "Skills Percentage",
+    "skills_percentage_text": "Put value for Cover Image field to increase your skill up to 85%"
   },
   "dashboard": {
     "sidebar": {

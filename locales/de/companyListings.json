@@ -288,7 +288,7 @@
     }
   },
   "companyProfile": {
-    "title": "Firmenprofil!",
+    "title": "Unternehmensprofil",
     "subtitle": "Bereit wieder einzusteigen?",
     "widgetTitle": {
       "myProfile": "Mein Profil",
@@ -320,49 +320,27 @@
       "saveButton": "Speichern"
     },
     "form": {
-      "companyName": "Firmenname",
-      "companyNamePlaceholder": "Invisionn",
-      "emailAddress": "E-Mail-Adresse",
-      "emailAddressPlaceholder": "ib-themes",
-      "city": "Stadt",
-      "cityPlaceholder": "Berlin",
-      "country": "Land",
-      "countryPlaceholder": "Deutschland",
-      "primaryIndustry": "Hauptbranche",
-      "primaryIndustryPlaceholder": "Software",
-      "companySize": "Unternehmensgröße",
-      "companySizeOptions": {
-        "50_100": "50 - 100",
-        "100_150": "100 - 150",
-        "200_250": "200 - 250",
-        "300_350": "300 - 350",
-        "500_1000": "500 - 1000"
-      },
-      "website": "Webseite",
-      "websitePlaceholder": "www.invision.com",
-      "estSince": "Gegründet seit",
-      "estSincePlaceholder": "TT/MM/JJJJ",
-      "category": "Kategorie",
-      "categoryPlaceholder": "Kategorie auswählen",
-      "subcategories": "Unterkategorien",
-      "subcategoriesPlaceholder": "Unterkategorie auswählen",
-      "allowInSearch": "In Suche & Auflistung erlauben",
-      "allowInSearchOptions": {
-        "yes": "Ja",
-        "no": "Nein"
-      },
-      "linkedin": "LinkedIn",
-      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
-      "twitter": "Twitter",
-      "twitterPlaceholder": "https://twitter.com/invisionn",
-      "instagram": "Instagram",
-      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
-      "facebook": "Facebook",
-      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
-      "aboutCompany": "Über das Unternehmen",
-      "aboutCompanyPlaceholder": "Beschreibung über das Unternehmen",
-      "saveButton": "Speichern",
-      "savingButton": "Speichern..."
+      "company_name": "Firmenname",
+      "company_tagline": "Firmenslogan",
+      "company_description": "Firmenbeschreibung",
+      "company_website": "Firmenwebsite",
+      "company_established": "Unternehmen gegründet",
+      "company_team_size": "Teamgröße des Unternehmens",
+      "company_category": "Unternehmenskategorie",
+      "company_revenue": "Unternehmensumsatz",
+      "company_allow_search": "In Suche & Auflistung erlauben",
+      "company_address": "Firmenadresse",
+      "company_city": "Stadt",
+      "company_state": "Bundesland",
+      "company_zip": "PLZ",
+      "company_country": "Land",
+      "company_phone": "Telefon",
+      "company_email": "E-Mail",
+      "company_facebook": "Facebook",
+      "company_twitter": "Twitter",
+      "company_linkedin": "LinkedIn",
+      "company_instagram": "Instagram",
+      "save_button": "Änderungen speichern"
     },
     "logoCoverUploader": {
       "uploadButton": "Titelbild hochladen",
@@ -410,5 +388,17 @@
         "last5Years": "Letzte 5 Jahre"
       }
     }
+  },
+  "employerMenu": {
+    "dashboard": "Dashboard",
+    "company_profile": "Unternehmensprofil",
+    "post_new_job": "Neue Stelle ausschreiben",
+    "manage_jobs": "Stellen verwalten",
+    "all_applicants": "Alle Bewerber",
+    "shortlisted_resumes": "Vorgemerkte Lebensläufe",
+    "resume_alerts": "Lebenslauf-Benachrichtigungen",
+    "change_password": "Passwort ändern",
+    "logout": "Abmelden",
+    "delete_profile": "Profil löschen"
   }
 } 

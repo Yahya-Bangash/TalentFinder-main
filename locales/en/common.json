@@ -188,6 +188,18 @@
     },
     "rights_text": "All Right Reserved."
   },
+  "EmployerSidebar": {
+    "dashboard": "Dashboard",
+    "company_profile": "Company Profile",
+    "post_new_job": "Post a New Job",
+    "manage_jobs": "Manage Jobs",
+    "all_applicants": "All Applicants",
+    "shortlisted_resumes": "Shortlisted Resumes",
+    "resume_alerts": "Resume Alerts",
+    "change_password": "Change Password",
+    "logout": "Logout",
+    "delete_profile": "Delete Profile"
+  },
   "index": {
     "footer": {
       "contact": {

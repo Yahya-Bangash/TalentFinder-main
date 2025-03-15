@@ -272,40 +272,38 @@
     }
   },
   "myProfile": {
-    "title": "Mein Profil",
+    "title": "Mein Profil!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Mein Profil",
     "form": {
-      "fullName": "Vollständiger Name",
-      "fullNamePlaceholder": "Jerome",
+      "name": "Name",
+      "namePlaceholder": "Max Mustermann",
       "jobTitle": "Berufsbezeichnung",
-      "jobTitlePlaceholder": "UI Designer",
-      "country": "Land",
-      "countryPlaceholder": "Deutschland",
-      "city": "Stadt",
-      "cityPlaceholder": "Frankfurt",
+      "jobTitlePlaceholder": "Softwareentwickler",
+      "phone": "Telefon",
+      "phonePlaceholder": "+49 123 456 789",
+      "email": "E-Mail",
+      "emailPlaceholder": "beispiel@domain.de",
+      "website": "Webseite",
+      "websitePlaceholder": "www.beispiel.de",
+      "currentSalary": "Aktuelles Gehalt",
+      "currentSalaryPlaceholder": "50.000€",
       "age": "Alter",
-      "agePlaceholder": "0",
-      "expectedSalary": "Erwartete Gehaltsspanne",
-      "expectedSalaryPlaceholder": "90k-100k",
-      "experience": "Erfahrung (Jahre)",
-      "experiencePlaceholder": "5",
-      "gender": "Geschlecht",
-      "genderOptions": {
-        "male": "Männlich",
-        "female": "Weiblich",
-        "others": "Andere"
-      },
-      "educationLevel": "Bildungsniveau",
-      "educationLevelPlaceholder": "Zertifikat",
-      "categories": "Kategorien",
-      "categoriesPlaceholder": "Kategorie auswählen",
-      "skills": "Fähigkeiten",
-      "skillsPlaceholder": "Fähigkeiten auswählen",
+      "agePlaceholder": "30",
+      "education": "Bildung",
+      "educationPlaceholder": "Bachelor-Abschluss",
       "languages": "Sprachen",
-      "languagesPlaceholder": "Englisch, Türkisch",
-      "description": "Beschreibung",
-      "descriptionPlaceholder": "Beschreibung über dich selbst",
-      "saveButton": "Speichern",
-      "savingButton": "Speichern..."
+      "languagesPlaceholder": "Deutsch, Englisch",
+      "experience": "Erfahrung",
+      "experiencePlaceholder": "5 Jahre",
+      "allowInSearch": "In Suche & Auflistung erlauben",
+      "allowInSearchOptions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "aboutMe": "Über mich",
+      "aboutMePlaceholder": "Schreiben Sie eine kurze Beschreibung über sich selbst",
+      "saveButton": "Speichern"
     },
     "upload": {
       "profileImage": "Profilbild hochladen",
@@ -434,5 +432,21 @@
       "createSuccess": "Informationen zu sozialen Netzwerken erfolgreich erstellt",
       "createError": "Fehler beim Erstellen der Informationen zu sozialen Netzwerken"
     }
+  },
+  "candidateMenu": {
+    "dashboard": "Dashboard",
+    "my_profile": "Mein Profil",
+    "my_resume": "Mein Lebenslauf",
+    "applied_jobs": "Beworbene Stellen",
+    "job_alerts": "Job-Benachrichtigungen",
+    "shortlisted_jobs": "Gespeicherte Stellen",
+    "cv_manager": "Lebenslauf-Manager",
+    "packages": "Pakete",
+    "messages": "Nachrichten",
+    "change_password": "Passwort ändern",
+    "logout": "Abmelden",
+    "delete_profile": "Profil löschen",
+    "skills_percentage": "Fähigkeiten-Prozentsatz",
+    "skills_percentage_text": "Fügen Sie einen Wert für das Titelbild-Feld hinzu, um Ihre Fähigkeiten auf bis zu 85% zu erhöhen"
   }
 } 

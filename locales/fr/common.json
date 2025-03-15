@@ -188,6 +188,18 @@
     },
     "rights_text": "Tous droits réservés."
   },
+  "EmployerSidebar": {
+    "dashboard": "Tableau de Bord",
+    "company_profile": "Profil d'Entreprise",
+    "post_new_job": "Publier une Nouvelle Offre",
+    "manage_jobs": "Gérer les Offres",
+    "all_applicants": "Tous les Candidats",
+    "shortlisted_resumes": "CV Présélectionnés",
+    "resume_alerts": "Alertes CV",
+    "change_password": "Changer le Mot de Passe",
+    "logout": "Déconnexion",
+    "delete_profile": "Supprimer le Profil"
+  },
   "index": {
     "footer": {
       "contact": {

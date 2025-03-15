@@ -288,7 +288,7 @@
     }
   },
   "companyProfile": {
-    "title": "Company Profile!",
+    "title": "Company Profile",
     "subtitle": "Ready to jump back in?",
     "widgetTitle": {
       "myProfile": "My Profile",
@@ -320,49 +320,27 @@
       "saveButton": "Save"
     },
     "form": {
-      "companyName": "Company name",
-      "companyNamePlaceholder": "Invisionn",
-      "emailAddress": "Email address",
-      "emailAddressPlaceholder": "ib-themes",
-      "city": "City",
-      "cityPlaceholder": "New York",
-      "country": "Country",
-      "countryPlaceholder": "USA",
-      "primaryIndustry": "Primary Industry",
-      "primaryIndustryPlaceholder": "Software",
-      "companySize": "Company Size",
-      "companySizeOptions": {
-        "50_100": "50 - 100",
-        "100_150": "100 - 150",
-        "200_250": "200 - 250",
-        "300_350": "300 - 350",
-        "500_1000": "500 - 1000"
-      },
-      "website": "Website",
-      "websitePlaceholder": "www.invision.com",
-      "estSince": "Est. Since",
-      "estSincePlaceholder": "mm/dd/yyyy",
-      "category": "Category",
-      "categoryPlaceholder": "Select Category",
-      "subcategories": "Subcategories",
-      "subcategoriesPlaceholder": "Select Subcategory",
-      "allowInSearch": "Allow In Search & Listing",
-      "allowInSearchOptions": {
-        "yes": "Yes",
-        "no": "No"
-      },
-      "linkedin": "LinkedIn",
-      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
-      "twitter": "Twitter",
-      "twitterPlaceholder": "https://twitter.com/invisionn",
-      "instagram": "Instagram",
-      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
-      "facebook": "Facebook",
-      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
-      "aboutCompany": "About Company",
-      "aboutCompanyPlaceholder": "Description about the company",
-      "saveButton": "Save",
-      "savingButton": "Saving..."
+      "company_name": "Company Name",
+      "company_tagline": "Company Tagline",
+      "company_description": "Company Description",
+      "company_website": "Company Website",
+      "company_established": "Company Established",
+      "company_team_size": "Company Team Size",
+      "company_category": "Company Category",
+      "company_revenue": "Company Revenue",
+      "company_allow_search": "Allow In Search & Listing",
+      "company_address": "Company Address",
+      "company_city": "City",
+      "company_state": "State",
+      "company_zip": "Zip",
+      "company_country": "Country",
+      "company_phone": "Phone",
+      "company_email": "Email",
+      "company_facebook": "Facebook",
+      "company_twitter": "Twitter",
+      "company_linkedin": "LinkedIn",
+      "company_instagram": "Instagram",
+      "save_button": "Save Changes"
     },
     "logoCoverUploader": {
       "uploadButton": "Upload Cover Image",
@@ -380,6 +358,18 @@
       "uploadingType": "Uploading {type}...",
       "uploadSuccess": "{type} uploaded successfully."
     }
+  },
+  "employerMenu": {
+    "dashboard": "Dashboard",
+    "company_profile": "Company Profile",
+    "post_new_job": "Post a New Job",
+    "manage_jobs": "Manage Jobs",
+    "all_applicants": "All Applicants",
+    "shortlisted_resumes": "Shortlisted Resumes",
+    "resume_alerts": "Resume Alerts",
+    "change_password": "Change Password",
+    "logout": "Logout",
+    "delete_profile": "Delete Profile"
   },
   "dashboard": {
     "title": "Dashboard Home!",

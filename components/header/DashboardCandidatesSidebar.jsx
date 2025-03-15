@@ -15,6 +15,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { signOutUser } from "@/appwrite/Services/authServices";
 import initializeDB from "@/appwrite/Services/dbServices";
 import * as sdk from "node-appwrite";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const DashboardCandidatesSidebar = () => {
   const { menu } = useSelector((state) => state.toggle);
@@ -25,11 +26,31 @@ const DashboardCandidatesSidebar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [componentKey, setComponentKey] = useState(0);
   const router = useRouter();
+  const { t } = useTranslation('candidateListings');
 
   const dispatch = useDispatch();
   // menu togggle handler
   const menuToggleHandler = () => {
     dispatch(menuToggle());
+  };
+
+  // Function to get translation key for menu items
+  const getTranslationKey = (itemName) => {
+    switch (itemName) {
+      case "Dashboard": return "candidateMenu.dashboard";
+      case "My Profile": return "candidateMenu.my_profile";
+      case "My Resume": return "candidateMenu.my_resume";
+      case "Applied Jobs": return "candidateMenu.applied_jobs";
+      case "Job Alerts": return "candidateMenu.job_alerts";
+      case "Shortlisted Jobs": return "candidateMenu.shortlisted_jobs";
+      case "CV Manager": return "candidateMenu.cv_manager";
+      case "Packages": return "candidateMenu.packages";
+      case "Messages": return "candidateMenu.messages";
+      case "Change Password": return "candidateMenu.change_password";
+      case "Logout": return "candidateMenu.logout";
+      case "Delete Profile": return "candidateMenu.delete_profile";
+      default: return itemName;
+    }
   };
 
   // Simple function to handle logout
@@ -132,7 +153,8 @@ const DashboardCandidatesSidebar = () => {
                 menuToggleHandler}
             >
               <Link href={item.routePath}>
-                <i className={`la ${item.icon}`}></i> {item.name}
+                <i className={`la ${item.icon}`}></i>{" "}
+                {t(getTranslationKey(item.name), { fallback: item.name })}
               </Link>
             </li>
           ))}
@@ -140,10 +162,9 @@ const DashboardCandidatesSidebar = () => {
         {/* End navigation */}
 
         <div className="skills-percentage">
-          <h4>Skills Percentage</h4>
+          <h4>{t("candidateMenu.skills_percentage")}</h4>
           <p>
-            Put value for <strong>Cover Image</strong> field to increase your
-            skill up to <strong>85%</strong>
+            {t("candidateMenu.skills_percentage_text")}
           </p>
           <div style={{ width: 200, height: 200, margin: "auto" }}>
             <CircularProgressbar
