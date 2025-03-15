@@ -1,31 +1,35 @@
+import { useTranslation } from "@/app/hooks/useTranslation";
+
 const TopCardBlock = () => {
+  const { t } = useTranslation('companyListings');
+  
   const cardContent = [
     {
       id: 1,
       icon: "flaticon-briefcase",
       countNumber: "22",
-      metaName: "Posted Jobs",
+      metaName: t('dashboard.topCards.jobsPosted', 'Posted Jobs'),
       uiClass: "ui-blue",
     },
     {
       id: 2,
       icon: "la-file-invoice",
       countNumber: "9382",
-      metaName: "Application",
+      metaName: t('dashboard.topCards.applications', 'Applications'),
       uiClass: "ui-red",
     },
     {
       id: 3,
       icon: "la-comment-o",
       countNumber: "74",
-      metaName: "Messages",
+      metaName: t('dashboard.topCards.messages', 'Messages'),
       uiClass: "ui-yellow",
     },
     {
       id: 4,
       icon: "la-bookmark-o",
       countNumber: "32",
-      metaName: "Shortlist",
+      metaName: t('dashboard.topCards.shortlisted', 'Shortlist'),
       uiClass: "ui-green",
     },
   ];

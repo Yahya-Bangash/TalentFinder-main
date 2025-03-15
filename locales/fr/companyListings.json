@@ -380,5 +380,35 @@
       "uploadingType": "Téléchargement de {type}...",
       "uploadSuccess": "{type} téléchargé avec succès."
     }
+  },
+  "dashboard": {
+    "title": "Tableau de Bord!",
+    "notifications": "Notifications",
+    "recentApplicants": "Candidats Récents",
+    "topCards": {
+      "jobsPosted": "Offres Publiées",
+      "applications": "Candidatures",
+      "messages": "Messages",
+      "shortlisted": "Présélectionnés"
+    },
+    "profileChart": {
+      "title": "Vues de Votre Profil",
+      "dataset": "Ensemble de données",
+      "months": {
+        "january": "Janvier",
+        "february": "Février",
+        "march": "Mars",
+        "april": "Avril",
+        "may": "Mai",
+        "june": "Juin"
+      },
+      "timeOptions": {
+        "last6Months": "6 derniers mois",
+        "last12Months": "12 derniers mois",
+        "last16Months": "16 derniers mois",
+        "last24Months": "24 derniers mois",
+        "last5Years": "5 dernières années"
+      }
+    }
   }
 } 

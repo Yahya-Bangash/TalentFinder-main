@@ -380,5 +380,35 @@
       "uploadingType": "{type} wird hochgeladen...",
       "uploadSuccess": "{type} erfolgreich hochgeladen."
     }
+  },
+  "dashboard": {
+    "title": "Dashboard Startseite!",
+    "notifications": "Benachrichtigungen",
+    "recentApplicants": "Neueste Bewerber",
+    "topCards": {
+      "jobsPosted": "Veröffentlichte Jobs",
+      "applications": "Bewerbungen",
+      "messages": "Nachrichten",
+      "shortlisted": "Vorgemerkt"
+    },
+    "profileChart": {
+      "title": "Ihre Profilaufrufe",
+      "dataset": "Datensatz",
+      "months": {
+        "january": "Januar",
+        "february": "Februar",
+        "march": "März",
+        "april": "April",
+        "may": "Mai",
+        "june": "Juni"
+      },
+      "timeOptions": {
+        "last6Months": "Letzte 6 Monate",
+        "last12Months": "Letzte 12 Monate",
+        "last16Months": "Letzte 16 Monate",
+        "last24Months": "Letzte 24 Monate",
+        "last5Years": "Letzte 5 Jahre"
+      }
+    }
   }
 } 
