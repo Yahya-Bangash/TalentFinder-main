@@ -286,5 +286,99 @@
       "confirmPassword": "Confirmer le Mot de Passe",
       "updateButton": "Mettre à Jour"
     }
+  },
+  "companyProfile": {
+    "title": "Profil d'Entreprise !",
+    "subtitle": "Prêt à vous y remettre ?",
+    "widgetTitle": {
+      "myProfile": "Mon Profil",
+      "socialNetwork": "Réseau Social",
+      "contactInformation": "Informations de Contact"
+    },
+    "metadata": {
+      "title": "Profil d'Entreprise || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Gérez le profil de votre entreprise avec DIGI-X-TECH"
+    },
+    "contactInfo": {
+      "country": "Pays",
+      "countryPlaceholder": "France",
+      "city": "Ville",
+      "cityPlaceholder": "Paris",
+      "address": "Adresse Complète",
+      "addressPlaceholder": "123 Avenue des Champs-Élysées, 75008 Paris, France",
+      "saveButton": "Enregistrer"
+    },
+    "socialNetwork": {
+      "facebook": "Facebook",
+      "facebookPlaceholder": "www.facebook.com/Invision",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "www.twitter.com/Invision",
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "www.linkedin.com/Invision",
+      "googlePlus": "Google Plus",
+      "googlePlusPlaceholder": "www.googleplus.com/Invision",
+      "saveButton": "Enregistrer"
+    },
+    "form": {
+      "companyName": "Nom de l'entreprise",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "Adresse e-mail",
+      "emailAddressPlaceholder": "ib-themes",
+      "city": "Ville",
+      "cityPlaceholder": "Paris",
+      "country": "Pays",
+      "countryPlaceholder": "France",
+      "primaryIndustry": "Secteur Principal",
+      "primaryIndustryPlaceholder": "Logiciel",
+      "companySize": "Taille de l'Entreprise",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Site Web",
+      "websitePlaceholder": "www.invision.com",
+      "estSince": "Établie Depuis",
+      "estSincePlaceholder": "jj/mm/aaaa",
+      "category": "Catégorie",
+      "categoryPlaceholder": "Sélectionner une Catégorie",
+      "subcategories": "Sous-catégories",
+      "subcategoriesPlaceholder": "Sélectionner une Sous-catégorie",
+      "allowInSearch": "Autoriser dans la Recherche et le Listing",
+      "allowInSearchOptions": {
+        "yes": "Oui",
+        "no": "Non"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/invisionn",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
+      "aboutCompany": "À Propos de l'Entreprise",
+      "aboutCompanyPlaceholder": "Description de l'entreprise",
+      "saveButton": "Enregistrer",
+      "savingButton": "Enregistrement..."
+    },
+    "logoCoverUploader": {
+      "uploadButton": "Télécharger l'image de couverture",
+      "uploadingButton": "Téléchargement...",
+      "uploadCoverImage": "Télécharger l'image de couverture",
+      "fileRestrictions": "Taille maximale du fichier : 50MB. Types autorisés : jpg, jpeg, png, gif.",
+      "coverImage": "Image de couverture",
+      "uploading": "Téléchargement...",
+      "updateSuccess": "Image de couverture téléchargée et données mises à jour avec succès !",
+      "errors": {
+        "initServices": "Échec de l'initialisation des services.",
+        "servicesNotInitialized": "Services non initialisés correctement. Veuillez réessayer.",
+        "uploadError": "Une erreur s'est produite lors du téléchargement : {error}."
+      },
+      "uploadingType": "Téléchargement de {type}...",
+      "uploadSuccess": "{type} téléchargé avec succès."
+    }
   }
 } 

@@ -9,6 +9,7 @@ import { ID } from "node-appwrite"; // Importing ID from node-appwrite
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import useUserProfile from '@/app/hooks/useUserProfile';
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const LogoCoverUploader = () => {
   const [storageServices, setStorageServices] = useState(null);
@@ -20,6 +21,7 @@ const LogoCoverUploader = () => {
 
   const { user } = useAuth(); // Get current user
   const { refreshProfile } = useUserProfile();
+  const { t } = useTranslation('companyListings');
 
   // Initialize storage and database services
   useEffect(() => {
@@ -168,7 +170,7 @@ const LogoCoverUploader = () => {
             type="submit"
             disabled={uploading || !coverImage}
           >
-            {uploading ? "Uploading..." : "Upload Cover Image"}
+            {uploading ? "Uploading..." : t('companyProfile.logoCoverUploader.uploadButton')}
           </button>
         </div>
       </form>

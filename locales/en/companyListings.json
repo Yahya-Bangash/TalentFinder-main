@@ -286,5 +286,99 @@
       "confirmPassword": "Confirm Password",
       "updateButton": "Update"
     }
+  },
+  "companyProfile": {
+    "title": "Company Profile!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": {
+      "myProfile": "My Profile",
+      "socialNetwork": "Social Network",
+      "contactInformation": "Contact Information"
+    },
+    "metadata": {
+      "title": "Company Profile || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Manage your company profile with DIGI-X-TECH"
+    },
+    "contactInfo": {
+      "country": "Country",
+      "countryPlaceholder": "United States",
+      "city": "City",
+      "cityPlaceholder": "California",
+      "address": "Complete Address",
+      "addressPlaceholder": "329 Queensberry Street, North Melbourne VIC 3051, Australia.",
+      "saveButton": "Save"
+    },
+    "socialNetwork": {
+      "facebook": "Facebook",
+      "facebookPlaceholder": "www.facebook.com/Invision",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "www.twitter.com/Invision",
+      "linkedin": "Linkedin",
+      "linkedinPlaceholder": "www.linkedin.com/Invision",
+      "googlePlus": "Google Plus",
+      "googlePlusPlaceholder": "www.googleplus.com/Invision",
+      "saveButton": "Save"
+    },
+    "form": {
+      "companyName": "Company name",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "Email address",
+      "emailAddressPlaceholder": "ib-themes",
+      "city": "City",
+      "cityPlaceholder": "New York",
+      "country": "Country",
+      "countryPlaceholder": "USA",
+      "primaryIndustry": "Primary Industry",
+      "primaryIndustryPlaceholder": "Software",
+      "companySize": "Company Size",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Website",
+      "websitePlaceholder": "www.invision.com",
+      "estSince": "Est. Since",
+      "estSincePlaceholder": "mm/dd/yyyy",
+      "category": "Category",
+      "categoryPlaceholder": "Select Category",
+      "subcategories": "Subcategories",
+      "subcategoriesPlaceholder": "Select Subcategory",
+      "allowInSearch": "Allow In Search & Listing",
+      "allowInSearchOptions": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/invisionn",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
+      "aboutCompany": "About Company",
+      "aboutCompanyPlaceholder": "Description about the company",
+      "saveButton": "Save",
+      "savingButton": "Saving..."
+    },
+    "logoCoverUploader": {
+      "uploadButton": "Upload Cover Image",
+      "uploadingButton": "Uploading...",
+      "uploadCoverImage": "Upload Cover Image",
+      "fileRestrictions": "Max file size: 50MB. Allowed types: jpg, jpeg, png, gif.",
+      "coverImage": "Cover Image",
+      "uploading": "Uploading...",
+      "updateSuccess": "Cover image uploaded and data updated successfully!",
+      "errors": {
+        "initServices": "Failed to initialize services.",
+        "servicesNotInitialized": "Services not initialized properly. Please try again.",
+        "uploadError": "An error occurred during upload: {error}."
+      },
+      "uploadingType": "Uploading {type}...",
+      "uploadSuccess": "{type} uploaded successfully."
+    }
   }
 } 

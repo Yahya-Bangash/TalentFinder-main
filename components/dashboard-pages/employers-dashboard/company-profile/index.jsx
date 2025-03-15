@@ -1,3 +1,4 @@
+'use client'
 import MobileMenu from "../../../header/MobileMenu";
 import DashboardHeader from "../../../header/DashboardHeader";
 import LoginPopup from "../../../common/form/login/LoginPopup";
@@ -9,8 +10,11 @@ import ContactInfoBox from "./components/ContactInfoBox";
 import CopyrightFooter from "../../CopyrightFooter";
 import MenuToggler from "../../MenuToggler";
 import DefaulHeader2 from "@/components/header/DefaulHeader2";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const index = () => {
+    const { t } = useTranslation('companyListings');
+    
     return (
         <div className="page-wrapper dashboard">
             <span className="header-span"></span>
@@ -21,7 +25,7 @@ const index = () => {
 
             <section className="user-dashboard">
                 <div className="dashboard-outer">
-                    <BreadCrumb title="Company Profile!" />
+                    <BreadCrumb title={t('companyProfile.title')} subtitle={t('companyProfile.subtitle')} />
                     <MenuToggler />
 
                     <div className="row">
@@ -29,7 +33,7 @@ const index = () => {
                             <div className="ls-widget">
                                 <div className="tabs-box">
                                     <div className="widget-title">
-                                        <h4>My Profile</h4>
+                                        <h4>{t('companyProfile.widgetTitle.myProfile')}</h4>
                                     </div>
                                     <MyProfile />
                                 </div>
@@ -38,7 +42,7 @@ const index = () => {
                             <div className="ls-widget">
                                 <div className="tabs-box">
                                     <div className="widget-title">
-                                        <h4>Social Network</h4>
+                                        <h4>{t('companyProfile.widgetTitle.socialNetwork')}</h4>
                                     </div>
                                     <div className="widget-content">
                                         <SocialNetworkBox />
@@ -49,7 +53,7 @@ const index = () => {
                             <div className="ls-widget">
                                 <div className="tabs-box">
                                     <div className="widget-title">
-                                        <h4>Contact Information</h4>
+                                        <h4>{t('companyProfile.widgetTitle.contactInformation')}</h4>
                                     </div>
                                     <div className="widget-content">
                                         <ContactInfoBox />

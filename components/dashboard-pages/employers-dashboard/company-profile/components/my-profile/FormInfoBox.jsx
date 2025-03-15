@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from "react";
 import Select from "react-select";
 import * as sdk from "node-appwrite";
@@ -8,6 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import useUserProfile from '@/app/hooks/useUserProfile';
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const FormInfoBox = () => {
   const [db, setDb] = useState(null);
@@ -37,6 +39,7 @@ const FormInfoBox = () => {
 
   const { user } = useAuth();
   const { refreshProfile } = useUserProfile();
+  const { t } = useTranslation('companyListings');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -189,11 +192,11 @@ const FormInfoBox = () => {
       <div className="row">
         {/* Company Name Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Company name</label>
+          <label>{t('companyProfile.form.companyName')}</label>
           <input
             type="text"
             name="name"
-            placeholder="Invisionn"
+            placeholder={t('companyProfile.form.companyNamePlaceholder')}
             value={formData.name}
             required
             onChange={handleInputChange}
@@ -202,11 +205,11 @@ const FormInfoBox = () => {
 
         {/* Email Address Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Email address</label>
+          <label>{t('companyProfile.form.emailAddress')}</label>
           <input
             type="email"
             name="email"
-            placeholder="ib-themes"
+            placeholder={t('companyProfile.form.emailAddressPlaceholder')}
             value={formData.email}
             required
             onChange={handleInputChange}
@@ -215,11 +218,11 @@ const FormInfoBox = () => {
 
         {/* City Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>City</label>
+          <label>{t('companyProfile.form.city')}</label>
           <input
             type="text"
             name="city"
-            placeholder="New York"
+            placeholder={t('companyProfile.form.cityPlaceholder')}
             value={formData.city}
             required
             onChange={handleInputChange}
@@ -228,11 +231,11 @@ const FormInfoBox = () => {
 
         {/* Country Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Country</label>
+          <label>{t('companyProfile.form.country')}</label>
           <input
             type="text"
             name="country"
-            placeholder="USA"
+            placeholder={t('companyProfile.form.countryPlaceholder')}
             value={formData.country}
             required
             onChange={handleInputChange}
@@ -241,11 +244,11 @@ const FormInfoBox = () => {
 
         {/* Primary Industry Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Primary Industry</label>
+          <label>{t('companyProfile.form.primaryIndustry')}</label>
           <input
             type="text"
             name="primaryIndustry"
-            placeholder="Software"
+            placeholder={t('companyProfile.form.primaryIndustryPlaceholder')}
             value={formData.primaryIndustry}
             required
             onChange={handleInputChange}
@@ -254,7 +257,7 @@ const FormInfoBox = () => {
 
         {/* Company Size Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Company Size</label>
+          <label>{t('companyProfile.form.companySize')}</label>
           <select
             name="companySize"
             className="chosen-single form-select"
@@ -262,21 +265,21 @@ const FormInfoBox = () => {
             required
             onChange={handleInputChange}
           >
-            <option value="50 - 100">50 - 100</option>
-            <option value="100 - 150">100 - 150</option>
-            <option value="200 - 250">200 - 250</option>
-            <option value="300 - 350">300 - 350</option>
-            <option value="500 - 1000">500 - 1000</option>
+            <option value="50 - 100">{t('companyProfile.form.companySizeOptions.50_100')}</option>
+            <option value="100 - 150">{t('companyProfile.form.companySizeOptions.100_150')}</option>
+            <option value="200 - 250">{t('companyProfile.form.companySizeOptions.200_250')}</option>
+            <option value="300 - 350">{t('companyProfile.form.companySizeOptions.300_350')}</option>
+            <option value="500 - 1000">{t('companyProfile.form.companySizeOptions.500_1000')}</option>
           </select>
         </div>
 
         {/* Website Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Website</label>
+          <label>{t('companyProfile.form.website')}</label>
           <input
             type="url"
             name="website"
-            placeholder="www.invision.com"
+            placeholder={t('companyProfile.form.websitePlaceholder')}
             value={formData.website}
             required
             onChange={handleInputChange}
@@ -285,11 +288,11 @@ const FormInfoBox = () => {
 
         {/* Est. Since Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Est. Since</label>
+          <label>{t('companyProfile.form.estSince')}</label>
           <input
             type="date"
             name="estSince"
-            placeholder="mm/dd/yyyy"
+            placeholder={t('companyProfile.form.estSincePlaceholder')}
             value={formData.estSince}
             required
             onChange={handleInputChange}
@@ -299,7 +302,7 @@ const FormInfoBox = () => {
 
         {/* Category Select */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Category</label>
+          <label>{t('companyProfile.form.category')}</label>
           <Select
             value={selectedCategory}
             name="categoryTags"
@@ -307,14 +310,14 @@ const FormInfoBox = () => {
             className="basic-single-select"
             classNamePrefix="select"
             onChange={handleCategoryChange}
-            placeholder="Select Category"
+            placeholder={t('companyProfile.form.categoryPlaceholder')}
           />
         </div>
 
         {/* Subcategory Select (shows only if a Category is selected) */}
         {subCategories.length > 0 && (
           <div className="form-group col-lg-6 col-md-12">
-            <label>Subcategories</label>
+            <label>{t('companyProfile.form.subcategories')}</label>
             <Select
               value={formData.categoryTags}
               isMulti
@@ -323,32 +326,32 @@ const FormInfoBox = () => {
               className="basic-multi-select"
               classNamePrefix="select"
               onChange={handleSubCategoryChange}
-              placeholder="Select Subcategory"
+              placeholder={t('companyProfile.form.subcategoriesPlaceholder')}
             />
           </div>
         )}
 
         {/* Allow In Search & Listing Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Allow In Search & Listing</label>
+          <label>{t('companyProfile.form.allowInSearch')}</label>
           <select
             name="listingVisibilityPermission"
             className="chosen-single form-select"
             value={formData.listingVisibilityPermission}
             onChange={handleInputChange}
           >
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
+            <option value="Yes">{t('companyProfile.form.allowInSearchOptions.yes')}</option>
+            <option value="No">{t('companyProfile.form.allowInSearchOptions.no')}</option>
           </select>
         </div>
 
         {/* LinkedIn Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>LinkedIn</label>
+          <label>{t('companyProfile.form.linkedin')}</label>
           <input
             type="url"
             name="linkedin"
-            placeholder="https://www.linkedin.com/company/invisionn/"
+            placeholder={t('companyProfile.form.linkedinPlaceholder')}
             value={formData.linkedin}
             onChange={handleInputChange}
           />
@@ -356,11 +359,11 @@ const FormInfoBox = () => {
 
         {/* Twitter Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Twitter</label>
+          <label>{t('companyProfile.form.twitter')}</label>
           <input
             type="url"
             name="twitter"
-            placeholder="https://twitter.com/invisionn"
+            placeholder={t('companyProfile.form.twitterPlaceholder')}
             value={formData.twitter}
             onChange={handleInputChange}
           />
@@ -368,11 +371,11 @@ const FormInfoBox = () => {
 
         {/* Instagram Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Instagram</label>
+          <label>{t('companyProfile.form.instagram')}</label>
           <input
             type="url"
             name="instagram"
-            placeholder="https://www.instagram.com/invisionn/"
+            placeholder={t('companyProfile.form.instagramPlaceholder')}
             value={formData.instagram}
             onChange={handleInputChange}
           />
@@ -380,11 +383,11 @@ const FormInfoBox = () => {
 
         {/* Facebook Input */}
         <div className="form-group col-lg-6 col-md-12">
-          <label>Facebook</label>
+          <label>{t('companyProfile.form.facebook')}</label>
           <input
             type="url"
             name="facebook"
-            placeholder="https://www.facebook.com/invisionn/"
+            placeholder={t('companyProfile.form.facebookPlaceholder')}
             value={formData.facebook}
             onChange={handleInputChange}
           />
@@ -392,10 +395,10 @@ const FormInfoBox = () => {
 
         {/* About Company Textarea */}
         <div className="form-group col-lg-12 col-md-12">
-          <label>About Company</label>
+          <label>{t('companyProfile.form.aboutCompany')}</label>
           <textarea
             name="description"
-            placeholder="Description about the company"
+            placeholder={t('companyProfile.form.aboutCompanyPlaceholder')}
             value={formData.description}
             onChange={handleInputChange}
           ></textarea>
@@ -408,7 +411,7 @@ const FormInfoBox = () => {
             type="submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Saving..." : "Save"}
+            {isSubmitting ? t('companyProfile.form.savingButton') : t('companyProfile.form.saveButton')}
           </button>
         </div>
       </div>

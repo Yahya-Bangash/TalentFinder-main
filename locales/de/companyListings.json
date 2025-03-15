@@ -286,5 +286,99 @@
       "confirmPassword": "Passwort bestätigen",
       "updateButton": "Aktualisieren"
     }
+  },
+  "companyProfile": {
+    "title": "Firmenprofil!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": {
+      "myProfile": "Mein Profil",
+      "socialNetwork": "Soziales Netzwerk",
+      "contactInformation": "Kontaktinformationen"
+    },
+    "metadata": {
+      "title": "Firmenprofil || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Verwalten Sie Ihr Firmenprofil mit DIGI-X-TECH"
+    },
+    "contactInfo": {
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "city": "Stadt",
+      "cityPlaceholder": "Berlin",
+      "address": "Vollständige Adresse",
+      "addressPlaceholder": "Musterstraße 123, 10115 Berlin, Deutschland",
+      "saveButton": "Speichern"
+    },
+    "socialNetwork": {
+      "facebook": "Facebook",
+      "facebookPlaceholder": "www.facebook.com/Invision",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "www.twitter.com/Invision",
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "www.linkedin.com/Invision",
+      "googlePlus": "Google Plus",
+      "googlePlusPlaceholder": "www.googleplus.com/Invision",
+      "saveButton": "Speichern"
+    },
+    "form": {
+      "companyName": "Firmenname",
+      "companyNamePlaceholder": "Invisionn",
+      "emailAddress": "E-Mail-Adresse",
+      "emailAddressPlaceholder": "ib-themes",
+      "city": "Stadt",
+      "cityPlaceholder": "Berlin",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "primaryIndustry": "Hauptbranche",
+      "primaryIndustryPlaceholder": "Software",
+      "companySize": "Unternehmensgröße",
+      "companySizeOptions": {
+        "50_100": "50 - 100",
+        "100_150": "100 - 150",
+        "200_250": "200 - 250",
+        "300_350": "300 - 350",
+        "500_1000": "500 - 1000"
+      },
+      "website": "Webseite",
+      "websitePlaceholder": "www.invision.com",
+      "estSince": "Gegründet seit",
+      "estSincePlaceholder": "TT/MM/JJJJ",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Kategorie auswählen",
+      "subcategories": "Unterkategorien",
+      "subcategoriesPlaceholder": "Unterkategorie auswählen",
+      "allowInSearch": "In Suche & Auflistung erlauben",
+      "allowInSearchOptions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://www.linkedin.com/company/invisionn/",
+      "twitter": "Twitter",
+      "twitterPlaceholder": "https://twitter.com/invisionn",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "https://www.instagram.com/invisionn/",
+      "facebook": "Facebook",
+      "facebookPlaceholder": "https://www.facebook.com/invisionn/",
+      "aboutCompany": "Über das Unternehmen",
+      "aboutCompanyPlaceholder": "Beschreibung über das Unternehmen",
+      "saveButton": "Speichern",
+      "savingButton": "Speichern..."
+    },
+    "logoCoverUploader": {
+      "uploadButton": "Titelbild hochladen",
+      "uploadingButton": "Wird hochgeladen...",
+      "uploadCoverImage": "Titelbild hochladen",
+      "fileRestrictions": "Maximale Dateigröße: 50MB. Erlaubte Typen: jpg, jpeg, png, gif.",
+      "coverImage": "Titelbild",
+      "uploading": "Wird hochgeladen...",
+      "updateSuccess": "Titelbild erfolgreich hochgeladen und Daten aktualisiert!",
+      "errors": {
+        "initServices": "Fehler beim Initialisieren der Dienste.",
+        "servicesNotInitialized": "Dienste nicht richtig initialisiert. Bitte versuchen Sie es erneut.",
+        "uploadError": "Beim Hochladen ist ein Fehler aufgetreten: {error}."
+      },
+      "uploadingType": "{type} wird hochgeladen...",
+      "uploadSuccess": "{type} erfolgreich hochgeladen."
+    }
   }
 } 
