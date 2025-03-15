@@ -9,8 +9,10 @@ import { ID } from "node-appwrite"; // Importing ID from node-appwrite
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import useUserProfile from '@/app/hooks/useUserProfile';
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const LogoUpload = () => {
+  const { t } = useTranslation('candidateListings');
   const [storageServices, setStorageServices] = useState(null);
   const [dbServices, setDbServices] = useState(null);
   const [documentId, setDocumentId] = useState(null);
@@ -199,12 +201,12 @@ const LogoUpload = () => {
               htmlFor="uploadProfileImage"
             >
               <div className={`${profileImage && profileImage.name ? "text-green-500" : ""}`}>
-                {profileImage && profileImage.name ? profileImage.name : "Upload Profile Image"}
+                {profileImage && profileImage.name ? profileImage.name : t('myProfile.upload.profileImage')}
               </div>
             </label>
           </div>
           <div className="text">
-            Max file size: 50MB. Allowed types: jpg, jpeg, png, gif.
+            {t('myProfile.upload.profileImageInfo')}
           </div>
         </div>
 
@@ -223,12 +225,12 @@ const LogoUpload = () => {
               htmlFor="uploadCvFile"
             >
               <div className={`${cvFile && cvFile.name ? "text-green-500" : ""}`}>
-                {cvFile && cvFile.name ? cvFile.name : "Upload CV"}
+                {cvFile && cvFile.name ? cvFile.name : t('myProfile.upload.cv')}
               </div>
             </label>
           </div>
           <div className="text">
-            Max file size: 50MB. Allowed types: pdf, doc, docx, txt.
+            {t('myProfile.upload.cvInfo')}
           </div>
         </div>
 
@@ -247,12 +249,12 @@ const LogoUpload = () => {
               htmlFor="uploadVideoFile"
             >
               <div className={`${videoFile && videoFile.name ? "text-green-500" : ""}`}>
-                {videoFile && videoFile.name ? videoFile.name : "Upload Video"}
+                {videoFile && videoFile.name ? videoFile.name : t('myProfile.upload.video')}
               </div>
             </label>
           </div>
           <div className="text">
-            Max file size: 50MB. Allowed types: mp4, mov, avi.
+            {t('myProfile.upload.videoInfo')}
           </div>
         </div>
 
@@ -262,7 +264,7 @@ const LogoUpload = () => {
             type="submit"
             disabled={uploading || (!profileImage && !cvFile && !videoFile)}
           >
-            {uploading ? "Uploading..." : "Upload Files"}
+            {uploading ? t('myProfile.upload.uploadingButton') : t('myProfile.upload.uploadButton')}
           </button>
         </div>
       </form>

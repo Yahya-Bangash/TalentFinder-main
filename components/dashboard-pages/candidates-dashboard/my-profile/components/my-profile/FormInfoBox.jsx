@@ -9,8 +9,10 @@ import catOptions from "@/data/categories";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import useUserProfile from '@/app/hooks/useUserProfile';
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const FormInfoBox = () => {
+    const { t } = useTranslation('candidateListings');
     const [db, setDb] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState([]);
     const [skillsOptions, setSkillsOptions] = useState([]);
@@ -124,7 +126,7 @@ const FormInfoBox = () => {
     const handleSave = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        const toastId = toast.info('Saving your information...', { autoClose: false });
+        const toastId = toast.info(t('myProfile.toasts.saving'), { autoClose: false });
 
         const updatedData = {
             name: formData.name,
@@ -147,7 +149,7 @@ const FormInfoBox = () => {
             if (documentId && db) {
                 await db.jobSeekers?.update(documentId, updatedData);
                 toast.update(toastId, { 
-                    render: "Profile updated successfully!", 
+                    render: t('myProfile.toasts.updateSuccess'), 
                     type: toast.TYPE.SUCCESS, 
                     autoClose: 3000 
                 });
@@ -156,7 +158,7 @@ const FormInfoBox = () => {
                 const newDoc = await db.jobSeekers?.create(updatedData);
                 setDocumentId(newDoc.$id);
                 toast.update(toastId, { 
-                    render: "Profile created successfully!", 
+                    render: t('myProfile.toasts.createSuccess'), 
                     type: toast.TYPE.SUCCESS, 
                     autoClose: 3000 
                 });
@@ -165,7 +167,7 @@ const FormInfoBox = () => {
         } catch (error) {
             console.error("Error saving profile:", error);
             toast.update(toastId, { 
-                render: "Error saving profile. Please try again.", 
+                render: t('myProfile.toasts.error'), 
                 type: toast.TYPE.ERROR, 
                 autoClose: 5000 
             });
@@ -179,11 +181,11 @@ const FormInfoBox = () => {
             <form className="default-form" onSubmit={handleSave}>
                 <div className="row">
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Full Name</label>
+                        <label>{t('myProfile.form.fullName')}</label>
                         <input
                             type="text"
                             name="name"
-                            placeholder="Jerome"
+                            placeholder={t('myProfile.form.fullNamePlaceholder')}
                             value={formData.name}
                             required
                             onChange={handleInputChange}
@@ -191,11 +193,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Job Title</label>
+                        <label>{t('myProfile.form.jobTitle')}</label>
                         <input
                             type="text"
                             name="jobTitle"
-                            placeholder="UI Designer"
+                            placeholder={t('myProfile.form.jobTitlePlaceholder')}
                             value={formData.jobTitle}
                             required
                             onChange={handleInputChange}
@@ -203,11 +205,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Country</label>
+                        <label>{t('myProfile.form.country')}</label>
                         <input
                             type="text"
                             name="country"
-                            placeholder="Germany"
+                            placeholder={t('myProfile.form.countryPlaceholder')}
                             value={formData.country}
                             required
                             onChange={handleInputChange}
@@ -215,11 +217,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>City</label>
+                        <label>{t('myProfile.form.city')}</label>
                         <input
                             type="text"
                             name="city"
-                            placeholder="Frankfurt"
+                            placeholder={t('myProfile.form.cityPlaceholder')}
                             value={formData.city}
                             required
                             onChange={handleInputChange}
@@ -227,11 +229,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Age</label>
+                        <label>{t('myProfile.form.age')}</label>
                         <input
                             type="number"
                             name="age"
-                            placeholder={0}
+                            placeholder={t('myProfile.form.agePlaceholder')}
                             value={formData.age}
                             required
                             onChange={handleInputChange}
@@ -239,11 +241,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Expected Salary Range</label>
+                        <label>{t('myProfile.form.expectedSalary')}</label>
                         <input
                             type="text"
                             name="expectedSalaryRange"
-                            placeholder="90k-100k"
+                            placeholder={t('myProfile.form.expectedSalaryPlaceholder')}
                             value={formData.expectedSalaryRange}
                             required
                             onChange={handleInputChange}
@@ -251,11 +253,11 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Experience (Years)</label>
+                        <label>{t('myProfile.form.experience')}</label>
                         <input
                             type="number"
                             name="experience"
-                            placeholder="5"
+                            placeholder={t('myProfile.form.experiencePlaceholder')}
                             value={formData.experience}
                             required
                             onChange={handleInputChange}
@@ -263,7 +265,7 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Gender</label>
+                        <label>{t('myProfile.form.gender')}</label>
                         <select
                             name="gender"
                             className="chosen-single form-select"
@@ -271,18 +273,18 @@ const FormInfoBox = () => {
                             required
                             onChange={handleInputChange}
                         >
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Others">Others</option>
+                            <option value="Male">{t('myProfile.form.genderOptions.male')}</option>
+                            <option value="Female">{t('myProfile.form.genderOptions.female')}</option>
+                            <option value="Others">{t('myProfile.form.genderOptions.others')}</option>
                         </select>
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Education Levels</label>
+                        <label>{t('myProfile.form.educationLevel')}</label>
                         <input
                             type="text"
                             name="educationalLevel"
-                            placeholder="Certificate"
+                            placeholder={t('myProfile.form.educationLevelPlaceholder')}
                             value={formData.educationalLevel}
                             required
                             onChange={handleInputChange}
@@ -290,7 +292,7 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Categories</label>
+                        <label>{t('myProfile.form.categories')}</label>
                         <Select
                             value={selectedCategory}
                             isMulti
@@ -299,12 +301,12 @@ const FormInfoBox = () => {
                             className="basic-multi-select"
                             classNamePrefix="select"
                             onChange={handleCategoryChange}
-                            placeholder="Select Category"
+                            placeholder={t('myProfile.form.categoriesPlaceholder')}
                         />
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Skills</label>
+                        <label>{t('myProfile.form.skills')}</label>
                         <Select
                             value={skillsOptions}
                             isMulti
@@ -313,16 +315,16 @@ const FormInfoBox = () => {
                             className="basic-multi-select"
                             classNamePrefix="select"
                             onChange={handleSkillsChange}
-                            placeholder="Select Skills"
+                            placeholder={t('myProfile.form.skillsPlaceholder')}
                         />
                     </div>
 
                     <div className="form-group col-lg-6 col-md-12">
-                        <label>Languages</label>
+                        <label>{t('myProfile.form.languages')}</label>
                         <input
                             type="text"
                             name="languages"
-                            placeholder="English, Turkish"
+                            placeholder={t('myProfile.form.languagesPlaceholder')}
                             value={formData.languages}
                             required
                             onChange={handleInputChange}
@@ -330,10 +332,10 @@ const FormInfoBox = () => {
                     </div>
 
                     <div className="form-group col-lg-12 col-md-12">
-                        <label>Description</label>
+                        <label>{t('myProfile.form.description')}</label>
                         <textarea
                             name="description"
-                            placeholder="Description about yourself"
+                            placeholder={t('myProfile.form.descriptionPlaceholder')}
                             value={formData.description}
                             onChange={handleInputChange}
                         ></textarea>
@@ -345,7 +347,7 @@ const FormInfoBox = () => {
                             type="submit"
                             disabled={isSubmitting}
                         >
-                            {isSubmitting ? "Saving..." : "Save"}
+                            {isSubmitting ? t('myProfile.form.savingButton') : t('myProfile.form.saveButton')}
                         </button>
                     </div>
                 </div>
