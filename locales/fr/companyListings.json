@@ -271,5 +271,20 @@
         }
       }
     }
+  },
+  "changePassword": {
+    "title": "Changer le Mot de Passe !",
+    "subtitle": "Prêt à vous y remettre ?",
+    "widgetTitle": "Changer le Mot de Passe",
+    "metadata": {
+      "title": "Changer le Mot de Passe || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Changez le mot de passe de votre compte avec DIGI-X-TECH"
+    },
+    "form": {
+      "oldPassword": "Ancien Mot de Passe",
+      "newPassword": "Nouveau Mot de Passe",
+      "confirmPassword": "Confirmer le Mot de Passe",
+      "updateButton": "Mettre à Jour"
+    }
   }
 } 

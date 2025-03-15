@@ -271,5 +271,20 @@
         }
       }
     }
+  },
+  "changePassword": {
+    "title": "Change Password!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "Change Password",
+    "metadata": {
+      "title": "Change Password || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Change your account password with DIGI-X-TECH"
+    },
+    "form": {
+      "oldPassword": "Old Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "updateButton": "Update"
+    }
   }
 } 
