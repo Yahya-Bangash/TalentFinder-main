@@ -164,5 +164,22 @@
       "hybrid": "Hybrid",
       "remote": "Remote"
     }
+  },
+  "manageJobs": {
+    "title": "Jobs verwalten",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Meine Stellenangebote",
+    "metadata": {
+      "title": "Jobs verwalten || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Verwalten Sie Ihre Stellenangebote mit DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Titel",
+      "applications": "Bewerbungen",
+      "rate": "Vergütung",
+      "created": "Erstellt",
+      "action": "Aktion"
+    },
+    "loading": "Jobs werden geladen..."
   }
 } 

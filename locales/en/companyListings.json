@@ -164,5 +164,22 @@
       "hybrid": "Hybrid",
       "remote": "Remote"
     }
+  },
+  "manageJobs": {
+    "title": "Manage Jobs",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "My Job Listings",
+    "metadata": {
+      "title": "Manage Jobs || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Manage your job listings with DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Title",
+      "applications": "Applications",
+      "rate": "Rate",
+      "created": "Created",
+      "action": "Action"
+    },
+    "loading": "Loading jobs..."
   }
 } 

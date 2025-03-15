@@ -164,5 +164,22 @@
       "hybrid": "Hybride",
       "remote": "Télétravail"
     }
+  },
+  "manageJobs": {
+    "title": "Gérer les Offres",
+    "subtitle": "Prêt à vous y remettre ?",
+    "widgetTitle": "Mes Offres d'Emploi",
+    "metadata": {
+      "title": "Gérer les Offres || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Gérez vos offres d'emploi avec DIGI-X-TECH"
+    },
+    "table": {
+      "title": "Titre",
+      "applications": "Candidatures",
+      "rate": "Rémunération",
+      "created": "Créé le",
+      "action": "Action"
+    },
+    "loading": "Chargement des offres..."
   }
 } 
