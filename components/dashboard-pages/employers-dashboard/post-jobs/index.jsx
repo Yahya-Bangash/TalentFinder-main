@@ -1,3 +1,4 @@
+'use client'
 import MobileMenu from "../../../header/MobileMenu";
 import DashboardHeader from "../../../header/DashboardHeader";
 import LoginPopup from "../../../common/form/login/LoginPopup";
@@ -8,8 +9,11 @@ import PostJobSteps from "./components/PostJobSteps";
 import PostBoxForm from "./components/PostBoxForm";
 import MenuToggler from "../../MenuToggler";
 import DefaulHeader2 from "@/components/header/DefaulHeader2";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const index = () => {
+  const { t } = useTranslation('companyListings');
+  
   return (
     <div className="page-wrapper dashboard">
       <span className="header-span"></span>
@@ -30,7 +34,10 @@ const index = () => {
       {/* <!-- Dashboard --> */}
       <section className="user-dashboard">
         <div className="dashboard-outer">
-          <BreadCrumb title="Post a New Job!" />
+          <BreadCrumb 
+            title={t('postJob.title')} 
+            subtitle={t('postJob.subtitle')}
+          />
           {/* breadCrumb */}
 
           <MenuToggler />
@@ -42,7 +49,7 @@ const index = () => {
               <div className="ls-widget">
                 <div className="tabs-box">
                   <div className="widget-title">
-                    <h4>Post Job</h4>
+                    <h4>{t('postJob.widgetTitle')}</h4>
                   </div>
 
                   <div className="widget-content">

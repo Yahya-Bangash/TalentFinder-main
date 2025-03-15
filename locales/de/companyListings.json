@@ -110,7 +110,7 @@
   },
   "index": {
     "title": "Unternehmen",
-    "subtitle": "Finden Sie die besten Arbeitgeber",
+    "subtitle": "Finden Sie die besten Unternehmen, für die Sie arbeiten können",
     "search": {
       "title": "Unternehmen Suchen",
       "placeholder": "Firmenname oder Stichwort"
@@ -131,9 +131,38 @@
     },
     "pagination": {
       "per_page": "Pro Seite",
-      "showing": "Anzeige von",
+      "showing": "Zeige",
       "of": "von",
       "results": "Ergebnissen"
+    }
+  },
+  "postJob": {
+    "title": "Neuen Job veröffentlichen!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Job veröffentlichen",
+    "steps": {
+      "title": "Schritte zur Jobveröffentlichung"
+    },
+    "form": {
+      "title": "Jobformular veröffentlichen",
+      "jobTitle": "Jobtitel",
+      "jobTitlePlaceholder": "Titel",
+      "jobDescription": "Stellenbeschreibung",
+      "jobDescriptionPlaceholder": "Stellenbeschreibung",
+      "selectCategories": "Jobkategorien auswählen",
+      "jobType": "Jobtyp",
+      "offeredRate": "Angebotene Vergütung",
+      "offeredRatePlaceholder": "1000€",
+      "skills": "Fähigkeiten",
+      "postButton": "Job veröffentlichen",
+      "postingButton": "Wird veröffentlicht...",
+      "successMessage": "Job erfolgreich veröffentlicht!"
+    },
+    "jobTypes": {
+      "urgent": "Dringend",
+      "fullTime": "Vollzeit",
+      "hybrid": "Hybrid",
+      "remote": "Remote"
     }
   }
 } 

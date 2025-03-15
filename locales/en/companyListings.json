@@ -135,5 +135,34 @@
       "of": "of",
       "results": "results"
     }
+  },
+  "postJob": {
+    "title": "Post a New Job!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "Post Job",
+    "steps": {
+      "title": "Post Job Steps"
+    },
+    "form": {
+      "title": "Post Job Form",
+      "jobTitle": "Job Title",
+      "jobTitlePlaceholder": "Title",
+      "jobDescription": "Job Description",
+      "jobDescriptionPlaceholder": "Job Description",
+      "selectCategories": "Select Job Categories",
+      "jobType": "Job Type",
+      "offeredRate": "Offered Rate",
+      "offeredRatePlaceholder": "$1000",
+      "skills": "Skills",
+      "postButton": "Post Job",
+      "postingButton": "Posting...",
+      "successMessage": "Job posted successfully!"
+    },
+    "jobTypes": {
+      "urgent": "Urgent",
+      "fullTime": "Full Time",
+      "hybrid": "Hybrid",
+      "remote": "Remote"
+    }
   }
 } 

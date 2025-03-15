@@ -118,15 +118,15 @@
     "filters": {
       "location": "Emplacement",
       "category": "Catégorie",
-      "founded": "Date de Création",
+      "founded": "Date de Fondation",
       "team_size": "Taille de l'Équipe"
     },
     "sort": {
       "title": "Trier par",
       "options": {
         "default": "Par défaut",
-        "newest": "Plus récent",
-        "oldest": "Plus ancien"
+        "newest": "Plus récentes",
+        "oldest": "Plus anciennes"
       }
     },
     "pagination": {
@@ -134,6 +134,35 @@
       "showing": "Affichage de",
       "of": "sur",
       "results": "résultats"
+    }
+  },
+  "postJob": {
+    "title": "Publier une Nouvelle Offre d'Emploi !",
+    "subtitle": "Prêt à vous y remettre ?",
+    "widgetTitle": "Publier une Offre",
+    "steps": {
+      "title": "Étapes de Publication d'Emploi"
+    },
+    "form": {
+      "title": "Formulaire de Publication d'Emploi",
+      "jobTitle": "Titre du Poste",
+      "jobTitlePlaceholder": "Titre",
+      "jobDescription": "Description du Poste",
+      "jobDescriptionPlaceholder": "Description du Poste",
+      "selectCategories": "Sélectionner les Catégories d'Emploi",
+      "jobType": "Type d'Emploi",
+      "offeredRate": "Rémunération Proposée",
+      "offeredRatePlaceholder": "1000€",
+      "skills": "Compétences",
+      "postButton": "Publier l'Offre",
+      "postingButton": "Publication en cours...",
+      "successMessage": "Offre publiée avec succès !"
+    },
+    "jobTypes": {
+      "urgent": "Urgent",
+      "fullTime": "Temps Plein",
+      "hybrid": "Hybride",
+      "remote": "Télétravail"
     }
   }
 } 
