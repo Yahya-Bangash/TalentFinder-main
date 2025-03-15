@@ -225,5 +225,51 @@
       "educationTraining": "Education Training",
       "all": "All"
     }
+  },
+  "allApplicants": {
+    "title": "All Applicants!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "Applicant",
+    "metadata": {
+      "title": "All Applicants || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "View all job applicants with DIGI-X-TECH"
+    },
+    "content": {
+      "jobTitle": "Senior Product Designer",
+      "tabs": {
+        "total": "Total(s): 6",
+        "approved": "Approved: 2",
+        "rejected": "Rejected(s): 4"
+      },
+      "candidate": {
+        "hourlyRate": "/ hour",
+        "actions": {
+          "view": "View Application",
+          "approve": "Approve Application",
+          "reject": "Reject Application",
+          "delete": "Delete Application"
+        }
+      }
+    },
+    "filterBox": {
+      "selectJobs": {
+        "title": "Select Jobs",
+        "options": {
+          "last12Months": "Last 12 Months",
+          "last16Months": "Last 16 Months",
+          "last24Months": "Last 24 Months",
+          "last5Years": "Last 5 year"
+        }
+      },
+      "status": {
+        "title": "All Status",
+        "options": {
+          "last12Months": "Last 12 Months",
+          "last16Months": "Last 16 Months",
+          "last24Months": "Last 24 Months",
+          "last5Years": "Last 5 year"
+        }
+      }
+    }
   }
 } 

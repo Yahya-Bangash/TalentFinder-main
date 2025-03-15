@@ -225,5 +225,51 @@
       "educationTraining": "Formation en Éducation",
       "all": "Tous"
     }
+  },
+  "allApplicants": {
+    "title": "Tous les Candidats !",
+    "subtitle": "Prêt à vous y remettre ?",
+    "widgetTitle": "Candidat",
+    "metadata": {
+      "title": "Tous les Candidats || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Consultez tous les candidats aux offres d'emploi avec DIGI-X-TECH"
+    },
+    "content": {
+      "jobTitle": "Designer Produit Senior",
+      "tabs": {
+        "total": "Total : 6",
+        "approved": "Approuvés : 2",
+        "rejected": "Rejetés : 4"
+      },
+      "candidate": {
+        "hourlyRate": "/ heure",
+        "actions": {
+          "view": "Voir la Candidature",
+          "approve": "Approuver la Candidature",
+          "reject": "Rejeter la Candidature",
+          "delete": "Supprimer la Candidature"
+        }
+      }
+    },
+    "filterBox": {
+      "selectJobs": {
+        "title": "Sélectionner les Offres",
+        "options": {
+          "last12Months": "12 derniers mois",
+          "last16Months": "16 derniers mois",
+          "last24Months": "24 derniers mois",
+          "last5Years": "5 dernières années"
+        }
+      },
+      "status": {
+        "title": "Tous les Statuts",
+        "options": {
+          "last12Months": "12 derniers mois",
+          "last16Months": "16 derniers mois",
+          "last24Months": "24 derniers mois",
+          "last5Years": "5 dernières années"
+        }
+      }
+    }
   }
 } 
