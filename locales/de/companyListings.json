@@ -181,5 +181,24 @@
       "action": "Aktion"
     },
     "loading": "Jobs werden geladen..."
+  },
+  "shortlistedResumes": {
+    "title": "Gespeicherte Lebensläufe!",
+    "subtitle": "Bereit wieder einzusteigen?",
+    "widgetTitle": "Gespeicherte Lebensläufe",
+    "metadata": {
+      "title": "Gespeicherte Lebensläufe || DIGI-X-TECH - Job Board React NextJS Vorlage",
+      "description": "Sehen Sie sich Ihre gespeicherten Kandidaten-Lebensläufe mit DIGI-X-TECH an"
+    },
+    "filterBox": {
+      "searchPlaceholder": "Suchen",
+      "timeFilter": {
+        "newest": "Neueste",
+        "last12Months": "Letzte 12 Monate",
+        "last16Months": "Letzte 16 Monate",
+        "last24Months": "Letzte 24 Monate",
+        "last5Years": "Letzte 5 Jahre"
+      }
+    }
   }
 } 

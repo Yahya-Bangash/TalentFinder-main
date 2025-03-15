@@ -181,5 +181,24 @@
       "action": "Action"
     },
     "loading": "Chargement des offres..."
+  },
+  "shortlistedResumes": {
+    "title": "CV Présélectionnés !",
+    "subtitle": "Prêt à vous y remettre ?",
+    "widgetTitle": "CV Présélectionnés",
+    "metadata": {
+      "title": "CV Présélectionnés || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "Consultez les CV des candidats présélectionnés avec DIGI-X-TECH"
+    },
+    "filterBox": {
+      "searchPlaceholder": "Rechercher",
+      "timeFilter": {
+        "newest": "Plus récents",
+        "last12Months": "12 derniers mois",
+        "last16Months": "16 derniers mois",
+        "last24Months": "24 derniers mois",
+        "last5Years": "5 dernières années"
+      }
+    }
   }
 } 

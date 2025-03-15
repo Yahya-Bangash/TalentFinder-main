@@ -1,4 +1,8 @@
+import { useTranslation } from "@/app/hooks/useTranslation";
+
 const WidgetToFilterBox = () => {
+  const { t } = useTranslation('companyListings');
+  
   return (
     <div className="chosen-outer">
       {/* <!--search box--> */}
@@ -9,7 +13,7 @@ const WidgetToFilterBox = () => {
             <input
               type="search"
               name="search-field"
-              placeholder="Search"
+              placeholder={t('shortlistedResumes.filterBox.searchPlaceholder')}
               required
             />
           </div>
@@ -19,11 +23,11 @@ const WidgetToFilterBox = () => {
 
       {/* <!--Tabs Box--> */}
       <select className="chosen-single form-select chosen-container">
-        <option>Newest</option>
-        <option>Last 12 Months</option>
-        <option>Last 16 Months</option>
-        <option>Last 24 Months</option>
-        <option>Last 5 year</option>
+        <option>{t('shortlistedResumes.filterBox.timeFilter.newest')}</option>
+        <option>{t('shortlistedResumes.filterBox.timeFilter.last12Months')}</option>
+        <option>{t('shortlistedResumes.filterBox.timeFilter.last16Months')}</option>
+        <option>{t('shortlistedResumes.filterBox.timeFilter.last24Months')}</option>
+        <option>{t('shortlistedResumes.filterBox.timeFilter.last5Years')}</option>
       </select>
     </div>
   );

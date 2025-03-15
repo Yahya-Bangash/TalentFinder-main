@@ -181,5 +181,24 @@
       "action": "Action"
     },
     "loading": "Loading jobs..."
+  },
+  "shortlistedResumes": {
+    "title": "Shortlisted Resumes!",
+    "subtitle": "Ready to jump back in?",
+    "widgetTitle": "Shortlist Resumes",
+    "metadata": {
+      "title": "Shortlisted Resumes || DIGI-X-TECH - Job Board React NextJS Template",
+      "description": "View your shortlisted candidate resumes with DIGI-X-TECH"
+    },
+    "filterBox": {
+      "searchPlaceholder": "Search",
+      "timeFilter": {
+        "newest": "Newest",
+        "last12Months": "Last 12 Months",
+        "last16Months": "Last 16 Months",
+        "last24Months": "Last 24 Months",
+        "last5Years": "Last 5 year"
+      }
+    }
   }
 } 
